@@ -1,0 +1,109 @@
+// 공통 
+//@import "font.scss";
+@import 'reset.scss'; //reset
+@import "fsize.scss"; //폰트사이즈
+@import "gap.scss"; //flex gap
+@import "hspace.scss"; 
+@import "mpsize.scss";
+@import "modal.scss";
+@import "button.scss";
+
+// 레이아웃
+@import "header.scss";
+@import "main.scss";
+@import "sub.scss";
+
+ .up *{
+     color:#E81A1A ;
+ }
+ .dn *{
+     color:#2073EF ;
+ } 
+  #container{
+    display:block;
+    width:100%;
+
+    &.item{
+      //overflow:hidden;
+      background:#f5f5f5;
+      height:100%;
+      float:left;
+    }
+  }
+
+  .text-truncate-2 {
+    -webkit-line-clamp: 2 !important;
+    overflow : hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    white-space: normal !important;
+  }
+
+  .text-truncate-3 {
+    -webkit-line-clamp: 3 !important;
+    overflow : hidden !important;
+    text-overflow: ellipsis !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    white-space: normal !important;
+}
+.text-truncate-4 {
+  -webkit-line-clamp: 4 !important;
+  overflow : hidden !important;
+  text-overflow: ellipsis !important;
+  display: -webkit-box !important;
+  -webkit-box-orient: vertical !important;
+  white-space: normal !important;
+}
+
+.fw{
+  &-100{
+    font-weight: 100 !important;
+  }
+  &-300{
+    font-weight: 300 !important;
+  }
+  &-400{
+    font-weight: 400 !important;
+  }
+  &-500{
+    font-weight: 500 !important;
+  }
+  &-700{
+    font-weight: 700 !important;
+  }  
+}
+.none-bordered{
+  border:0 !important;
+}
+.shadow-bottom{
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+}
+
+.page-bottom-button{
+  position:fixed;
+  bottom:10px;
+  left:0;
+  width:100%;
+  padding:0 20px;
+}
+
+.empty.alarm{
+  display:block;
+  width:100%;
+  padding:20px;
+  float:left;
+
+  font-size:14px;
+  line-height:21px;
+  color:#000;
+
+  em{
+    color:#3F54C3;
+  }
+}
+.bg-w{
+  background:#fff;
+  border-top:1px solid #ccc;
+}

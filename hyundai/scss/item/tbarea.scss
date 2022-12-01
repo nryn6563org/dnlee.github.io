@@ -1,0 +1,22 @@
+.tbArea-w{
+    display:block;
+    width:100%;
+    height:auto;
+    border-radius: 20px 20px 0 0;
+    //overflow: hidden;
+}
+#tbArea{
+    position: relative; 
+    //overflow: hidden;
+    bottom: 0; 
+    width:100%;
+    height:auto;
+    padding: 0;
+    background:#fff;
+    border-radius: 20px 20px 0 0;
+    float:left;
+   
+}
+
+@import 'tbheader.scss';
+@import 'tbcontent.scss';

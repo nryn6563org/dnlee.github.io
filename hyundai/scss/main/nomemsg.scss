@@ -1,0 +1,33 @@
+.nomemsg{
+    display:block;
+    width:100%;
+
+    &>div{
+        display:flex;
+        width:calc(100% - 40px);
+        height:38px;
+        line-height:38px;
+        background: #333D47;
+        border-radius: 38px;
+        padding:0 13px 0 24px;
+        margin:0 20px;
+        justify-content: space-between;
+
+        span{
+            font-size:14px;
+            color:#fff;
+
+            em{
+                font-weight:700;
+            }
+        }
+
+        button{
+            color:#fff;
+            width:24px;
+            height:38px;
+            line-height:38px;
+            font-size:17px;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.newsList>.list>.tag{
+    display:block;
+    width:100%;
+    float:left;
+
+    span{
+        display:block;
+        padding:3px 6px;
+        border-radius: 4px;
+        font-size:11px;
+        line-height:14px;
+        font-weight:500;
+        float:left;
+
+        &.t01{
+            background:#FDF6EB;
+            color:#E58B04;
+        }
+        &.t02{
+            background:#ECF5FC;
+            color:#0E82DB;
+        }
+        &.t03{
+            background:#FDECEC;
+            color:#E00D14;
+        }
+        &.t04{
+            background:#EDF8EF;
+            color:#21A93C;
+        }
+    }
+}

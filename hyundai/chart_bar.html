@@ -1,0 +1,113 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=bar-data-color&code=PYBwLglsB2AEC8sDeAoWsAeBBDEDOAXMmurGAJ4gCmRA5AMYCGYVA5sAE7m0A0J6wAGaC8VMEQCMABj6lYjXHgAqEegGsiqOejwALYAHcigxgBtR_WAF9ZpBfgAyEaDWLbYp51QDKFU6613WAMIABMwXSIAJgA6AFZLdCtLG0t7PAdGACMqU01E2EEYMG8IAC9XKIS5VLlQ5kYiAG1aQA8xwFtawA9x3lhaQBwa7p5ewAY6wABawFCJwEtV2gBdElrYchx8fLkKajoANzMAVypeSz1DYzMLJNtRDggqQlgmy0C5U2zc1aCjozIOPdt3EGA8BBIDAiAAiYA7MCA0JUUG_bRFaAlcquCQAdnh5wK9TAjTuBXQjyC21MeyIAFoogAOACcGIJpCBVAAtr5yP43kFSPRgKZOHQsqT9gysVz0M8cnk3GKdPpPmBvlRMUEeXyOGDBXtQSLrAyFu4ie4SWTYFEaRI4sq5EzWX4Ajr0Kr-b0OFRQrQdfqghLXtKZR8iAqfg7YE71bBQa7QtqZckuV65IbtMbXOSJAAWGlWxksW3s-0yx28520TXC2PZ8UvKVJ9wBr7Bwuh4vh0FlmNiuNBBOkNNxGQFGbK9auUuMDgemokOZWADcQA
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="ko" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="chart_container" style="height: 300px; width: 400px"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.0/dist/echarts.min.js"></script>
+  
+
+  <script type="text/javascript">
+  	
+  	function numberWithCommas (x) {
+		  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+		}
+
+    var dom = document.getElementById('chart_container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    option = {
+  xAxis: {
+    type: 'category',
+    offset: 25,
+    axisTick: {
+      show: false
+    },
+    axisLine: {
+      lineStyle: {
+        width: 2.5
+      }
+    },
+    axisLabel: {
+    	show : false,
+      fontSize: 15
+    },
+    data: ['외국인', '개인', '기관종합']
+  },
+  yAxis: {
+    type: 'value',
+    show: false
+  },
+  series: [
+    {
+      label: {
+        show: true,
+        position: "outside",
+        fontSize: 17,
+        formatter (param) {
+        	
+        	console.log(param)
+        	var v = param.data.value
+        	//return v
+        	
+        	return (v >= 0 ? param.name + '\n' : '') + numberWithCommas(v) + (v < 0 ? '\n' + param.name : '')
+        }
+      },
+      data: [
+        {
+          value: -2897,
+          itemStyle: {
+            color: 'blue'
+          },
+          label: {
+            show: true,
+            color: "blue"
+          }
+        },
+        {
+          value: 2915,
+          itemStyle: {
+            color: 'red'
+          },
+          label: {
+            show: true,
+            color: "red"
+          }
+        },
+        {
+          value: -149,
+          itemStyle: {
+            color: 'blue'
+          },
+          label: {
+            show: true,
+            color: "blue"
+          }
+        }
+      ],
+      type: 'bar'
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    //window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>

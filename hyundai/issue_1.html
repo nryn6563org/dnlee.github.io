@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>현대차증권</title>
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossorigin="crossorigin">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+            rel="stylesheet">
+        <link href="./css/font.css" rel="stylesheet">
+        <!-- // font css -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+            crossorigin="anonymous">
+        <!-- //bootstrap css -->
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
+        <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+        <!-- //swiper css -->
+        <link rel="stylesheet" href="./css/common.css">
+        <!-- // custom css -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+        <!-- //swiper js -->
+    </head>
+    <body>
+
+        <!-- header -->
+        <header id="header" class="sub">
+            <div>
+                <div>
+                    <button class="back"><img src="./img/header/icon-back.svg" alt="뒤로가기"></button>
+                    <h1 class="text-truncate">
+                        <span>오늘의 이슈 (종목명종목명종목명종목명)</span>
+                        <!-- <span><em>기관 관심 이슈</em> (종목명)</span> -->
+                    </h1>
+                </div>
+                <!-- // -->
+                <div>
+                    <button class="usr" data-bs-toggle="button">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewbox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M11.5342 3.6942C11.6997 3.2698 12.3003 3.2698 12.4658 3.6942L14.5047 8.92122C14.5744 9.09981 14.74 9.22285 14.9311 9.23796L20.3327 9.66506C20.7715 9.69976 20.9546 10.2437 20.626 10.5367L16.4583 14.2532C16.3218 14.3748 16.2627 14.5612 16.304 14.7393L17.5915 20.2929C17.6931 20.7311 17.2094 21.0701 16.8321 20.8251L12.2723 17.8641C12.1067 17.7565 11.8933 17.7565 11.7277 17.8641L7.16793 20.8251C6.79061 21.0701 6.30693 20.7311 6.40853 20.2929L7.69605 14.7393C7.73733 14.5612 7.67816 14.3748 7.54174 14.2532L3.37396 10.5367C3.04539 10.2437 3.22846 9.69976 3.66732 9.66506L9.0689 9.23796C9.26 9.22285 9.42564 9.09981 9.4953 8.92122L11.5342 3.6942Z"
+                                stroke="black"
+                                stroke-width="1.5"/>
+                        </svg>
+                    </button>
+                    <!-- // 즐겨찾기 -->
+
+                    <button class="usr" data-bs-toggle="button">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewbox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M17.5529 9.6506C17.5529 8.17781 16.9678 6.76533 15.9264 5.7239C14.885 4.68248 13.4725 4.09741 11.9997 4.09741C10.5269 4.09741 9.11444 4.68248 8.07301 5.7239C7.03158 6.76533 6.44652 8.17781 6.44652 9.6506C6.44652 16.1293 3.66992 17.9804 3.66992 17.9804H20.3295C20.3295 17.9804 17.5529 16.1293 17.5529 9.6506Z"
+                                stroke="black"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                            <path
+                                d="M13.6008 19.9805C13.4381 20.261 13.2045 20.4938 12.9235 20.6557C12.6425 20.8175 12.3239 20.9027 11.9996 20.9027C11.6753 20.9027 11.3567 20.8175 11.0757 20.6557C10.7947 20.4938 10.5612 20.261 10.3984 19.9805"
+                                stroke="black"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <!-- // 알림 -->
+                </div>
+                <!-- // -->
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- sub page header container안으로 들어감 -->
+
+        <article id="container">
+
+            <section class="cnm">
+                <div class="chart-w pt-20 pb-40">
+                    <div class="chart-graph">
+                        <img src="./img/issue/chart.png" alt="차트" width="100%">
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="chart-label mt-20">
+                        <span class="lb01">반도체</span>
+                        <span class="lb02">삼성전자가나다</span>
+                        <span class="lb03">마리화나</span>
+                        <span class="lb04">세아베스틸지주</span>
+                        <span class="lb05">성산양회</span>
+                        <span class="lb06">대한전선</span>
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- // -->
+
+
+                <div class="txtbox pb-40">
+                    <div class="bg-box">
+                        <div class="top text-truncate-2">
+                            <span>마이크론, 뉴욕 반도체 공장 설립에 1천억달러 투자 계획이 다 있구나마이크론, 뉴욕 반도체 공장 설립에 1천억달러 투자 계획이 다 있구나</span>
+                        </div>
+                        <!-- // -->
+
+                        <div class="txt">
+                            <span>
+                                미국 메모리 반도체 제조사인 마이크론 테크놀로지(NAS:MU)가 뉴욕에 반도체 공장을 짓기 위해 최대 1천억 달러를 투자할 예정이라고 밝혔다. 4일(현지시간) 뉴욕타임스에 따르면 마이크론은 이날 뉴욕주에 새로운 컴퓨터 반도체 공장을 건설하는 데 앞으로 20년 이상 최대 1천억 달러를 투자할 계획이라고 말했다. 미국에서 반도체 법이 통과한 이후 기업들이 속속 미국내 투자를 강화하고 있다고 한다. 
+                            </span>
+                            <!-- 
+                                8줄기준 말줄임이 들어감. 
+                             -->
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- // -->
+
+
+
+                <div class="swipe-box pb-40">
+                    <div class="issue-card-box bordered">
+                        <div class="title">
+                            <span class="fw-400"><em class="visual">#네옴시티</em> 관련종목</span>
+                            <em>2022.03.03 기준</em>
+                        </div>
+                        <!-- // -->
+
+                        <div class="list-w">
+                            <div class="list">
+                                <a href="./item.html">
+                                    <div class="top">
+                                        <div class="name">현대차증권</div>
+                                        <!-- //name -->
+                                        
+                                        <div class="per">
+                                            <span class="up">+21.62%</span>
+                                        </div>
+                                        <!-- //per -->
+                                    </div>
+                                    <!-- //top -->
+                                    
+                                    <div class="txt text-truncate">
+                                        코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고
+                                    </div>
+                                    <!-- //txt -->
+                                </a>
+                            </div>
+                            <!-- // list-->
+                            <div class="list">
+                                <a href="./item.html">
+                                    <div class="top">
+                                        <div class="name">현대차증권</div>
+                                        <!-- //name -->
+                                        
+                                        <div class="per">
+                                            <span class="dn">+21.62%</span>
+                                        </div>
+                                        <!-- //per -->
+                                    </div>
+                                    <!-- //top -->
+                                    
+                                    <div class="txt text-truncate">
+                                        코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고
+                                    </div>
+                                    <!-- //txt -->
+                                </a>
+                            </div>
+                            <!-- // list-->
+                            <div class="list">
+                                <a href="./item.html">
+                                    <div class="top">
+                                        <div class="name">현대차증권</div>
+                                        <!-- //name -->
+                                        
+                                        <div class="per">
+                                            <span class="up">+21.62%</span>
+                                        </div>
+                                        <!-- //per -->
+                                    </div>
+                                    <!-- //top -->
+                                    
+                                    <div class="txt text-truncate">
+                                        코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고
+                                    </div>
+                                    <!-- //txt -->
+                                </a>
+                            </div>
+                            <!-- // list-->
+                            <div class="list">
+                                <a href="./item.html">
+                                    <div class="top">
+                                        <div class="name">현대차증권</div>
+                                        <!-- //name -->
+                                        
+                                        <div class="per">
+                                            <span class="up">+21.62%</span>
+                                        </div>
+                                        <!-- //per -->
+                                    </div>
+                                    <!-- //top -->
+                                    
+                                    <div class="txt text-truncate">
+                                        코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고
+                                    </div>
+                                    <!-- //txt -->
+                                </a>
+                            </div>
+                            <!-- // list-->
+                            <div class="list">
+                                <a href="./item.html">
+                                    <div class="top">
+                                        <div class="name">현대차증권</div>
+                                        <!-- //name -->
+                                        
+                                        <div class="per">
+                                            <span class="up">+21.62%</span>
+                                        </div>
+                                        <!-- //per -->
+                                    </div>
+                                    <!-- //top -->
+                                    
+                                    <div class="txt text-truncate">
+                                        코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고
+                                    </div>
+                                    <!-- //txt -->
+                                </a>
+                            </div>
+                            <!-- // list-->
+                        </div>
+                        <!-- //list-w -->
+                        
+
+                        <div class="more">
+                            <button>더보기</button>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- // -->
+
+
+            </section>
+            <!-- // -->
+
+            <section class="cnm cnm-bg pb-40">
+                <div class="title mt-40">
+                    <span class="fw-400">기관과 외국인이 <br>관심을 갖는 이슈는?</span>
+                </div>
+                <!-- // -->
+
+                <ul class="nav cnm-tab mt-20" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" aria-current="page" href="#agency" data-bs-toggle="tab" data-bs-target="#agency" role="tab">기관</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" aria-current="page" href="#foreigner" data-bs-toggle="tab" data-bs-target="#foreigner" role="tab">외국인</a>
+                    </li>
+                </ul>
+                <!-- // -->
+
+                <div class="tab-content">
+                    <div id="agency" class="tab-pane fade active show">
+                        <div class="tag-link mt-20">
+                            <div class="link">
+                                <a href="./issue_2.html"># 수급포착테마</a>
+                            </div>
+                            <!-- // -->
+            
+                            <div class="link">
+                                <a href="./issue_2.html"># 전일시간 외 급등주</a>
+                            </div>
+                            <!-- // -->
+            
+                            <div class="link">
+                                <a href="./issue_2.html"># 검색 상위 신규 등장</a>
+                            </div>
+                            <!-- // -->
+            
+                            <div class="link">
+                                <a href="./issue_2.html"># 장중수급포착</a>
+                            </div>
+                            <!-- // -->
+                            
+                            <div class="link">
+                                <a href="./issue_2.html"># 장중수급포착</a>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+                    <div id="foreigner" class="tab-pane fade">
+                        <div class="tag-link mt-20">
+                            <div class="link">
+                                <a href="./issue_2.html"># 수급포착테마</a>
+                            </div>
+                            <!-- // -->
+            
+                            <div class="link">
+                                <a href="./issue_2.html"># 전일시간 외 급등주</a>
+                            </div>
+                            <!-- // -->
+            
+                            <div class="link">
+                                <a href="./issue_2.html"># 검색 상위 신규 등장</a>
+                            </div>
+                            <!-- // -->
+            
+                            <div class="link">
+                                <a href="./issue_2.html"># 장중수급포착</a>
+                            </div>
+                            <!-- // -->
+
+                            <div class="link">
+                                <a href="./issue_2.html"># 장중수급포착</a>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- // -->
+            </section>
+            <!-- // -->
+
+
+            <section class="cnm">
+                <div class="guide">
+                    <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+                    <!-- // -->
+
+                    <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+                    <!-- // -->
+
+                    <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+                    <!-- // -->
+                </div>
+                <!-- //guide -->
+            </section>
+            <!-- // -->
+        </article>
+        <!-- //container -->
+
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+        <!-- //bootstrap js html최하단에 두어주세요!!! -->
+    </body>
+</html>

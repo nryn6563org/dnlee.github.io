@@ -1,0 +1,15 @@
+button{
+    &.bg{
+        &-white{
+            background:#fff;
+            color:#141414;
+            border:1px solid #d7d7d7;
+        }
+        &-blue{
+            background:#3F54C3;
+            color:#fff;
+        }
+    }
+}
+
+@import 'fixedButton.scss';

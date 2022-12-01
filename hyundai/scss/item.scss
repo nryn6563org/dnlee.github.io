@@ -1,0 +1,15 @@
+.c-item{
+    position:relative;
+    width:100%;
+    //height:100%;
+    //min-height:470px;
+    float:left;
+    background:#f5f5f5;
+    overflow:hidden;
+}
+
+
+@import './item/info.scss';
+@import './item/additional.scss';
+@import './item/cardnews.scss';
+@import './item/tbarea.scss';

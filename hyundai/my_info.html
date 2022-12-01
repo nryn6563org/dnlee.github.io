@@ -1,0 +1,561 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <title>현대차증권</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="./css/font.css" rel="stylesheet">
+    <!-- // font css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- //bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+    <!-- //swiper css -->
+    <link rel="stylesheet" href="./css/common.css">
+    <!-- // custom css -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+    <!-- //swiper js -->
+  </head>
+  <body>
+
+    <!-- header -->
+    <header id="header">
+        <div>
+            <div>
+                <button class="back"><img src="./img/header/icon-back.svg" alt="뒤로가기"></button>
+                <h1>MY투자정보</h1>
+            </div>
+            <!-- // -->
+            <div>
+                <!-- <button class="search"><img src="./img/header/icon-search.svg" alt="검색"></button>
+                <a href="#">MY</a> -->
+            </div>
+            <!-- // -->
+        </div>
+    </header>
+    <!-- //header -->
+
+    <article id="container">
+
+        <section class="cnm">
+            <ul class="nav cnm-tab p-0 none-bordered shadow-bottom">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#page01" data-bs-toggle="tab" data-bs-target="#page01">MY종목</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#page02" data-bs-toggle="tab" data-bs-target="#page02">종목알림</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#page03" data-bs-toggle="tab" data-bs-target="#page03">AI추천알림</a>
+                </li>
+            </ul>
+            <!-- //tab -->
+
+            <div class="tab-content">
+                <div class="tab-pane fade active show" id="page01">
+                    <div class="alarm-setting-info">
+                        <div>
+                            <div>
+                                MY종목 <span class="fw-500"><em>10</em>/50</span>
+                            </div>
+                            <div>
+                                알림 <span class="fw-500"><em>3</em>/10</span>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div>
+                            <a href="javascript:;" data-bs-toggle="modal" data-bs-target="#setting">종목설정</a>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="alarm-setting-list">
+                        <div class="list-w">
+                            <div class="list on">
+                                <a href="./item_alarm.html">박셀바이오</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list on">
+                                <a href="./item_alarm.html">현대차증권</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">노터스</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">에코프로</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">한국비엔씨</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">HK이노엔</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">현대모비스</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">현대위아</a>
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <a href="./item_alarm.html">현대제철</a>
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <!-- <div class="empty alarm">
+                        등록된 종목이 없습니다. <br>
+                        <em class="dn">AI투자정보>종목홈</em> 에서 등록할 수 있습니다. 
+                    </div> -->
+                </div>
+                <!-- // -->
+
+                <div class="tab-pane fade" id="page02">
+                    <div class="alarm-check-list">
+                        <div class="list-w">
+                            <div class="list">
+                                <span>장마감 종목요약 (16:00)</span>
+                                <div class="sw-w">
+                                    <input type="checkbox" id="check01" checked>
+                                    <label for="check01" class="switch_label">
+                                        <span class="onf_btn"></span>
+                                    </label>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <span>종목 특이사항</span>
+                                <div class="sw-w">
+                                    <input type="checkbox" id="check02">
+                                    <label for="check02" class="switch_label">
+                                        <span class="onf_btn"></span>
+                                    </label>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="alarm-check-button">
+                        <div class="check">
+                            <span>주요 공시 알림</span>
+                            <div class="sw-w">
+                                <input type="checkbox" id="checking">
+                                <label for="checking" class="switch_label">
+                                    <span class="onf_btn"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="button-list">
+                            <button class="active" role="button" data-bs-toggle="button"><span>수주공시</span></button>
+                            <button class="" role="button" data-bs-toggle="button"><span>실적공시</span></button>
+                            <button class="small" role="button" data-bs-toggle="button"><span>주요경영사항</span></button>
+                            <button class="small" role="button" data-bs-toggle="button"><span>전환사채발행</span></button>
+                            <button class="small" role="button" data-bs-toggle="button"><span>신규시설투자</span></button>
+                            <button class="" role="button" data-bs-toggle="button"><span>지분공시</span></button>
+                            <button class="small" role="button" data-bs-toggle="button"><span>풍문보도해명</span></button>
+                            <button class="" role="button" data-bs-toggle="button"><span>유/무상증자</span></button>
+                            <button class="small" role="button" data-bs-toggle="button"><span>자기주식<br>취득/처분</span></button>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="fixed-button">
+                        <button data-bs-target="#notItem" data-bs-toggle="modal">종목 설정 하기</button>
+                    </div>
+                    <!-- // -->
+                </div>
+                <!-- // -->
+
+                <div class="tab-pane fade" id="page03">
+                    <div class="alarm-check-list">
+                        <div class="list-w">
+                            <div class="list">
+                                <span>AI 국내 추천 종목 (09:30)</span>
+                                <div class="sw-w">
+                                    <input type="checkbox" id="check011" checked>
+                                    <label for="check011" class="switch_label">
+                                        <span class="onf_btn"></span>
+                                    </label>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                            <div class="list">
+                                <span>AI 미국 추천 종목 (21:00)</span>
+                                <div class="sw-w">
+                                    <input type="checkbox" id="check022">
+                                    <label for="check022" class="switch_label">
+                                        <span class="onf_btn"></span>
+                                    </label>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                    </div>
+                    <!-- // -->
+
+                    <div class="alarm-check-button pb-22">
+                        <div class="check">
+                            <span>AI 포트폴리오 매매신호</span>
+                            <div class="sw-w">
+                                <input type="checkbox" id="checking2">
+                                <label for="checking2" class="switch_label">
+                                    <span class="onf_btn"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="button-list">
+                            <button class="active" role="button" data-bs-toggle="button"><span>수주공시</span></button>
+                            <button class="" role="button" data-bs-toggle="button"><span>실적공시</span></button>
+                            <button class="small" role="button" data-bs-toggle="button"><span>주요경영사항</span></button>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+
+                    <div class="alarm-more-list">
+                        <div>
+                            <a href="#">
+                                <span>AI 국내 추천 종목 상세보기</span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="#">
+                                <span>AI 미국 추천 종목 상세 보기</span>
+                            </a>
+                        </div>
+
+                        <div>
+                            <a href="#">
+                                <span>AI 포트폴리오 추천  보기</span>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- // -->
+            </div>
+        </section>
+        <!-- // -->
+
+
+        <!-- Modal -->
+        <div class="modal custom-modal01 fade" id="notItem">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <div class="modal-txt text-start">
+                            AI추천알림은 가입 후 이용 가능합니다. <br>
+                            가입하시겠습니까?
+                        </div>
+                        <!-- // text -->
+
+                        <div class="modal-button joinable">
+                            <button class="bg-white" data-bs-dismiss="modal">취소</button>
+                            <button class="bg-blue">가입하기</button>
+                        </div>
+                        <!-- // button -->
+
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+        <div class="modal fade" id="setting" aria-hidden="true" aria-labelledby="종목설정">
+            <div class="modal-dialog modal-fullscreen">
+                <div class="modal-content">
+                    <section class="cnm">
+                        <div class="subTitle">
+                            <h1>MY 종목 설정</h1>
+                            <a href="javascript:;" data-bs-dismiss="modal">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+            
+                    </section>
+                    <!-- // -->
+            
+                    <section class="cnm h-100 overflow-auto">
+                        <div class="alarm-setting-info">
+                            <div class="allcheck">
+                                <input type="checkbox" id="alck">
+                                <label for="alck">전체선택 (10/100)</label>
+                            </div>
+                            <!-- // -->
+            
+                            <div>
+                                <div>
+                                    알림 설정<span class="fw-500">(<em>3</em>/10)</span>
+                                </div>
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+            
+                        <div class="alarm-setting-list pb-150">
+                            <div class="list-w">
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list01">
+                                        <label for="list01">박셀바이오</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check001" >
+                                        <label for="check001" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list02">
+                                        <label for="list02">현대차증권</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check002" >
+                                        <label for="check002" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list03">
+                                        <label for="list03">노터스</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check003" >
+                                        <label for="check003" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list04">
+                                        <label for="list04">에코프로</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check004" >
+                                        <label for="check004" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list05">
+                                        <label for="list05">한국비엔씨</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check005" >
+                                        <label for="check005" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list06">
+                                        <label for="list06">HK이노엔</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check006" >
+                                        <label for="check006" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list07">
+                                        <label for="list07">현대모비스</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check007" >
+                                        <label for="check007" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list08">
+                                        <label for="list08">현대위아</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check008" >
+                                        <label for="check008" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                                <div class="list">
+                                    <div class="item-check">
+                                        <input type="checkbox" id="list09">
+                                        <label for="list09">현대제철</label>
+                                    </div>
+                                    
+                                    <div class="sw-w">
+                                        <input type="checkbox" id="check009" >
+                                        <label for="check009" class="switch_label">
+                                            <span class="onf_btn"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <!-- // -->
+                            </div>
+                        </div>
+                        <!-- // -->
+            
+                        <div class="fixed-button pt-15 pb-15 bottom-0 bg-w">
+                            <button data-bs-target="#itemDel" data-bs-toggle="modal">선택 종목 삭제</button>
+                        </div>
+                        <!-- // -->
+            
+                    </section>
+                    <!-- // -->
+                </div>
+            </div>
+        </div>
+        <!-- // -->
+
+        <!-- Modal -->
+        <div class="modal custom-modal01 fade" id="">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <div class="modal-txt text-start">
+                            등록된 종목이 없습니다. <br>
+                            AI투자정보 > 종목홈에서 종목을 등록한 후 <br>
+                            알림을 설정해주세요.
+                        </div>
+                        <!-- // text -->
+
+                        <div class="modal-button">
+                            <button class="bg-blue w-100" data-bs-dismiss="modal">가입하기</button>
+                        </div>
+                        <!-- // button -->
+
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+        <!-- Modal -->
+        <div class="modal custom-modal01 fade" id="itemDel">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <div class="modal-txt text-start">
+                            선택한 종목을 삭제하시겠습니까?
+                        </div>
+                        <!-- // text -->
+
+                        <div class="modal-button">
+                            <button class="bg-white" data-bs-dismiss="modal">취소</button>
+                            <button class="bg-blue" data-bs-target="#del" data-bs-toggle="modal">삭제하기</button>
+                        </div>
+                        <!-- // button -->
+
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+        <!-- Modal -->
+        <div class="modal custom-modal01 fade" id="del">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+
+                        <div class="modal-txt text-start">
+                            선택한 종목을 삭제하였습니다.
+                        </div>
+                        <!-- // text -->
+
+                        <div class="modal-button">
+                            <button class="bg-blue w-100" data-bs-dismiss="modal">확인</button>
+                        </div>
+                        <!-- // button -->
+
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+
+    </article>
+    <!-- //container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- //bootstrap js html최하단에 두어주세요!!! -->
+  </body>
+</html>
