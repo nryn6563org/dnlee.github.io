@@ -294,180 +294,190 @@
         </div>
         <!-- //modal -->
 
+        
         <div class="modal fade" id="setting" aria-hidden="true" aria-labelledby="종목설정">
             <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
-                    <section class="cnm">
-                        <div class="subTitle">
-                            <h1>MY 종목 설정</h1>
-                            <a href="javascript:;" data-bs-dismiss="modal">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-            
-                    </section>
-                    <!-- // -->
-            
-                    <section class="cnm h-100 overflow-auto">
-                        <div class="alarm-setting-info">
-                            <div class="allcheck">
-                                <input type="checkbox" id="alck">
-                                <label for="alck">전체선택 (10/100)</label>
+
+                    <div class="modal-body p-0">
+                        <section class="cnm">
+                            <div class="subTitle">
+                                <h1>MY 종목 설정</h1>
+                                <a href="javascript:;" data-bs-dismiss="modal">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </a>
                             </div>
-                            <!-- // -->
-            
-                            <div>
-                                <div>
-                                    알림 설정<span class="fw-500">(<em>3</em>/10)</span>
-                                </div>
-                            </div>
-                            <!-- // -->
-                        </div>
+                
+                        </section>
                         <!-- // -->
-            
-                        <div class="alarm-setting-list pb-150">
-                            <div class="list-w">
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list01">
-                                        <label for="list01">박셀바이오</label>
+                
+                        <section class="cnm h-100 overflow-auto">
+                            <div class="alarm-setting-info">
+                                <div class="allcheck">
+                                    <input type="checkbox" id="alck" value="all" v-model="allSelected">
+                                    <label for="alck">전체선택 (10/100)</label>
+                                </div>
+                                <!-- // -->
+                
+                                <div>
+                                    <div>
+                                        알림 설정<span class="fw-500">(<em>3</em>/10)</span>
                                     </div>
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                
+                            <div class="alarm-setting-list pb-150">
+                                <div class="list-w">
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list01">
+                                            <label for="list01">박셀바이오</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check001" >
+                                            <label for="check001" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                        <!-- // -->
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list02">
+                                            <label for="list02">현대차증권</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check002" >
+                                            <label for="check002" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list03">
+                                            <label for="list03">노터스</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check003" >
+                                            <label for="check003" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list04">
+                                            <label for="list04">에코프로</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check004" >
+                                            <label for="check004" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
                                     
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check001" >
-                                        <label for="check001" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list05">
+                                            <label for="list05">한국비엔씨</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check005" >
+                                            <label for="check005" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list06">
+                                            <label for="list06">HK이노엔</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check006" >
+                                            <label for="check006" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list07">
+                                            <label for="list07">현대모비스</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check007" >
+                                            <label for="check007" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list08">
+                                            <label for="list08">현대위아</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check008" >
+                                            <label for="check008" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <!-- // -->
+                                    <div class="list">
+                                        <div class="item-check">
+                                            <input type="checkbox" id="list09">
+                                            <label for="list09">현대제철</label>
+                                        </div>
+                                        
+                                        <div class="sw-w">
+                                            <input type="checkbox" id="check009" >
+                                            <label for="check009" class="switch_label">
+                                                <span class="onf_btn"></span>
+                                            </label>
+                                        </div>
                                     </div>
                                     <!-- // -->
                                 </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list02">
-                                        <label for="list02">현대차증권</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check002" >
-                                        <label for="check002" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list03">
-                                        <label for="list03">노터스</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check003" >
-                                        <label for="check003" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list04">
-                                        <label for="list04">에코프로</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check004" >
-                                        <label for="check004" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list05">
-                                        <label for="list05">한국비엔씨</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check005" >
-                                        <label for="check005" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list06">
-                                        <label for="list06">HK이노엔</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check006" >
-                                        <label for="check006" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list07">
-                                        <label for="list07">현대모비스</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check007" >
-                                        <label for="check007" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list08">
-                                        <label for="list08">현대위아</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check008" >
-                                        <label for="check008" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
-                                <div class="list">
-                                    <div class="item-check">
-                                        <input type="checkbox" id="list09">
-                                        <label for="list09">현대제철</label>
-                                    </div>
-                                    
-                                    <div class="sw-w">
-                                        <input type="checkbox" id="check009" >
-                                        <label for="check009" class="switch_label">
-                                            <span class="onf_btn"></span>
-                                        </label>
-                                    </div>
-                                </div>
-                                <!-- // -->
                             </div>
-                        </div>
+                            <!-- // -->
+                
+                            <div class="fixed-button pt-15 pb-15 bottom-0 bg-w">
+                                <button data-bs-target="#itemDel" data-bs-toggle="modal">선택 종목 삭제</button>
+                            </div>
+                            <!-- // -->
+                
+                        </section>
                         <!-- // -->
-            
-                        <div class="fixed-button pt-15 pb-15 bottom-0 bg-w">
-                            <button data-bs-target="#itemDel" data-bs-toggle="modal">선택 종목 삭제</button>
-                        </div>
-                        <!-- // -->
-            
-                    </section>
+                    </div>
                     <!-- // -->
+                    
                 </div>
             </div>
         </div>
