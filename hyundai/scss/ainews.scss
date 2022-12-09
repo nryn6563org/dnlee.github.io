@@ -6,6 +6,7 @@
 #detail{
     .modal-content{
         display:block;
+        overflow-y:auto;
     }
 }
 .detail{
@@ -66,7 +67,7 @@
     &-con{
         display:block;
         width:100%;
-        height:calc(100% - 180px);
+        height:calc(100% - 250px);
         float:left;
         font-size:13px;
         line-height:19px;
