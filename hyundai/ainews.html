@@ -477,7 +477,7 @@
                                     let widW = document.querySelector('.newsBeforeTag .nav').offsetWidth;
                                     if(this.offsetLeft > widW/2){
                                         document.querySelector('.newsBeforeTag .nav').scrollTo({
-                                            left: this.offsetLeft , 
+                                            left: this.offsetLeft - 50 , 
                                             behavior : 'smooth'
                                         })
                                     }else if(this.offsetLeft <= widW/2){
