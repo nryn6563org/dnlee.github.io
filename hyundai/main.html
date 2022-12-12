@@ -22,7 +22,7 @@
     <!-- //swiper js -->
   </head>
   <body>
-
+    
     <!-- header -->
     <header id="header">
         <div>
@@ -32,7 +32,7 @@
             </div>
             <!-- // -->
             <div>
-                <button class="search"><img src="./img/header/icon-search.svg" alt="검색"></button>
+                <button class="search"><img src="./img/header/icon-search.svg" alt="검색" data-bs-toggle="modal" data-bs-target="#search"></button>
                 <a href="./my_info.html">MY</a>
             </div>
             <!-- // -->
@@ -153,7 +153,7 @@
 
             <div class="swiper swipe-box">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide issue-card-box mt-20">
+                    <div class="swiper-slide issue-card-box mt-20 border-f0">
                         <div class="title">
                             <span>핫이슈 종목</span>
                             <em>2022.03.03 기준</em>
@@ -252,7 +252,7 @@
                     </div>
                     <!-- //issue-card-box -->
 
-                    <div class="swiper-slide issue-card-box mt-20">
+                    <div class="swiper-slide issue-card-box mt-20 border-f0">
                         <div class="title">
                             <span>외국인 비중 확대</span>
                             <em>2022.03.03 기준</em>
@@ -350,7 +350,7 @@
                     </div>
                     <!-- //issue-card-box -->
 
-                    <div class="swiper-slide issue-card-box mt-20">
+                    <div class="swiper-slide issue-card-box mt-20 border-f0">
                         <div class="title">
                             <span>기관 순매수 상위</span>
                             <em>2022.03.03 기준</em>
@@ -448,7 +448,7 @@
                     </div>
                     <!-- //issue-card-box -->
 
-                    <div class="swiper-slide issue-card-box mt-20">
+                    <div class="swiper-slide issue-card-box mt-20 border-f0">
                         <div class="title">
                             <span>외국인 순매수 상위</span>
                             <em>2022.03.03 기준</em>
@@ -1778,6 +1778,100 @@
                 <!-- //content -->
             </div>
             <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+        <!-- modal -->
+        <div class="modal fade" id="search">
+            <div class="modal-dialog modal-fullscreen">
+                <!-- content -->
+                <div class="modal-content">
+                    <!-- body -->
+                    <div class="modal-body p-0">
+                        <section class="cnm">
+                            <div class="subTitle">
+                                <h1>종목검색</h1>
+                                <a href="javascript:;" data-bs-dismiss="modal">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </section>
+                        <!-- // -->
+
+
+                        <section class="cnm">
+                            <div class="schArea">
+                                <form onsubmit="return false;" class="pure-form" >
+                                    <input id="advanced-demo" autofocus type="text" name="" placeholder="" style="">
+                                    <label for="advanced-demo">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414"/>
+                                        </svg>
+                                    </label>
+                                </form>
+                            </div>
+                            <script src="./js/auto-complete.js"></script>
+                            <script>
+                                new autoComplete({
+                                selector: '#advanced-demo',
+                                minChars: 0,
+                                source: function(term, suggest){
+                                    //$.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
+
+                                    term = term.toLowerCase();
+                                    var choices = [
+                                        ['Australia', 'au'], 
+                                        ['Austria', 'at'], 
+                                        ['Brasil', 'br'], 
+                                        ['Bulgaria', 'bg'], 
+                                        ['Canada', 'ca'], 
+                                        ['China', 'cn'], 
+                                        ['Czech Republic', 'cz'], 
+                                        ['Denmark', 'dk'], 
+                                        ['Finland', 'fi'],
+                                        ['France', 'fr'], 
+                                        ['Germany', 'de'], 
+                                        ['Hungary', 'hu'], 
+                                        ['India', 'in'], 
+                                        ['Italy', 'it'], 
+                                        ['Japan', 'ja'], 
+                                        ['Netherlands', 'nl'], 
+                                        ['Norway', 'no'], 
+                                        ['Portugal', 'pt'], 
+                                        ['Romania', 'ro'], 
+                                        ['Russia', 'ru'], 
+                                        ['Spain', 'es'], 
+                                        ['Swiss', 'ch'], 
+                                        ['Turkey', 'tr'], 
+                                        ['USA', 'us']
+                                    ];
+                                    var suggestions = [];
+                                    for (i=0;i<choices.length;i++)
+                                        if (~(choices[i][0]+' '+choices[i][1]).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                                    suggest(suggestions);
+                                },
+                                renderItem: function (item, search){
+                                    search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
+                                    var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
+                                    return '<div class="autocomplete-suggestion" data-langname="' + item[0] + '" data-lang="' + item[1]+ '" data-val="' + search +'">' + item[0].replace(re, "<b>$1</b>") + '</div>';
+                                },
+                                onSelect: function(e, term, item){
+                                    console.log('Item "'+item.getAttribute('data-langname')+' ('+item.getAttribute('data-lang')+')" selected by '+(e.type == 'keydown' ? 'pressing enter' : 'mouse click')+'.');
+                                    document.getElementById('advanced-demo').value = item.getAttribute('data-langname')+' ('+item.getAttribute('data-lang')+')';
+                                }
+                                });
+                            </script>
+                        </section>
+                        <!-- // -->
+
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
         </div>
         <!-- //modal -->
 

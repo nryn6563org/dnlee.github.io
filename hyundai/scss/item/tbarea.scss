@@ -1,9 +1,21 @@
 .tbArea-w{
+    position:relative;
+    top:0;
     display:block;
     width:100%;
-    height:auto;
+    height:100%;
     border-radius: 20px 20px 0 0;
-    //overflow: hidden;
+    overflow: hidden;
+    float:left;
+    background:#fff;;
+    margin-top:-150px;
+    touch-action: pan-y;
+    z-index: 12;
+    transition: margin .3s ease-in-out;
+
+    &.open{
+        margin-top:calc(-100vh + 50px);
+    }
 }
 #tbArea{
     position: relative; 
@@ -12,7 +24,7 @@
     width:100%;
     height:auto;
     padding: 0;
-    background:#fff;
+    //background:#fff;
     border-radius: 20px 20px 0 0;
     float:left;
    

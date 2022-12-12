@@ -499,6 +499,10 @@
         left:auto;
         bottom:auto;
         float:left;
+
+        .swiper-pagination-bullet-active{
+            background:#000;
+        }
     }
 }
 .local-more{

@@ -285,12 +285,12 @@
                         <div id="area01" class="tab-pane fade active show " role="tabpanel" tabindex="0">
                             <div class="chart-w">
                                 <div class="chart">
-                                    <img src="./img/item/bubble.png" alt="" width="100%">
+                                    <img src="./img/item/chart.png" alt="" width="100%">
                                 </div>
                                 <!-- // 임의 영역 -->
 
                                 <div class="date">
-                                    <span>09.15 10:30 기준</span>
+                                    <span>09.15 10:30 기준(단위 억단위)</span>
                                 </div>
                                 <!-- // -->
                             </div>
@@ -858,26 +858,27 @@
 
                         <div id="area05" class="tab-pane fade " role="tabpanel" tabindex="0"></div>
                         <!-- //기술진단 -->
+
+                        <section class="cnm">
+                            <div class="guide">
+                                <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+                                <!-- // -->
+        
+                                <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+                                <!-- // -->
+        
+                                <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+                                <!-- // -->
+                            </div>
+                            <!-- //guide -->
+                        </section>
+                        <!-- // -->
                     </div>
 
                 </section>
+                
             </div>
             <!-- // 상하 움직입 -->
-
-            <section class="cnm">
-                <div class="guide">
-                    <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
-                    <!-- // -->
-
-                    <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
-                    <!-- // -->
-
-                    <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
-                    <!-- // -->
-                </div>
-                <!-- //guide -->
-            </section>
-            <!-- // -->
 
             <script>
                 //메뉴 좌우 스크롤
@@ -888,6 +889,10 @@
                     const menu = snavi[i];
 
                     menu.addEventListener('click', function (e) {
+
+                        document.querySelector('.areaContent').scrollTo(0, 0);
+
+
                         document.querySelector('.smenu.active').classList.remove('active');
                         this.classList.add('active');
                         let widW = document.querySelector('.navi-s .nav').offsetWidth;
@@ -904,6 +909,53 @@
                         }
                     });
                 }
+                /////////////////////////////////////////////
+
+                //쓸어올리기 
+                let touchStartY = 0
+                const swipeArea = document.querySelector('#tbArea header')
+                const swipeAreaW = document.querySelector('.tbArea-w')
+                // 이벤트 초기화
+                const endExpension = (ev) => {
+                    // const lastTouchY = ev.changedTouches[0].clientY
+                    swipeArea.removeEventListener('touchmove', doExpansion)
+                    swipeAreaW.style.top = 0
+                }
+                // touchmove 시 마진값 조절
+                const doExpansion = (ev) => {
+                    // console.log(ev, touchStartY)
+                    const movedY = ev.changedTouches[0].clientY
+                    swipeArea.addEventListener('touchend', endExpension)
+                    if(swipeAreaW.classList.contains('open')) {
+                        if(touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
+                            swipeArea.removeEventListener('touchmove', doExpansion)
+                            swipeAreaW.style.top = 0
+                            swipeAreaW.classList.remove('open')
+                        }
+                    } else if(!swipeAreaW.classList.contains('open')) {
+                        if(touchStartY - movedY > 80) {
+                            swipeArea.removeEventListener('touchmove', doExpansion)
+                            swipeAreaW.style.top = 0
+                            swipeAreaW.classList.add('open')
+                        } else if(touchStartY - movedY < -80) {
+                            ev.preventDefault()
+                            if(!swipeAreaW.classList.contains('bounce')) swipeAreaW.classList.add('bounce')
+                            setTimeout(() => {
+                                swipeAreaW.classList.remove('bounce')
+                            }, 140)
+                        }
+                    }
+                }
+                // touchstart 최초 좌표반환
+                const addHeight = (ev) => {
+                    touchStartY = ev.changedTouches[0].clientY
+                    swipeArea.addEventListener('touchmove', doExpansion)
+                }
+                swipeArea.addEventListener('touchstart', addHeight)
+
+
+                /////////////////////////////////////////
+
             </script>
 
             <div class="fixed-button">
