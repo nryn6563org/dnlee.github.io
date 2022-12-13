@@ -158,7 +158,7 @@
             </div>
             <!-- // swipe card -->
             <script>
-                var swiper = new Swiper(".swiper-card", {
+                const swiper = new Swiper(".swiper-card", {
                     spaceBetween: 20,
                     pagination: {
                         el: ".swiper-pagination",
@@ -574,7 +574,7 @@
             </div>
             <!-- // -->
             <script>
-                var swiper = new Swiper(".swipe-box", {
+                const swiper = new Swiper(".swipe-box", {
                     spaceBetween: 20,
                     pagination: {
                         el: ".swiper-pagination",
@@ -892,7 +892,7 @@
                     </div>
                     <!-- //swipe-card -->
                     <script>
-                        var swiper = new Swiper("#kor .swiper", {
+                        const swiper = new Swiper("#kor .swiper", {
                             spaceBetween: 20,
                             pagination: {
                                 el: ".swiper-pagination",
@@ -1041,7 +1041,7 @@
                     <!-- //swipe-card -->
 
                     <script>
-                        var swiper = new Swiper("#usa .swiper", {
+                        const swiper = new Swiper("#usa .swiper", {
                             spaceBetween: 20,
                             pagination: {
                                 el: ".swiper-pagination",
@@ -1839,7 +1839,7 @@
                                         //$.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
     
                                         term = term.toLowerCase();
-                                        var choices = [
+                                        const choices = [
                                             ["000000", "삼성SDI"],
                                             ["000000", "삼성SDI우"],
                                             ["000000", "삼성공조"],
@@ -1865,14 +1865,14 @@
                                             ["000000", "CJ ENM"],
                                             ["000000", "위메이드"],
                                         ];
-                                        var suggestions = [];
+                                        const suggestions = [];
                                         for (i=0;i<choices.length;i++)
                                             if (~(choices[i][0]+' '+choices[i][1]).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
                                         suggest(suggestions);
                                     },
                                     renderItem: function (item, search){
                                         search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
-                                        var re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
+                                        const re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
                                         return '<div class="autocomplete-suggestion" data-number="' + item[0] + '" data-lang="' + item[1]+ '" data-val="' + search +'">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, "<em>$1</em>") + '</span>' + '</div>';
                                     },
                                     onSelect: function(e, term, item){
