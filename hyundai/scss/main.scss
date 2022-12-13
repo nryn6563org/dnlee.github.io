@@ -28,9 +28,26 @@
             color:#141414;
             font-weight:700;
             float:left;
+
+            em{
+                position:relative;
+                display:inline-block;
+                z-index:2;
+
+                &::after{
+                    position:absolute;
+                    content:'';
+                    bottom:0;
+                    left:0;
+                    width:100%;
+                    height:14px;
+                    background:#e0e9ff;
+                    z-index:-1;
+                }
+            }
         }
 
-        em{
+        &>em{
             display:block;
             width:100%;
             font-size:10px;
