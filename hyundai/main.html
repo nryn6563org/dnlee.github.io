@@ -1981,7 +1981,7 @@
                     const witchTop = section[i].getBoundingClientRect().top + document.querySelector('html').scrollTop - 50;
                     console.log(window.scrollY + "," + witchTop)
 
-                    if(document.querySelector('html').scrollTop >= witchTop){
+                    if(document.querySelector('html').scrollTop >= witchTop +50){
                         document.querySelector('h1').innerHTML = changeTitle[i].innerHTML;
                     }else if(document.querySelector("html").scrollTop == 0){
                         document.querySelector('h1').innerHTML = "투자정보";
