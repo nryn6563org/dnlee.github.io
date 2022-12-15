@@ -62,6 +62,7 @@
         <!-- // -->
 
         <section class="cnm pb-34">
+            <h2 class="fixed-title">시장의 이슈</h2>
             <div class="title mt-20">
                 <span><em>시장의 이슈</em>를<br>확인해 보세요.</span>
                 <em>2022.03.03 기준</em>
@@ -169,6 +170,7 @@
         <!-- // -->
 
         <section class="cnm cnm-bg pb-34">
+            <h2 class="fixed-title">시장 특징주</h2>
             <div class="title mt-40">
                 <span><em>시장 특징주</em>를 <br>확인해 보세요.</span>
             </div>
@@ -586,6 +588,7 @@
         <!-- // -->
 
         <section class="cnm">
+            <h2 class="fixed-title">기술주를 확인</h2>
             <div class="title mt-40">
                 <span>금주의 저평가된 <br><em>기술주를 확인</em>해 보세요.</span>
             </div>
@@ -717,6 +720,7 @@
         <!-- // -->
 
         <section class="cnm cnm-bg pb-40">
+            <h2 class="fixed-title">AI가 추천</h2>
             <div class="title mt-40">
                 <span><em>AI가 추천</em>하는 <br>관심종목입니다.</span>
             </div>
@@ -1069,6 +1073,7 @@
         <!-- // -->
 
         <section class="cnm pb-40">
+            <h2 class="fixed-title">주요 공시와 최신 리포트</h2>
             <div class="title mt-40">
                 <span><em>주요 공시와 최신 리포트</em>를 <br>확인해보세요.</span>
             </div>
@@ -1732,6 +1737,7 @@
         <!-- // -->
 
         <section class="cnm cnm-bg pb-40">
+            <h2 class="fixed-title">장 개시전 !</h2>
             <div class="title mt-40">
                 <span><em>장 개시전 !</em> <br>이런 주제는 어떠세요?</span>
             </div>
@@ -1960,7 +1966,29 @@
         </div>
         <!-- //modal -->
 
+        <script>
+            window.addEventListener('scroll', function(){
+                scrollMotion()
+            });
 
+            function scrollMotion(){
+                const title = document.querySelector('h1');
+                const changeTitle = document.querySelectorAll('.fixed-title');
+                const section = document.querySelectorAll('.cnm')
+                
+                
+                for (let i=0; i < changeTitle.length; i++){
+                    const witchTop = section[i].getBoundingClientRect().top + document.querySelector('html').scrollTop - 50;
+                    console.log(window.scrollY + "," + witchTop)
+
+                    if(document.querySelector('html').scrollTop >= witchTop){
+                        document.querySelector('h1').innerHTML = changeTitle[i].innerHTML;
+                    }else if(document.querySelector("html").scrollTop < section[0].getBoundingClientRect().top + document.querySelector('html').scrollTop - 50){
+                        document.querySelector('h1').innerHTML = "투자정보";
+                    }
+                }
+            }
+        </script>
     </article>
     <!-- //container -->
 

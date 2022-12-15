@@ -1,5 +1,6 @@
 // 공통
 //@import "font.scss";
+
 @import 'reset.scss'; //reset
 @import "fsize.scss"; //폰트사이즈
 @import "gap.scss"; //flex gap
@@ -14,7 +15,7 @@
 @import "sub.scss";
 
 body{
-  overscroll-behavior: none;
+  //overscroll-behavior: none;
 }
  .up *{
      color:#E81A1A ;
@@ -31,6 +32,9 @@ body{
   #container{
     display:block;
     width:100%;
+    max-width:640px;
+    margin:0 auto;
+    padding-top:50px;
 
     &.item{
       overflow:hidden;
@@ -127,3 +131,9 @@ body{
 .border-f0{
   border:1px solid #f0f0f0;
 }
+
+.fixed-title{
+  height:1px;
+  overflow:hidden;
+}
+
