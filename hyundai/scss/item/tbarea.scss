@@ -14,7 +14,7 @@
     transition: margin .3s ease-in-out;
 
     &.open{
-        margin-top:calc(-100vh + 100px);
+        margin-top:calc(((var(--vh, 1vh) * -100) + 50px));
     }
 }
 #tbArea{

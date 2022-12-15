@@ -912,16 +912,23 @@
                 /////////////////////////////////////////////
 
                 //쓸어올리기 
+
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty("--vh", `${vh}px`);
+
                 let touchStartY = 0
                 const swipeArea = document.querySelector('#tbArea header')
                 const swipeAreaW = document.querySelector('.tbArea-w')
+                
                 // 이벤트 초기화
                 const endExpension = (ev) => {
                     // const lastTouchY = ev.changedTouches[0].clientY
                     swipeArea.removeEventListener('touchmove', doExpansion)
                     swipeAreaW.style.top = 0
                 }
+
                 // touchmove 시 마진값 조절
+
                 const doExpansion = (ev) => {
                     // console.log(ev, touchStartY)
                     const movedY = ev.changedTouches[0].clientY
