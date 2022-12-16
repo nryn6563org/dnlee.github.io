@@ -77,3 +77,8 @@
         overflow-y:auto;
     }
 }
+
+#aiboxw{
+    height:calc(100% - 48px);
+    overflow:auto;
+}

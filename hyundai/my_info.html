@@ -42,7 +42,7 @@
 
     <article id="container">
 
-        <section class="cnm">
+        <section class="cnm h-100">
             <ul class="nav cnm-tab p-0 none-bordered shadow-bottom">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#page01" data-bs-toggle="tab" data-bs-target="#page01">MY종목</a>
@@ -58,7 +58,7 @@
             <!-- //tab -->
 
             <div class="tab-content">
-                <div class="tab-pane fade active show" id="page01">
+                <div class="tab-pane h-100 fade active show" id="page01">
                     <div class="alarm-setting-info">
                         <div>
                             <div>
@@ -126,7 +126,7 @@
                 </div>
                 <!-- // -->
 
-                <div class="tab-pane fade" id="page02">
+                <div class="tab-pane h-100 fade" id="page02">
                     <div class="alarm-check-list">
                         <div class="list-w">
                             <div class="list">
@@ -189,7 +189,7 @@
                 </div>
                 <!-- // -->
 
-                <div class="tab-pane fade" id="page03">
+                <div class="tab-pane h-100 fade" id="page03">
                     <div class="alarm-check-list">
                         <div class="list-w">
                             <div class="list">
@@ -314,7 +314,7 @@
                         </section>
                         <!-- // -->
                 
-                        <section class="cnm h-100 overflow-auto">
+                        <section class="cnm overflow-auto" style="height:calc(100% - 50px);">
                             <div class="alarm-setting-info">
                                 <div class="allcheck">
                                     <input type="checkbox" id="alck" value="all" v-model="allSelected">
@@ -331,7 +331,7 @@
                             </div>
                             <!-- // -->
                 
-                            <div class="alarm-setting-list pb-150">
+                            <div class="alarm-setting-list">
                                 <div class="list-w">
                                     <div class="list">
                                         <div class="item-check">
@@ -468,7 +468,7 @@
                             </div>
                             <!-- // -->
                 
-                            <div class="fixed-button pt-15 pb-15 bottom-0 bg-w">
+                            <div class="fixed-button">
                                 <button data-bs-target="#itemDel" data-bs-toggle="modal">선택 종목 삭제</button>
                             </div>
                             <!-- // -->

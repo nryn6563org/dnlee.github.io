@@ -1971,6 +1971,8 @@
                 scrollMotion()
             });
 
+            
+
             function scrollMotion(){
                 const title = document.querySelector('h1');
                 const changeTitle = document.querySelectorAll('.fixed-title');
@@ -1979,7 +1981,7 @@
                 
                 for (let i=0; i < changeTitle.length; i++){
                     const witchTop = section[i].getBoundingClientRect().top + document.querySelector('html').scrollTop - 50;
-                    console.log(window.scrollY + "," + witchTop)
+                    //console.log(window.scrollY + "," + witchTop)
 
                     if(document.querySelector('html').scrollTop >= witchTop +50){
                         document.querySelector('h1').innerHTML = changeTitle[i].innerHTML;

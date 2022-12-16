@@ -9,6 +9,7 @@
     width:100%;
     overflow:hidden;
     float:left;
+    scroll-snap-align: start;
 
     &-bg{
         background:#f8f8f8;
