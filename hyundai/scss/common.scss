@@ -138,3 +138,7 @@ body{
   height:1px;
   overflow:hidden;
 }
+
+.no-snap{
+  scroll-snap-align: none !important;
+}
