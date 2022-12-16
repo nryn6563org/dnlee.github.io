@@ -11,6 +11,10 @@
     float:left;
     scroll-snap-align: start;
 
+    &:first-of-type{
+        scroll-snap-align: none !important;
+    }
+
     &-bg{
         background:#f8f8f8;
     }

@@ -1,6 +1,7 @@
 .nomemsg{
     display:block;
     width:100%;
+    //scroll-snap-align: start;
 
     &>div{
         display:flex;
