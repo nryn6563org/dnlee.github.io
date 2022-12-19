@@ -38,163 +38,164 @@
             <!-- // -->
         </div>
 
-        <!-- modal -->
-        <div class="modal fade" id="search">
-            <div class="modal-dialog modal-fullscreen">
-                <!-- content -->
-                <div class="modal-content">
-                    <!-- body -->
-                    <div class="modal-body p-0">
-                        <section class="cnm">
-                            <div class="subTitle search pl-12 pr-14">
-                                <a href="javascript:;" data-bs-dismiss="modal">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                        <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                </a>
-
-                                <div class="schArea">
-                                    <form onsubmit="return false;" class="pure-form" >
-                                        <input id="advanced-demo" type="text" name="" placeholder="종목, 메뉴, 키워드 검색" style="">
-                                        <label for="advanced-demo">
-                                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414"/>
-                                            </svg>
-                                        </label>
-                                    </form>
-                                </div>
-                                <!-- // -->
-                                <script src="./js/auto-complete.js"></script>
-                                <script>
-                                    new autoComplete({
-                                    selector: '#advanced-demo',
-                                    minChars: 0,
-                                    source: function(term, suggest){
-                                        //$.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
-    
-                                        term = term.toLowerCase();
-                                        const choices = [
-                                            ["000000", "삼성SDI"],
-                                            ["000000", "삼성SDI우"],
-                                            ["000000", "삼성공조"],
-                                            ["000000", "삼성물산우B"],
-                                            ["000000", "삼성바이오로직스"],
-                                            ["000000", "삼성중공업"],
-                                            ["000000", "삼성전자"],
-                                            ["000000", "삼성생명보험"],
-                                            ["000000", "삼성디스플레이"],
-                                            ["000000", "삼성화재해상"],
-                                            ["000000", "삼성카드"],
-                                            ["000000", "제일기획"],
-                                            ["000000", "세메스"],
-                                            ["000000", "에스디플렉스"],
-                                            ["000000", "휴먼TCS"],
-                                            ["000000", "삼성전기"],
-                                            ["000000", "삼성엔지니어링"],
-                                            ["000000", "조선중공업"],
-                                            ["000000", "LG화학"],
-                                            ["000000", "한미약품"],
-                                            ["000000", "KB금융"],
-                                            ["000000", "포스코케미칼"],
-                                            ["000000", "CJ ENM"],
-                                            ["000000", "위메이드"],
-                                        ];
-                                        const suggestions = [];
-                                        for (i=0;i<choices.length;i++)
-                                            if (~(choices[i][0]+' '+choices[i][1]).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
-                                        suggest(suggestions);
-                                    },
-                                    renderItem: function (item, search){
-                                        search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
-                                        const re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
-                                        return '<div class="autocomplete-suggestion" data-number="' + item[0] + '" data-lang="' + item[1]+ '" data-val="' + search +'">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, "<em>$1</em>") + '</span>' + '</div>';
-                                    },
-                                    onSelect: function(e, term, item){
-                                        console.log('Item "'+item.getAttribute('data-number')+' ('+item.getAttribute('data-lang')+')" selected by '+(e.type == 'keydown' ? 'pressing enter' : 'mouse click')+'.');
-                                        document.getElementById('advanced-demo').value = item.getAttribute('data-lang');
-                                    }
-                                    });
-                                </script>
-                            </div>
-                            <!-- //subTitle -->
-                            
-                        </section>
-                        <!-- // -->
-
-                        <section class="cnm resultArea">
-
-                            <!-- <div class="empty-sch">
-                                <span>#<em>방산</em> 과(와) 관련된 종목이 검색되지 않았습니다.</span>
-                            </div> -->
-                            <!-- //  -->
-
-                            <div class="result">
-                                <div class="title"><span>검색결과</span></div>
-                                <div class="tagtxt">
-                                    <span>#<em>방산</em> 과(와) 관련된 종목을 검색했습니다.</span>
-                                </div>
-                            </div>
-                            <!-- // -->
-
-
-                            <div class="result">
-                                <div class="title">
-                                    <span>종목명종목명</span><em>000000</em>
-                                </div>
-                                <!-- //title -->
-
-                                <div class="cont">
-                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                                </div>
-                                <!-- //cont -->
-                            </div>
-                            <!-- // -->
-
-
-                            <div class="result">
-                                <div class="title">
-                                    <span>종목명종목명</span><em>000000</em>
-                                </div>
-                                <!-- //title -->
-
-                                <div class="cont">
-                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                                </div>
-                                <!-- //cont -->
-                            </div>
-                            <!-- // -->
-
-
-                            <div class="result">
-                                <div class="title">
-                                    <span>종목명종목명</span><em>000000</em>
-                                </div>
-                                <!-- //title -->
-
-                                <div class="cont">
-                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                                </div>
-                                <!-- //cont -->
-                            </div>
-                            <!-- // -->
-                        </section>
-                        <!-- //검색결과 -->
-
-                    </div>
-                    <!-- //body -->
-                </div>
-                <!-- //content -->
-            </div>
-        </div>
-        <!-- //modal -->
+        
     </header>
     <!-- //header -->
+    <!-- modal -->
+    <div class="modal fade" id="search">
+        <div class="modal-dialog modal-fullscreen">
+            <!-- content -->
+            <div class="modal-content">
+                <!-- body -->
+                <div class="modal-body p-0">
+                    <section class="cnm">
+                        <div class="subTitle search pl-12 pr-14">
+                            <a href="javascript:;" data-bs-dismiss="modal">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+
+                            <div class="schArea">
+                                <form onsubmit="return false;" class="pure-form" >
+                                    <input id="advanced-demo" type="text" name="" placeholder="종목, 메뉴, 키워드 검색" style="">
+                                    <label for="advanced-demo">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414"/>
+                                        </svg>
+                                    </label>
+                                </form>
+                            </div>
+                            <!-- // -->
+                            <script src="./js/auto-complete.js"></script>
+                            <script>
+                                new autoComplete({
+                                selector: '#advanced-demo',
+                                minChars: 0,
+                                source: function(term, suggest){
+                                    //$.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
+
+                                    term = term.toLowerCase();
+                                    const choices = [
+                                        ["000000", "삼성SDI"],
+                                        ["000000", "삼성SDI우"],
+                                        ["000000", "삼성공조"],
+                                        ["000000", "삼성물산우B"],
+                                        ["000000", "삼성바이오로직스"],
+                                        ["000000", "삼성중공업"],
+                                        ["000000", "삼성전자"],
+                                        ["000000", "삼성생명보험"],
+                                        ["000000", "삼성디스플레이"],
+                                        ["000000", "삼성화재해상"],
+                                        ["000000", "삼성카드"],
+                                        ["000000", "제일기획"],
+                                        ["000000", "세메스"],
+                                        ["000000", "에스디플렉스"],
+                                        ["000000", "휴먼TCS"],
+                                        ["000000", "삼성전기"],
+                                        ["000000", "삼성엔지니어링"],
+                                        ["000000", "조선중공업"],
+                                        ["000000", "LG화학"],
+                                        ["000000", "한미약품"],
+                                        ["000000", "KB금융"],
+                                        ["000000", "포스코케미칼"],
+                                        ["000000", "CJ ENM"],
+                                        ["000000", "위메이드"],
+                                    ];
+                                    const suggestions = [];
+                                    for (i=0;i<choices.length;i++)
+                                        if (~(choices[i][0]+' '+choices[i][1]).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                                    suggest(suggestions);
+                                },
+                                renderItem: function (item, search){
+                                    search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
+                                    const re = new RegExp("(" + search.split(' ').join('|') + ")", "gi");
+                                    return '<div class="autocomplete-suggestion" data-number="' + item[0] + '" data-lang="' + item[1]+ '" data-val="' + search +'">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, "<em>$1</em>") + '</span>' + '</div>';
+                                },
+                                onSelect: function(e, term, item){
+                                    console.log('Item "'+item.getAttribute('data-number')+' ('+item.getAttribute('data-lang')+')" selected by '+(e.type == 'keydown' ? 'pressing enter' : 'mouse click')+'.');
+                                    document.getElementById('advanced-demo').value = item.getAttribute('data-lang');
+                                }
+                                });
+                            </script>
+                        </div>
+                        <!-- //subTitle -->
+                        
+                    </section>
+                    <!-- // -->
+
+                    <section class="cnm resultArea">
+
+                        <!-- <div class="empty-sch">
+                            <span>#<em>방산</em> 과(와) 관련된 종목이 검색되지 않았습니다.</span>
+                        </div> -->
+                        <!-- //  -->
+
+                        <div class="result">
+                            <div class="title"><span>검색결과</span></div>
+                            <div class="tagtxt">
+                                <span>#<em>방산</em> 과(와) 관련된 종목을 검색했습니다.</span>
+                            </div>
+                        </div>
+                        <!-- // -->
+
+
+                        <div class="result">
+                            <div class="title">
+                                <span>종목명종목명</span><em>000000</em>
+                            </div>
+                            <!-- //title -->
+
+                            <div class="cont">
+                                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                            </div>
+                            <!-- //cont -->
+                        </div>
+                        <!-- // -->
+
+
+                        <div class="result">
+                            <div class="title">
+                                <span>종목명종목명</span><em>000000</em>
+                            </div>
+                            <!-- //title -->
+
+                            <div class="cont">
+                                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                            </div>
+                            <!-- //cont -->
+                        </div>
+                        <!-- // -->
+
+
+                        <div class="result">
+                            <div class="title">
+                                <span>종목명종목명</span><em>000000</em>
+                            </div>
+                            <!-- //title -->
+
+                            <div class="cont">
+                                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                            </div>
+                            <!-- //cont -->
+                        </div>
+                        <!-- // -->
+                    </section>
+                    <!-- //검색결과 -->
+
+                </div>
+                <!-- //body -->
+            </div>
+            <!-- //content -->
+        </div>
+    </div>
+    <!-- //modal -->
 
     <article id="container">
 
