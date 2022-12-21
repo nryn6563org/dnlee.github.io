@@ -9,10 +9,11 @@
     width:100%;
     overflow:hidden;
     float:left;
-    scroll-snap-align: start;
+    //scroll-snap-align: start;
+    //padding-top:50px;
 
     &:first-of-type{
-        scroll-snap-align: none !important;
+        //scroll-snap-align: none !important;
     }
 
     &-bg{
