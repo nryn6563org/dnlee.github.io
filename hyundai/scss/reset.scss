@@ -8,10 +8,6 @@
   }
   html,body{
     height:100%;
-    //overflow-y:scroll;
-    scroll-snap-type: y proximity;
-    scroll-padding-top: 50px;
-    scroll-snap-stop:always;
   }
   main {
     display: block;

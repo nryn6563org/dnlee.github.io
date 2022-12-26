@@ -1,3 +1,4 @@
+
 .c-item{
 
     .add{
@@ -6,7 +7,7 @@
         float:left;
         padding:22px 20px 0;
         gap:5px;
-        justify-content: space-between;
+        justify-content: flex-start;
 
         button{
             width:calc((100% - 10px) / 3);
