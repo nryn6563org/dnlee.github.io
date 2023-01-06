@@ -3,46 +3,47 @@
 @import "myItemAlarmSetting.scss";
 @import "ainews.scss";
 @import "charitem.scss";
+@import "major.scss";
 
-#subHeader{
-    position: sticky;
-    width:100%;
-    height:50px;
-    top:0;
-    z-index:999;
-    float:left;
+#subHeader {
+  position: sticky;
+  width: 100%;
+  height: 50px;
+  top: 0;
+  z-index: 999;
+  float: left;
 }
 
-#content{
-    position:relative;
-    width:100%;
-    float:left;
-    clear:left;
-    overflow:hidden;
+#content {
+  position: relative;
+  width: 100%;
+  float: left;
+  clear: left;
+  overflow: hidden;
 }
-.sub-title{
+.sub-title {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 25px;
+  line-height: 25px;
+  padding: 0 20px;
+  color: #141414;
+  font-weight: 500;
+
+  span {
     position: relative;
-    display:block;
-    width:100%;
-    height:25px;
-    line-height:25px;
-    padding:0 20px;
-    color:#141414;
-    font-weight:500;
+    font-size: 20px;
+  }
 
-    span{
-        position: relative;
-        font-size:20px;
-    }
-
-    span::after{
-        content:'';
-        position: absolute;
-        width:100%;
-        height:14px;
-        background:#e0e9fe;
-        left:0;
-        bottom:0;
-        z-index: -1;
-    }
+  span::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 14px;
+    background: #e0e9fe;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 }

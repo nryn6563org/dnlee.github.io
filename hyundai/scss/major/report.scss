@@ -1,0 +1,120 @@
+#reportContent {
+  .tab-pane {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
+}
+
+.r-card {
+  display: block;
+  width: 100%;
+  float: left;
+
+  .swiper-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 12px 20px 20px;
+
+    .swiper-slide {
+      display: block;
+      width: 170px;
+      height: 131px;
+
+      .box {
+        display: block;
+        width: 100%;
+        height: 131px;
+        overflow: hidden;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+        .top {
+          display: block;
+          float: left;
+          width: 100%;
+          height: 40px;
+          line-height: 40px;
+          background: #454a63;
+          text-align: center;
+          letter-spacing: -0.05em;
+          font-size: 14px;
+          color: #fff;
+          font-weight: 500;
+        }
+
+        .cont {
+          display: block;
+          width: 100%;
+          height: 91px;
+          padding: 13px 20px;
+          float: left;
+
+          .tit {
+            display: block;
+            width: 100%;
+            float: left;
+            font-size: 16px;
+            height: 24px;
+            line-height: 24px;
+            color: #141414;
+            font-weight: 500;
+          }
+          .txt {
+            display: block;
+            width: 100%;
+            float: left;
+            font-size: 13px;
+            line-height: 18px;
+            color: #828282;
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.cnm-tab-mr {
+  position: sticky;
+  top: 50px;
+  display: block;
+  width: 100%;
+  filter: drop-shadow(0px 3px 3px rgba(0, 0, 0, 0.08));
+  background: #fff;
+  z-index: 99;
+  float: left;
+
+  .nav {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    float: left;
+
+    .nav-item {
+      display: table-cell;
+
+      .nav-link {
+        display: block;
+        width: 100%;
+        height: 38px;
+        line-height: 38px;
+        border-bottom: 1px solid #ccc;
+        float: left;
+        font-size: 16px;
+        color: #828282;
+        padding:0;
+        text-align:center;
+
+        &.active{
+            color:#141414;
+            font-weight:700;
+            border-bottom:3px solid #141414;
+        }
+      }
+    }
+  }
+}
