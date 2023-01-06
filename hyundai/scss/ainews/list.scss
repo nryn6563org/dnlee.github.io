@@ -1,65 +1,65 @@
-.newsList{
-    display:block;
-    width:100%;
-    float:left;
-    padding:20px 20px 40px;
+.newsList {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 20px 20px 40px;
 
-    .list{
-        position: relative;
-        display:block;
-        width:100%;
-        background:#f9f9f9;
-        border-radius: 16px;
-        box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
-        padding:14px 20px;
-        float:left;
-        margin-top:13px;
+  .list {
+    position: relative;
+    display: block;
+    width: 100%;
+    background: #f9f9f9;
+    border-radius: 16px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.05);
+    padding: 14px 20px;
+    float: left;
+    margin-top: 13px;
 
-        a{
-            position:absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
-            text-indent:-9999em;
-        }
-
-        &:first-child{
-            margin-top:0;
-        }
-
-        .txt{
-            display:block;
-            width:100%;
-            float:left;
-            font-size:16px;
-            line-height:22px;
-            height:44px;
-            margin-top:8px;
-            color:#141414;
-        }
-
-        .date{
-            position:absolute;
-            top:15px;
-            right:20px;
-            height:18px;
-            padding:2px 0;
-
-            span{
-                display:block;
-                font-size:12px;
-                line-height:14px;
-                height:14px;
-                color:#969696;
-                margin-left:8px;
-                float:left;
-
-                &:first-child{
-                    border-right:1px solid  #d7d7d7;
-                    padding-right:8px;
-                }
-            }
-        }
+    a {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      text-indent: -9999em;
     }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    .txt {
+      display: block;
+      width: 100%;
+      float: left;
+      font-size: 16px;
+      line-height: 22px;
+      height: 44px;
+      margin-top: 8px;
+      color: #141414;
+    }
+
+    .date {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      height: 18px;
+      padding: 2px 0;
+
+      span {
+        display: block;
+        font-size: 12px;
+        line-height: 14px;
+        height: 14px;
+        color: #969696;
+        margin-left: 8px;
+        float: left;
+
+        &:first-child {
+          border-right: 1px solid #d7d7d7;
+          padding-right: 8px;
+        }
+      }
+    }
+  }
 }

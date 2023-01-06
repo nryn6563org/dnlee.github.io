@@ -1,73 +1,72 @@
-#tbArea .hrbox{
-    position: relative;
-    display:table;
-    width:100%;
-    border:1px solid #8e9ef5;
-    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
-    border-radius: 16px;
-    padding:17px 24px 18px;
-    margin:20px 0 0 0;
-    table-layout: fixed;
-    float:left;
+#tbArea .hrbox {
+  position: relative;
+  display: table;
+  width: 100%;
+  border: 1px solid #8e9ef5;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 17px 24px 18px;
+  margin: 20px 0 0 0;
+  table-layout: fixed;
+  float: left;
 
-    &::after{
-        position: absolute;
-        content:'';
-        width:1px;
-        height:54px;
-        top:24px;
-        left:50%;
-        background:#ebebeb;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 54px;
+    top: 24px;
+    left: 50%;
+    background: #ebebeb;
+  }
+
+  & > div {
+    display: table-cell;
+    width: 50%;
+
+    &:last-child {
+      padding-left: 15px;
     }
 
-    &>div{
-        display:table-cell;
-        width:50%;
+    .tit {
+      display: block;
+      width: 100%;
+      float: left;
 
-        &:last-child{
-            padding-left:15px;
-        }
+      span {
+        display: block;
+        width: 100%;
+        float: left;
+        height: 16px;
+        line-height: 16px;
+        font-size: 13px;
+        color: #828282;
+      }
 
-        .tit{
-            display:block;
-            width:100%;
-            float:left;
-
-            span{
-                display:block;
-                width:100%;
-                float:left;
-                height:16px;
-                line-height:16px;
-                font-size:13px;
-                color:#828282;
-            }
-
-            em{
-                display:block;
-                width:100%;
-                float:left;
-                height:15px;
-                line-height:15px;
-                font-size:12px;
-                color:#828282;
-                margin-top:3px;
-            }
-
-        }
-
-        .prc{
-            display:block;
-            width:100%;
-            float:left;
-            margin-top:8px;
-            line-height:25px;
-
-            span{
-                font-size:20px;
-                color:#141414;
-                font-weight:700;
-            }
-        }
+      em {
+        display: block;
+        width: 100%;
+        float: left;
+        height: 15px;
+        line-height: 15px;
+        font-size: 12px;
+        color: #828282;
+        margin-top: 3px;
+      }
     }
+
+    .prc {
+      display: block;
+      width: 100%;
+      float: left;
+      margin-top: 8px;
+      line-height: 25px;
+
+      span {
+        font-size: 20px;
+        color: #141414;
+        font-weight: 700;
+      }
+    }
+  }
 }

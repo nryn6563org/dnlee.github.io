@@ -1,250 +1,250 @@
 .charItem {
+  display: block;
+  width: 100%;
+  float: left;
+
+  .control {
+    position: relative;
     display: block;
     width: 100%;
-    float:left;
+    height: 55px;
+    line-height: 55px;
+    float: left;
+    text-align: center;
+    background: #efefef;
 
-    .control {
-        position: relative;
+    span {
+      font-size: 16px;
+      color: #646464;
+      font-weight: 400;
+    }
+    button {
+      position: absolute;
+      top: 15px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      &::after {
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 1.5px solid #141414;
+        border-radius: 1px;
+        border-top: 0;
+        border-right: 0;
+      }
+
+      &.left {
+        left: 15px;
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+      &.right {
+        right: 15px;
+        &::after {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  .tab-content > .tab-pane > .guide {
+    display: block;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 20px;
+    background: none;
+    border: none;
+    float: left;
+    margin-top: 10px;
+
+    span {
+      font-size: 12px;
+      color: #8c8c8c;
+
+      &:first-child {
+        text-indent: 5px;
+      }
+    }
+  }
+
+  .list {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
+    float: left;
+
+    & > div:not(.more) {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 77px;
+      float: left;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 25px;
+      padding-bottom: 11px;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      .date {
+        display: block;
+        height: 15px;
+        float: left;
+        font-size: 12px;
+        line-height: 15px;
+        color: #8c8c8c;
+      }
+
+      .name {
         display: block;
         width: 100%;
-        height: 55px;
-        line-height: 55px;
+        height: 24px;
+        line-height: 24px;
+        color: #141414;
+        font-weight: 500;
         float: left;
-        text-align: center;
-        background: #efefef;
+        padding-right: 76px;
+        margin-top: 7px;
+      }
+
+      .per {
+        position: absolute;
+        top: 48px;
+        right: 5px;
+        width: 66px;
+        height: 22px;
 
         span {
-            font-size: 16px;
-            color: #646464;
-            font-weight: 400;
+          display: block;
+          width: 100%;
+          height: 22px;
+          line-height: 22px;
+          float: left;
+          border-radius: 4px;
+          font-size: 13px;
+          text-align: center;
+
+          &.up {
+            background: #fdecec;
+            color: #e81a1a;
+          }
+          &.dn {
+            background: #ecf5fc;
+            color: #0e83db;
+          }
         }
-        button {
-            position: absolute;
-            top: 15px;
-            width: 24px;
-            height: 24px;
-            display:flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
+      }
 
-            &::after {
-                display: block;
-                content: '';
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #141414;
-                border-radius: 1px;
-                border-top: 0;
-                border-right: 0;
-            }
-
-            &.left {
-                left: 15px;
-                &::after {
-                    transform: rotate(45deg);
-                }
-            }
-            &.right {
-                right: 15px;
-                &::after {
-                    transform: rotate(-135deg);
-                }
-            }
-        }
-    }
-
-    .tab-content>.tab-pane>.guide{
-        display:block;
-        width:100%;
-        height:15px;
-        line-height:15px;
-        padding:0 20px;
-        background:none;
-        border:none;
-        float: left;;
-        margin-top:10px;
-
-        span{
-            font-size:12px;
-            color:#8c8c8c;
-
-            &:first-child{
-                text-indent: 5px;
-            }
-        }
-    }
-
-    .list {
+      .cont {
         display: block;
         width: 100%;
-        padding: 0 20px;
-        margin-top: 20px;
         float: left;
+        margin-top: 5px;
 
-        & > div:not(.more) {
-            position: relative;
-            display: block;
-            width: 100%;
-            min-height: 77px;
-            float: left;
-            border-top: 1px solid #e5e5e5;
-            padding-top: 25px;
-            padding-bottom: 11px;
-            padding-left:5px;
-            padding-right:5px;
+        div {
+          display: block;
+          width: 100%;
 
-            .date {
-                display: block;
-                height: 15px;
-                float: left;
-                font-size: 12px;
-                line-height: 15px;
-                color: #8c8c8c;
-            }
-
-            .name {
-                display: block;
-                width: 100%;
-                height: 24px;
-                line-height: 24px;
-                color: #141414;
-                font-weight: 500;
-                float: left;
-                padding-right: 76px;
-                margin-top: 7px;
-            }
-
-            .per {
-                position: absolute;
-                top: 48px;
-                right: 5px;
-                width: 66px;
-                height: 22px;
-
-                span {
-                    display: block;
-                    width: 100%;
-                    height: 22px;
-                    line-height: 22px;
-                    float: left;
-                    border-radius: 4px;
-                    font-size: 13px;
-                    text-align: center;
-
-                    &.up {
-                        background: #fdecec;
-                        color: #E81A1A;
-                    }
-                    &.dn {
-                        background: #ecf5fc;
-                        color: #0e83db;
-                    }
-                }
-            }
-
-            .cont {
-                display: block;
-                width: 100%;
-                float: left;
-                margin-top: 5px;
-
-                div {
-                    display: block;
-                    width: 100%;
-
-                    height: 18px;
-                    line-height: 18px;
-                    font-size: 12px;
-                    color: #4d4d4d;
-                    float: left;
-                }
-            }
-
-            & > a {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 11;
-                text-indent: -9999em;
-            }
-
-            &:first-child {
-                padding-top: 0;
-                border-top:0;
-
-                .per{
-                    top:23px;
-                }
-            }
+          height: 18px;
+          line-height: 18px;
+          font-size: 12px;
+          color: #4d4d4d;
+          float: left;
         }
+      }
 
-        &-bullet{
-            &>div:not(.more){
-                padding:18px 0 18px 41px;
-                min-height:68px;
+      & > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        text-indent: -9999em;
+      }
 
-                &:first-child{
-                    .buNumber{
-                        top:0;
-                    }
-                    .per{
-                        top:2px;
-                    }
-                }
+      &:first-child {
+        padding-top: 0;
+        border-top: 0;
 
-                .buNumber{
-                    position: absolute;
-                    top:18px;
-                    left:4px;
-                    width:27px;
-                    height:27px;
-                    display:flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    border-radius: 100%;
-                    background:#000;
-
-                    span{
-                        display:block;
-                        font-size:14px;
-                        height:18px;
-                        line-height:18px;
-                        color:#fff;
-                        font-weight:500;
-                    }
-                }
-                .name{
-                    margin-top:1px;
-                }
-                .per{
-                    top:20px;
-                }
-                .cont{
-                    margin-top:5px;
-                }
-            }
+        .per {
+          top: 23px;
         }
-
-        .more{
-            display:block;
-            width:100%;
-            float:left;
-            margin-top:25px;
-
-            button{
-                display:block;
-                width:100%;
-                height:50px;
-                text-align: center;
-                background: #f4f2f4;
-                border-radius: 10px;
-                font-size:14px;
-                color:#333d47;
-            }
-        }
+      }
     }
+
+    &-bullet {
+      & > div:not(.more) {
+        padding: 18px 0 18px 41px;
+        min-height: 68px;
+
+        &:first-child {
+          .buNumber {
+            top: 0;
+          }
+          .per {
+            top: 2px;
+          }
+        }
+
+        .buNumber {
+          position: absolute;
+          top: 18px;
+          left: 4px;
+          width: 27px;
+          height: 27px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          border-radius: 100%;
+          background: #000;
+
+          span {
+            display: block;
+            font-size: 14px;
+            height: 18px;
+            line-height: 18px;
+            color: #fff;
+            font-weight: 500;
+          }
+        }
+        .name {
+          margin-top: 1px;
+        }
+        .per {
+          top: 20px;
+        }
+        .cont {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .more {
+      display: block;
+      width: 100%;
+      float: left;
+      margin-top: 25px;
+
+      button {
+        display: block;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        background: #f4f2f4;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #333d47;
+      }
+    }
+  }
 }
