@@ -1,34 +1,34 @@
 .tbArea-w {
-  position: relative;
-  top: 0;
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-radius: 20px 20px 0 0;
-  overflow: hidden;
-  float: left;
-  background: #fff;
-  margin-top: -150px;
-  touch-action: pan-y;
-  z-index: 12;
-  transition: margin 0.3s ease-in-out;
+    position: relative;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    float: left;
+    background: #fff;
+    margin-top: -150px;
+    touch-action: pan-y;
+    z-index: 12;
+    transition: margin 0.3s ease-in-out;
 
-  &.open {
-    margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
-  }
+    &.open {
+        margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
+    }
 }
 #tbArea {
-  position: relative;
-  //overflow: hidden;
-  bottom: 0;
-  width: 100%;
-  height: auto;
-  padding: 0;
-  //background:#fff;
-  border-radius: 20px 20px 0 0;
-  float: left;
-  overflow-y: scroll;
+    position: relative;
+    //overflow: hidden;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    //background:#fff;
+    border-radius: 20px 20px 0 0;
+    float: left;
+    overflow-y: scroll;
 }
 
-@import "tbheader.scss";
-@import "tbcontent.scss";
+@import 'tbheader.scss';
+@import 'tbcontent.scss';

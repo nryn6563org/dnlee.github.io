@@ -1,15 +1,15 @@
 button {
-  &.bg {
-    &-white {
-      background: #fff;
-      color: #141414;
-      border: 1px solid #d7d7d7;
+    &.bg {
+        &-white {
+            background: #fff;
+            color: #141414;
+            border: 1px solid #d7d7d7;
+        }
+        &-blue {
+            background: #3f54c3;
+            color: #fff;
+        }
     }
-    &-blue {
-      background: #3f54c3;
-      color: #fff;
-    }
-  }
 }
 
-@import "fixedButton.scss";
+@import 'fixedButton.scss';

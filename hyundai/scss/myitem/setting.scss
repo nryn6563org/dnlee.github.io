@@ -1,38 +1,38 @@
-.item-check{
+.item-check {
     position: relative;
-    display:block;
+    display: block;
 
-    input[type="checkbox"]+ label{
-        font-size:16px;
-        color:#141414;
-        padding-left:30px;
-        background:url(../img/myitem/check.svg) no-repeat 0 50%;
-        background-size:22px auto;
-    }
-    input[type="checkbox"]:checked + label{
-        background:url(../img/myitem/checkOn.svg) no-repeat 0 50%;
+    input[type='checkbox'] + label {
+        font-size: 16px;
+        color: #141414;
+        padding-left: 30px;
+        background: url(../img/myitem/check.svg) no-repeat 0 50%;
         background-size: 22px auto;
     }
-    input[type="checkbox"]{
-        position:absolute;
-        top:0;
-        left:-9999em;
+    input[type='checkbox']:checked + label {
+        background: url(../img/myitem/checkOn.svg) no-repeat 0 50%;
+        background-size: 22px auto;
+    }
+    input[type='checkbox'] {
+        position: absolute;
+        top: 0;
+        left: -9999em;
     }
 }
 
-.subTitle{
-    display:flex;
+.subTitle {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    width:100%;
-    float:left;
-    padding:0 20px;
-    height:50px;
+    width: 100%;
+    float: left;
+    padding: 0 20px;
+    height: 50px;
 
-    h1{
-        font-size:18px;
-        font-weight:700;
-        color:#141414;
+    h1 {
+        font-size: 18px;
+        font-weight: 700;
+        color: #141414;
     }
 }

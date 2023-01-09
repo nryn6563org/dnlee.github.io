@@ -1,21 +1,35 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" >
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
     <title>현대차증권</title>
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link href="./css/font.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./css/font.css" rel="stylesheet" />
     <!-- // font css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
     <!-- //bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
     <!-- //swiper css -->
-    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/common.css" />
     <!-- // custom css -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <!-- <script src="./js/swiper-bundle.min.js"></script> -->
@@ -24,912 +38,1079 @@
   <body>
     <!-- header -->
     <header id="header">
+      <div>
         <div>
-            <div>
-                <button class="back"><img src="./img/header/icon-back.svg" alt="뒤로가기"></button>
-                <h1>AI속보</h1>
-            </div>
-            <!-- // -->
-            <div>
-                <!-- <button class="search"><img src="./img/header/icon-search.svg" alt="검색"></button>
-                <a href="#">MY</a> -->
-            </div>
-            <!-- // -->
+          <button class="back">
+            <img src="./img/header/icon-back.svg" alt="뒤로가기" />
+          </button>
+          <h1>AI속보</h1>
         </div>
+        <!-- // -->
+        <div>
+          <!-- <button class="search"><img src="./img/header/icon-search.svg" alt="검색"></button>
+                <a href="#">MY</a> -->
+        </div>
+        <!-- // -->
+      </div>
     </header>
     <!-- //header -->
 
     <article id="container">
+      <section class="cnm h-100">
+        <ul class="nav cnm-tab p-0 none-bordered shadow-bottom">
+          <li class="nav-item">
+            <a
+              class="nav-link active"
+              aria-current="page"
+              href="#page01"
+              data-bs-toggle="tab"
+              data-bs-target="#page01"
+              >주요속보</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              aria-current="page"
+              href="#page02"
+              data-bs-toggle="tab"
+              data-bs-target="#page02"
+              >주요태그</a
+            >
+          </li>
+        </ul>
+        <!-- //tab -->
 
-        <section class="cnm h-100">
-            <ul class="nav cnm-tab p-0 none-bordered shadow-bottom">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#page01" data-bs-toggle="tab" data-bs-target="#page01">주요속보</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#page02" data-bs-toggle="tab" data-bs-target="#page02">주요태그</a>
-                </li>
-            </ul>
-            <!-- //tab -->
-
-            <div id="aiboxw" class="tab-content w-100 float-start">
-                <div class="tab-pane fade active show" id="page01">
-
-                    <div class="newsList">
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
+        <div id="aiboxw" class="tab-content w-100 float-start">
+          <div class="tab-pane fade active show" id="page01">
+            <div class="newsList">
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
                                 <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
                                 <span class="t04">#장중수급특징주</span>
                                 <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <span class="t02">#검색상위신규등장</span>
-                                <!-- <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <span class="t02">#검색상위신규등장</span>
+                  <!-- <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span> -->
-                                <!-- <span class="t04">#장중수급특징주</span> -->
-                                <!-- <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span> -->
+                  <!-- <span class="t04">#장중수급특징주</span> -->
+                  <!-- <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span> -->
-                                <span class="t03">#시간외급등주</span>
-                                <!-- // -->
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span> -->
+                  <span class="t03">#시간외급등주</span>
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
                                 <span class="t04">#장중수급특징주</span>
                                 <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span>
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span>
                                 <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <span class="t01">#10시상승테마</span>
-                                <!-- <span class="t04">#장중수급특징주</span>
+                  <!-- 장중 -->
+                  <span class="t01">#10시상승테마</span>
+                  <!-- <span class="t04">#장중수급특징주</span>
                                 <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span>
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span>
                                 <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span> -->
-                                <span class="t04">#장중수급특징주</span>
-                                <!-- <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span> -->
+                  <span class="t04">#장중수급특징주</span>
+                  <!-- <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span>
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span>
                                 <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
                                 <span class="t04">#장중수급특징주</span> -->
-                                <span class="t02">#수주-매출30%이상</span>
-                                <!-- // -->
+                  <span class="t02">#수주-매출30%이상</span>
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span>
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span>
                                 <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
                                 <span class="t04">#장중수급특징주</span>
                                 <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <span class="t01">#시장특징주총정리</span>
-                                <!-- <span class="t04">#주요기관별순매수상위</span>
+                  <!-- 장마감후 -->
+                  <span class="t01">#시장특징주총정리</span>
+                  <!-- <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <span class="t02">#검색상위신규등장</span>
-                                <!-- <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <span class="t02">#검색상위신규등장</span>
+                  <!-- <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
                                 <span class="t04">#장중수급특징주</span>
                                 <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span>
                                 <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
 
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
 
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
 
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span> -->
-                                <!-- <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span> -->
+                  <!-- <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
 
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
                                 <span class="t04">#장중수급특징주</span>
                                 <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
+                  <!-- // -->
 
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
                                 <span class="t04">#주요기관별순매수상위</span> -->
-                                <span class="t03">#52주신고가</span>
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-                    </div>
-                    <!-- // -->
+                  <span class="t03">#52주신고가</span>
+                  <!-- // -->
                 </div>
-                <!-- // -->
+                <!-- //tag -->
 
-                <div class="tab-pane fade pt-3" id="page02">
-                    <div class="newsListTag">
-                        <div class="tab-content">
-                            <p id="tagtxt00" class="tab-pane active show">
-                                개장전 유용한 태그입니다.
-                            </p>
-                            <p id="tagtxt01" class="tab-pane">
-                                최근 외인·기관의 순매수가 증가하고 있는 테마를 포착해서 매일 8시에 제공합니다.
-                            </p>
-                            <p id="tagtxt02" class="tab-pane ">
-                                포털의 검색 상위에 새롭게 등장한 종목을 파악해서 오전 8시에 제공합니다.
-                            </p>
-                            <p id="tagtxt03" class="tab-pane ">
-                                시간외거래에서 급등한 종목을 분석해서 매일 17시, 18시 2회 제공합니다.
-                            </p>
-                            <p id="tagtxt04" class="tab-pane ">
-                                매일 오전 10시, 강세를 보이는 테마와 주도 종목을 분석해서 제공합니다.
-                            </p>
-                            <p id="tagtxt05" class="tab-pane ">
-                                외인과 기관이 동시순매수·연속순매수·대량순매수하는 종목을 정리해서 10시 30분에 제공합니다.
-                            </p>
-                            <p id="tagtxt06" class="tab-pane ">
-                                전년 매출 30%를 초과하는 계약을 수주한 기업의 공시를 요약해서 제공합니다.
-                            </p>
-                            <p id="tagtxt07" class="tab-pane ">
-                                오늘 투신, 연기금, 사모펀드이 많이 매수한 종목을 요약·정리해서 16시에 제공합니다.
-                            </p>
-                            <p id="tagtxt08" class="tab-pane ">
-                                52주 신고가를 기록한 종목을 실시간으로 포착해서 제공합니다.
-                            </p>
-                            <p id="tagtxt09" class="tab-pane ">
-                                오늘 시장에서 화제가 된 종목을 요약·정리해서 16시에 제공합니다.
-                            </p>
-                        </div>
-
-                        <div class="newsBeforeTag">
-                            <div class="nav" role="tablist">
-                                <button type="button" class="smenu active nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt00">
-                                    <span>#전체</span>
-                                </button>
-                                <button type="button" class="smenu nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt01">
-                                    <span>#수급포착테마</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt02">
-                                    <span class="" >#검색상위신규등장</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt03">
-                                    <span class="" >#시간외급등주</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt04">
-                                    <span class="" >#10시상승테마</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt05">
-                                    <span class="" >#장중수급특징주</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt06">
-                                    <span class="" >#신규수주-매출30%이상</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt07">
-                                    <span class="" >#주요기관별순매수상위</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt08">
-                                    <span class="" >#52주신고가</span>
-                                </button>
-                                <button type="button" class="smenu  nav-tabs" data-bs-toggle="tab" data-bs-target="#tagtxt09">
-                                    <span class="" >#시장특징주총정리</span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <script>
-                            //메뉴 좌우 스크롤
-                            let snavi = document.querySelectorAll('.smenu');
-                            let naviAmount = snavi.length;
-            
-                            for (var i = 0; i < naviAmount; i++) {
-                                const menu = snavi[i];
-            
-                                menu.addEventListener('click', function (e) {
-                                    document.querySelector('.smenu.active').classList.remove('active');
-                                    this.classList.add('active');
-                                    let widW = document.querySelector('.newsBeforeTag .nav').offsetWidth;
-                                    if(this.offsetLeft > widW/2){
-                                        document.querySelector('.newsBeforeTag .nav').scrollTo({
-                                            left: this.offsetLeft - 50 , 
-                                            behavior : 'smooth'
-                                        })
-                                    }else if(this.offsetLeft <= widW/2){
-                                        document.querySelector('.newsBeforeTag .nav').scrollTo({
-                                            left: 0,
-                                            behavior : 'smooth'
-                                        })
-                                    }
-                                });
-                            }
-                        </script>
-                        <!-- // -->
-                        
-                    </div>
-                    <!-- // -->
-
-                    <div class="newsList">
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
-                                <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
-                                <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <span class="t02">#검색상위신규등장</span>
-                                <!-- <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
-                                <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
-                                <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
-                                <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <span class="t01">#수급포착테마</span>
-                                <!-- <span class="t02">#검색상위신규등장</span>
-                                <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <span class="t02">#검색상위신규등장</span>
-                                <!-- <span class="t03">#시간외급등주</span> -->
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-
-                        <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
-                            
-                            <div class="tag">
-                                <!-- 개장전 -->
-                                <!-- <span class="t01">#수급포착테마</span> -->
-                                <!-- <span class="t02">#검색상위신규등장</span> -->
-                                <span class="t03">#시간외급등주</span>
-                                <!-- // -->
-
-                                <!-- 장중 -->
-                                <!-- <span class="t01">#10시상승테마</span>
-                                <span class="t04">#장중수급특징주</span>
-                                <span class="t02">#수주-매출30%이상</span> -->
-                                <!-- // -->
-
-                                <!-- 장마감후 -->
-                                <!-- <span class="t01">#시장특징주총정리</span>
-                                <span class="t04">#주요기관별순매수상위</span>
-                                <span class="t03">#52주신고가</span> -->
-                                <!-- // -->
-                            </div>
-                            <!-- //tag -->
-
-                            <div class="txt text-truncate-2">
-                                <span>코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세 포착</span>
-                            </div>
-                            <!-- //txt -->
-
-                            <div class="date">
-                                <span>2022.07.27</span>
-                                <span>10:27</span>
-                                <span>씽크풀</span>
-                            </div>
-                            <!-- //date -->
-                        </div>
-                        <!-- // -->
-                    </div>
-                    <!-- // -->
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
                 </div>
-                <!-- // -->
-            </div>
-        </section>
-        <!-- // -->
+                <!-- //txt -->
 
-        <div class="modal fade" id="detail" aria-hidden="true" aria-labelledby="ai속보상세">
-            <div class="modal-dialog modal-fullscreen">
-                <div class="modal-content">
-                    <section class="cnm">
-                        <div class="subTitle">
-                            <h1>AI속보 상세</h1>
-                            <a href="javascript:;" data-bs-dismiss="modal">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                            </a>
-                        </div>
-                    </section>
-                    <!-- // -->
-
-                    <section class="cnm detail-w">
-                        <div class="detail-top">
-                            <div class="obj text-truncate-2">
-                                <span>[수급포착테마] 코로나19(렘데시비스),코로나가19(모더나),LNG 매수세포착</span>
-                            </div>
-                            <!-- // -->
-                            <div class="info-w">
-                                <div class="date">
-                                    <span>2022.07.27</span>
-                                    <span>10:27</span>
-                                    <span>씽크풀</span>
-                                </div>
-                                <!-- // -->
-
-                                <div class="fs-btn">
-                                    <button class="minusFs" onclick="fsDown();">
-                                        <img src="./img/fsmall.png" alt="" width="24px">
-                                    </button>
-                                    <button class="plusFs" onclick="fsUp();">
-                                        <img src="./img/flarge.png" alt="" width="24px">
-                                    </button>
-                                </div>
-                                <!-- // -->
-                            </div>
-                        </div>
-                        <!-- // -->
-
-                        <div class="detail-con">
-                            25일 아침에 상승세로 출발했던 코스피 시장은 장중 한때 2,253.24 포인트까지 올랐다가, 외국인과 기관의 매수세로 전 거래일 대비+0.1% 오른 2,237.5 포인트를 기록하고 있다. <br><br>
-
-                            <img src="./img/chart-demo.png" alt="" width="100%">
-                            <br><br>
-
-                            25일 아침에 상승세로 출발했던 코스피 시장은 장중 한때 2,253.24 포인트까지 올랐다가, 외국인과 기관의 매수세로 전 거래일 대비+0.1% 오른 2,237.5 포인트를 기록하고 기록하고 있다. <br><br>
-                            25일 아침에 상승세로 출발했던 코스피 시장은 장중 한때 2,253.24 포인트까지 올랐다가, 외국인과 기관의 매수세로 전 거래일 대비+0.1% 오른 2,237.5 포인트를 기록하고 있다. <br><br>
-                        </div>
-                        <!-- // -->
-
-                        <script>
-                            let divEls = document.querySelector('.detail-con');
-
-                            function fsUp() {
-                                const fs = document.defaultView.getComputedStyle(divEls).getPropertyValue('font-size');
-                                divEls.style.fontSize = parseInt(fs) + 2 + "px";
-                                divEls.style.lineHeight = parseInt(fs) + 6 + "px";
-
-                                if(parseInt(divEls.style.fontSize) >= 22){
-                                    alert('최대 크기 입니다.')
-                                    divEls.style.fontSize = "13px";
-                                    divEls.style.lineHeight = "19px";
-                                }
-                            }
-                            function fsDown() {
-                                const fs = document.defaultView.getComputedStyle(divEls).getPropertyValue('font-size');
-                                divEls.style.fontSize = parseInt(fs) - 1 + "px";
-                                divEls.style.lineHeight = parseInt(fs) + 6 + "px";
-
-                                if(parseInt(divEls.style.fontSize) <= 9){
-                                    alert('최소 크기 입니다.')
-                                    divEls.style.fontSize = "13px";
-                                    divEls.style.lineHeight = "19px";
-                                }
-                            }
-                        </script>
-
-                    </section>
-                    <!-- // -->
-
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
                 </div>
-                <!-- // -->
+                <!-- //date -->
+              </div>
+              <!-- // -->
             </div>
             <!-- // -->
+          </div>
+          <!-- // -->
+
+          <div class="tab-pane fade pt-3" id="page02">
+            <div class="newsListTag">
+              <div class="tab-content">
+                <p id="tagtxt00" class="tab-pane active show">
+                  개장전 유용한 태그입니다.
+                </p>
+                <p id="tagtxt01" class="tab-pane">
+                  최근 외인·기관의 순매수가 증가하고 있는 테마를 포착해서 매일
+                  8시에 제공합니다.
+                </p>
+                <p id="tagtxt02" class="tab-pane">
+                  포털의 검색 상위에 새롭게 등장한 종목을 파악해서 오전 8시에
+                  제공합니다.
+                </p>
+                <p id="tagtxt03" class="tab-pane">
+                  시간외거래에서 급등한 종목을 분석해서 매일 17시, 18시 2회
+                  제공합니다.
+                </p>
+                <p id="tagtxt04" class="tab-pane">
+                  매일 오전 10시, 강세를 보이는 테마와 주도 종목을 분석해서
+                  제공합니다.
+                </p>
+                <p id="tagtxt05" class="tab-pane">
+                  외인과 기관이 동시순매수·연속순매수·대량순매수하는 종목을
+                  정리해서 10시 30분에 제공합니다.
+                </p>
+                <p id="tagtxt06" class="tab-pane">
+                  전년 매출 30%를 초과하는 계약을 수주한 기업의 공시를 요약해서
+                  제공합니다.
+                </p>
+                <p id="tagtxt07" class="tab-pane">
+                  오늘 투신, 연기금, 사모펀드이 많이 매수한 종목을 요약·정리해서
+                  16시에 제공합니다.
+                </p>
+                <p id="tagtxt08" class="tab-pane">
+                  52주 신고가를 기록한 종목을 실시간으로 포착해서 제공합니다.
+                </p>
+                <p id="tagtxt09" class="tab-pane">
+                  오늘 시장에서 화제가 된 종목을 요약·정리해서 16시에
+                  제공합니다.
+                </p>
+              </div>
+
+              <div class="newsBeforeTag">
+                <div class="nav" role="tablist">
+                  <button
+                    type="button"
+                    class="smenu active nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt00"
+                  >
+                    <span>#전체</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt01"
+                  >
+                    <span>#수급포착테마</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt02"
+                  >
+                    <span class="">#검색상위신규등장</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt03"
+                  >
+                    <span class="">#시간외급등주</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt04"
+                  >
+                    <span class="">#10시상승테마</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt05"
+                  >
+                    <span class="">#장중수급특징주</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt06"
+                  >
+                    <span class="">#신규수주-매출30%이상</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt07"
+                  >
+                    <span class="">#주요기관별순매수상위</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt08"
+                  >
+                    <span class="">#52주신고가</span>
+                  </button>
+                  <button
+                    type="button"
+                    class="smenu nav-tabs"
+                    data-bs-toggle="tab"
+                    data-bs-target="#tagtxt09"
+                  >
+                    <span class="">#시장특징주총정리</span>
+                  </button>
+                </div>
+              </div>
+
+              <script>
+                //메뉴 좌우 스크롤
+                let snavi = document.querySelectorAll(".smenu");
+                let naviAmount = snavi.length;
+
+                for (var i = 0; i < naviAmount; i++) {
+                  const menu = snavi[i];
+
+                  menu.addEventListener("click", function (e) {
+                    document
+                      .querySelector(".smenu.active")
+                      .classList.remove("active");
+                    this.classList.add("active");
+                    let widW = document.querySelector(
+                      ".newsBeforeTag .nav"
+                    ).offsetWidth;
+                    if (this.offsetLeft > widW / 2) {
+                      document.querySelector(".newsBeforeTag .nav").scrollTo({
+                        left: this.offsetLeft - 50,
+                        behavior: "smooth",
+                      });
+                    } else if (this.offsetLeft <= widW / 2) {
+                      document.querySelector(".newsBeforeTag .nav").scrollTo({
+                        left: 0,
+                        behavior: "smooth",
+                      });
+                    }
+                  });
+                }
+              </script>
+              <!-- // -->
+            </div>
+            <!-- // -->
+
+            <div class="newsList">
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
+                                <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
+                                <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <span class="t02">#검색상위신규등장</span>
+                  <!-- <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
+                                <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
+                                <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
+                                <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <span class="t01">#수급포착테마</span>
+                  <!-- <span class="t02">#검색상위신규등장</span>
+                                <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <span class="t02">#검색상위신규등장</span>
+                  <!-- <span class="t03">#시간외급등주</span> -->
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+
+              <div class="list" data-bs-toggle="modal" data-bs-target="#detail">
+                <div class="tag">
+                  <!-- 개장전 -->
+                  <!-- <span class="t01">#수급포착테마</span> -->
+                  <!-- <span class="t02">#검색상위신규등장</span> -->
+                  <span class="t03">#시간외급등주</span>
+                  <!-- // -->
+
+                  <!-- 장중 -->
+                  <!-- <span class="t01">#10시상승테마</span>
+                                <span class="t04">#장중수급특징주</span>
+                                <span class="t02">#수주-매출30%이상</span> -->
+                  <!-- // -->
+
+                  <!-- 장마감후 -->
+                  <!-- <span class="t01">#시장특징주총정리</span>
+                                <span class="t04">#주요기관별순매수상위</span>
+                                <span class="t03">#52주신고가</span> -->
+                  <!-- // -->
+                </div>
+                <!-- //tag -->
+
+                <div class="txt text-truncate-2">
+                  <span
+                    >코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착코로나19(렘데시비스),코로나19(모더나),LNG 매수세
+                    포착</span
+                  >
+                </div>
+                <!-- //txt -->
+
+                <div class="date">
+                  <span>2022.07.27</span>
+                  <span>10:27</span>
+                  <span>씽크풀</span>
+                </div>
+                <!-- //date -->
+              </div>
+              <!-- // -->
+            </div>
+            <!-- // -->
+          </div>
+          <!-- // -->
+        </div>
+      </section>
+      <!-- // -->
+
+      <div
+        class="modal fade"
+        id="detail"
+        aria-hidden="true"
+        aria-labelledby="ai속보상세"
+      >
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <section class="cnm">
+              <div class="subTitle">
+                <h1>AI속보 상세</h1>
+                <a href="javascript:;" data-bs-dismiss="modal">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M5 5L19 19"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                    <path
+                      d="M19 5L5 19"
+                      stroke="black"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </section>
+            <!-- // -->
+
+            <section class="cnm detail-w">
+              <div class="detail-top">
+                <div class="obj text-truncate-2">
+                  <span
+                    >[수급포착테마] 코로나19(렘데시비스),코로나가19(모더나),LNG
+                    매수세포착</span
+                  >
+                </div>
+                <!-- // -->
+                <div class="info-w">
+                  <div class="date">
+                    <span>2022.07.27</span>
+                    <span>10:27</span>
+                    <span>씽크풀</span>
+                  </div>
+                  <!-- // -->
+
+                  <div class="fs-btn">
+                    <button class="minusFs" onclick="fsDown();">
+                      <img src="./img/fsmall.png" alt="" width="24px" />
+                    </button>
+                    <button class="plusFs" onclick="fsUp();">
+                      <img src="./img/flarge.png" alt="" width="24px" />
+                    </button>
+                  </div>
+                  <!-- // -->
+                </div>
+              </div>
+              <!-- // -->
+
+              <div class="detail-con">
+                25일 아침에 상승세로 출발했던 코스피 시장은 장중 한때 2,253.24
+                포인트까지 올랐다가, 외국인과 기관의 매수세로 전 거래일
+                대비+0.1% 오른 2,237.5 포인트를 기록하고 있다. <br /><br />
+
+                <img src="./img/chart-demo.png" alt="" width="100%" />
+                <br /><br />
+
+                25일 아침에 상승세로 출발했던 코스피 시장은 장중 한때 2,253.24
+                포인트까지 올랐다가, 외국인과 기관의 매수세로 전 거래일
+                대비+0.1% 오른 2,237.5 포인트를 기록하고 기록하고 있다.
+                <br /><br />
+                25일 아침에 상승세로 출발했던 코스피 시장은 장중 한때 2,253.24
+                포인트까지 올랐다가, 외국인과 기관의 매수세로 전 거래일
+                대비+0.1% 오른 2,237.5 포인트를 기록하고 있다. <br /><br />
+              </div>
+              <!-- // -->
+
+              <script>
+                let divEls = document.querySelector(".detail-con");
+
+                function fsUp() {
+                  const fs = document.defaultView
+                    .getComputedStyle(divEls)
+                    .getPropertyValue("font-size");
+                  divEls.style.fontSize = parseInt(fs) + 2 + "px";
+                  divEls.style.lineHeight = parseInt(fs) + 6 + "px";
+
+                  if (parseInt(divEls.style.fontSize) >= 22) {
+                    alert("최대 크기 입니다.");
+                    divEls.style.fontSize = "13px";
+                    divEls.style.lineHeight = "19px";
+                  }
+                }
+                function fsDown() {
+                  const fs = document.defaultView
+                    .getComputedStyle(divEls)
+                    .getPropertyValue("font-size");
+                  divEls.style.fontSize = parseInt(fs) - 1 + "px";
+                  divEls.style.lineHeight = parseInt(fs) + 6 + "px";
+
+                  if (parseInt(divEls.style.fontSize) <= 9) {
+                    alert("최소 크기 입니다.");
+                    divEls.style.fontSize = "13px";
+                    divEls.style.lineHeight = "19px";
+                  }
+                }
+              </script>
+            </section>
+            <!-- // -->
+          </div>
+          <!-- // -->
         </div>
         <!-- // -->
-
-
+      </div>
+      <!-- // -->
     </article>
     <!-- //container -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
     <!-- //bootstrap js html최하단에 두어주세요!!! -->
   </body>
 </html>
