@@ -12,6 +12,9 @@
 @import 'header.scss';
 @import 'main.scss';
 @import 'sub.scss';
+html{
+    overscroll-behavior: none;
+}
 body {
     overscroll-behavior: contain;
     max-width: 640px;
