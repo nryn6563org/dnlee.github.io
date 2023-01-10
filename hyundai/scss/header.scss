@@ -22,6 +22,41 @@
         }
     }
 
+    &.a-item{
+        background: #454A63;
+        padding: 0 14px 0 12px;
+
+        position: relative !important;
+        position: -webkit-relative;
+
+        & > div > div:first-child {
+            width: calc(100% - 68px);
+        }
+
+        & > div:not(.modal){
+            justify-content: space-between;
+            align-items: center;
+            align-content: center;
+            height:50px;
+
+            &>div{
+                button{
+                    &.back{
+                        margin-top:0;
+                    }
+                }
+            }
+            h1{
+                margin-left:5px;
+                margin-top:0;
+                
+                span{
+                    color:#fff;
+                }
+            }
+        }
+    }
+
     &.sub {
         padding: 0 14px 0 12px;
 

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <title>현대차증권</title>
+        <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+        <link href="./css/font.css" rel="stylesheet" />
+        <!-- // font css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+        <!-- //bootstrap css -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+        <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+        <!-- //swiper css -->
+        <link rel="stylesheet" href="./css/common.css" />
+        <!-- // custom css -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+        <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+        <!-- //swiper js -->
+    </head>
+    <body>
+        <!-- header -->
+        <header id="header" class="a-item">
+            <div>
+                <div>
+                    <button class="back">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h1 class="text-truncate">
+                        <!-- <span>오늘의 이슈 (종목명종목명종목명종목명)</span> -->
+                        <span><em>아마존닷컵</em></span>
+                    </h1>
+                </div>
+                <!-- // -->
+                <div>
+                    <button class="btn-org-info" data-bs-toggle="modal" data-bs-target="#org-popup"><span>기업정보</span></button>
+                    <!-- // -->
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- Modal z-index값 적용으로 header밖으로 나와야 합니다. -->
+        <div class="modal custom-modal01 fade" id="org-popup">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="org-info-top">
+                            <div>기업개요</div>
+                            <buttton class="org-close" data-bs-dismiss="modal">&times;</buttton>
+                        </div>
+                        <div class="org-info-txt">
+                            <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함.</span>
+                            <span>이 회사의 제품에는 상품 및 공급 업체의 재판매를 위해 구매하는 상품 및 제 3 자 판매자가 제공하는 콘텐츠가 포함됨</span>
+                            <span>또한 전자 장치를 제조 및 판매함.</span>
+                        </div>
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+        <article id="container" class="aitem">
+            <section id="content" class="a-item">
+                <div class="org-detail">
+                    <div class="info">
+                        <span>AMZN</span>
+                        <span>NASDAQ</span>
+                        <span>소매(카달로그 및 온라인 판매)</span>
+                    </div>
+                    <!-- // -->
+                    <div class="box">
+                        <div class="top">
+                            <div class="stit">오늘의추천</div>
+                            <div class="price">
+                                <div>
+                                    <em>추천가</em>
+                                    <span class="red">450.00</span>
+                                </div>
+                                <div>
+                                    <em>목표가</em>
+                                    <span>460.00</span>
+                                </div>
+                                <div>
+                                    <em>손절가</em>
+                                    <span class="blue">440.00</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- //top -->
+
+                        <div class="btm">
+                            <div>
+                                <strong>추천사유</strong>
+                                <span class="text-truncate-2"> 최근 발표한 2분기 양호한 실적에 따라 주가 상승 확률이 높을 것으로 분석하고 있다. </span>
+                            </div>
+                        </div>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+                </div>
+            </section>
+            <!-- // -->
+
+            <div class="tbArea-w">
+                <div class="org-p-w">
+                    <div class="org-p">
+                        <div class="score-box">
+                            <div class="score">
+                                <dl>
+                                    <dt>AI 평가점수</dt>
+                                    <dd>89점</dd>
+                                </dl>
+                            </div>
+
+                            <div class="graph mt-17 w-100 float-start">
+                                <img src="./img/aitem/aiscore.png" alt="" width="100%" />
+                            </div>
+                        </div>
+                        <!-- // -->
+
+                        <ul class="nav cnm-stab mt-20">
+                            <li class="nav-item">
+                                <a href="#usa01" class="nav-link active" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa01">성장성</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#usa02" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa02">안정성</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#usa03" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa03">수익성</a>
+                            </li>
+
+                            <li class="nav-item">
+                                <a href="#usa04" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa04">멀티플</a>
+                            </li>
+                        </ul>
+                        <!-- //nav -->
+
+                        <div class="tab-content w-100 float-start mt-14 pb-40">
+                            <div id="usa01" class="tab-pane fade active show">
+                                <div class="org-p-txt">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2236_25548)">
+                                                <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2236_25548">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span>기업의 미래 성장 가능성을 분석할 수 있는 지표입니다.</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score">
+                                        <dl>
+                                            <dt>성장성 지표 평균점수</dt>
+                                            <dd>89점</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>매출액 증가율</dt>
+                                            <dd>89점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac01" style="width: 89%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>자기자본 증가율</dt>
+                                            <dd>60점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac01" style="width: 60%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+
+                            <div id="usa02" class="tab-pane fade">
+                                <div class="org-p-txt">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2236_25548)">
+                                                <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2236_25548">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span>기업의 재무/실적 안정성을 분석할 수 있는 지표입니다.</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score">
+                                        <dl>
+                                            <dt>안정성 지표 평균점수</dt>
+                                            <dd>89점</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>부채/유동 비율</dt>
+                                            <dd>70점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac02" style="width: 70%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>실적안정성</dt>
+                                            <dd>30점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac02" style="width: 30%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+
+                            <div id="usa03" class="tab-pane fade">
+                                <div class="org-p-txt">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2236_25548)">
+                                                <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2236_25548">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span>기업의 영업효율 및 성과를 분석할 수 있는 지표입니다.</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score">
+                                        <dl>
+                                            <dt>수익성 지표 평균점수</dt>
+                                            <dd>89점</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>ROA/ROE</dt>
+                                            <dd>45점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac03" style="width: 45%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>영업이익률</dt>
+                                            <dd>15점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac03" style="width: 15%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+
+                            <div id="usa04" class="tab-pane fade">
+                                <div class="org-p-txt">
+                                    <span>
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_2236_25548)">
+                                                <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                                            </g>
+                                            <defs>
+                                                <clipPath id="clip0_2236_25548">
+                                                    <rect width="16" height="16" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+                                    </span>
+                                    <span>기업의 미래 가치를 분석할 수 있는 지표입니다.</span>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score">
+                                        <dl>
+                                            <dt>멀티플 지표 평균점수</dt>
+                                            <dd>89점</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>PER</dt>
+                                            <dd>59점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac04" style="width: 59%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+
+                                <div class="score-box mt-20">
+                                    <div class="score pt-25">
+                                        <dl>
+                                            <dt>PBR</dt>
+                                            <dd>39점</dd>
+                                        </dl>
+
+                                        <div class="score-progress">
+                                            <span class="pr-basic"></span>
+                                            <span class="pr-active ac04" style="width: 39%"></span>
+
+                                            <div>
+                                                <span>0</span>
+                                                <span>평균(42)</span>
+                                                <span>100</span>
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                        <!-- // -->
+
+                                        <div class="elm-w">
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                            <div class="elm">
+                                                <span class="bullet">분석요소</span>
+                                                <!-- // -->
+
+                                                <span class="txt">
+                                                    기업의 성장률을 판단하는 대표적인 지표. <br />
+                                                    시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                                                </span>
+                                                <!-- // -->
+                                            </div>
+                                            <!-- // -->
+                                        </div>
+                                    </div>
+                                    <!-- //score -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                        </div>
+                        <!-- // -->
+
+                        <section class="cnm">
+                            <div class="guide">
+                                <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+                                <!-- // -->
+
+                                <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+                                <!-- // -->
+
+                                <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+                                <!-- // -->
+                            </div>
+                            <!-- //guide -->
+                        </section>
+                        <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="org-scroll"></div>
+                </div>
+                <!-- // -->
+            </div>
+            <!-- // 상하 움직입 -->
+
+            <script>
+                //쓸어올리기
+
+                let vh = window.innerHeight * 0.01;
+                document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+                let touchStartY = 0;
+                const swipeArea = document.querySelector('.org-scroll');
+                const swipeAreaW = document.querySelector('.tbArea-w');
+
+                // 이벤트 초기화
+                const endExpension = ev => {
+                    // const lastTouchY = ev.changedTouches[0].clientY
+                    swipeArea.removeEventListener('touchmove', doExpansion);
+                    swipeAreaW.style.top = 0;
+                };
+
+                // touchmove 시 마진값 조절
+
+                const doExpansion = ev => {
+                    // console.log(ev, touchStartY)
+                    const movedY = ev.changedTouches[0].clientY;
+                    swipeArea.addEventListener('touchend', endExpension);
+                    if (swipeAreaW.classList.contains('open')) {
+                        if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
+                            swipeArea.removeEventListener('touchmove', doExpansion);
+                            swipeAreaW.style.top = 0;
+                            swipeAreaW.classList.remove('open');
+                        }
+                    } else if (!swipeAreaW.classList.contains('open')) {
+                        if (touchStartY - movedY > 80) {
+                            swipeArea.removeEventListener('touchmove', doExpansion);
+                            swipeAreaW.style.top = 0;
+                            swipeAreaW.classList.add('open');
+                        } else if (touchStartY - movedY < -80) {
+                            ev.preventDefault();
+                            if (!swipeAreaW.classList.contains('bounce')) swipeAreaW.classList.add('bounce');
+                            setTimeout(() => {
+                                swipeAreaW.classList.remove('bounce');
+                            }, 140);
+                        }
+                    }
+                };
+                // touchstart 최초 좌표반환
+                const addHeight = ev => {
+                    touchStartY = ev.changedTouches[0].clientY;
+                    swipeArea.addEventListener('touchmove', doExpansion);
+                };
+                swipeArea.addEventListener('touchstart', addHeight);
+
+                /////////////////////////////////////////
+            </script>
+        </article>
+        <!-- //container -->
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        <!-- //bootstrap js html최하단에 두어주세요!!! -->
+    </body>
+</html>

@@ -1,0 +1,29 @@
+@import "./aitem/local.scss";
+@import "./aitem/usa.scss";
+
+.btn-alarm{
+    display:block;
+    width:73px;
+    height:32px;
+    border:1px solid rgba(179, 169, 240, 0.8);
+    background:rgba(224, 220, 250, 0.2);
+    border-radius: 6px;
+    font-size:12px;
+    color:#fff;
+
+    &:hover,&:active,&:focus{
+        border:1px solid rgba(179, 169, 240, 0.8);
+    }
+}
+#container.aitem{
+    padding-top:0;
+    height:calc(100% - 50px);
+    overflow:hidden;
+}
+#content.a-item{
+    display:block;
+    width:100%;
+    float:left;
+    background:#454a63;
+    min-height:100%;
+}
