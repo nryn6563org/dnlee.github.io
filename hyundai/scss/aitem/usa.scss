@@ -36,15 +36,15 @@
                         .usaPrice {
                             display: flex;
                             justify-content: flex-start;
-                            min-width: 256px;
+                            width:248px;
                             float: left;
                             margin-top: 11px;
-                            padding: 0 4px;
+                            //padding: 0 4px;
 
                             & > div {
                                 position: relative;
                                 padding-left: 18px;
-                                min-width:77px;
+                                width:77px;
                                 text-align:center;
 
                                 &:first-child {
@@ -54,7 +54,7 @@
 
                                 &:nth-child(2n) {
                                     padding: 0 18px;
-                                    min-width:calc(100% - 154px);
+                                    width:calc(100% - 154px);
 
                                     &::before {
                                         content: '';
