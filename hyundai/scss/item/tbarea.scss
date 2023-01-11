@@ -13,8 +13,9 @@
     z-index: 12;
     transition: margin 0.3s ease-in-out;
 
-    &.aiarea.open{
+    &.aiarea.open {
         margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
+        border-radius: 0 !important;
     }
 
     &.open {
