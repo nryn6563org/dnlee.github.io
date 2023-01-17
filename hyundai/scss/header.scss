@@ -55,6 +55,18 @@
                 }
             }
         }
+        &.a2-item{
+            background:#DED6D0;
+
+            & > div:not(.modal){
+                h1{
+                    
+                    span{
+                        color:#141414;
+                    }
+                }
+            }
+        }
     }
 
     &.sub {
