@@ -1,0 +1,163 @@
+.wrap{
+  max-width: 640px;
+  min-width: 360px;
+  margin: 0 auto;
+}
+
+article{
+  padding: 0 20px;
+  margin-bottom: 30px;
+}
+
+article.background{
+  background-color: #f8f8f8;
+}
+
+.text-truncate{
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.text-truncate2{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 2 !important; 
+  -webkit-box-orient: vertical !important;
+}
+
+button.more{
+  font-size: 14px;
+  width: 100%;
+  height: 50px;
+  color: #333d47;
+  border: none;
+  background-color: #f0f0f0;
+}
+
+button.orange{
+  color: #e58b04;
+  background-color: #fdf6eb;
+}
+
+button.green{
+  color: #21a93c;
+  background-color: #edf8ef;
+}
+
+button.blue{
+  color: #0e82db;
+  background-color: #ecf5fc;
+}
+
+button.red{
+  color: #e00d14;
+  background-color: #fdecec;
+}
+
+/* header */
+.header{
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.head-name{
+  display: flex;
+  justify-content: baseline;
+}
+
+.head-name button.back{
+  padding: 0 !important;
+  margin-right: 5px;
+  border: none;
+  background: none;
+}
+
+.head-name h1{
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+/* section article(main) */
+.nav{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav button {
+  width: 50%;
+  font-size: 16px;
+  color: #28313A;
+  /* background-color: #fff; */
+}
+
+.nav-link{
+  border: none !important;
+}
+
+.nav button.active {
+  font-weight: 900;
+  font-size: 16px;
+  color: #000;
+  border-bottom: 3px solid #000 !important;
+}
+
+.nav-tabs .nav-link.active{
+  background: none !important;
+}
+
+.nav button:hover {
+  font-weight: 900;
+  font-size: 16px;
+  color: #000;
+}
+
+.tab-content {
+  margin-top: 20px;
+}
+
+.main-news, .main-tag{
+  width: 100%;
+  height: 98px;
+  margin-right: 20px;
+  padding: 15px 20px;
+  background-color: #F9F9F9;
+  border-radius: 15px;
+  box-shadow: 0px 5px 5px rgb(0 0 0 / 10%);
+  margin-bottom: 15px;
+}
+
+.date-time, .data-time span{
+  font-size: 12px;
+  color: #969696;
+  margin-bottom: 5px;
+}
+
+.text{
+  font-size: 16px;
+  color: #141414;
+  font-weight: 500;
+}
+
+.main-tag .data-time{
+  display: flex;
+  justify-content: space-between;
+}
+
+.data-time span button{
+  font-size: 11px;
+  height: 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+
+.main a{
+  text-decoration: none;
+}
