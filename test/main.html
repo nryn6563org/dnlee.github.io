@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>현대차증권-Main</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="icon" href="img/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+</head>
+
+<body>
+
+  <div class="wrap">
+    <header class="header">
+      <div class="head-name">
+        <button class="back"><img src="img/icon_back.png" alt="뒤로가기"></button>
+        <h1>AI투자정보</h1>
+      </div>
+      <div class="head-icon">
+        <a href="#" class="search"><img src="img/head-icon1.png" alt="검색"></a>
+        <a href="#" class="my"><img src="img/head-icon2.png" alt="my"></a>
+      </div>
+    </header>
+
+    <section>
+
+      <article>
+        <div class="message">
+          <div class="mes-text">
+            <span><strong>서비스 신청</strong>하여 추가 정보를 받아보세요.</span>
+          </div>
+          <div class="mes-close">
+            <button><img src="img/mes-close.png" alt="닫기"></button>
+          </div>
+        </div>
+      </article>
+
+
+      <article>
+        <div class="issue">
+          <div class="isu-headname">
+            <span><strong class="emp">시장의 이슈</strong>를 <br>확인해 보세요.</span>
+            <em>2022.03.03 기준</em>
+          </div>
+          <img src="img/issue-img.png" alt="버블차트" class="isu-img">
+        </div>
+
+        <!-- swiper -->
+        <div class="swiper isuSwiper swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+          <div class="swiper-wrapper transform: translate3d(0px, 0px, 0px);">
+            <div class="swiper-slide issue-slide">
+              <div class="slide-tag">
+                <button class="red">#네옵시티</button>
+                <span class="up">+1.62%</span>
+              </div>
+              <div class="slide-text">
+                <span>불붙는 '태양광 전기차' 시장 누가 선점하나? 2025년 4천만원대 나온다.</span>
+              </div>
+            </div>
+            <div class="swiper-slide issue-slide"">
+                <div class=" slide-tag">
+              <button class="blue">#네옵시티</button>
+              <span class="down">-1.62%</span>
+            </div>
+            <div class="slide-text">
+              <span>불붙는 '태양광 전기차' 시장 누가 선점하나? 2025년 4천만원대 나온다.</span>
+            </div>
+          </div>
+          <div class="swiper-slide issue-slide"">
+                <div class=" slide-tag">
+            <button>#전기차</button>
+            <span>0%</span>
+          </div>
+          <div class="slide-text">
+            <span>불붙는 '태양광 전기차' 시장 누가 선점하나? 2025년 4천만원대 나온다.</span>
+          </div>
+        </div>
+        <div class="swiper-slide issue-slide"">
+                <div class=" slide-tag">
+          <button class="red">#네옵시티</button>
+          <span class="up">+1.62%</span>
+        </div>
+        <div class="slide-text">
+          <span>불붙는 '태양광 전기차' 시장 누가 선점하나? 2025년 4천만원대 나온다.</span>
+        </div>
+  </div>
+  </div>
+  <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pag"></div>
+  </div>
+
+  </article>
+  <div class="cha">
+    <article>
+
+      <div class="cha-headname">
+        <span><strong class="emp">시장의 특징주</strong>를 <br>확인해 보세요.</span>
+      </div>
+      <!-- swiper -->
+      <div class="swiper isuSwiper swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide cha-slide">
+            <div class="slide-listname">
+              <span>핫이슈 종목</span>
+              <small>2022.03.03 기준</small>
+            </div>
+            <div class="slide-list">
+              <ul>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">NAVER</span>
+                    <span class="num up red">+1.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name text-truncate">삼성바이오로직스가나다라마바사삼성바이오로직스가나다라마바사</span>
+                    <span class="num down blue">-0.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+              </ul>
+              <button class="more">더보기</button>
+            </div>
+            
+          </div>
+
+
+          <div class="swiper-slide cha-slide">
+            <div class="slide-listname">
+              <span>외국인 비중 확대</span>
+              <small>2022.03.03 기준</small>
+            </div>
+            <div class="slide-list">
+              <ul>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">NAVER</span>
+                    <span class="num up red">+1.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name text-truncate">삼성바이오로직스가나다라마바사삼성바이오로직스가나다라마바사</span>
+                    <span class="num down blue">-0.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class="more">더보기</button>
+          </div>
+
+          <div class="swiper-slide cha-slide">
+            <div class="slide-listname">
+              <span>기관 순매수 상위</span>
+              <small>2022.03.03 기준</small>
+            </div>
+            <div class="slide-list">
+              <ul>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">NAVER</span>
+                    <span class="num up red">+1.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name text-truncate">삼성바이오로직스가나다라마바사삼성바이오로직스가나다라마바사</span>
+                    <span class="num down blue">-0.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class="more">더보기</button>
+          </div>
+
+          <div class="swiper-slide cha-slide">
+            <div class="slide-listname">
+              <span>외국인 순매수 상위 </span>
+              <small>2022.03.03 기준</small>
+            </div>
+            <div class="slide-list">
+              <ul>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">NAVER</span>
+                    <span class="num up red">+1.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name text-truncate">삼성바이오로직스가나다라마바사삼성바이오로직스가나다라마바사</span>
+                    <span class="num down blue">-0.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+                <li>
+                  <div class="list-top">
+                    <span class="list-top-name">현대차증권</span>
+                    <span class="num up red">+21.62%</span>
+                  </div>
+                  <div class="list-bot">
+                    <span class="text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418 코스피, 개인의 매수세로 AFDSS상승 2,418 개인의 매수세로 AFDSS상승
+                      2,418</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <button class="more">더보기</button>
+          </div>
+
+        </div>
+        <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pag"></div>
+      </div>
+
+
+
+    </article>
+  </div>
+
+  <article>
+    <div class="tec">
+      <div class="tec-headname">
+        <span>금주의 저평가된 <br> <strong class="emp">기술주를 확인</strong>해 보세요.</span>
+      </div>
+
+      <div class="nav nav-tabs tec-tab">
+        <button data-bs-toggle="tab" data-bs-target="#one" class="nav-link tec-tab1 active"
+          aria-selected="true">이슈섹터</button>
+        <button data-bs-toggle="tab" data-bs-target="#two" class="nav-link tec-tab2" aria-selected="false">이슈테마</button>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <div id="one" class="tab-pane fade show active" tabindex="0">
+          <div class="sect">
+            <div class="sect-headname">
+              <span>신재생에너지</span>
+            </div>
+            <div class="sect-box">
+              <div class="sect-top">
+                <span class="green">다소저평가</span>
+                <a href="#">기술진단</a>
+              </div>
+              <div class="sect-bot">
+                <span>현대차증권</span>
+                <em>기술력<strong>12</strong>위 / 1365</em>
+              </div>
+            </div>
+            <div class="sect-box">
+              <div class="sect-top">
+                <span class="blue">저평가</span>
+                <a href="#">기술진단</a>
+              </div>
+              <div class="sect-bot">
+                <span class="text-truncate">삼성바이오로직스</span>
+                <em>기술력<strong>12</strong>위 / 1365</em>
+              </div>
+            </div>
+            <div class="sect-box">
+              <div class="sect-top">
+                <span class="red">고평가</span>
+                <a href="#">기술진단</a>
+              </div>
+              <div class="sect-bot">
+                <span>NAVER</span>
+                <em>기술력<strong>12</strong>위 / 1365</em>
+              </div>
+            </div>
+            <button class="tec-more">더보기</button>
+          </div>
+        </div>
+
+        <div id="two" class="tab-pane fade" tabindex="0">
+
+          <div class="them">
+            <div class="sect-headname">
+              <span>신재생에너지</span>
+            </div>
+            <div class="sect-box">
+              <div class="sect-top">
+                <span class="green">다소저평가</span>
+                <a href="#">기술진단</a>
+              </div>
+              <div class="sect-bot">
+                <span>현대차증권</span>
+                <em>기술력<strong>12</strong>위 / 1365</em>
+              </div>
+            </div>
+            <div class="sect-box">
+              <div class="sect-top">
+                <span class="blue">저평가</span>
+                <a href="#">기술진단</a>
+              </div>
+              <div class="sect-bot">
+                <span class="text-truncate">삼성바이오로직스</span>
+                <em>기술력<strong>12</strong>위 / 1365</em>
+              </div>
+            </div>
+            <div class="sect-box">
+              <div class="sect-top">
+                <span class="red">고평가</span>
+                <a href="#">기술진단</a>
+              </div>
+              <div class="sect-bot">
+                <span>NAVER</span>
+                <em>기술력<strong>12</strong>위 / 1365</em>
+              </div>
+            </div>
+            <button class="tec-more">더보기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+  <article class="background">
+
+    <div class="interest">
+      <div class="int-headname">
+        <span><strong class="emp">AI가 추천</strong>하는 <br> 관심종목입니다.</span>
+        <button>더보기</button>
+      </div>
+
+      <div class="nav nav-tabs int-tab">
+        <button data-bs-toggle="tab" data-bs-target="#int1" class="nav-link int-tab1 active"
+          aria-selected="true">국내주식</button>
+        <button data-bs-toggle="tab" data-bs-target="#int2" class="nav-link it-tab2" aria-selected="false">미국주식</button>
+      </div>
+      <div class="tab-content" id="nav-tabContent">
+        <div id="int1" class="tab-pane fade show active" tabindex="0">
+          <div class="swiper intSwiper swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide int-slide">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+              </div>
+              <div class="swiper-slide int-slide">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+              </div>
+              <div class="swiper-slide int-slide">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+              </div>
+              <div class="swiper-slide int-slide notjoin">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+                <div class="notjoin-text">
+                  <span>AI관심종목</span>
+                  <div class="maintext">AI종목추천 서비스는 <br> 서비스 가입 후 확인 가능합니다.</div>
+
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#joinModal">가입하기</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pag"></div>
+          </div>
+          <button class="aiport">
+            <div class="aiport-text">
+              <span>내 투자 스타일에 맞는 <br> <strong>AI포트폴리오 확인하기</strong></span>
+            </div>
+            <img src="img//icon_arrow_right.svg" alt="" class="aiport-next">
+          </button>
+        </div>
+        <div id="int2" class="tab-pane fade" tabindex="0">
+          <div class="swiper intSwiper swiper-horizontal swiper-pointer-events swiper-backface-hidden">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide int-slide">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+              </div>
+              <div class="swiper-slide int-slide">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+              </div>
+              <div class="swiper-slide int-slide">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+              </div>
+              <div class="swiper-slide int-slide notjoin">
+                <div class="intslide-top">
+                  <span>AI관심종목</span>
+                  <div class="top-text">
+                    <em><strong>LIG 넥스원 </strong><small>000123</small><br>방산물자의 개발,제조,정비 및 판매업체</em>
+                  </div>
+                </div>
+                <div class="intslide-bot">
+                  <span>증권사 목표가<strong>45,000원</strong></span>
+                  <button>#온라인</button>
+                  <button>#해외주식</button>
+                  <button>#2차전지</button>
+                </div>
+                <div class="notjoin-text">
+                  <span>AI관심종목</span>
+                  <div class="maintext">AI종목추천 서비스는 <br> 서비스 가입 후 확인 가능합니다.</div>
+                  <button type="button" data-bs-toggle="modal" data-bs-target="#joinModal">가입하기</button>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pag"></div>
+          </div>
+          <button class="aiport">
+            <div class="aiport-text">
+              <span>내 투자 스타일에 맞는 <br> <strong>AI포트폴리오 확인하기</strong></span>
+            </div>
+            <img src="img//icon_arrow_right.svg" alt="" class="aiport-next">
+          </button>
+        </div>
+      </div>
+    </div>
+  </article>
+
+  <article>
+
+    <div class="report">
+      <div class="rep-headname">
+        <span><strong class="emp">주요 공시와 최신 리포트</strong>를 <br>확인해보세요.</span>
+      </div>
+
+      <div class="nav nav-tabs rep-tab">
+        <button data-bs-toggle="tab" data-bs-target="#rep1" class="nav-link rep-tab1 active"
+          aria-selected="true">주요공시</button>
+        <button data-bs-toggle="tab" data-bs-target="#rep2" class="nav-link rep-tab2" aria-selected="false">최신
+          리포트</button>
+      </div>
+
+      <div class="tab-content" id="nav-tabContent">
+        <div id="rep1" class="tab-pane fade show active" tabindex="0">
+          <div class="nav nav-tabs rep-sub">
+            <button data-bs-toggle="tab" data-bs-target="#repsub1" class="nav-link rep-sub1 active"
+              aria-selected="true">수주공시</button>
+            <button data-bs-toggle="tab" data-bs-target="#repsub2" class="nav-link rep-sub2"
+              aria-selected="false">주요경영사항</button>
+            <button data-bs-toggle="tab" data-bs-target="#repsub3" class="nav-link rep-sub3"
+              aria-selected="false">시설투자</button>
+          </div>
+          <div class="tab-content" id="nav-tabContent">
+            <div id="repsub1" class="tab-pane fade show active" tabindex="0">
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+
+              <button class="rep-more">더보기</button>
+            </div>
+            <div id="repsub2" class="tab-pane fade" tabindex="0">
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+
+              <button class="rep-more">더보기</button>
+            </div>
+            <div id="repsub3" class="tab-pane fade" tabindex="0">
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub text-truncate2">
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                  면역항암제 Q702와 키트루다주(펨브롤리주맙) 병용투여에 관한 한국 식품의약품안전처
+                </div>
+                <div class="list-bot right">09.22 15:02</div>
+              </div>
+
+              <button class="rep-more">더보기</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="rep2" class="tab-pane fade" tabindex="0">
+          <div class="nav nav-tabs rep-sub">
+            <button data-bs-toggle="tab" data-bs-target="#repsub1-1" class="nav-link rep-sub1 active"
+              aria-selected="true">신규리포트</button>
+            <button data-bs-toggle="tab" data-bs-target="#repsub2-1" class="nav-link rep-sub2"
+              aria-selected="false">목표가상향</button>
+            <button data-bs-toggle="tab" data-bs-target="#repsub3-1" class="nav-link rep-sub3"
+              aria-selected="false">신규매수추천</button>
+          </div>
+          <div class="tab-content" id="nav-tabContent">
+            <div id="repsub1-1" class="tab-pane fade show active" tabindex="0">
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="red">목표가: 230,000원 투자의견 : <em class="red">BUY</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="blue">목표가: 230,000원 투자의견 : <em class="blue">SELL</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="red">목표가: 230,000원 투자의견 : <em class="red">BUY</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+
+              <button class="rep-more">더보기</button>
+            </div>
+            <div id="repsub2-1" class="tab-pane fade" tabindex="0">
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="red">목표가: 230,000원 투자의견 : <em class="red">BUY</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="blue">목표가: 230,000원 투자의견 : <em class="blue">SELL</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="red">목표가: 230,000원 투자의견 : <em class="red">BUY</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+
+              <button class="rep-more">더보기</button>
+            </div>
+            <div id="repsub3-1" class="tab-pane fade" tabindex="0">
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="red">목표가: 230,000원 투자의견 : <em class="red">BUY</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="blue">목표가: 230,000원 투자의견 : <em class="blue">SELL</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+              <div class="rep-list">
+                <div class="list-name">현대차증권</div>
+                <div class="list-sub">공급자 위주 시장 전환 등으로 수주 큰 폭 증가</div>
+                <span class="red">목표가: 230,000원 투자의견 : <em class="red">BUY</em></span>
+                <div class="list-bot">IBK투자증권 | 09.22 15:02</div>
+              </div>
+
+              <button class="rep-more">더보기</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+  <article class="background">
+
+
+    <div class="recom">
+      <div class="recom-headname">
+        <span><strong class="emp">장 개시전!</strong><br>이런 주제는 어떠세요?</span>
+      </div>
+      <a href="#">
+        <span># 수급포착테마</span>
+        <img src="img/icon_arrow_right.svg" alt="recom-next" class="recom-next">
+      </a>
+      <a href="#">
+        <span># 전일시간 외 금등주</span>
+        <img src="img/icon_arrow_right.svg" alt="recom-next" class="recom-next">
+      </a>
+      <a href="#">
+        <span># 검색 상위 신규 등장</span>
+        <img src="img/icon_arrow_right.svg" alt="recom-next" class="recom-next">
+      </a>
+      <a href="#">
+        <span># 장중수급포착</span>
+        <img src="img/icon_arrow_right.svg" alt="recom-next" class="recom-next">
+      </a>
+
+
+
+    </div>
+
+
+  </article>
+
+  </section>
+
+  <!-- modal -->
+  <div class="modal fade modal-custom" id="joinModal" style="display: none;" tabindex="-1" aria-hidden="true">
+  
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+  
+        <div class="modal-text">
+          <span>AI투자정보 가입 후 서비스 <br> 이용가능합니다.</span>
+        </div>
+        <div class="modal-btn">
+          <button type="button" class="cancle" data-bs-dismiss="modal">취소</button>
+          <button type="button" class="join">가입하기</button>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+
+  <footer>
+
+    <span class="footer-text">
+      ※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.
+    </span>
+    <span class="footer-text">
+      ※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.
+    </span>
+    <span class="footer-text">
+      ※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.
+    </span>
+
+  </footer>
+  </div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const message = document.querySelector('.message');
+    const close = document.querySelector('.mes-close');
+
+    close.addEventListener('click', function () {
+      message.style.display = 'none';
+    });
+
+    const swiper = new Swiper(".isuSwiper", {
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    const swiper2 = new Swiper(".intSwiper", {
+      spaceBetween: 20,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+  </script>
+</body>
+
+</html>
