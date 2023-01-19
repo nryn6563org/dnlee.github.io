@@ -5,10 +5,6 @@
   margin: 0 auto;
 }
 
-article{
-  margin-bottom: 20px;
-}
-
 article.background{
   background-color: #f8f8f8;
 }
@@ -76,6 +72,7 @@ strong.emp{
   color: #fff;
   border-radius: 38px;
   margin: 0px 20px;
+  margin-bottom: 20px;
 }
 
 .message .mes-text{
@@ -124,8 +121,12 @@ img.isu-img{
 }
 
 /* swiper */
-.swiper{
-  padding: 20px !important; 
+.swiper.isuSwiper{
+  padding: 15px 20px 40px 20px !important; 
+}
+
+.swiper.hotisuSwiper{
+  padding: 20px 20px 40px 20px;
 }
 
 button.more{
@@ -216,6 +217,10 @@ span.swiper-pagination-bullet.swiper-pagination-bullet-active{
   display: block;
   font-size: 20px;
   font-weight: 700;
+}
+
+.swiper.chaSwiper{
+  padding: 20px 20px 40px;
 }
 
 .swiper-slide.cha-slide{
@@ -309,13 +314,8 @@ span.text-truncate {
 }
 
 /* section article (tec) */
-.tec{
-  margin-top: 20px;
-}
-
 .tec-headname{
-  margin-bottom: 20px;
-  padding: 0px 30px;
+  padding: 40px 30px 20px;
 }
 
 .tec-headname span{
@@ -364,8 +364,8 @@ span.text-truncate {
   background: none !important;
 }
 
-.tab-content {
-  margin-top: 25px;
+.tab-content{
+  margin-top: 20px;
   /* padding: 0 20px; */
 }
 
@@ -383,6 +383,11 @@ span.text-truncate {
   border-radius: 15px;
   box-shadow: 0px 3px 8px rgb(0 0 0 / 8%);
 }
+
+.sect-box.last{
+  margin-bottom: 0;
+}
+
 
 .sect-top span{
   font-size: 11px;
@@ -449,7 +454,8 @@ span.red{
 .tec-more button{
   width: 100%;
   height: 50px;
-  margin: 6px 0 20px;
+  margin-top: 26px;
+  margin-bottom: 40px;
   border: none;
   background-color: #F4F2F4;
   border-radius: 10px;
@@ -517,25 +523,26 @@ span.red{
 }
 
 .top-text{
-  width: 273px;
-  height: 42px;
   margin-top: 12px;
-  margin-bottom: 66px;
-  color: #fff;
 }
 
-.top-text em{
-  font-style: normal;
+.top-text2{
+  width: 273px;
+  height: 42px;
+  margin-top: 5px;
+  margin-bottom: 46px;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
 }
 
-.top-text em strong{
+.top-text strong{
+  color: #fff;
   font-size: 24px;
   font-weight: 700;
 }
 
-.top-text em small{
+.top-text small{
   font-size: 14px;
   font-weight: 400;
   color: #9EA2BB;
@@ -717,10 +724,14 @@ button.join{
   padding: 0 20px;
 }
 
+.nav.rep-sub{
+  height: 40px;
+}
+
 .rep-sub button{
   width: 33.33%;
   height: 40px;
-  padding: 6.5px 0;
+  padding: 0;
   font-size: 14px;
   font-weight: 400;
   background-color: #EBEBEB !important;
@@ -758,7 +769,7 @@ button.nav-link.rep-sub1.active, button.nav-link.rep-sub2.active, button.nav-lin
 
 .rep-list{
   position: relative;
-  padding: 18px 0;
+  padding: 18px 5px;
   border-top: 1px solid #d7d7d7;
 }
 
@@ -771,6 +782,12 @@ button.nav-link.rep-sub1.active, button.nav-link.rep-sub2.active, button.nav-lin
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 5px;
+}
+
+.list-sub1{
+  font-size: 12px;
+  font-weight: 400;
+  color: #4D4D4D;
 }
 
 .list-sub{
@@ -805,7 +822,7 @@ button.nav-link.rep-sub1.active, button.nav-link.rep-sub2.active, button.nav-lin
   color: #969696;
 }
 
-.list-sub.text-truncate2{
+.text-truncate2{
   overflow: hidden;
   text-overflow: ellipsis;
   display: -webkit-box !important;
@@ -834,7 +851,7 @@ button.nav-link.rep-sub1.active, button.nav-link.rep-sub2.active, button.nav-lin
   font-size: 14px;
   font-weight: 400;
   color: #333d47;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 
@@ -869,20 +886,27 @@ button.nav-link.rep-sub1.active, button.nav-link.rep-sub2.active, button.nav-lin
   color: #28313A;
 }
 
+.recom a:last-child{
+  margin-bottom: 0;
+}
+
 
 /* footer */
 footer{
-  padding: 48px 26px 77px 27px;
+  padding: 40px 26px 77px 27px;
   font-size: 12px;
   font-weight: 400;
   color: #969696;
+  border-top: 8px solid #f4f4f4;
 }
 
 .footer-text{
-  display: block;
+  margin-bottom: 10px;
 }
 
-
+footer div:last-child{
+  margin-bottom: 0;
+}
 
 
 

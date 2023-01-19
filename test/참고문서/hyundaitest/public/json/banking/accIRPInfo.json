@@ -1,0 +1,11 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "accInfo" : {
+        "balance" : "1000000",
+        "evalPrice": "10000000",
+        "ableSale": "1000000",
+        "maxAmount": "1000000",
+        "limitAmmonut": "7500"
+    }
+}

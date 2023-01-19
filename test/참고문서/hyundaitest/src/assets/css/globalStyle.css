@@ -1,0 +1,1382 @@
+@import 'font.css';
+
+/* 공통컬러 */
+:root {
+    --red: rgba(232, 26, 26, 1);
+    --blue: rgba(32, 115, 239, 1);
+    --black: rgba(20, 20, 20, 1);
+    --white: rgba(255, 255, 255, 1);
+    --pointBlue: rgba(63 , 84, 195, 1);
+    --basicLine: rgba(210, 210, 210, 1);
+    --basicBg: rgba(245, 245, 245, 1);
+    --fontDeepgray: rgba(60, 60, 60, 1);
+    --fontLightgray: rgba(140, 140, 140, 1);
+    --noticeGray: rgba(112, 120, 132, 1);
+    --noticeRad:rgba(238, 55, 57, 1);
+    --tableTitleFont: rgba(100 ,100, 100, 1);
+    --tableTitleBg: rgba(250, 250, 250, 1);
+    --tableTopLine:rgba(140 ,140, 140, 1);
+    --tableCenterLine:rgba(217, 217, 217, 1);
+    --tableBottomLine:rgba(240, 240, 240, 1);
+    --blackBlue: rgba(242, 245, 249, 1);
+    --listBorder: rgba(215,215,215,1); /* ul 타입 상단 보더 컬러 추가 */
+    --listBg: rgba(248,248,248,1); /* ul 타입 연회색 매트추가(현재 리스트에만 적용값) 컬러 추가 */
+}
+/* 공통 폰트 */
+.fontRed { color:var(--red) !important; }
+.fontNoticeRed { color:var(--red); }
+.fontPointBlue { color: var(--pointBlue) !important; }
+.fontBlue { color: var(--blue) !important; }
+.fontGray { color:var(--noticeGray); }
+.fontLightGray { color:rgba(173, 173, 173, 1); }
+.fontBlack { color:var(--black); }
+.weight400 { font-weight: 400;}
+.weight500 { font-weight: 500;}
+.weight700 { font-weight: 700;}
+.bgBlue {background-color:rgba(242, 245, 249, 1) !important; }
+.bgGray {background-color:var(--tableTitleBg); }
+.bgLightGray {background-color:var(--listBg); }
+.bgBlueGray {background-color:rgba(246, 247, 249, 1); }
+.fontUnderLn { background: rgba(63, 84, 195, 0.1); color:var(--pointBlue) ;}
+.fontUnderLnRed { background: rgba(238, 55, 57, 0.1); color:var(--red) ;}
+.aleartToast { background: var(--red); color: var(--white) }
+/* 공통스타일 - line-height 추가 2022-09-18 서영기 */
+html, body {
+    width: 100%;
+    margin: 0; padding: 0; word-break:keep-all; line-height: 1.5;
+    overscroll-behavior: none; position: fixed; overflow: hidden;
+}
+
+html, body, button, input, textarea, select {
+    font-family: 'Spoqa Han Sans Neo', 'sans-serif'; font-size: 14px; color: var(--black);
+}
+/* search폼 초기화 */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+}
+
+/* 컨텐츠영역 공통 : 상하 여백, 타이틀*/
+/* 2단 라우터 구조로 인한 변경 */
+#hmsec > div:not(.bottomBtnArea):not(.bottomSheet):not(.buttonArea) {
+    overflow: auto;
+    height: inherit;
+}
+section, .section {
+    /* min-height: calc(100% - 50px); */
+    min-height: calc(100% - 146px);
+    /* 여백 */
+    margin: 50px 0 0;
+    /* 타이틀: 이체정보확인 & 이체결과 */
+    & > h1 {
+        margin: 0 ; padding: 20px 0 24px;
+        font-size:1.428rem ; font-weight: 400;
+        text-align: center;
+    }
+    & > hr {
+        margin: 0;
+        height: 10px;
+        border: none;
+        background: rgba(239, 239, 239, 1);
+    }
+}
+/* 상승 & 하락 */
+.iconUp {
+    background:url('@/assets/images/global/icon_rising.png') no-repeat left center /9px auto ;
+}
+.iconDown {
+    background:url('@/assets/images/global/icon_down.png') no-repeat left center /9px auto;
+}
+/* 버튼공통 */
+button {
+    padding: 0 24px;
+    border: 1px solid var(--basicLine); border-radius: 6px;
+    background-color:var(--basicBg);
+    line-height: 38px; font-size: 14px; text-align: center; font-weight: 500; color: var(--black);
+    cursor: pointer; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+    /* size */
+    &.h32 {
+        padding: 0 24px;
+        line-height: 30px; font-size: 0.857rem;
+    }
+    &.h44 {
+        padding: 0 36px;
+        border-radius: 8px;
+        line-height: 42px; font-size: 1.143rem;
+    }
+    &.h50 {
+        padding: 0 36px;
+        border-radius: 8px;
+        line-height: 48px; font-size: 1.143rem;
+    }
+    &.w100 {
+        width:100px;
+        padding:0;
+        text-align:center;
+        box-sizing:border-box;
+    }
+    /* style */
+    &.black {
+        border-color: rgba(59,59,59,1);
+        background-color: rgba(59,59,59,1);
+        color: var(--white);
+    }
+    &.red {
+        border-color: var(--red);
+        background-color: var(--red);
+        color: var(--white);
+    }
+    &.blue {
+        border-color: var(--blue);
+        background-color: var(--blue);
+        color: var(--white);
+    }
+    &.pointBlue {
+        /* padding: 0 60px; */
+        border-color: var(--pointBlue);
+        background-color: var(--pointBlue);
+        color: var(--white);
+    }
+    &.borderBlue {
+        border-color: var(--pointBlue);
+        background-color: var(--white);
+        color: var(--pointBlue);
+    }
+    &.white {
+        /* padding: 0 60px; */
+        border-color: var(--basicLine);
+        background-color: var(--white);
+        color: var(--black);
+    }
+    &.gray {
+        padding: 0 30px 0 50px;
+        border-color: var(--basicLine);
+        background-color:rgba(238, 238, 238, 1);
+        color: var(--black);
+    }
+    &.lightBlue {
+        border-color: rgba(244, 246, 253, 1);
+        background-color:rgba(244, 246, 253, 1);
+        color: var(--pointBlue);
+    }
+    /* disable */
+    &:disabled:not(.pointBlue) {
+        border-color:rgba(236, 236, 236, 1);
+        background-color:rgba(249, 249, 249, 1);
+        color:rgba(198, 198, 198, 1) ;
+    }
+    &.pointBlue:disabled {
+        /* opacity: 0.3; */
+        background-color:rgba(182, 190, 232, 1);
+        border-color:rgba(182, 190, 232, 1);
+        color:rgba(219, 223, 244, 1);
+    }
+    /* active */
+    &:active:not(:disabled), &.on {
+        border-color:rgba(66, 88, 205, 1);
+        background-color:var(--white);
+        &.black{
+            border-color:rgba(35, 35, 35, 1);
+            background: rgba(35, 35, 35, 1);
+        }
+        &.red{
+            border-color:rgba(202, 47, 48, 1);
+            background: rgba(202, 47, 48, 1);
+        }
+        &.blue{
+            border-color:rgba(8, 106, 207, 1);
+            background: rgba(8, 106, 207, 1);
+        }
+        &.pointBlue{
+            border-color:rgba(54, 71, 166, 1);
+            background: rgba(54, 71, 166, 1);
+        }
+        &.white , &.gray{
+            border-color:var(--pointBlue);
+        }
+    }
+    /* close & del */
+    &.del {
+        width: 24px; height: 24px;
+        padding: 0;
+        border: none;
+        background: url('@/assets/images/global/button_close.png') no-repeat center / 24px auto;
+        font-size: 0;
+    }
+    /* 셀렉트 컨트롤러 호출 버튼 20220923 서영기 추가 */
+    &.select {
+        padding-right: 30px; padding-left: 12px;
+        background-color: rgba(255,255,255,1);
+        background-image: url('@/assets/images/global/icon_dropDown.png'); background-repeat: no-repeat;
+        background-position: calc(100% - 12px) center;
+        background-size: 8px auto;
+        text-align: left;
+        &.dimmed * {
+            color: rgba(173, 173, 173, 1); font-weight: 400;
+        }
+    }
+    /* infp */
+    &.info {
+        width: 13px; height: 13px;
+        padding: 0; margin-left: 4px;
+        border: none;
+        background: transparent url('@/assets/images/global/icon_info_gray.png') no-repeat center /contain ;
+    }
+    /* noti - 알림/벨 2022-10-13 서영기 추가 */
+    &.noti {
+        width: 24px; height: 24px;
+        padding: 0;
+        border: none;
+        background: url('@/assets/images/global/icon_bell.png') no-repeat center / 22px auto;
+        font-size: 0;
+        &.on {
+            background-image:url('@/assets/images/global/icon_bell_on.png') ;
+        }
+    }
+}
+/* 인풋 공통 */
+input[type="checkbox"], input[type="radio"] {
+    display: none;
+    /* nomal 체크박스/라디오 */
+    & + div {
+        position: relative;
+        min-height: 22px; /* 멀티라인 대비 min으로 변경 2022-09-18 서영기 */
+        padding: 0 0 0 30px;
+        background-repeat: no-repeat;  background-position: left 0; background-size:22px auto; /* background-position 변경 2022-09-18 서영기 */
+        line-height: 22px; font-size: 16px; color: var(--black);
+        /* 스위치 */
+        &.switch {
+            display: inline-block;
+            width: 40px; height: 24px;
+            padding: 0;
+            border-radius: 39px;
+            background: rgba(233, 233, 234, 1);
+            &::before{
+                content: '';
+                position: absolute;
+                left: 2px; top: 2px;
+                width: 20px; height: 20px;
+                border:none; border-radius: 100%;
+                background: var(--white);
+                transition: all .2s ease-in-out;
+            }
+        }
+        /* 체크btn스타일 */
+        &.check {
+            height:40px;
+            padding: 0 12px 0 12px;
+            border: 1px solid var(--basicLine); border-radius: 6px;
+            background: rgba(238, 238, 238, 1);
+            color: var(--black);
+            line-height: 38px; font-size: 1rem;
+            box-sizing: border-box; text-align: center;
+            & span {
+                display: inline-block;
+                background: url('@/assets/images/global/icon_check.png') no-repeat left center / 11px auto;
+                padding-left: 20px;
+
+            }
+        }
+        /* 블루탭 스타일 */
+        &.blue {
+            min-width:60px; height:40px;
+            padding:0;
+            border-radius: 99px; border:1px solid rgba(240, 240, 240, 1);
+            background:var(--white);
+            text-align:center; line-height:38px; color: rgba(100, 100, 100, 1); font-size:1rem;
+            box-sizing: border-box;
+        }
+        /* 체크 박스 스타일추가 2022-09-21 */
+        &.checkText {
+            color: rgba(198,198,198,1);
+            background:url('@/assets/images/global/checkbox_checkText_off.png') no-repeat 6px 6px / 11px auto;
+        }
+    }
+    /* 스위치 */
+    &:checked + div {
+        &.switch {
+            background:var(--pointBlue) ;
+            &::before{
+                left: calc(100% - 22px);;
+                width: 20px; height: 20px;
+                transition: all .2s ease-in-out;
+            }
+        }
+        &.check {
+            border-color:var(--pointBlue);
+            background:var(--white);
+        }
+        &.blue {
+            background:var(--pointBlue);
+            font-weight:500; color:var(--white);
+        }
+
+        /* 체크 박스 스타일추가 2022-09-21 */
+        &.checkText {
+            color: var(--black);
+            background:url('@/assets/images/global/checkbox_checkText.png') no-repeat 6px 6px / 11px auto;
+        }
+    }
+    /* 체크박스&라디오 disabled , checked */
+    &:disabled{
+        & + div {
+            &.switch {
+                opacity: 0.5;
+                &::before { background: var(--white); }
+            }
+        }
+        /* 체크박스 - 약관동의  */
+        & + p {
+            border-color:rgba(233, 233, 234, 1);
+            background: rgba(233, 233, 234, 1);
+        }
+        &:checked + p  {opacity: 0.2;}
+    }
+}
+input[type="checkbox"]{
+    & + div {
+        background-image:url('@/assets/images/global/checkbox_line_off.png');
+    }
+    &:checked + div {
+        background-image:url('@/assets/images/global/checkbox_line_on.png');
+    }
+    &:disabled {
+        & + div {
+            background-image:url('@/assets/images/global/checkbox_line_disable.png');
+        }
+        &:checked + div {
+            background-image:url('@/assets/images/global/checkbox_line_on.png');
+            opacity: 0.2;
+        }
+    }
+    /* 체크박스 - 약관동의  */
+    & + p {
+        width: 16px ; height: 16px;
+        border: 1px solid black;
+        font-size: 0;
+    }
+    &:checked + p {
+        border-color: blue;
+        background: blue;
+    }
+}
+input[type="radio"] {
+    & + div {
+        background-image:url('@/assets/images/global/radio_off.png');
+    }
+    &:checked + div {
+        background-image:url('@/assets/images/global/radio_on.png');
+    }
+    &:disabled {
+        & + div {
+            background-image:url('@/assets/images/global/radio_disable.png');
+        }
+        &:checked + div {
+            background-image:url('@/assets/images/global/radio_on.png');
+            opacity: 0.2;
+        }
+    }
+}
+/* 탭형 */
+.tab {
+    display: flex;
+    height: 40px;
+    border-radius: 6px;
+    background:rgba(235, 235, 235, 1);
+    & label {
+        flex: 1;
+        & input[type="radio"] {
+            & + div {
+                height: 40px;
+                padding: 0;
+                border: 1px solid transparent;
+                background-image:none;
+                line-height: 38px; text-align: center; color: rgba(153, 153, 153, 1); font-weight: 400; font-size: 1rem; /* 서체기본크기 추가 */
+                box-sizing: border-box;
+                /* 임시 - 추후 bg로처리 */
+                &::before { display: none;}
+            }
+            &:checked + div {
+                border-color: var(--black); border-radius: 6px;
+                background: var(--white);
+                color: var(--black); font-weight: 700; font-size: 1rem; /* 서체기본크기 추가 */
+            }
+        }
+    }
+}
+input[type="text"], input[type="search"], input[type="password"], input[type="tel"] {
+    height: 40px;
+    padding: 0 12px;
+    border: 1px solid var(--basicLine); border-radius: 6px;
+    background:var(--white);
+    line-height: 40px; font-size: 14px; color: var(--black); font-weight: 500;
+    box-sizing: border-box; outline:none;
+    &::placeholder { color: rgba(173, 173, 173, 1); font-weight: 400;}
+    /* text color not working */
+    &:disabled {
+            border-color:rgba(236, 236, 236, 1);
+            background: rgba(249, 249, 249, 1);
+            color: rgba(198, 198, 198, 1);font-weight: 400;
+            /* color: red; */
+    }
+    &:read-only {
+            /* border-color:rgba(226, 226, 226, 1);
+            background: rgba(250, 250, 250, 1);
+            color: var(--black); font-weight: 500; */
+    }
+    /* 리드온리의 경우 on 상황 제외 */
+    &:active:not(:disabled, :read-only, .err), &:focus:not(:disabled, :read-only, .err), &.on:not(:disabled) {
+        border-color: var(--pointBlue);
+        & + button { display: block;}
+    }
+    /* 사이즈 */
+    &.h50 {
+        height: 50px;
+        line-height: 50px; font-size: 16px;
+    }
+    /* 에러 */
+    &.err {
+        border-color: var(--red);
+    }
+    /* 에러 - 20220918 서영기 - 영역에러 추가 */
+    &.errBox {
+        border-color: var(--red) !important;
+        background: url('@/assets/images/global/icon_errorBox.png') no-repeat right 10px center / 20px !important;
+    }
+}
+label {
+    overflow: visible; display: inline-block;  position: relative;
+    line-height: 0;
+    & p, & span, & div { line-height: 1.5; }
+    & input {
+        /* 인풋 높이에 따른 버튼 배치 */
+        &.h50 + button {
+            margin-top: -36px;
+        }
+        &.h50 ~ button.resetInput {
+            margin-top: -34px;
+        }
+    }
+    /* 기본 span */
+    & > span {
+        display: inline-block;
+        margin-top: 10px;
+        &.gray { color: rgba(140, 140, 140, 1); }
+    }
+    & textarea {
+        overflow: auto;
+        width: 100%; height: 160px;
+        padding: 20px 12px; border: 1px solid rgba(227, 227, 227, 1); border-radius: 8px;
+        font-size: 1.142rem; font-weight: 400; line-height: 24px;
+        box-sizing: border-box;
+    }
+    & > button {
+        display: none; position: absolute;
+        right: 10px; z-index: 5; width: 20px; height: 20px;
+        padding: 0;
+        border: none;
+        line-height: inherit;
+        &.resetInput {
+            width: 20px; height: 20px;
+            margin-top: -30px;
+            background: rgba(239, 239, 239, 1) url('@/assets/images/global/button_del.png') no-repeat 5px center / 9px;
+            border-radius: 10px; /* radius 추가 */
+        }
+    }
+    /* 에러 */
+    &.errBox {
+        & > button { display: none; }
+        &::after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 10px); right:10px ; width: 20px; height: 20px;
+            border-radius: 100%;
+            background-color: var(--red);
+        }
+    }
+    /*검색 */
+    &.search {
+        & > button:not(.resetInput) {
+            display: block;
+            right: 7px;
+            width: 24px; height: 24px;
+            margin-top: -32px;
+            background:url('@/assets/images/global/button_search.png') no-repeat center/24px auto ;
+        }
+        & > button.resetInput {
+            right: 34px;
+        }
+        & > input {
+            padding:0 36px 0 12px;
+            &.h50 + button:not(.resetInput) {
+                margin-top: -36px;
+            }
+        }
+    }
+}
+/* 탭매뉴 관련 */
+.tabStyle01, .tabStyle02, .tabStyle04 {
+    height: 38px;
+    background: var(--white);
+    &  ul {
+        overflow: hidden;
+        padding: 0; margin: 0;
+        background: var(--white);
+        list-style: none;
+        & li {
+            float: left;
+            min-width: 62px;
+            padding:0  16px;
+            line-height: 38px; color:rgba(130, 130, 130, 1); font-size: 16px; font-weight: 400;
+            box-sizing: border-box;
+            &.on {
+                position: relative;
+                color: var(--pointBlue); font-weight: 700;
+                &.on::after {
+                    content: ''; position: absolute;
+                    left: 0; bottom: -1px; width: 100%; height: 3px;
+                    border-radius: 1px;
+                    background: var(--pointBlue);
+                }
+            }
+            & a {
+                 display: block;
+                color:inherit;
+                text-decoration: none; text-align: center;
+            }
+        }
+    }
+}
+.tabStyle02 {
+    position: relative;
+    & > button {
+        position: absolute;
+        right: 0; top: 0; z-index: 10; width: 34px; height: 38px;
+        padding: 0 17px 0 9px;
+        border: none;
+        background: var(--white);
+        /* background: red; */
+        color: rgba(128, 128, 128, 1);
+    }
+}
+.tabStyle03 {
+    height: 46px;
+    padding: 4px;
+    border-radius: 100px;
+    background: var(--basicBg);
+    box-sizing: border-box;
+    & ul {
+        overflow: hidden;
+        margin: 0; padding: 0;
+        list-style: none;
+        & li {
+            float: left;
+            width: 100%;
+            border-radius: 100px;
+            line-height: 38px; color: rgba(153, 153, 153, 1); font-size: 16px; font-weight: 400;
+            &.on {
+                background: var(--pointBlue) ;
+                color: var(--white); font-weight: 500;
+            }
+        }
+        &[data-tabList="2"] li { width: calc( 100%/2);}
+        &[data-tabList="3"] li { width: calc( 100%/3);}
+        &[data-tabList="4"] li { width: calc( 100%/4);}
+        &[data-tabList="5"] li { width: calc( 100%/5);}
+        &[data-tabList="6"] li { width: calc( 100%/6);}
+        & a {
+            display: block;
+            color: inherit;
+            text-decoration: none; text-align: center;
+        }
+    }
+}
+.tabStyle04 {
+    height: 56px;
+    /* border-bottom: 1px solid rgba(204, 204, 204, 1); */
+    &  ul {
+        & li {
+            height:56px;
+            padding: 0;
+            line-height: 56px;
+            border-bottom: 1px solid rgba(204, 204, 204, 1);
+            box-sizing: border-box;
+        }
+        &[data-tabList="2"] li { width: calc( 100%/2);}
+        &[data-tabList="3"] li { width: calc( 100%/3);}
+        &[data-tabList="4"] li { width: calc( 100%/4);}
+        &[data-tabList="5"] li { width: calc( 100%/5);}
+        &[data-tabList="6"] li { width: calc( 100%/6);}
+    }
+    &.h38 {
+        height:38px;
+        & ul {
+            & li { height:38px; line-height: 38px;}
+        }
+    }
+    &.shadow {
+        position: relative;
+        background: #ccc;
+        box-shadow: 0 3px 3px rgba(0, 0, 0, 0.08); z-index: 10;
+        & li:not(.on) {
+            border-bottom-color: rgba(255,255,255,1);
+        }
+    }
+    &.sticky {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+}
+/* 버튼영역 - bottom Btns */
+.bottomBtnArea {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px 26px;
+    /*정렬: 취소 & 보내기 */
+    &.align01 {
+        /* display: flex;
+        justify-content: space-between; */
+        /* 221005 최예솔 수정 1:2비율 */
+        & button {  flex-grow: 1; flex-basis: 24%; padding: 0;}
+        & button:last-child { flex-grow: 1; flex-basis: 57%;}
+    }
+    /* 정렬: 단일버튼 */
+    & > button { flex: 1; padding:0; }
+    & > button + button { margin-left: 12px; }
+
+}
+/* 버튼영역 - 써클아이콘St Btns*/
+.circleStBtnArea {
+    display: flex;
+    justify-content: space-between; flex-wrap: wrap;
+    margin: 0; padding:0 ;
+    border-bottom: none;
+    line-height: 1; list-style: none;
+    /* 버튼정렬 */
+    &.right {
+        justify-content: end; padding: 0;
+        & button { margin-bottom:0;}
+    }
+    & button {
+        width:calc(50% - 12px);
+        padding: 0 0 0 24px; margin: 0;
+        border: none;
+        background-color: transparent;
+        line-height: 21px; font-size: 1rem; font-weight: 500; text-align:left;
+        & span {
+            display: inline-block; position:relative;
+            height: 21px;
+            line-height: 21px;
+            text-align:left;
+            &:before {
+                content:'';
+                position:absolute;
+                left:-24px; top:calc(50% - 7.5px);
+                width:16px; height:16px;
+                background-position: left center; background-repeat: no-repeat; background-size: 16px auto; background-color: transparent;
+            }
+        }
+        /* icon 스타일 */
+        &.icoPlus {
+            & span:before { background-image: url('@/assets/images/global/icon_addCircle_off.png');}
+            &.on {
+                color:var(--pointBlue);
+                & span:before {background-image: url('@/assets/images/global/icon_addCircle_on.png');}
+            }
+        }
+        &.icoHistory {
+            & span:before { background-image: url('@/assets/images/global/icon_Inq_history.png');}
+        }
+        &.icoWon {
+            & span:before { background-image: url('@/assets/images/global/icon_inq_won.png');}
+        }
+        &.icoCheck {
+            & span:before { background-image: url('@/assets/images/global/icon_roundCheck.png');}
+        }
+        &.icoChangeOrder { /* 순서변경 추가 - 서영기 20220920 */
+            & span:before { background-image: url('@/assets/images/global/icon_changeOrder.png');}
+        }
+        /* button 내 span 정렬 */
+        &.right { text-align:right;}
+    }
+}
+/* 불렛 */
+.bullet {
+    display: inline-block;
+    height: 20px;
+    padding: 0 6px;
+    border:1px solid rgba(227, 227, 227, 1); border-radius: 4px;
+    background: rgba(255, 255, 255, 1);
+    line-height: 18px;color: var(--fontDeepgray); font-size: 0.786rem; font-weight: 500;
+    box-sizing: border-box;
+    /* 컬러 */
+    &.red {
+        border-color:rgba(255, 240, 242, 1);
+        background: rgba(255, 240, 242, 1);
+        color: var(--noticeRad);
+    }
+    &.blue{
+        border-color: rgba(236, 242, 252, 1);
+        background: rgba(236, 242, 252, 1);
+        color: rgba(12, 93, 214, 1);
+    }
+    &.lightBlue{
+        background: rgba(236, 245, 252, 1);
+        background: rgba(236, 245, 252, 1);
+        color: rgba(14, 130, 219, 1);
+    }
+    &.orange{
+        border-color: rgba(253, 243, 236, 1);
+        background: rgba(253, 243, 236, 1);
+        color: rgba(235, 102, 14, 1);
+    }
+    &.yellow{
+        border-color:rgba(255, 240, 242, 1);
+        background: rgba(253, 246, 235, 1);
+        color: rgba(229, 139, 4, 1);
+    }
+    &.green{
+        border-color:rgba(255, 240, 242, 1);
+        background: rgba(237, 248, 239, 1);
+        color:  rgba(33, 169, 60, 1);
+    }
+    &.purple{
+        border-color:rgba(255, 240, 242, 1);
+        background: rgba(242, 237, 250, 1);
+        color:  rgba(98, 27, 189, 1);
+    }
+    &.bgRed {
+        border-color:rgba(255, 240, 242, 1);
+        background: rgba(235, 75, 77, 1);
+        color: var(--white);
+    }
+    &.gray {
+        border-color:rgba(255, 240, 242, 1);
+        background: rgba(240, 240, 240, 1);
+        color: rgba(65, 65, 65, 1);
+    }
+    & + .bullet {
+        margin-lefT: 4px;
+    }
+}
+/* 리스트관련 style */
+/* 리스트- noList */
+ul.noList {
+    display:table;
+    height:100%;
+    width: 100%;
+    margin:0 !important; padding: 0;
+    list-style:none;
+    & li {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        & p {
+            margin: 0 0 24px; padding: 48px 0 0;
+            background: url('@/assets/images/global/icon_nolist.png') no-repeat center top / 32px auto ;
+            font-size: 1.143rem; color: var(--fontLightgray); font-weight: 400;
+        }
+        & button {
+            padding: 0 16px;
+        }
+        & div { height: 40px; }
+    }
+}
+/* 리스트- 기본 */
+.listType01 {
+    margin: 0; padding: 0;
+    list-style: none;
+    & li {
+        position: relative;
+        padding: 0 0 0 10px;
+        line-height: 21px; font-size: 1rem; font-weight: 400;
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0; top: 7px;
+            width: 4px; height: 4px;
+            border-radius: 100%;
+            background: var(--black);
+
+        }
+        & ~ li { margin: 8px 0 0;}
+    }
+    &.gray {
+        padding: 20px;
+        border-radius: 8px;
+        background:rgba(248, 248, 248, 1) ;
+        color: var(--fontDeepgray);
+        &::before { background: var(--fontDeepgray); }
+    }
+}
+/* 리스트- border-bottom ex)우편물반송팝업 */
+.listType02 {
+    margin: 0; padding: 0;
+    list-style: none;
+    & li {
+        padding: 0; margin: 0;
+        & ~ li { border-top: 1px solid rgba(215, 215, 215, 1);}
+        & button {
+            width: 100%;
+            padding: 24px 0; border: none;
+            background: url('@/assets/images/global/arrow_right_bold.png') no-repeat right center / 8px auto;
+            text-align: left;
+            box-sizing: border-box;
+            & h2 {
+                margin: 0;
+                font-size: 1.142rem; line-height:24px;
+            }
+            & p {
+                margin: 0;
+                font-size: 1.142rem; font-weight: 400;line-height:24px;
+            }
+        }
+    }
+}
+/* AD - 허브*/
+.adHerb {
+    display: flex; position:relative;
+    justify-content: space-between; width: 100%;
+    padding:15px 14px 14px 64px ;
+    border-radius: 16px 0px 16px 16px;
+    background:rgba(235, 239, 254, 1);
+    line-height:1; text-align:left;
+    /* 아이콘 - 영역 */
+    &:before {
+        content:'';
+        position:absolute;
+        left:12px; top:calc(50% - 20px); width:40px; height:40px;
+        border-radius: 100%;
+        background: var(--white);
+        animation: zoomInOut 2s infinite ;
+    }
+    /* 아이콘 - img */
+    &:after {
+        content:'';
+        position:absolute; left:12px; top:calc(50% - 20px); width:40px; height:40px;
+        border-radius: 100%;
+        background: transparent url('@/assets/images/banking/icon_herb.png') no-repeat left 14px bottom 13px / 15px auto;
+    }
+    /* 링크이동 */
+    & a {
+        display:block;
+        flex: 1;
+        text-decoration:none;
+        & p {
+            margin:0 0 4px;
+            font-size:0.857rem; color:var(--fontDeepgray);
+        }
+        & strong {
+            color:var(--fontDeepgray);
+        }
+    }
+    /* 닫기버튼 */
+    & button {
+        width:24px; height:24px;
+        padding:0;
+        border:none;
+        background:url('@/assets/images/global/button_close.png') no-repeat center / 24px auto;
+        font-size:0;
+        &:active {background-color:transparent;}
+    }
+}
+/* 연락처 - sms전송 방법 선택 */
+/* button > a로 변경 - 서영기 2022-10-18 */
+.checkTrInfo {
+    position:relative;
+    & a {
+        display: inline-block;
+        width:calc(100%/2 - 10px);
+        padding:0; border-color:var(--white);
+        background:var(--white);;
+        text-align:center; font-weight: 400; color: inherit; text-decoration: none;
+        &:before {
+            content:'';
+            display:inline-block;
+            width:20px; height:20px;
+            margin:0 10px 0 0;
+            background-repeat:no-repeat; background-position: center; background-size:20px auto;
+            line-height:40px;
+            transform: translateY(25%);
+        }
+        &:active {border-color:var(--white);}
+        /* 문자전송 */
+        &[data-way="sms"]{
+            &:before { background-image:url('@/assets/images/global/icon_transfer_sms.png');}
+        }
+        /* 카카오톡 전송 */
+        &[data-way="kakao"]{
+            margin:0 0 0 20px;
+            &:before { background-image:url('@/assets/images/global/icon_transfer_kakao.png');}
+        }
+    }
+    & hr {
+        position:absolute;
+        left: 50%; top: calc(50% - 10px);
+        margin: 0 !important;
+        width: 1px !important; height: 20px !important;
+        border: none;
+        background: var(--tableCenterLine);
+    }
+}
+/* 금융상품 홈 - 자물쇠 계좌 */
+/* layout 이동 */
+.productHome {
+    display: flex;
+    padding:20px;
+    justify-content: space-between;
+    & .acct {
+        flex: 1;
+        padding: 0 12px; margin: 0 12px 0 0;
+        background: var(--white) url('@/assets/images/global/arrow_black.png') no-repeat right 8px center / 24px auto;
+        text-align: left; font-weight: 400;
+        & img {
+            width: 20px; height: 20px;
+            margin: 0 8px 0 0;
+            vertical-align: middle;
+        }
+    }
+    & .pw {
+        width: 40px; height: 40px;
+        padding: 0;
+        background: var(--white) url('@/assets/images/global/button_lock.png') no-repeat center /24px auto;
+        &.passed {
+            background-image: url('@/assets/images/global/button_lock_on.png');
+        }
+    }
+}
+/* transHome - layout.css => selectBankingMyAcc */
+/* 뱅킹 이체정보 & 결과 - 이체건 정보 Setting */
+.transInfoOption {
+    & > div {
+        display: flex;
+        justify-content: space-between;
+        padding: 27px 0; margin: 0 20px;
+        border-bottom: 1px solid rgba(215, 215, 215, 1);
+        line-height: 1;
+        /* 예약이체 */
+        &[data-name="resTransfer"] {
+            flex-wrap: wrap;
+            padding: 24px 0 24px;
+            /* checked 일때 */
+            &.on {
+                padding-bottom: 0;
+                border-bottom: none;
+                & form { display: block;}
+            }
+            & > p { line-height: 24px;}
+            /* checked 일때 노출  */
+            & form {
+                display: none;
+                flex-basis: 100%;
+                & > div {
+                    padding: 28px 0 0;
+                    /* 예약시간 */
+                    & > div.reserveTime {
+                        padding: 24px 0 0;
+                        text-align: right;
+                        & p {
+                            float: left;
+                            padding: 0 0 0 8px;
+                            color: var(--fontLightgray);
+                        }
+                        & label:not(.cal) {
+                            /* float: right; */
+                            margin-left: 12px;
+                        }
+                    }
+                    /* 안내문구 */
+                    & > div.reserveInfo {
+                        padding: 20px 20px 23px; margin-top: 24px;
+                        border-radius: 8px;
+                        background:rgba(248, 248, 248, 1);
+                        & p {
+                            position: relative;
+                            margin: 0 0 15px; padding:0 0 0 10px;
+                            line-height: 21px; color:var(--fontDeepgray);
+                            &:before {
+                                content: "";
+                                position: absolute;
+                                left:0; top:7px; width: 4px; height: 4px;
+                                border-radius: 100%;
+                                background: var(--fontDeepgray);
+                            }
+                        }
+                        & button {
+                            padding: 0 14px 0 0;
+                            border: none;
+                            background: url('@/assets/images/global/arrow_right_bold.png') no-repeat right center / 5px auto ;
+                            line-height: 1; font-size: 1rem; color: var(--fontDeepgray);
+                        }
+                    }
+                }
+            }
+        }
+        /* 받는분 & 내통장 표시정보 */
+        &[data-name="toReceiver"], &[data-name="toMyAccunt"] {
+            & button {
+                padding: 0 20px 0 0;
+                border: none;
+                background: var(--white) url('@/assets/images/global/icon_edit_black.png') no-repeat right 1px center / 12px auto;
+                line-height: 1;
+            }
+        }
+        /* 받는분 표시정보*/
+        &[data-name="toReceiver"] {
+            padding-bottom: 0;
+            border: none;
+        }
+        /* 연금계좌인출확인 - 공통으로 하단으로 이동 - 서영기 202209016 */
+        /* 알림발송 */
+        &[data-name="sendNote"] {
+            padding: 22px 0;
+            & label { margin-left: 12px;}
+            & p { line-height: 40px;}
+        }
+        /* 연락처 이체안내 */
+        &[data-name="contactTrInfo"] {
+            display: block;
+            padding: 27px 0 24px;
+            border-bottom:none;
+            & ul {
+                margin:14px 0 0; padding: 20px 20px 12px;
+                border-radius: 8px;
+                background:rgba(248, 248, 248, 1);
+                list-style:none;
+                & li {
+                    position: relative;
+                    padding:0 0 0 10px; margin:0 0 8px;
+                    line-height: 21px; color:var(--fontDeepgray);
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        left:0; top:9px; width: 4px; height: 4px;
+                        border-radius: 100%;
+                        background: var(--fontDeepgray);
+                    }
+                }
+            }
+        }
+        &[data-name="btns"] {
+            padding: 24px 0 4px;
+            border-bottom: none;
+            &.right {
+                justify-content: end; padding:24px 0;
+                & button { margin-bottom:0;}
+            }
+        }
+        & > p {
+            margin: 0; padding: 0 0 0 4px;
+            color: var(--fontLightgray);
+        }
+        & > span {
+            font-weight: 500;
+        }
+    }
+}
+/* 연금계좌인출확인 - 공통으로 하단으로 이동 - 서영기 202209016 */
+div[data-name="pension"] {
+    display: block;
+    padding-bottom: 25px;
+    & table {
+        width: 100%;
+        margin: 14px 0 24px;
+        border-top: 1px solid var(--tableTopLine); border-collapse:collapse;
+        border-spacing: 0;
+        & th {
+            padding: 0 12px;
+            border-bottom: 1px solid rgba(220, 220, 220, 1); border-right: 1px solid rgba(220, 220, 220, 1);
+            background: rgba(250, 250, 250, 1);
+            line-height: 45px; text-align: left; color: var(--tableTitleFont); font-weight: 400;
+        }
+        & td {
+            padding: 0 12px 0 0;
+            border-bottom: 1px solid rgba(220, 220, 220, 1);
+            text-align: right;
+        }
+        & [data-type="total"] {
+            & th {
+                border-right: none;
+                background: rgba(242, 245, 249, 1);
+                font-weight: 500; color: var(--black);
+            }
+            & td {
+                background: rgba(242, 245, 249, 1);
+                font-weight: 700; color: var( --pointBlue);
+            }
+        }
+    }
+}
+.transInfoConfirm {
+    margin: 0;
+    border-radius: 0;
+}
+/* 뱅킹 이체 정보확인 & 결과 - 계좌 출입금 정보 list*/
+.transInfoConfirm {
+    margin: 0 20px 4px; padding: 27px 20px;
+    border-radius: 8px;
+    list-style: none;
+    & li {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 15.5px;
+        &:last-child { margin-bottom: 0;}
+        & > span{
+            line-height: 1; color: var(--tableTopLine);
+        }
+        & p {
+            margin: 0;
+            font-weight: 500; line-height: 1;
+        }
+    }
+}
+/* 뱅킹 다계좌이체 - 토탈 이체건수*/
+.TransTotalArea {
+    display: flex;
+    justify-content:space-between; align-items: center;
+    padding: 20px;
+    background: var(--basicBg);
+    & > h1 {
+        margin: 0;
+        font-size: 1.429rem; font-weight: 400;
+        & strong {margin-left: 8px;};
+    }
+    /* 컴파일 오류로 hgroup > div로 변경 - 20220913 서영기 */
+    & > div {
+        margin: 0;
+        text-align: right;
+        & strong {
+            font-size: 1.429rem;
+        }
+        & span {
+            display: flex;
+            align-items: center; justify-content: flex-end;
+            margin: 3px 0 0;
+            font-size: 1rem; color: var(--fontLightgray); text-align: right;
+            & > button {
+                width:15px; height:15px;
+                padding:0; margin:0 0 0 8px;
+                border: none;
+                background:url('@/assets/images/global/icon_info_gray.png') no-repeat center / 13px auto;
+                font-size:0;
+            }
+        }
+    }
+}
+/* 뱅킹 다계좌이체 - 계좌별 예금주 정보 */
+ .acctInfoArea {
+    padding: 4px 0 4px 56px;
+    & h1 {
+        margin: 0 0 8px;
+        line-height: 1; font-weight: 500; font-size: 1rem;
+        & span:not(.bullet) {
+            margin-left: 4px;
+            color: var(--pointBlue) ;
+        }
+    }
+    & p {
+        margin: 0;
+        line-height: 1; color: var(--fontLightgray); font-weight: 500;
+    }
+}
+
+/* 캘린더 호출 인풋 20220927 서영기 */
+div.cal {
+    display: flex;
+    width: 100%;
+    padding: 0; border: 1px solid var(--basicLine); border-radius: 6px;
+    background: rgba(255,255,255,1);
+    align-items: center; flex-wrap: nowrap;
+    box-sizing: border-box;
+    &:not(.range) {
+        & > label {
+            padding: 0 12px;
+            flex: 1 1 100%; align-items: center;
+            & input {
+                display: inline-block;
+                width: calc(100% - 16px);
+                margin: 0; padding: 0; border: none;
+                background: transparent;
+            }
+            & button {
+                display: inline-block; position: static;
+                width: 16px; height: 16px;
+                margin: 1px 0 0 0; padding: 0; border-radius: 0;
+                vertical-align: text-top;
+                background: url('@/assets/images/global/icon_calender.png') no-repeat center / 16px auto;
+            }
+            & input.h50 + button { margin-top: 2px; }
+        }
+    }
+    &.range {
+        & > label {
+            flex: 1 1 48%;
+            text-align: center;
+            & input {
+                display: inline-block;
+                width: 84px;
+                margin: 0; padding: 0; border: none;
+                background: transparent; text-align: center;
+                &.h50 {
+                    width: 96px;
+                }
+            }
+            & button {
+                display: inline-block; position: static;
+                width: 16px; height: 16px;
+                margin: 1px 0 0 8px; padding: 0; border-radius: 0;
+                vertical-align: text-top;
+                background: url('@/assets/images/global/icon_calender.png') no-repeat center / 16px auto;
+            }
+            & input.h50 + button { margin-top: 2px; }
+        }
+    }
+    &.disabled {
+        border: 1px solid rgba(236, 236, 236, 1);
+        background: rgba(249, 249, 249, 1);
+        & * { opacity: .54; }
+    }
+}
+
+/* 애니메이션 */
+@keyframes zoomInOut {
+    0% { transform:scale(1); opacity:1; box-shadow: 0 0 0 rgba(0,0,0,0);}
+    40% { transform:scale(.9);opacity:.8; box-shadow: inset 0 0 3px rgba(0,0,0,.3); }
+    70% { transform:scale(1);opacity:.8; box-shadow: inset 0 0 0 rgba(0,0,0,0); }
+    80% { transform:scale(1.1); opacity:.9; box-shadow: 0 0 6px rgba(0,0,0,.3); }
+    100% { transform:scale(1); opacity:1; box-shadow: 0 0 0 rgba(0,0,0,0);}
+}
+
+/* 인풋 포커스 활성화를 위한 하단 div */
+div.emptydiv {
+    height: 0px;
+    padding: 0; margin:0;
+    transition: height .2s ease;
+    &.on {
+        height: 420px;
+    }
+}
+
+/* 컨텐츠 하단 버튼 */
+.ad {
+    position: relative;
+    width: calc(100% - 40px);
+    margin: 0 20px; padding: 20px;
+    border-color: rgba(221, 226, 244, 1);
+    background: rgba(235, 239, 254, 1);
+    text-align: left;
+    box-sizing: border-box;
+    & h2 {
+        margin: 0 0 4px;
+        line-height: 20px; font-size: 1.142rem;
+    }
+    & p {
+        margin: 0;
+        line-height: 15px; font-size: 0.857rem; color: var(--tableTitleFont);
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        right: 20px; top: 50%;
+        width: 10px; height: 5px;
+        background: url('@/assets/images/global/arrow_gray.png') no-repeat center / 10px auto;
+        transform: rotate(270deg);
+    }
+}
+
+/* a 변경 정의 */
+a.inArrow {
+    display: inline-block;
+    padding: 0 16px 0 0;
+    background: url('@/assets/images/global/arrow_right_s12.png') no-repeat right top 50% / 12px auto;
+    text-decoration: underline; color: rgba(100, 100, 100, 1); font-size: 0.857rem;
+    &.blue {
+        color: var(--pointBlue);
+        background-image: url('@/assets/images/global/arrow_right_s12_blue.png');
+    }
+    &.red {
+        color: var(--red);
+        background-image: url('@/assets/images/global/arrow_right_s12_red.png');
+    }
+    &.gray {
+        color: var(--tableTitleFont);
+        background-image: url('@/assets/images/global/arrow_right_s12_gray.png');
+    }
+    &.noLine {
+        text-decoration: none; font-size: 1rem;
+    }
+    &.black {
+        color: var(--black) !important;;
+    }
+}
+/* 이름 및 텍스트 입력(기본 아이콘 좌축) */
+a.regName {
+    display: block;
+    text-decoration: none;
+    font-weight: inherit; font-size: inherit; color: inherit;
+    &.afterIcon {
+        &::after {
+            display: inline-block; width: 20px; height: 20px;
+            margin-left: 4px;
+            background: url('@/assets/images/global/icon_edit_black.png') no-repeat center / 14px;
+            content: ' ';
+            vertical-align: middle;
+        }
+        &.gray::after {
+            background: url('@/assets/images/global/icon_edit_gray.png') no-repeat center / 14px;
+        }
+    }
+    &:not(.afterIcon) {
+        &::before {
+            display: inline-block; width: 20px; height: 20px;
+            margin-right: 6px;
+            background: url('@/assets/images/global/icon_edit_black.png') no-repeat center / 14px;
+            content: ' ';
+            vertical-align: middle;
+        }
+        &.gray::before {
+            background: url('@/assets/images/global/icon_edit_gray.png') no-repeat center / 14px;
+        }
+    }
+    &.gray {
+        color: rgba(140, 140, 140, 1);
+    }
+}
+/* 인포아이콘이 포함된 링크(기본 아이콘 우측 20221025 기준 좌측 아이콘 없음) */
+/* 버튼과 별개 추가 스타일 */
+a.info {
+    display: inline-block; position: relative;
+    padding-right: 17px;
+    color: var(--black);
+    &::after {
+        position: absolute;
+        top: 50%; right: 0; width: 13px; height: 13px;
+        background: transparent url('@/assets/images/global/icon_info_gray.png') no-repeat center / contain ;
+        transform: translateY(-50%);
+        content: ' ';
+    }
+
+}
+
+/* 가이드 텍스트 <p> 20221025 추가*/
+.guideTxt {
+    position: relative;
+    padding: 0 0 0 7px; margin: 0;
+    text-align: left; color: var(--noticeGray);
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0; top: 7px;
+        width: 3px; height: 3px;
+        border-radius: 100%;
+        background: var(--noticeGray);
+    }
+    &.size12 {
+        font-size: 0.857rem;
+    }
+}
