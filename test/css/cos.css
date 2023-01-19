@@ -126,18 +126,18 @@ button.nav-link.enl-tab2.active{
 .list-top{
   width: 100%;
   display: flex;
-  justify-content: ;
+  justify-content: baseline;
 }
 
 .list-num{
-  
+  width: 10%;
 }
 
 .list-name{
-
+  width: 65%;
 }
 
 .list-per{
-
+  width: 25%;
 }
 
