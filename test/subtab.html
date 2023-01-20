@@ -24,11 +24,13 @@
         <h1>삼성전자</h1>
       </div>
       <div class="head-icon">
-        <button class="search">
-          <img src="img/star.png" alt="즐겨찾기">
+        <button type="button" class="btn search" data-bs-toggle="button">
+          <img class="staroff" src="img/star.png" alt="즐겨찾기">
+          <img class="staron" src="img/staron.png" alt="즐겨찾기">
         </button>
-        <button class="my" id="my">
-          <img src="img/alarm.png" alt="알림">
+        <button type="button" class="btn my" data-bs-toggle="button">
+          <img class="alarmoff" src="img/alarm.png" alt="알림">
+          <img class="alarmon" src="img/alarmon.png" alt="알림">
         </button>
       </div>
     </header>
@@ -48,7 +50,7 @@
           <div class="evt-quote">
             <span><strong>1,201,000</strong> 0.48%</span>
           </div>
-          <div class="evt-text">
+          <div class="evt-text text-truncate">
             <span>아연, 금, 은 등의 비철금속 제련 및 판매 기업</span>
           </div>
           <div class="evt-tag">
@@ -61,6 +63,7 @@
             <button>핫 이슈 <img src="img/white-right.png" alt="바로가기"></button>
             <button>이슈포착 <img src="img/white-right.png" alt="바로가기"></button>
           </div>
+        </div>
           <div class="swiper evtSwiper swiper-horizontal swiper-pointer-events swiper-backface-hidden">
             <div class="swiper-wrapper">
               <div class="swiper-slide evt-slide">
@@ -69,11 +72,11 @@
                   <div class="date">09.22</div>
                 </div>
                 <ul class="slide-list">
-                  <li>외인+27.2만주/기관+3.6만주/개인-3.7만주</li>
-                  <li>외국인4일연속순매수</li>
-                  <li>차트 주가>5MA 골든트로스 발생</li>
-                  <li>거래량급중 90.4만주 (전일대비 223%)</li>
-                  <li>운송장비업종 -0.21%</li>
+                  <li class="text-truncate">외인+27.2만주/기관+3.6만주/개인-3.7만주</li>
+                  <li class="text-truncate">외국인4일연속순매수</li>
+                  <li class="text-truncate">차트 주가>5MA 골든트로스 발생</li>
+                  <li class="text-truncate">거래량급중 90.4만주 (전일대비 223%)</li>
+                  <li class="text-truncate">운송장비업종 -0.21%</li>
                 </ul>
               </div>
               <div class="swiper-slide evt-slide">
@@ -82,18 +85,18 @@
                   <div class="date">09.22</div>
                 </div>
                 <ul class="slide-list">
-                  <li>15:37 52주 신저가 이탈</li>
-                  <li>13:05 모바일 게임 테마 평균 -3.2%하락</li>
-                  <li>10:00 모바일 콘텐츠 테마 평균 -3.3%하락</li>
-                  <li>09.18 52주 신저가 이탈</li>
-                  <li>09.18 52주 신저가 이탈</li>
+                  <li class="text-truncate">15:37 52주 신저가 이탈</li>
+                  <li class="text-truncate">13:05 모바일 게임 테마 평균 -3.2%하락</li>
+                  <li class="text-truncate">10:00 모바일 콘텐츠 테마 평균 -3.3%하락</li>
+                  <li class="text-truncate">09.18 52주 신저가 이탈</li>
+                  <li class="text-truncate">09.18 52주 신저가 이탈</li>
                 </ul>
               </div>
             </div>
             <div class="swiper-pagination swiper-pagination-bullets swiper-pagination-horizontal swiper-pag"></div>
           </div>
 
-        </div>
+        
       </article>
 
       <article class="background">
