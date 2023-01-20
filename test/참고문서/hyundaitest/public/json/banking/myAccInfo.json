@@ -1,0 +1,10 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "accInfo" : {
+        "isLoanAcc" : true,
+        "loanLimit" : 1000000,
+        "possibleAmount" : 100000000,
+        "remainingLimit" : 200000000
+    }
+}

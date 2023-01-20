@@ -1,0 +1,132 @@
+[
+    {
+        "menuName" : "프리셋 페이지",
+        "menuRoot" : "/preset",
+        "compName" : "presetPage"
+    },
+    {
+        "menuName" : "단일계좌이체",
+        "menuRoot" : "/banking/accountTransfer",
+        "compName" : "accountTransferMain"
+    },
+    {
+        "menuName" : "다계좌이체",
+        "menuRoot" : "/banking/accountTransfer/multiMain",
+        "compName" : "accountMultiTransferMain"
+    },
+    {
+        "menuName" : "지연이체관리",
+        "menuRoot" : "/banking/transManage/delayed",
+        "compName" : "transManageDelayed"
+    },
+    {
+        "menuName" : "예약이체관리",
+        "menuRoot" : "/banking/transManage/reserved",
+        "compName" : "transManagereserved"
+    },
+    {
+        "menuName" : "은행연계입금",
+        "menuRoot" : "/banking/transManage/bankConnect/main",
+        "compName" : "transManageBankConnect"
+    },
+    {
+        "menuName" : "간편이체관리",
+        "menuRoot" : "/banking/transManage/easyTransfer",
+        "compName" : "transManageEasyTransfer"
+    },
+    {
+        "menuName" : "입금계좌 관리",
+        "menuRoot" : "/banking/transManage/saveAcc",
+        "compName" : "transManageSaveAcc"
+    },
+    {
+        "menuName" : "장기미사용 계좌",
+        "menuRoot" : "/banking/transManage/unusedAccount",
+        "compName" : "transManageUnusedAccount"
+    },
+    {
+        "menuName" : "오픈뱅킹등록",
+        "menuRoot" : "/banking/openBanking/join/info",
+        "compName" : "openBankingJoinInfo"
+    },
+    {
+        "menuName" : "오픈뱅킹조회",
+        "menuRoot" : "/banking/openBanking/inquiry",
+        "compName" : "openBankingInquiryList"
+    },
+    {
+        "menuName" : "오픈뱅킹 자금반환창구",
+        "menuRoot" : "/banking/openBanking/returnFunds",
+        "compName" : "openBankingReturnFunds"
+    },
+    {
+        "menuName" : "오픈뱅킹 잔액모으기",
+        "menuRoot" : "/banking/openBanking/balance/list",
+        "compName" : "openBankingBalanceList"
+    },
+    {
+        "menuName" : "오픈뱅킹계좌 관리",
+        "menuRoot" : "/banking/openBanking/accManage",
+        "compName" : "openBankingaccManage"
+    },
+    {
+        "menuName" : "펀드",
+        "menuRoot" : "/products/fund/main",
+        "compName" : "fundMain"
+    },
+    {
+        "menuName" : "펀드 검색",
+        "menuRoot" : "/products/fund/search",
+        "compName" : "fundSearch"
+    },
+    {
+        "menuName" : "펀드 상세",
+        "menuRoot" : "/products/fund/view",
+        "compName" : "fundView"
+    },
+    {
+        "menuName" : "펀드 신규매수",
+        "menuRoot" : "/products/newFundBuy/start",
+        "compName" : "newFundBuyStart"
+    },
+    {
+        "menuName" : "펀드 정기매수",
+        "menuRoot" : "/products/autoFundBuy/start",
+        "compName" : "autoFundBuyStart"
+    },
+    {
+        "menuName" : "펀드 나의펀드",
+        "menuRoot" : "/products/myfund/balance",
+        "compName" : "myfundBalanceReport"
+    },
+    {
+        "menuName" : "펀드 사후관리 서비스(알리미)",
+        "menuRoot" : "/products/myfund/noteService",
+        "compName" : "myfundNoteService"
+    },
+    {
+        "menuName" : "IRP 상품매매",
+        "menuRoot" : "/products/IRP/trading",
+        "compName" : "tradingIRP"
+    },
+    {
+        "menuName" : "IRP 상품매매 ELB",
+        "menuRoot" : "/products/IRP/reserveELB/",
+        "compName" : "reserveELB"
+    },
+    {
+        "menuName" : "IRP 검색",
+        "menuRoot" : "/products/IRP/search",
+        "compName" : "searchIRP"
+    },
+    {
+        "menuName" : "IRP 상세",
+        "menuRoot" : "/products/IRP/view",
+        "compName" : "productIRPView"
+    },
+    {
+        "menuName" : "IRP 만기현황 / 만기예약매수",
+        "menuRoot" : "/products/IRP/expiry",
+        "compName" : "expiryReserveIRP"
+    }
+]

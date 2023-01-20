@@ -1,0 +1,36 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "feeLists" : [
+        {
+            "bankCode" : "004",
+            "bankAccNumber" : 1234567801,
+            "feePrice": 500
+        },
+        {
+            "bankCode" : "089",
+            "bankAccNumber" : 1234567802,
+            "feePrice": 1200
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567804,
+            "feePrice": 0
+        },
+        {
+            "bankCode" : "007",
+            "bankAccNumber" : 1111111111,
+            "feePrice": 500
+        },
+        {
+            "bankCode" : "007",
+            "bankAccNumber" : 4444444444,
+            "feePrice": 1200
+        },
+        {
+            "bankCode" : "027",
+            "bankAccNumber" : 5555555555,
+            "feePrice": 0
+        }
+    ]
+}

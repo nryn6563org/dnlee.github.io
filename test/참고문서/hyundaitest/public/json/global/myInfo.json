@@ -1,0 +1,10 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "myInfo" : {
+        "userName" : "홍길동",
+        "postCode" : "00012",
+        "address01" : "서울시 영등포구 영등포동 영등포로 53길 24",
+        "address02" : "현대차증권아파트 204동 301호"
+    }
+}

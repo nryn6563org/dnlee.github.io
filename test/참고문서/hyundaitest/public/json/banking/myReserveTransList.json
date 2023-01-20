@@ -1,0 +1,66 @@
+{
+    "affective" : 200,
+    "message" : "예약이체리스트",
+    "transList" : [
+        {
+            "transferDate" : "2022.07.15",
+            "transferInfo": [
+                {
+                    "ownerName": "돌맹이",
+                    "bankCode": "236",
+                    "bankAccNumber": "123412341230",
+                    "reserveDateFrom": "2018.01",
+                    "reserveDateTo": "2024.04",
+                    "reserveTime": "am",
+                    "feePrice": "0",
+                    "sendPrice": "1000000"
+                },
+                {
+                    "ownerName": "돌맹이",
+                    "bankCode": "236",
+                    "bankAccNumber": "123412341230",
+                    "reserveDateFrom": "2018.01",
+                    "reserveDateTo": "2024.04",
+                    "reserveTime": "pm",
+                    "feePrice": "0",
+                    "sendPrice": "1000000"
+                },
+                {
+                    "ownerName": "돌맹이",
+                    "bankCode": "236",
+                    "bankAccNumber": "123412341230",
+                    "reserveDateFrom": "2018.03",
+                    "reserveDateTo": "2024.08",
+                    "reserveTime": "am",
+                    "feePrice": "0",
+                    "sendPrice": "1000000"
+                }
+            ]
+        },
+        {
+            "transferDate" : "2022.07.10",
+            "transferInfo": [
+                {
+                    "ownerName": "홍길돌",
+                    "bankCode": "236",
+                    "bankAccNumber": "2123412341231",
+                    "reserveDateFrom": "2019.01",
+                    "reserveDateTo": "2026.04",
+                    "reserveTime": "am",
+                    "feePrice": "200",
+                    "sendPrice": "25730100"
+                },
+                {
+                    "ownerName": "홍길돌",
+                    "bankCode": "236",
+                    "bankAccNumber": "2123412341231",
+                    "reserveDateFrom": "2019.01",
+                    "reserveDateTo": "2026.04",
+                    "reserveTime": "pm",
+                    "feePrice": "200",
+                    "sendPrice": "25730100"
+                }
+            ]
+        }
+    ]
+}

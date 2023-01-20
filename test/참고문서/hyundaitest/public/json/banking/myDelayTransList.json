@@ -1,0 +1,54 @@
+{
+    "affective" : 200,
+    "message" : "지연이체 목록",
+    "transList": [
+        {
+            "status": "01",
+            "ownerName" : "김삿갓",
+            "bankCode" : "236",
+            "bankAccNumber" : "000124665",
+            "completeDate" : "2022.07.27",
+            "completeTime" : "07:32",
+            "regdDevice" : "스마트폰",
+            "reasonForCancle": "",
+            "feePrice" : "0",
+            "sendPrice" : "110000"
+        },
+        {
+            "status": "02",
+            "ownerName" : "삿갓",
+            "bankCode" : "236",
+            "bankAccNumber" : "000124665",
+            "completeDate" : "2022.07.27",
+            "completeTime" : "15:12",
+            "regdDevice" : "스마트폰",
+            "reasonForCancle": "",
+            "feePrice" : "0",
+            "sendPrice" : "110000"
+        },
+        {
+            "status": "00",
+            "ownerName" : "홍삿갓",
+            "bankCode" : "236",
+            "bankAccNumber" : "000124665",
+            "completeDate" : "2022.07.27",
+            "completeTime" : "07:32",
+            "regdDevice" : "스마트폰",
+            "reasonForCancle": "이중입금",
+            "feePrice" : "0",
+            "sendPrice" : "110000"
+        },
+        {
+            "status": "01",
+            "ownerName" : "홍삿갓",
+            "bankCode" : "236",
+            "bankAccNumber" : "000124665",
+            "completeDate" : "2022.07.27",
+            "completeTime" : "07:32",
+            "regdDevice" : "스마트폰",
+            "reasonForCancle": "이중입금",
+            "feePrice" : "0",
+            "sendPrice" : "110000"
+        }
+    ]
+}

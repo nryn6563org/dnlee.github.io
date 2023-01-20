@@ -1,0 +1,27 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "groupList" : [
+        {
+            "groupCode" : "often",
+            "groupName" : "자주 사용하는 계좌"
+        },
+        {
+            "groupCode" : "quick",
+            "groupName" : "퀵 등록 계좌"
+        },
+        {
+            "groupCode" : "001",
+            "groupName" : "가족"
+        },
+        {
+            "groupCode" : "002",
+            "groupName" : "친구"
+        },
+        {
+            "groupCode" : "003",
+            "groupName" : "기타"
+        }
+
+    ]
+}
