@@ -1,0 +1,24 @@
+{
+    "affective" : 200,
+    "message" : "만기(예정)IRP 목록",
+    "irpList" : [
+        {
+            "itemCode": "022",
+            "itemType": "04",
+            "itemName": "NH-Amundi코리아2배인버스레버리지증권투자신탁",
+            "buyDate": "2022.09.05",
+            "marketValue": 10000000,
+            "maturityDate": "2022.10.05",
+            "interestRate": "10.20%"
+        },
+        {
+            "itemCode": "111122",
+            "itemType": "01",
+            "itemName": "상품명 NH-Amundi코리아2배인버스레버리지증권투자신탁",
+            "buyDate": "2022.09.05",
+            "marketValue": 310000000,
+            "maturityDate": "2022.10.05",
+            "interestRate": "10.20%"
+        }
+    ]
+}

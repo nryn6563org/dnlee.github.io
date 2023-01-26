@@ -1,0 +1,1124 @@
+
+h3 {
+    margin: 0 0 8px; padding: 0 20px;
+    font-size: 1.143rem; font-weight: 700;
+}
+h4 {
+    margin: 0 0 6px; padding: 0 20px;
+    font-size: 1rem; font-weight: 400;
+    &.gray { color: var(--fontLightgray); }
+}
+h5 {
+    margin: 0; padding: 7.5px 20px;
+    background: rgba(239, 239, 239, 1);
+    color: var(--tableTitleFont); font-size: 1rem; font-weight: 400;
+}
+/* 라운드박스 & 스퀘어박스 & 심플박스 공통 */
+.roundBox , .squareBox, .simpleBox {
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: rgba(248, 248, 248, 1);
+    list-style: none;
+    /* 중첩리스트 */
+    &.innerList {
+        & ol{
+            width: 100%;
+            padding: 0; list-style: none;
+            & li {
+                position: relative;
+                padding-left: 10px; margin-top: 6px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 8px; left: 0;
+                    width: 4px; height: 4px;
+                    border-radius: 100%;
+                    background: rgba(140, 140, 140, 1);
+                }
+            }
+        }
+        & ol.black > li::before {
+            background: var(--black);
+        }
+    }
+    & > li {
+        display: flex;
+        justify-content: space-between; align-items: center; flex-wrap: wrap;
+        & ~ li { margin-top: 5px;}
+        /* 기본txt */
+        & > span { color:rgba(140, 140, 140, 1); }
+        & > p { margin: 0; }
+        /* 폰트굵기 500 */
+        & > strong { font-weight: 500;}
+        /* 폰트굵기 700 */
+        & > h1 {
+            margin:0; padding: 0;
+            font-size: 1rem; font-weight: 700;
+        }
+        /* 16px 500 - span(400)/ strong(700) */
+        & > h2 {
+            margin:0; padding: 0;
+            font-size: 1.143rem; font-weight: 500;
+            & > span { font-weight: 400; }
+            & > strong { font-weight: 700; }
+        }
+        /* 셀렉트 버튼 */
+        & > .wrapArea {
+            width: 100%;
+            padding: 0 0 4px;
+            & > button { width: 100%; margin-top: 12px;}
+        }
+        /* 단일 우측정렬 */
+        &.right {
+            & > * { margin-left: auto !important; }
+        }
+    }
+    /* 구분선 */
+    & hr {
+        height: 1px;
+        margin: 18px 0;
+        border: none;
+        background: var(--listBorder);
+    }
+    /* 리스트내에 기능요소 포함 시 */
+    &.hasMore {
+        & li ~ li { margin-top: 8px;}
+    }
+    /* 리스트간 간격 공통 */
+    &.dist8 {
+        & li ~ li { margin-top: 8px;}
+    }
+    &.dist12 {
+        & li ~ li { margin-top: 12px;}
+    }
+    &.dist18 {
+        & li ~ li { margin-top: 18px;}
+    }
+    & .font12 { font-size: 0.857rem; }
+}
+/* 라운드박스 */
+.roundBox { margin: 0 20px;}
+/* 스퀘어박스 */
+.squareBox {
+    margin:0;
+    border-radius:0;
+}
+/* 심플박스 */
+.simpleBox {
+    padding: 0; margin: 0;
+    border-radius: 0;
+    background:none;
+}
+/* 내부 기타 블록이나 정보 가 들어가는 라운드박스 */
+.roundBlock {
+    position: relative; display: block;
+    margin: 0 20px; padding: 12px 0; border-radius: 8px;
+    background: rgba(242, 245, 249, 1);
+    &.hasLink {
+        padding-right: 38px;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 20px; top: calc(50% - 5px);
+            width: 6px; height: 10px;
+            background: url('@/assets/images/global/arrow_right_m_gray.png') no-repeat center / 6px auto;
+        }
+    }
+    /* 구분선 */
+    & hr {
+        height: 1px;
+        margin: 18px 20px;
+        border: none;
+        background: var(--listBorder);
+    }
+    &.gray { background: var(--listBg) }
+}
+/* 불렛리스트 */
+.bulletList {
+    & li {
+        position: relative;
+        padding-left: 10px;
+        &::before {
+            content: '';
+            position: absolute;
+            top:10px; left: 0;
+            width:4px ; height: 4px;
+            border-radius: 100%;
+            background: rgba(60, 60, 60, 1);
+        }
+        /* 목록 타이틀 있는경우 */
+        &.title {
+            padding: 0; margin-bottom: 10px;
+            font-size: 1.142rem; font-weight: 700;
+            &::before {display: none;}
+        }
+    }
+}
+
+/* 리스트내 버튼영역 */
+/* 버튼영역 */
+.innerBtnBox {
+    display: flex;
+    padding: 0; margin: 0;
+    & > button, & > label {
+        flex: 1;
+        & ~ button, & ~ label { margin-left: 12px; }
+    }
+}
+/* 금융상품 검색 - 검색조건 컴포넌트 호출 */
+div.productSearch {
+    overflow: hidden;
+    padding: 18px 20px 14px;
+    box-shadow: inset 0 4px 20px -20px rgb(0 0 0 / 80%);
+    & > label {
+        width: calc(100% - 48px);
+        & input { width: 100%;}
+    }
+    /* 상세검색 설정 */
+    & > button {
+        float: right;
+        width: 40px; height: 40px;
+        padding: 0;
+        background: var(--white) url('@/assets/images/global/icon_search_setting.png') no-repeat center /24px auto;
+    }
+    /* 배경회색 */
+    &.gray { background: rgba(248, 248, 248, 1); }
+    /* 추가 체크 영역 */
+    & > div {
+        overflow: hidden; display: flex; position: relative;
+        justify-content: space-between; align-items: center;
+        padding: 12px 0 4px;
+        /* 기간선택 */
+        & input[type="checkbox"] + div {
+            font-size: 1rem;
+        }
+    }
+}
+div.controlArea {
+    padding: 18px 20px; margin: 0;
+    &.gray { background: rgba(248, 248, 248, 1); }
+}
+/* 리스트 상단 셀렉트 요소 호출 영역 */
+div.listSort {
+    overflow: hidden; display: flex;
+    margin: 0 20px; padding: 8px 0;
+    border-bottom: 1px solid rgba(229, 229, 229, 1);
+    justify-content: space-between;
+    align-items: center;
+    & > button {
+        height: 26px;
+        padding: 0 20px 0 0; margin: 0 0 0 auto;
+        border: none;
+        background: url('@/assets/images/global/arrow_gray.png') no-repeat right center / 10px auto;
+        line-height: 15px; font-size: 0.857rem; font-weight: 400; color: rgba(130, 130, 130, 1);
+    }
+    & > label {
+        margin: 10px 0;
+        & > div {
+            font-size: 1rem;
+        }
+    }
+    &.agreeAll {
+        & > label > div {
+            font-size: 1.286rem; font-weight: 500;
+        }
+    }
+}
+/* label - 벨리데이션 교정, 최초 금액표기관련 */
+label.price {
+    width: 100%;
+    & > p { margin: 0; padding: 0; }
+    & > p:nth-child(1) {
+        text-align: right;
+        color: var(--pointBlue)
+    }
+    & > input {
+        width: 100%;
+        text-align: right; font-weight: 500;
+        &::placeholder { text-align: left; color: var(--fontLightgray); }
+    }
+    & > input + p {
+        color: var(--red)
+    }
+    &.hasReset {
+        & > input {
+            padding-right: 38px;
+        }
+        & button.resetInput { display: block; }
+    }
+}
+
+/* 상단계좌 선택 공통 */
+div.selectMyAcc {
+    display: flex;
+    padding: 16px 20px;
+    justify-content: space-between;
+    & > button.select {
+        flex: 1;
+        background: var(--white) url('@/assets/images/global/arrow_black.png') no-repeat right 8px center / 24px auto;
+        text-align: left; font-weight: 400;
+    }
+    & > button:not(.select) {
+        width: 40px; height: 40px;
+        margin-left: 12px; padding: 0;
+        background: var(--white) url('@/assets/images/global/button_lock.png') no-repeat center /24px auto;
+        &.passed {
+            background-image: url('@/assets/images/global/button_lock_on.png');
+        }
+    }
+    &.gray {
+        background: rgba(248, 248, 248, 1);
+    }
+}
+/* 스텝이 포함된 타이틀 */
+div.titleInStep {
+    position: relative; display: flex;
+    margin: 0; padding: 20px;
+    justify-content: space-between; flex-direction: row; flex-wrap: wrap;
+    & > h1 {
+        margin: 0; padding: 0;
+        line-height: 27px; text-align: left; font-size: 1.428rem; font-weight: 500;
+    }
+    & > h2 {
+        margin: 0; padding: 0;
+        line-height: 27px; text-align: left; font-size: 1.428rem; font-weight: 400;
+    }
+    & span {
+        display: block;
+        margin-top: 4px;
+        line-height: 20px; font-size: 1.142rem; color: var(--tableTopLine) ; font-weight: 400 ;
+        & strong {
+            font-weight: 500; color: var(--pointBlue)
+        }
+    }
+    & > p {
+        margin: 8px 0 0; padding: 0;
+    }
+    & div {
+        width: 100%;
+    }
+    & div.balnaceInfo {
+        display: flex;
+        margin-top: 4px;
+        align-items: center;
+        font-size: 1rem;
+        & button {
+            width: 20px; height: 20px;
+            padding: 0; margin: 2px 0 0 5px;
+            border: none;
+            background: url('@/assets/images/global/icon_info_gray.png') no-repeat center / 13px auto;
+            font-size: 0;
+        }
+    }
+}
+/* 가운데 정렬형 타이틀 */
+div.centerTitle {
+    position: relative;
+    margin: 0; padding: 20px; text-align: center;
+    & h1, & h2 {
+        margin: 0; padding: 0;
+        line-height: 27px; font-size: 1.428rem;
+    }
+    & h1 { font-weight: 500; }
+    & h2 { font-weight: 400; }
+    & p {
+        margin: 12px 0 0 0; padding: 0;
+        font-weight: 400;
+    }
+    & span {
+        display: block;
+        margin-top: 4px;
+        line-height: 20px; font-size: 1.142rem; color: var(--tableTopLine) ; font-weight: 400 ;
+        & strong {
+            font-weight: 500; color: var(--pointBlue)
+        }
+    }
+    & div {
+        width: 100%;
+    }
+    & .resultPass {
+        padding-top:66px;
+        background:url('@/assets/images/global/icon_result_check.png') no-repeat center top 0 / 46px auto;
+    }
+    & .resultFail { /* 서영기추가 20220920 */
+        padding-top:66px;
+        background:url('@/assets/images/global/icon_result_uncheck.png') no-repeat center top 0 / 46px auto;
+    }
+}
+
+/* 뱅킹 이체 홈 - 인터넷뱅킹 */
+.selectBankingMyAcc {
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: var(--white) url('@/assets/images/global/arrow_gray.png') no-repeat right 20px center/ 10px auto;
+    &:not(.smallList) {
+        height: 84px;
+    }
+    /* pw 미입력 */
+    &.off {
+        & button {
+            /* pw버튼 */
+            &:first-child {
+                border: 1px solid rgba(230, 230, 230, 1); border-radius: 8px;
+                background: var(--white) url('@/assets/images/global/button_lock.png') no-repeat center;
+                background-size: 24px auto;
+                & span {
+                    display: none; position: absolute;
+                    padding: 0 12px;
+                    bottom: -45px; left: 0; width: auto; height: 32px;
+                    border-radius: 8px;
+                    background: var(--pointBlue);
+                    line-height: 32px; font-size: 0.857rem; font-weight: 500; color: var(--white); text-align: left;
+                    box-sizing: border-box; opacity: 0; transition: .3s opacity ease; white-space: nowrap;
+                    &.on {
+                        display: block;
+                        opacity: 1;
+                    }
+                    &::after {
+                        display: none; position: absolute;
+                        top: -7px; left: 7px; width:18px; height: 12px;
+                        background: url('@/assets/images/global/button_lock_bubble.png') no-repeat center;
+                        background-size: 10px auto;
+                        content: ''; opacity: 0; transition: .3s opacity ease;
+                    }
+                    &.on::after {
+                        display: block;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    /* 계좌리스트 1개일 때 */
+    &.hasOne {
+        background-image: none;
+    }
+    & button {
+        &:first-child {
+            display: block; position: relative;
+            width: 36px; height: 36px;
+            padding: 0; border: none;
+            background-color: transparent;
+            & img {
+                width: 36px;
+            }
+        }
+        &:last-child {
+            flex: 1;
+            padding: 0; margin: 0 0 0 16px;
+            border: none;
+            background: none;
+            text-align: left;
+            & p {
+                margin: 0;
+                line-height: 1;
+                color:var(--tableTopLine) ; font-weight: 400;
+            }
+            & h2 {
+                margin: 6px 0 0;
+                line-height: 1;
+                color: var(--black) ; font-weight: 500;
+            }
+        }
+    }
+    &.smallList {
+        background: none;
+        align-items: start;
+        & button:first-child {
+            margin-top: 4px;
+        }
+        & button:last-child {
+            & h4 {
+                height: 1.5rem;
+                padding: 0; margin: 0;
+                line-height: 1.5rem;
+                font-weight: 500;
+            }
+            & p {
+                margin-top: 2px;
+                font-weight: 500; line-height: 1.5 !important;
+            }
+        }
+    }
+}
+/* 금융상품 리스트 */
+ul.productList {
+    list-style: none;
+    margin: 0;
+    &.noList { padding: 0; }
+    &:not(.noList) {
+        padding: 0 20px;
+        & > li {
+            overflow: hidden;
+            padding: 18px 0 14px;
+            /* 랭킹 및 selected대비 */
+            & > span, & > label, & > button {
+                display: none; float: left;
+            }
+            /* 불릿 영역 */
+            & > div.bullets {
+                overflow: hidden;
+                margin-bottom: 6px;
+                & > button {
+                    float: right;
+                    width: 20px; height: 20px;
+                    padding: 0; margin-top: 1px;
+                    border: none;
+                    background:url('@/assets/images/banking/icon_favorite.png') no-repeat center / 20px;
+                    &.on {
+                        background:url('@/assets/images/banking/icon_favorite_on.png') no-repeat center / 20px;
+                    }
+                }
+            }
+            /* 기타 하단 영역 */
+            & > div:not(.bullets) {
+                overflow: hidden;
+                margin-top: 12px; margin-bottom: 4px;
+            }
+            & > a {
+                display: block;
+                padding: 0; margin-top: -3.5px;
+                color: inherit; text-decoration: none;
+                /* 기본 펀드메인 및 수익률 표기 있을 시 */
+                & dl {
+                    display: flex;
+                    margin: 0; padding: 0;
+                    & dt {
+                        font-size: 0.857rem; font-weight: 400; color: var(--fontLightgray);
+                        padding-right: 16px;
+                        flex: 1 1 80%;
+                        & h1 {
+                            margin: 0 0 10px; padding: 0;
+                            font-size: 1rem; font-weight: 500; color: var(--black); word-break: break-all;
+                        }
+                    }
+                    & dd {
+                        width: 72px;
+                        margin: 10px 0 0;
+                        text-align: right; color: var(--fontLightgray); line-height: 1;
+                        & strong {
+                            display: inline-block;
+                            padding-top: 5px;
+                            font-size: 1.286rem; color: rgba(239,34,71,1);
+                        }
+                        & span {
+                            color: var(--black);
+                        }
+                    }
+                }
+                /* 타이틀만 있을 시 */
+                & > h1 {
+                    margin: 0; padding: 0;
+                    font-size: 1rem; font-weight: 400; word-break: break-all;
+                }
+                /* 후 추가, h2가 font-weight 500 */
+                & > h2 {
+                    margin: 0; padding: 0;
+                    font-size: 1rem; font-weight: 500; word-break: break-all;
+                }
+                & p {
+                    padding: 0; margin: 5px 0 0;
+                    font-weight: 500;
+                    &.gray { color: var(--fontLightgray); }
+                    & span { font-weight: 400; }
+                }
+            }
+            & > div.bullets + a {
+                margin-top: 6px;
+            }
+            & > p {
+                margin: 6px 0 0; padding: 0;
+                & strong {
+                    display: inline-block;
+                    padding: 0 10px; margin-right: 4px; margin-bottom: 4px;
+                    border: 1px solid rgba(235, 235, 235, 1); border-radius: 99px;
+                    line-height: 22px; font-size:0.785rem ; font-weight:400 ; color:rgba(77, 77, 77, 1);
+                    &::before { content: '#' }
+                }
+            }
+            & + li {
+                border-top: 1px solid rgba(229, 229, 229, 1);
+            }
+        }
+        &.noLine {
+            & li {
+                padding-top: 10px; padding-bottom: 10px;
+                & + li {
+                    border-top: none;
+                }
+            }
+        }
+        /* 랭킹시 앞단 숫자 표시 */
+        &.ranking {
+            & > li {
+                & > span {
+                    display: block;
+                    padding-top: 30px;
+                    font-size: 1.143rem; font-weight: 500px;
+                }
+                & > div, & > a, & > p {
+                    margin-left: 18px;
+                }
+            }
+        }
+        &.select {
+            & > li {
+                & > label {
+                    display: block;
+                    margin-top: 2px;
+                }
+                & > *:not(label) {
+                    margin-left: 30px;
+                }
+            }
+        }
+        /* 드랍다운 시 전체 간격 조정 */
+        &.dropDown {
+            padding: 0;
+            & > li {
+                padding: 18px 0 0 0;
+                & > a {
+                    position: relative;
+                    padding-right: 50px; padding-left: 20px; margin-bottom: 15px;
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        right: 20px; top : calc(50% - 4px);
+                        width: 10px; height: 10px;
+                        background: url('@/assets/images/global/arrow_gray.png') no-repeat center / contain;
+                        transform: rotate(0deg); transition:transform .2s ease-in-out ;
+                    }
+                }
+                &.on {
+                    & > a::after {
+                        top : calc(50% - 6px);
+                        transform: rotate(180deg)
+                    }
+                }
+                & > div, & > p {
+                    overflow: hidden;
+                    padding-right: 20px; padding-left: 20px; margin-bottom: 0;
+                    box-sizing: border-box;
+                }
+                &.notOpen {
+                    & > a {
+                        padding-right: 20px;
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            &.select {
+                & > li {
+                    & > * {
+                        margin-left: 20px;
+                    }
+                    & > div:not(.bullet), & > p {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+        &.delete, &.noti {
+            & > li {
+                position: relative;
+                & > a {
+                    padding-right: 30px;
+                    position: relative;
+                }
+            }
+        }
+        &.delete {
+            & button.del {
+                    display: block; position: absolute;
+                    right: 0; top: 18px;
+            }
+        }
+        &.noti {
+            & li {
+                & button.noti {
+                    display: block; position: absolute;
+                    top: 50%; right: 0; transform: translateY(-50%);
+                }
+            }
+        }
+        /* 블록형 */
+        &.block {
+            & > li {
+                padding: 20px; border: 1px solid rgba(215, 215, 215, 1); border-radius: 8px;
+                & + li { margin-top: 12px }
+            }
+            &.delete {
+                & button.del {
+                    display: block; position: absolute;
+                    right: 20px; top: 18px;
+                }
+            }
+        }
+    }
+}
+/* 은행리스트 */
+ul.accList {
+    margin: 0; padding: 0 20px;
+    list-style: none;
+    &.noList {
+        padding: 0;
+    }
+    &:not(.noList) > li {
+        overflow: hidden; position: relative;
+        padding: 0;
+        /* 랭킹 및 selected대비 */
+        & > span, & > label {
+            display: none; float: left;
+        }
+        /* 기타 하단 영역 */
+        & > div {
+            overflow: hidden;
+            margin-top: 12px; margin-bottom: 4px;
+        }
+        & > a {
+            display: block; position: relative;
+            padding: 18px 0;
+            text-decoration: none;
+            & img, & > span {
+                position: absolute;
+                top: 22px; width: 36px;
+            }
+            & h1, & h2, & p {
+                margin: 0; padding: 0 0 0 52px;
+            }
+            & h1 {
+                color: var(--black); font-weight: 500; font-size: 1.143rem;
+            }
+            & .singleLine {
+                line-height: 36px; margin-top: 2px;
+            }
+            & h2 {
+                color: var(--black); font-weight: 500; font-size: 1rem;
+            }
+            & > p {
+                font-size: 1rem; font-weight: 400; color: var(--black);
+                &.gray { color: var(--fontLightgray); }
+            }
+            & h1 + p { margin-top: 4px; }
+            & h2 + p, & p + p { margin-top: 2px; }
+            /* 자주,퀵 구분 */
+            & > span {
+                display: block;
+                height: 36px;
+                border-radius: 50%;
+                background-color: var(--pointBlue);
+                font-size: 0.857rem; text-align: center; color: rgba(255,255,255,1); line-height: 36px; font-weight: 500;
+                &.quick {
+                    font-size: 1.143rem;
+                }
+                &.people {
+                    background: var(--pointBlue)
+                }
+            }
+        }
+        & .innerBtnBox {
+            margin-top: -2px; margin-bottom: 18px; margin-left: 52px;
+            /* 끝에 위치할 시에만 하단 margin 필요 */
+        }
+        & > p {
+            margin: 6px 0 0; padding: 0;
+            & strong {
+                display: inline-block;
+                padding: 0 10px; margin-right: 4px; margin-bottom: 4px;
+                border: 1px solid rgba(235, 235, 235, 1); border-radius: 99px;
+                line-height: 22px; font-size:0.785rem ; font-weight:400 ; color:rgba(77, 77, 77, 1);
+                &::before { content: '#' }
+            }
+        }
+        & + li {
+            border-top: 1px solid rgba(229, 229, 229, 1);
+        }
+        &.on { background: rgba(244,246,253,1) url('@/assets/images/global/icon_select_on.png') no-repeat calc(100% - 20px) center / 15px; }
+    }
+    /* 현대차 증권일 시 은행 로고 미노출 */
+    &.hmsecAcc > li {
+        & h1, & h2, & p {
+            padding-left: 0 !important;
+        }
+    }
+    /* 라인 없을 시 */
+    &.noLine {
+        margin: 5px 0;
+        &:not(.select) { padding-left: 0; }
+        &:not(.useBtn), &:not(.delete) { padding-right: 0; }
+        & > li {
+            & > a { padding: 15px 20px; }
+            & + li { border: none; }
+        }
+    }
+    &.useBtn {
+        & > li {
+            padding-right: 36px;
+            & > a {
+                padding-right: 0;
+                & button {
+                    position: absolute;
+                    top: 50%; right: -32px; width: 24px; height: 24px;
+                    padding: 0; border: none; border-radius: 0;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+        & button.favorite {
+            background:url('@/assets/images/banking/icon_favorite.png') no-repeat center / 20px;
+            &.on {
+                background:url('@/assets/images/banking/icon_favorite_on.png') no-repeat center / 20px;
+            }
+        }
+        & button.handle {
+            background:url('@/assets/images/global/icon_orderBy.png') no-repeat center / 24px;
+        }
+        &.noLine, &.dropDown {
+            & > li { padding-right: 56px; }
+        }
+    }
+    &.select {
+        & > li {
+            padding-left: 34px;
+            & > label {
+                display: block; position: absolute;
+                margin-top: 30px; left: 0px;
+            }
+            & > *:not(label) {
+                padding-left: 0 !important;
+            }
+        }
+    }
+    /* 드랍다운 시 전체 간격 조정 */
+    &.dropDown {
+        padding: 0;
+        & > li {
+            /* padding: 18px 0 0 0; */
+            & > a {
+                position: relative;
+                padding-right: 50px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    right: 20px; top : calc(50% - 4px);
+                    width: 10px; height: 10px;
+                    background: url('@/assets/images/global/arrow_gray.png') no-repeat center / contain;
+                    transform: rotate(0deg); transition:transform .2s ease-in-out ;
+                }
+            }
+            &.on {
+                background: none;
+                & > a::after {
+                    top : calc(50% - 6px);
+                    transform: rotate(180deg)
+                }
+            }
+            & > div, & > p {
+                overflow: hidden;
+                padding-right: 20px; padding-left: 20px; margin-bottom: 0;
+                box-sizing: border-box;
+            }
+            &.notOpen {
+                & > a {
+                    padding-right: 20px;
+                    &::after {
+                        display: none;
+                    }
+                }
+            }
+        }
+        &:not(.noLine) {
+            & > li > a {
+                padding-left: 20px !important;
+            }
+        }
+        &.select {
+            & > li {
+                & > * {
+                    margin-left: 20px;
+                }
+                & > div:not(.bullet), & > p {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+    &.delete {
+        & > li {
+            position: relative;
+            & > a {
+                padding-right: 30px;
+                position: relative;
+            }
+        }
+        & button.del {
+                display: block; position: absolute;
+                right: 0; top: 50%; transform: translateY(-50%);
+        }
+    }
+    /* 블록형 */
+    &.block {
+        & > li {
+            padding: 18px 20px; border: 1px solid rgba(215, 215, 215, 1); border-radius: 8px;
+            & + li { margin-top: 12px }
+        }
+        &.delete {
+            & > li {
+                & button.del {
+                    display: block; position: absolute;
+                    right: 20px; top: 18px; transform: translateY(0);
+                }
+                & > h4 { padding: 0; }
+                & > h4 + a {
+                    padding: 0 !important;
+                    & > span, & > img {
+                        top: 2px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 항목동의 페이지 */
+ul.agreeList {
+    padding: 0; margin: 9px 0 14px;
+    list-style: none;
+    & > li {
+        overflow: hidden;
+        position: relative;
+        padding: 10px 0;
+        font-size: 1.143rem;
+        & a {
+            position: relative; display: block; float: right;
+            width: calc(100% - 30px);
+            margin-top: 1px;
+            text-decoration: none; color: inherit; line-height: 22px;
+        }
+        &::after, & li::after {
+            position: absolute;
+            right: 0; width: 18px; height: 18px;
+            font-size: 0; line-height: 0;
+            content: ' ';
+        }
+        &.hasChildren {
+            &::after {
+                top: 10px;
+                background: url('@/assets/images/global/arrow_right_s18.png') no-repeat center / 18px;
+                transform: rotate(90deg); transition: transform .2s ease;
+            }
+            &.on::after {
+                top: 16px;
+                transform: rotate(-90deg);
+            }
+        }
+        &.hasLink::after {
+            top: 14px;
+            background: url('@/assets/images/global/arrow_right_s18.png') no-repeat center / 18px;
+        }
+        & > ul {
+            overflow: hidden; clear: both;
+            padding: 6px 0 0; margin: 0;
+            list-style: none;
+            & > li {
+                position: relative;
+                padding: 6px 18px 6px 0;
+                &.hasLink_small::after {
+                    top: 9px;
+                    background: url('@/assets/images/global/arrow_right_s18_gray.png') no-repeat center / 18px;
+                }
+                & div {
+                    word-break: break-all;
+                    font-size: 1rem;
+                }
+            }
+        }
+        & p {
+            margin-top: 6px;
+        }
+    }
+}
+
+/* 옵션형 목록 */
+ul.optionsList {
+    padding: 0; margin: 0;
+    list-style: none;
+    & > li {
+        position: relative; display: flex;
+        padding: 0; margin: 0;
+        flex-direction: row; flex-wrap: wrap; justify-content: space-between;
+        & > p {
+            margin: 0; padding: 0;
+            font-size: 1.143rem; font-weight: 500;
+        }
+        & > label {
+            height: 24px;
+        }
+        & > div {
+            overflow: hidden;
+            width: 100%; margin-top: 14px;
+            & > div + div {
+                margin-top: 8px;
+            }
+        }
+    }
+    & > li + li { margin-top: 32px; }
+    /* 특이케이스 제목 + 텍스트 + 인풋 + 텍스트 조합 */
+    & .txtArea {
+        display: flex;
+        height: 40px;
+        justify-content: space-between;
+        align-items: start;
+        & > p {
+            margin: 0; padding: 0; color: rgba(60, 60, 60, 1);
+            line-height: 40px;
+        }
+        & > label {
+            & span, & strong {
+                display: inline-block;
+                line-height: 40px;
+            }
+            & input {
+                width: 160px;
+            }
+            & span {
+                margin-top: 0;
+                padding-left: 8px;
+            }
+            & strong {
+                padding-right: 10px;
+            }
+        }
+    }
+}
+/* 은행 선택 관련 */
+div.selectAcc {
+    padding: 0 20px;
+    & > button {
+        width: 100%;
+        padding: 0 0 0 12px;
+        background: var(--white) url('@/assets/images/global/arrow_black.png') no-repeat right 6px center / 24px auto;
+        text-align: left; font-weight: 400;
+        & + label {
+            margin-top: 8px;
+        }
+    }
+
+    & > label {
+        width: 100%;
+        & input {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+    & h2 {
+        margin: 0 0 10px;
+        line-height: 20px; font-size:1.142rem ; font-weight: 500;
+    }
+    & button.mySaveAcc {
+        float: right;
+        padding: 0 0 0 24px;
+        border: none;
+        background: url('@/assets/images/global/icon_list_blue.png') no-repeat left center / 16px auto;
+        line-height: 20px; font-size: 1rem; font-weight:500 ; color: var(--pointBlue);
+    }
+}
+/* 팁버튼 */
+button.info {
+    position: relative;
+    width: 16px; height: 16px;
+    vertical-align: middle;
+    &.on > div {
+        display: block;
+        opacity: 1;
+    }
+    & > div {
+        display: none; position: absolute;
+        width: calc(100vw - 78px);
+        padding: 16px 20px; border: 1px solid rgba(208,208,208,1); border-radius: 6px;
+        background: rgba(255,255,255,1);
+        font-weight: 400; line-height: 1.5; text-align: left;
+        box-shadow: 0 0 12px rgba(0, 0, 0, 0.08); z-index: 20; box-sizing: border-box;
+        opacity: 0; transition: opacity .2s ease;
+    }
+}
+
+/* 플랙스 내부 제어 */
+.div3_7 {
+    & *:first-child { flex: 1 1 30% }
+    & *:last-child { flex: 1 1 70% }
+}
+.div3_3_3 {
+    & * { flex: 1 1 34% }
+}
+
+/* basicTable */
+div.basicTable {
+    overflow: auto;
+    & table {
+        min-width: 100%; border-spacing: 0;
+        border-top: 1px solid var(--tableTopLine);
+        & th, & td {
+            padding: 10px 12px;
+            font-weight: 400; font-size: 1rem;
+            border-bottom: 1px solid rgba(240, 240, 240, 1);
+        }
+        & th {
+            border-right: 1px solid rgba(220, 220, 220, 1);
+            background: rgb(250, 250, 250);
+            text-align: left; color: rgba(100,100,100,1);
+        }
+        & td + td {
+            border-right: 1px solid rgba(220, 220, 220, 1);
+        }
+        &.tdCenter {
+            & td {
+                text-align: center;
+            }
+        }
+        &.tdRight {
+            & td {
+                text-align: right;
+            }
+        }
+        /* 총합계영역 */
+        & tr.totalArea {
+            & th, & td { background: rgba(242, 245, 249, 1); border-right: none; }
+            & th { color: var(--black); font-weight: 500; }
+            & td { color: var(--pointBlue); font-weight: 700; text-align: right; }
+        }
+    }
+}
+/* icon + 텍스트 조홥 */
+div.iconBox {
+    & a {
+        display: block; width: 100%;
+        margin: 0; padding: 20px 20px 20px 72px; border-radius: 8px;
+        background-color:rgba(242, 245, 249, 1); background-repeat: no-repeat; background-position: left 24px center;
+        background-size: 32px auto;
+        font-size: 1rem; line-height: 1; font-weight: 700; color: inherit; text-decoration: none;
+        box-sizing: border-box;
+        & p {
+            margin: 6px 0 2px; padding: 0;
+            font-weight: 400;
+        }
+    }
+    &.message > a { background-image: url('@/assets/images/global/icon_message.png'); }
+}
+/* 잔고 조회 영역 */
+div.balnaceArea {
+    display: flex;
+    height: 75px;
+    padding: 0 20px;
+    align-items: center; justify-content: space-between;
+    & > h1 {
+        font-size: 1.429rem
+    }
+    & > label span {
+        padding-right: 12px;
+        vertical-align: super;
+    }
+    &.on { background: rgba(63, 84, 195, 0.05); }
+}

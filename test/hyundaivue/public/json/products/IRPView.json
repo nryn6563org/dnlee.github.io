@@ -1,0 +1,139 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "itemInfo" : {
+        "itemCode" : "abc123",
+        "itemName": "우체국퇴직연금정기예금(1년)_DC/IRP2",
+        "itemClass" : "CE",
+        "dueDay":  "3",
+        "interestRate": "99.99",
+        "isGuarantee": true,
+        "isRiskyAsset" : false,
+        "feelRemu": false,
+        "isOnline" : true,
+        "isHighLevel" : true,
+        "pensionType" : "retirement",
+        "kinds": "savings",
+        "institute": "DBInsurance",
+        "investArea": "domestic",
+        "fundType": "stock",
+        "riskGrade": "6",
+        "volume": "u50",
+        "itemGrade": "1",
+        "manager": "daol",
+        "isSave": true,
+        "keywords": ["온라인", "해외주식", "2차전지"],
+        "recommendTitle": "전기차",
+        "recommendText": "미국, 호주, 유럽 등 전세계 수익형 부동산 및 부동산 개발회사에 중장기적으로 투자하여 안정적인 수익률을 추구. 시장 조정기 수익률 안정화를 위해 추천",
+        "specialType": "recommend",
+        "feeCollect": "before",
+        "baseInfo": {
+            "baseDate": "2022.09.20",
+            "basePrice": "88.88",
+            "fluctuation": "-8.88",
+            "yield": "8.88",
+            "comment": [
+                {
+                    "attachImage" : "/images/temp/sns_yuutube.png",
+                    "title" : "주요내용",
+                    "content" : "이 펀드에 대한 주요 내용을\n영상으로 쉽게 이해해 보세요!"
+                },
+                {
+                    "attachImage" : "",
+                    "title" : "주요내용",
+                    "content" : "다른 내용\n 내용은 최대 2줄"
+                }
+            ]
+        },
+        "detailInfo": {
+            "setDate" : "2019.01.14",
+            "operationScale" : "123.00",
+            "advanceFee" : "",
+            "redemptionFee" : "",
+            "remuneration" : "1.30000",
+            "reportList" : [
+                ["(간이)투자설명서", "fileURL"],
+                ["투자설명서", "fileURL"],
+                ["집약투자규약", "fileURL"],
+                ["운용보고서", "fileURL"]
+            ],
+            "etcClassCode" : [ "abc123A", "abc123B", "abc123C", "abc123D" ]
+        },
+        "detailYield" : {
+            "yeildList" : {
+                "baseDate" : "2022.07.16",
+                "lists" : [
+                    [ "1", "-0.71", "-3.31" ],
+                    [ "3", "-0.73", "-3.33" ],
+                    [ "6", "-0.76", "-3.36" ],
+                    [ "12", "-0.88", "-3.48" ],
+                    [ "36", "0.96", "-3.36" ],
+                    [ "YTM", "0.96", "3.36" ],
+                    [ "after", "1.05", "3.50" ]
+                ]
+            },
+            "dateList" : {
+                "baseDate" : "2022.07.16",
+                "lists" : [
+                    [ "2022.06.16", "-0.71", "-3.31" ],
+                    [ "2022.06.15", "-0.73", "-3.33" ],
+                    [ "2022.06.14", "-0.76", "-3.36" ],
+                    [ "2022.06.13", "-0.88", "-3.48" ],
+                    [ "2022.06.12", "-0.96", "-3.36" ],
+                    [ "2022.06.11", "0.96", "3.36" ],
+                    [ "2022.06.10", "1.05", "3.50" ]
+                ]
+            }
+        },
+        "riskData" : {
+            "deviation" : {
+                "fund" : [ "2.14", "2.24", "0.84", "9.49" ],
+                "percent" : [ "84", "65", "43", "10" ],
+                "sameType" : [ "2.14", "2.24", "0.84", "11.49" ]
+            },
+            "SharpRatio" : {
+                "fund" : [ "2.14", "2.24", "0.84", "9.49" ],
+                "percent" : [ "84", "65", "43", "10" ],
+                "sameType" : [ "2.14", "2.24", "0.84", "11.49" ]
+            }
+        },
+        "assetInfo" : {
+            "graphInfo" : [],
+            "countryList" : [
+                [ "한국", "48.71" ],
+                [ "미국", "48.71" ],
+                [ "영국", "48.71" ],
+                [ "수리남", "48.71" ],
+                [ "홍콩", "48.71" ],
+                [ "스페인", "48.71" ],
+                [ "케나다", "48.71" ],
+                [ "포르투갈", "48.71" ],
+                [ "이탈리아", "48.71" ],
+                [ "아르헨티나", "48.71" ]
+            ],
+            "stockList" : {
+                "stock" : [
+                    [ "VANGUARD S&P 500 ETF", "48.71" ],
+                    [ "GLOBAL X NASD 100 COV CALL ETF", "7.85" ],
+                    [ "Invesco QQQ Trust Seris 1", "4.61" ],
+                    [ "SPDR Portfolio S&P 500 High Di", "4.49" ],
+                    [ "VANGUARD INFO TECH ETF", "3.49" ],
+                    [ "iShares Semiconductor ETF", "3.49" ],
+                    [ "Consumer Staples Select Sector", "3.49" ],
+                    [ "VANGUARD UTILITIES ETF", "3.49" ],
+                    [ "맥쿼리인프라", "3.49" ],
+                    [ "Health Care SPDR(ETF)", "3.49" ]
+                ],
+                "bond" : [
+                    [ "iShares Semiconductor ETF", "3.49" ],
+                    [ "Consumer Staples Select Sector", "3.49" ],
+                    [ "VANGUARD UTILITIES ETF", "3.49" ],
+                    [ "맥쿼리인프라", "3.49" ],
+                    [ "Health Care SPDR(ETF)", "3.49" ],
+                    [ "Invesco QQQ Trust Seris 1", "4.61" ],
+                    [ "SPDR Portfolio S&P 500 High Di", "4.49" ]
+                ]
+            }
+        }
+    }
+}

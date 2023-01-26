@@ -11,6 +11,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
@@ -36,7 +37,7 @@
       </div>
 
       <div class="tab-content" id="nav-tabContent">
-        <div id="my" class="tab-pane fade show active" tabindex="0">
+        <div id="my" class="tab-pane fade show active info-tabcontent" tabindex="0">
           <div class="fixed">
             <div class="fixed-left">
               <span>MY종목 <strong>10</strong>/50</span>
@@ -71,7 +72,7 @@
           </div>
         </div>
 
-        <div id="alarm" class="tab-pane fade alarm" tabindex="0">
+        <div id="alarm" class="tab-pane fade alarm-tabContent" tabindex="0">
           <div class="alarm-list">
             <ul>
               <li>
@@ -134,12 +135,12 @@
 
               <div class="check">
                 <input type="checkbox" class="btn-check" id="btncheck8" autocomplete="off">
-                <label class="btn small" for="btncheck8">유/무상증자</label>
+                <label class="btn" for="btncheck8">유/무상증자</label>
               </div>
 
               <div class="check">
                 <input type="checkbox" class="btn-check" id="btncheck9" autocomplete="off">
-                <label class="btn small" for="btncheck9">자기주신 취득/처분</label>
+                <label class="btn small2" for="btncheck9">자기주신 <br>취득/처분</label>
               </div>
 
             </div>
@@ -151,17 +152,17 @@
 
         </div>
 
-        <div id="ai" class="tab-pane fade" tabindex="0">
+        <div id="ai" class="tab-pane fade ai" tabindex="0">
           <div class="ai-list">
             <ul>
               <li>
-                <span>장마감 종목요약(16:00)</span>
+                <span>AI 국내 추천 종목(09:30)</span>
                 <div class="form-check form-switch">
                   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 </div>
               </li>
               <li>
-                <span>종목 특이사항</span>
+                <span>AI 미국 추천 종목 (21:00)</span>
                 <div class="form-check form-switch">
                   <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                 </div>
@@ -170,7 +171,7 @@
           </div>
           <div class="ai-signal">
             <div class="signal-headname">
-              <span>주요 공시 알림</span>
+              <span>AI 포트폴리오 매매신호</span>
               <div class="form-check form-switch">
                 <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
               </div>
@@ -241,11 +242,11 @@
                   </div>
                   <span>알림 설정(<em>3</em>/10)</span>
                 </div>
-                <ul>
+                <ul class="modal-list">
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">박셀바이오</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1">
+                      <label for="flexCheckDefault1" class="form-check-label">박셀바이오</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -253,8 +254,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대차증권</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2">
+                      <label for="flexCheckDefault2" class="form-check-label">현대차증권</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -262,8 +263,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">노터스</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3">
+                      <label for="flexCheckDefault3" class="form-check-label">노터스</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -271,8 +272,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">에코프로</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                      <label for="flexCheckDefault4" class="form-check-label">에코프로</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -280,8 +281,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">한국비엔씨</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5">
+                      <label for="flexCheckDefault5" class="form-check-label">한국비엔씨</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -289,8 +290,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">HK이노엔</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault6">
+                      <label for="flexCheckDefault6" class="form-check-label">HK이노엔</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -298,8 +299,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대모비스</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault7">
+                      <label for="flexCheckDefault7" class="form-check-label">현대모비스</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -307,8 +308,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대위아</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault8">
+                      <label for="flexCheckDefault8" class="form-check-label">현대위아</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -316,8 +317,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대제철</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault9">
+                      <label for="flexCheckDefault9" class="form-check-label">현대제철</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -325,8 +326,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">박셀바이오</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault10">
+                      <label for="flexCheckDefault10" class="form-check-label">박셀바이오</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -334,8 +335,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대차증권</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault11">
+                      <label for="flexCheckDefault11" class="form-check-label">현대차증권</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -343,8 +344,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">노터스</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault12">
+                      <label for="flexCheckDefault12" class="form-check-label">노터스</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -352,8 +353,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">에코프로</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault13">
+                      <label for="flexCheckDefault13" class="form-check-label">에코프로</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -361,8 +362,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">한국비엔씨</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault14">
+                      <label for="flexCheckDefault14" class="form-check-label">한국비엔씨</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -370,8 +371,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">HK이노엔</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault15">
+                      <label for="flexCheckDefault15" class="form-check-label">HK이노엔</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -379,8 +380,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대모비스</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault16">
+                      <label for="flexCheckDefault16" class="form-check-label">현대모비스</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -388,8 +389,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대위아</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault17">
+                      <label for="flexCheckDefault17" class="form-check-label">현대위아</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
@@ -397,8 +398,8 @@
                   </li>
                   <li>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      <label for="checkBox" class="form-check-label">현대제철</label>
+                      <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault18">
+                      <label for="flexCheckDefault18" class="form-check-label">현대제철</label>
                     </div>
                     <div class="form-check form-switch">
                       <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">

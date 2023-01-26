@@ -1,0 +1,146 @@
+{
+    "affective" : 200,
+    "message" : "오픈뱅킹이체리스트",
+    "transList" : [
+        {
+            "transferDate" : "2022.07.15",
+            "transferInfo": [
+                {
+                    "transCode": "K210300033UD00000014",
+                    "timeStemp": "2022.07.15 06:34:10",
+                    "bankCode": "089",
+                    "ownerName" : "홍길동",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transBankCode" : "263",
+                    "transOwnerName" : "임꺽정",
+                    "transBankAccNumber": 123412341230,
+                    "resultInfo" : {
+                        "returnBankCode" : "263",
+                        "returnBankAccNumber" : 1212121212,
+                        "resultCode" : "02",
+                        "reasonCode" : "01",
+                        "regPrice" : 1500000,
+                        "regDate" : "2022.07.16",
+                        "processDate" : "2022.07.18"
+                    }
+                },
+                {
+                    "transCode": "K210300033UD00000015",
+                    "timeStemp": "2022.07.15 06:34:10",
+                    "bankCode": "089",
+                    "ownerName" : "홍길동",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transBankCode" : "263",
+                    "transOwnerName" : "임꺽정",
+                    "transBankAccNumber": 123412341230,
+                    "resultInfo" : {
+                        "returnBankCode" : "263",
+                        "returnBankAccNumber" : 1212121212,
+                        "resultCode" : "01",
+                        "reasonCode" : "01",
+                        "regPrice" : 1500000,
+                        "regDate" : "2022.07.16",
+                        "processDate" : "2022.07.18"
+                    }
+                }
+            ]
+        },
+        {
+            "transferDate" : "2022.07.10",
+            "transferInfo": [
+                {
+                    "transCode": "K210300033UD00000016",
+                    "timeStemp": "2022.07.10 06:34:10",
+                    "bankCode": "089",
+                    "ownerName" : "홍길동",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transBankCode" : "263",
+                    "transOwnerName" : "임꺽정",
+                    "transBankAccNumber": 123412341230,
+                    "resultInfo" : {
+                        "returnBankCode" : "263",
+                        "returnBankAccNumber" : 1212121212,
+                        "resultCode" : "00",
+                        "reasonCode" : "01",
+                        "regPrice" : 1500000,
+                        "regDate" : "2022.07.16",
+                        "processDate" : "2022.07.18"
+                    }
+                }
+            ]
+        },
+        {
+            "transferDate" : "2022.07.08",
+            "transferInfo": [
+                {
+                    "transCode": "K210300033UD00000017",
+                    "timeStemp": "2022.07.08 06:34:10",
+                    "bankCode": "089",
+                    "ownerName" : "홍길동",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transBankCode" : "263",
+                    "transOwnerName" : "임꺽정",
+                    "transBankAccNumber": 123412341230,
+                    "resultInfo" : {
+                        "returnBankCode" : "263",
+                        "returnBankAccNumber" : 1212121212,
+                        "resultCode" : "01",
+                        "reasonCode" : "01",
+                        "regPrice" : 1500000,
+                        "regDate" : "2022.07.16",
+                        "processDate" : "2022.07.18"
+                    }
+                },
+                {
+                    "transCode": "K210300033UD00000018",
+                    "timeStemp": "2022.07.08 06:34:10",
+                    "bankCode": "089",
+                    "ownerName" : "홍길동",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transBankCode" : "263",
+                    "transOwnerName" : "임꺽정",
+                    "transBankAccNumber": 123412341230,
+                    "resultInfo" : {
+                        "returnBankCode" : "263",
+                        "returnBankAccNumber" : 1212121212,
+                        "resultCode" : "02",
+                        "reasonCode" : "01",
+                        "regPrice" : 1500000,
+                        "regDate" : "2022.07.16",
+                        "processDate" : "2022.07.18"
+                    }
+                }
+            ]
+        },
+        {
+            "transferDate" : "2022.07.07",
+            "transferInfo": [
+                {
+                    "transCode": "K210300033UD00000019",
+                    "timeStemp": "2022.07.07 06:34:10",
+                    "bankCode": "089",
+                    "ownerName" : "홍길동",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transBankCode" : "263",
+                    "transOwnerName" : "임꺽정",
+                    "transBankAccNumber": 123412341230,
+                    "resultInfo" : {
+                        "returnBankCode" : "263",
+                        "returnBankAccNumber" : 1212121212,
+                        "resultCode" : "00",
+                        "reasonCode" : "01",
+                        "regPrice" : 1500000,
+                        "regDate" : "2022.07.16",
+                        "processDate" : "2022.07.18"
+                    }
+                }
+            ]
+        }
+    ]
+}
