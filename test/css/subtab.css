@@ -3,6 +3,7 @@
 body{
   overscroll-behavior: none;
   /* position: fixed; */
+  box-sizing: border-box;
 }
 
 .wrap{
@@ -288,18 +289,21 @@ ul.slide-list li::before{
   color: #141414;
 }
 
-.nav{
+.nav.aiana-tab{
+  display: flex;
+  justify-content: flex-start;
   width: 100%;
   height: 38px;
-  display: flex;
-  justify-content: baseline;
-  overflow: hidden;
+  /* overflow: hidden; */
+  text-overflow: clip;
+  white-space: nowrap;
 }
 
 .nav button {
   height: 38px;
   font-size: 16px;
   color: #28313A;
+  white-space: nowrap;
 }
 
 .nav-link{
@@ -327,14 +331,23 @@ ul.slide-list li::before{
   width: 100%;
 }
 
+.sup-imgtxt{
+  color: #949494;
+  font-weight: 400;
+  font-size: 10px;
+  margin-top: 5px;
+  float: right;
+  margin-bottom: 30px;
+}
+
 .supply, .quote, .perform, .report{
-  padding: 0 20px;
+  padding: 0 20px 40px;
   margin-top: 30px;
 }
 
 .aiana-box, .quote-box, .perform-box, .report-box, .dis-box{
   width: 100%;
-  padding: 15px 0 0;
+  padding: 25px 0 0;
   margin-right: 20px;
   display: block;
   background: #fff;
@@ -344,18 +357,39 @@ ul.slide-list li::before{
 }
 
 .aiana-list, .quote-list{
-  padding: 10px 20px;
+  padding: 25px 20px 0 15px;
+}
+
+.aiana-box div:first-child, .quote-box div:first-child{
+  padding-top: 0;
 }
 
 .aiana-list span, .quote-list span{
   float: left;
-  border: 1px solid #8C8C8C;
+  border: 1px solid rgba(140, 140, 140, 0.5);
   padding: 0 5px;
   border-radius: 13px;
   font-size: 13px;
+  font-weight: 400;
   color: #8c8c8c;
   margin-top: 2px;
-  margin-right: 20px;
+  margin-right: 10px;
+  z-index: 5;
+}
+
+.aiana-list{
+  position: relative;
+}
+
+.aiana-list::after{
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #ccc;
+  position: absolute;
+  top: 0;
+  left: 24px;
+  z-index: 2;
 }
 
 .list-text, .quote-text{
@@ -514,7 +548,7 @@ button.nav-link.dis-tab.active{
 }
 
 button.more{
-  margin-top: 20px;
+  margin-top: 28px;
   width: 100%;
   border: none;
   padding: 20px 0;
@@ -523,30 +557,22 @@ button.more{
   color: #333d47;
 }
 
-
 /* footer */
-footer{
-  margin-top: 10px;
+.footer{
+  padding: 40px 26px 77px 27px;
   background-color: #fff;
-  padding: 50px 40px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 400;
   color: #969696;
+  border-top: 8px solid #f4f4f4;
 }
 
 .footer-text{
-  display: block;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-button.buy-btn{
-  font-size: 16px;
-  width: 100%;
-  padding: 15px 0;
-  border: none;
-  border-radius: 8px;
-  color: #fff;
-  background-color: #3F54C3;
+footer div:last-child{
+  margin-bottom: 0;
 }
 
 
