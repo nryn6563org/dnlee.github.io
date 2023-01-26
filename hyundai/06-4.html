@@ -46,19 +46,31 @@
         <!-- //header -->
 
         <!-- Modal z-index값 적용으로 header밖으로 나와야 합니다. -->
-        <div class="modal custom-modal01 fade" id="org-popup">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="org-popup">
+            <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="org-info-top">
-                            <div>기업개요</div>
-                            <buttton class="org-close" data-bs-dismiss="modal">&times;</buttton>
-                        </div>
-                        <div class="org-info-txt">
-                            <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함.</span>
-                            <span>이 회사의 제품에는 상품 및 공급 업체의 재판매를 위해 구매하는 상품 및 제 3 자 판매자가 제공하는 콘텐츠가 포함됨</span>
-                            <span>또한 전자 장치를 제조 및 판매함.</span>
-                        </div>
+                    <div class="modal-body p-0">
+                        <section class="cnm">
+                            <div class="subTitle">
+                                <h1 class="m-0">기업개요</h1>
+                                <a href="javascript:;" data-bs-dismiss="modal">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </section>
+                        <!-- // -->
+                        <section class="cnm overflow-auto p-20 pt-0" style="height: calc(100% - 50px)">
+                            <div class="org-info-txt">
+                                <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함.</span>
+                                <span>이 회사의 제품에는 상품 및 공급 업체의 재판매를 위해 구매하는 상품 및 제 3 자 판매자가 제공하는 콘텐츠가 포함됨</span>
+                                <span>또한 전자 장치를 제조 및 판매함.</span>
+                            </div>
+                        </section>
+                        <!-- // -->
+                        
                     </div>
                     <!-- //body -->
                 </div>
