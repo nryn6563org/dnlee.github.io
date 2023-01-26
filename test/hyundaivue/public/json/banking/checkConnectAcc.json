@@ -1,0 +1,11 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "accInfo" : {
+        "ownerName" : "홍길동",
+        "bankCode" : "263",
+        "bankAccNumber" : 2345678910,
+        "possibleAmount" : 10000000,
+        "isPassed": true
+    }
+}

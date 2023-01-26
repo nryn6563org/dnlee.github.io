@@ -1,0 +1,96 @@
+{
+    "affective" : 200,
+    "message" : "계좌명칭",
+    "accList" : [
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "007",
+            "bankAccNumber" : 1111111111,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : false
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "011",
+            "bankAccNumber" : 2222222222,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : false,
+            "agreeWithdrawal" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "027",
+            "bankAccNumber" : 3333333333,
+            "bankAccName" : "계좌명칭",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : false,
+            "agreeWithdrawal" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "007",
+            "bankAccNumber" : 4444444444,
+            "bankAccName" : "계좌명칭",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : false
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "027",
+            "bankAccNumber" : 5555555555,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : false
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "003",
+            "bankAccNumber" : 6666666666,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "003",
+            "bankAccNumber" : 777777777777,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "266",
+            "bankAccNumber" : 888888888888,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "271",
+            "bankAccNumber" : 99999999999999,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "290",
+            "bankAccNumber" : 10101010101010,
+            "bankAccName" : "내계좌명",
+            "retainedAmount" : 1522263,
+            "regOpenBanking" : true,
+            "agreeWithdrawal" : true
+        }
+    ]
+}

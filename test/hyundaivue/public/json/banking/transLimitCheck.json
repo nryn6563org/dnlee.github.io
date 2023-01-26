@@ -1,0 +1,11 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "limitPrice" : {
+        "contractOnce" : 1000000000,
+        "contractOneDay" : 5000000000,
+        "UncontractedOnce": 50000000,
+        "UncontractedOneDay": 50000000,
+        "todayRemaining" : 5000000
+    }
+}
