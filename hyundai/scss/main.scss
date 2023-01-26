@@ -216,11 +216,10 @@
     }
 }
 div.cnm{
-    position:static;
+    position:absolute;
+    bottom:0;
 
     .guide{
-        position:absolute;
-        bottom:0;
-        left:0;
+
     }
 }

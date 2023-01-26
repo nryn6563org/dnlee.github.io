@@ -35,6 +35,12 @@
     background:#4d4d4f;
     min-height:100%;
 
+    &.empty{
+        min-height:762px;
+        height:100%;
+        overflow:auto;
+    }
+
     &.a2-item{
         background:#DED6D0;
 
