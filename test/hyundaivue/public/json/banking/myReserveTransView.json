@@ -1,0 +1,32 @@
+{
+    "affective" : 200,
+    "message" : "예약이체 상세",
+    "sendAccInfo" : [
+        {
+            "ownerName": "돌맹이",
+            "receiveBankCode": "236",
+            "receiveBankAccNumber": "123412341230",
+            "sendBankCode": "236",
+            "sendBankAccNumber" : "11111",
+            "reserveDate": "2022.08.15",
+            "reserveTime": "am",
+            "senderText" : "길동",
+            "reciverText" : "홍길동",
+            "feePrice": 0,
+            "sendPrice": 1005000
+        },
+        {
+            "ownerName": "허균",
+            "receiveBankCode": "236",
+            "receiveBankAccNumber": "2123412341231",
+            "sendBankCode": "236",
+            "sendBankAccNumber" : "12341234123",
+            "reserveDate": "2022.08.15",
+            "reserveTime": "am",
+            "senderText" : "동",
+            "reciverText" : "길동",
+            "feePrice": 0,
+            "sendPrice": 1000000
+        }
+    ]
+}

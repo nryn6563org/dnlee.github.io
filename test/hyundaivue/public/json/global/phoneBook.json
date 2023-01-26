@@ -1,0 +1,42 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "phoneBookList" : [
+        {
+            "userName" : "홍길동1",
+            "phoneNumber" : "00000000000"
+        },
+        {
+            "userName" : "홍길동2",
+            "phoneNumber" : "01000000000"
+        },
+        {
+            "userName" : "홍길동3",
+            "phoneNumber" : "02000000000"
+        },
+        {
+            "userName" : "홍길동4",
+            "phoneNumber" : "04000000000"
+        },
+        {
+            "userName" : "홍길동5",
+            "phoneNumber" : "05000000000"
+        },
+        {
+            "userName" : "홍길동6",
+            "phoneNumber" : "06000000000"
+        },
+        {
+            "userName" : "홍길동7",
+            "phoneNumber" : "07000000000"
+        },
+        {
+            "userName" : "홍길동8",
+            "phoneNumber" : "01000000000"
+        },
+        {
+            "userName" : "홍길동9",
+            "phoneNumber" : "09000000000"
+        }
+    ]
+}

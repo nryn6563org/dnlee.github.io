@@ -1,0 +1,9 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "result" : {
+        "resultCode" : "00",
+        "balance" : 12300000,
+        "transDate" : "2022.09.18"
+    }
+}

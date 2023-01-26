@@ -1,3 +1,5 @@
+* { font-family: 'Spoqa Han Sans Neo', 'sans-serif'; }
+
 .wrap{
   max-width: 640px;
   min-width: 360px;
@@ -28,49 +30,60 @@ article.background{
 }
 
 /* header */
-.header{
-  padding: 10px 20px;
+.header {
+  padding: 0px 12px;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
+  background-color: #fff;
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-.head-name{
+.head-name {
   display: flex;
   justify-content: baseline;
 }
 
-.head-name button.back{
+.head-name button.back {
   padding: 0 !important;
   margin-right: 5px;
   border: none;
   background: none;
 }
 
-.head-name h1{
-  margin-top: 8px;
+.head-name h1 {
+  margin-top: 16px;
   font-size: 18px;
-  font-weight: 900;
+  font-weight: 700;
 }
 
 /* container */
-.info-tab{
-  margin-top: 20px;
-  font-size: 16px;
-  /* box-shadow: 0 0 6px rgb(0 0 0 / 20%); */
-}
-
 .nav{
   width: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #fff;
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.2)) !important;
 }
 
 .nav button {
   width: 33.33%;
+  height: 38px;
   font-size: 16px;
   color: #828282;
-  /* background-color: #fff; */
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .nav-link{
@@ -78,7 +91,7 @@ article.background{
 }
 
 .nav button.active {
-  font-weight: 900;
+  font-weight: 400;
   font-size: 16px;
   color: #000;
   border-bottom: 3px solid #000 !important;
@@ -89,30 +102,37 @@ article.background{
 }
 
 .nav button:hover {
-  font-weight: 900;
+  font-weight: 700;
   font-size: 16px;
   color: #000;
 }
 
-.fix{
-  position: fixed;
+.info-tabcontent{
+  margin-top: 132px;
 }
 
 .fixed{
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 88px;
+  z-index: 999;
   width: 100%;
-  padding: 10px 20px;
+  height: 44px;
+  padding: 9px 20px;
   background-color: #F8F8F8;
 }
 
 .fixed-left span{
   font-size: 12px;
+  font-weight: 500;
   color: #707884;
-  margin-right: 20px;
+  margin-right: 24px;
 }
 
 .fixed-left span strong{
   color: #3f54c4;
+  font-weight: 700;
 }
 
 .fixed-right{
@@ -122,11 +142,12 @@ article.background{
 }
 
 .fixed-right button{
-  background-color: #000;
+  background-color: #141414;
   color: #fff;
   padding: 3px 12px;
   font-size: 12px;
-  border-radius: 5px;
+  font-weight: 500;
+  border-radius: 6px;
 }
 
 .info-list ul{
@@ -140,7 +161,7 @@ article.background{
   text-decoration: none;
   color: #141414;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .info-list img{
@@ -148,14 +169,23 @@ article.background{
 }
 
 /* modal */
+.modal{
+  z-index: 99999 !important;
+}
+
 .modal-header{
+  padding: 14px 20px !important;
+  height: 50px;
   border: none !important;
 }
 
 .modal-header .header-name{
   font-size: 18px;
-  font-weight: 900;
-  padding: 0px 20px;
+  font-weight: 700;
+}
+
+.modal-header button.btn{
+  padding: 0;
 }
 
 .modal-body{
@@ -168,12 +198,13 @@ article.background{
   background-color: #F8F8F8;
   position: fixed;
   width: 100%;
+  height: 44px;
 }
 
 .select{
   font-size: 14px;
   color: #3f54c3;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .select img{
@@ -186,35 +217,42 @@ article.background{
   top: 15px;
   font-size: 12px;
   color: #707884;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .selectbar span em{
   font-style: normal;
+  font-weight: 700;
   color: #3f54c3 !important;
+}
+
+.alarm-tabContent{
+  margin-top: 88px;
 }
 
 .alarm-list ul, .ai-list ul{
   list-style: none;
   padding: 0 !important;
+  margin: 0 !important;
 }
 
 .alarm-list, .ai-list{
   border-bottom: 10px solid #f0f0f0;
-  padding: 20px 20px 0;
+  padding: 12px 0;
+  /* padding: 20px 20px 0; */
 }
 
 .alarm-list ul li, .ai-list ul li{
-  padding: 10px 0;
+  padding: 14px 20px;
   font-size: 16px;
   color: #141414;
-  font-weight: 800;
+  font-weight: 400;
   display: flex;
   justify-content: space-between;
 }
 
 .imp-alarm, .ai-signal{
-  padding: 20px;
+  padding: 15px 20px;
 }
 
 .ai-signal{
@@ -226,29 +264,36 @@ article.background{
   justify-content: space-between;
   font-size: 16px;
   color: #141414;
-  font-weight: 800;
-  margin-bottom: 10px;
+  font-weight: 400;
+  margin-bottom: 15px;
+  line-height: 28px;
 }
 
 .btn-group{
+  width: 100%;
   display: grid !important;
-  grid-template-columns: auto auto auto !important;
+  grid-template-columns: auto auto auto;
   gap: 10px;
 }
 
 .check .btn{
-  width: 100%;
+  width: 100px;
   height: 40px;
+  padding: 0;
   border: 1px solid #f0f0f0;
   color: #8c8c8c;
   background-color: #fafafa;
   font-size: 14px;
-  border-radius: 5px !important;
+  font-weight: 400;
+  line-height: 35px;
+  border-radius: 6px !important;
 }
 
 .btn-check:checked+.btn{
   border-color: #3f54c3 !important;
   color: #3f54c3 !important;
+  background-color: #fff;
+  font-weight: 500;
 }
 
 .btn:hover{
@@ -259,6 +304,14 @@ article.background{
 
 .btn.small{
   font-size: 12px;
+  padding: 10px 12px;
+  line-height: 15px;
+}
+
+.btn.small2{
+  font-size: 12px;
+  padding: 5px 12px;
+  line-height: 15px;
 }
 
 
@@ -269,31 +322,36 @@ button.set-btn{
   color: #fff;
   background-color: #3f54c3;
   font-size: 16px;
-  border-radius: 6px;
-  margin-top: 280px;
+  font-weight: 500;
+  border-radius: 8px;
+  margin-top: 380px;
+}
+
+.ai{
+  margin-top: 88px;
 }
 
 .detail{
-  padding: 20px;
+  padding: 22px 20px;
 }
 
 .detail button{
   width: 100%;
   height: 60px;
+  line-height: 20px;
   text-align: left;
-  padding: 0 20px;
+  padding: 20px 25px;
   border: 1px solid #d2d2d2;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   border-radius: 10px;
   background-color: #fff;
   font-size: 16px;
   color: #141414;
-  font-weight: 800;
+  font-weight: 500;
 }
 
 .detail button img{
   float: right;
-  margin-top: 3px;
 }
 
 
@@ -301,19 +359,18 @@ button.set-btn{
 /* modal */
 .modal-body ul{
   list-style: none;
-  padding: 10px 20px !important;
-  margin-top: 50px;
+  margin-top: 44px;
+  padding: 0 !important;
 }
 
 .modal-body ul li{
-  padding: 15px 0;
+  padding: 19px 20px;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: #141414;
 }
-
 
 /* modal check/radio box */
 .form-check label{
@@ -358,6 +415,12 @@ button.set-btn{
   background-position: 95% 2px !important;
 }
 
+.form-check input:focus{
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
 .modal-footer button{
   width: 100%;
   padding: 10px 0;
@@ -368,4 +431,8 @@ button.set-btn{
   border-radius: 10px;
 }
 
+
+
+/* font */
+@import url(//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css);
 

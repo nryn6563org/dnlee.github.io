@@ -1,0 +1,155 @@
+{
+    "affective" : 200,
+    "message" : "계좌명칭",
+    "accList" : [
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 1111111111,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "01",
+            "retainedAmount" : 1522263,
+            "availableCode" : "00",
+            "isContract" : true,
+            "isDesignated" : true,
+            "isDelayTrans" : true,
+            "isDelayTranInfo" : {
+                "updateDate" : "2022.08.01",
+                "transLimitPrice" : 20000000
+            },
+            "isPassed" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 2222222222,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "01",
+            "retainedAmount" : 1522263,
+            "availableCode" : "01",
+            "isContract" : false,
+            "isDesignated" : true,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : {
+                "updateDate" : "2022.08.01",
+                "transLimitPrice" : 20000000
+            },
+            "isPassed" : false
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 3333333333,
+            "bankAccName" : "계좌명칭",
+            "bankAccTypeCode" : "02",
+            "retainedAmount" : 1522263,
+            "availableCode" : "02",
+            "isContract" : true,
+            "isDesignated" : true,
+            "isDelayTrans" : true,
+            "isDelayTranInfo" : {
+                "updateDate" : "2002.08.01",
+                "transLimitPrice" : 20000000
+            },
+            "isPassed" : false
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 4444444444,
+            "bankAccName" : "계좌명칭",
+            "bankAccTypeCode" : "03",
+            "retainedAmount" : 1522263,
+            "availableCode" : "03",
+            "isContract" : false,
+            "isDesignated" : true,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : false
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 5555555555,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "03",
+            "retainedAmount" : 1522263,
+            "availableCode" : "04",
+            "isContract" : false,
+            "isDesignated" : true,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 6666666666,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "05",
+            "retainedAmount" : 1522263,
+            "availableCode" : "00",
+            "isContract" : false,
+            "isDesignated" : false,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 777777777777,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "03",
+            "retainedAmount" : 1522263,
+            "availableCode" : "04",
+            "isContract" : false,
+            "isDesignated" : true,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 888888888888,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "05",
+            "retainedAmount" : 1522263,
+            "availableCode" : "00",
+            "isContract" : false,
+            "isDesignated" : false,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 99999999999999,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "03",
+            "retainedAmount" : 1522263,
+            "availableCode" : "04",
+            "isContract" : false,
+            "isDesignated" : true,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : true
+        },
+        {
+            "ownerName" : "홍길동",
+            "bankCode" : "263",
+            "bankAccNumber" : 10101010101010,
+            "bankAccName" : "내계좌명",
+            "bankAccTypeCode" : "05",
+            "retainedAmount" : 1522263,
+            "availableCode" : "00",
+            "isContract" : false,
+            "isDesignated" : false,
+            "isDelayTrans" : false,
+            "isDelayTranInfo" : null,
+            "isPassed" : true
+        }
+    ]
+}

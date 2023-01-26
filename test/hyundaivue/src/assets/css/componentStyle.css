@@ -1,0 +1,361 @@
+a, input, textarea, select {
+    -webkit-tap-highlight-color: transparent;
+}
+
+#quickMenuArea {
+    position: fixed; width: 100vw; height: 46px; left:0; top: calc(100vh - 46px);
+    background: rgba(27,27,27,1);
+    z-index: 999;
+}
+
+#toast {
+    position: absolute; display: table;
+    width: calc(100vw - 40px); height: 50px; left: 20px; bottom: 20px;
+    border-radius: 8px;
+    background: rgba(0,0,0,.8);
+    color: rgba(255,255,255,1); font-size: 1rem; text-align: center;
+    z-index: 999; opacity: 0; transition: opacity .3s ease;
+    & p {
+        display: table-cell; padding: 14px 20px;
+        vertical-align: middle;
+    }
+    &.on {
+        opacity: 1;
+    }
+    &.danger {
+        background: rgba(238, 55, 57, 1);
+    }
+}
+
+.alignLeft { text-align: left !important; }
+.alignCenter { text-align: center !important; }
+.alignRight { text-align: right !important; }
+
+div[role="dialog"] {
+    position: fixed;
+    top: 0; left: 0; width: 100vw; height: 100%;
+    background-color: rgba(0,0,0,.35);
+    opacity: 0; transition: .4s opacity ease;
+    z-index: 900;
+    &.on {
+        opacity: 1;
+    }
+    & > div:not(.bottomSheet) {
+        overflow: hidden; position: relative;
+        top: 50%; left: 20px; width: calc(100vw - 40px); max-height: calc(100% - 40px);
+        padding: 22px 20px 94px; border-radius: 16px;
+        background: rgba(255,255,255,1);
+        font-size: 1.143rem;
+        transform: translate(0, -50%); box-sizing: border-box; opacity: 0;
+        transition: .6s opacity ease;
+        & > h1 {
+            padding: 0; margin: -2px 0 19px 0;
+            font-weight: 700; font-size: 1.286rem;
+        }
+        & > div:not(.buttonArea) {
+            overflow: auto; max-height: calc(100vh - 150px);
+        }
+        & > h1 + div:not(.buttonArea) {
+            max-height: calc(100vh - 177px);
+        }
+        &.on {
+            opacity: 1;
+        }
+    }
+}
+div.bottomSheet {
+    overflow: hidden; position: relative;
+    top: 100%;
+    padding: 22px 20px 88px; border-radius: 20px 20px 0 0;
+    background: rgba(255,255,255,1);
+    font-size: 1.143rem;
+    box-sizing: border-box; transform: translate(0, 0); transition: transform .8s ease;
+    transition-delay: .2s;
+    &.on {
+        transform: translate(0, -100%);
+    }
+    & > h1 {
+        padding: 0; margin: 4px 0 19px 0;
+        font-weight: 700; font-size: 1.286rem;
+    }
+    & > div.contentArea {
+        overflow: auto; max-height: calc(100vh - 150px);
+    }
+    & > h1 + div.contentArea {
+        max-height: calc(100vh - 177px);
+    }
+    &.numberPad {
+        & input {
+            width: 100%; height: 60px; margin-bottom: 24px; padding: 0 12px;
+            border: 1px solid var(--pointBlue); border-radius: 8px;
+            font-size: 1.143rem; font-weight: 500;
+            box-sizing: border-box;
+            &::placeholder {
+                color: rgba(173, 173, 173, 1);
+                font-weight: 300;
+            }
+            &:active, &:focus {
+                outline: 0;
+            }
+        }
+        & > ul {
+            overflow: hidden; display: flex; flex-wrap: wrap;
+            margin: 0; padding: 0;
+            justify-content: space-between; list-style: none;
+            & li {
+                display: inline-block;
+                width: calc(100%/3); height: 50px;
+                flex-grow: 1;
+                & button {
+                    width: 100%; height: 100%;
+                    border: none; border-radius: 0; background-color: transparent;
+                    font-size: 1.714rem; font-weight: 500;
+                    &:active { background-color: rgba(241, 242, 243, 1) }
+                    &.deleteCnt {
+                        background: url('~@/assets/images/global/button_numberPad_del.png') no-repeat center / 20px;
+                    }
+                }
+                &:nth-child(n + 4) {
+                    margin-top: 6px;
+                }
+            }
+        }
+    }
+}
+div[role="dialog"], div.bottomSheet {
+    /* h1은 타이틀 영역으로만 사용한다. */
+    & h1 > button.modalClose {
+        overflow: hidden; position: absolute; display: block; overflow: hidden;
+        top: 22px; right: 20px; width: 24px; height: 24px;
+        margin: 0; padding: 0; border: none;
+        background: url('@/assets/images/global/button_modal_close.png') no-repeat center / 24px;
+        line-height: 80px;
+    }
+    & div.blueNote {
+        padding: 24px 20px;
+        background: rgba(242, 245, 249, 1);
+        text-align: center;
+    }
+    & div.buttonArea { margin-left: -20px; }
+}
+div.buttonArea {
+    position: absolute; display: flex;
+    width: 100%; bottom: 0;
+    padding: 0 20px 20px; background: rgba(255,255,255,1);
+    box-sizing: border-box;
+    z-index: 800;
+    & button {
+        padding: 0;
+        flex: 1 1 100%;
+    }
+    & button + button {
+        margin-left: 12px;
+    }
+    & button.delete {
+        background: url('~@/assets/images/global/button_numberPad_del.png') no-repeat center / 20px;
+    }
+    &::before {
+        position: absolute;
+        top: -10px; left: 0; width: 100%; height: 10px;
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+        content: ' ';
+    }
+}
+
+#alert {
+    & span {
+        display: inline-block;
+        padding-top: 8px;
+        font-size: 1rem;
+        color: var(--fontLightgray)
+    }
+}
+
+div.fullPopup {
+    position: fixed; overflow: auto;
+    top: 0; left: 0; width: 100vw; height: 100% !important;
+    padding: 50px 0 0;
+    background: rgba(255,255,255,1);
+    opacity: 0; transition: .4s opacity ease;
+    z-index: 900;
+    box-sizing: border-box;
+    &.on { opacity: 1; }
+    & > div.contentsArea {
+        overflow: auto; position: relative;
+        height: 100%;
+        /* max-height: calc(100% - 70px); */
+        padding: 0 20px 86px;
+        box-sizing: border-box;
+        transition: .6s opacity ease;
+        & > hr {
+            margin: 0;
+            height: 10px;
+            border: none;
+            background: rgba(239, 239, 239, 1);
+        }
+    }
+    & > div.buttonArea {
+        padding-left: 20px;
+    }
+    & > div.header {
+        position: fixed; overflow: hidden;
+        top: 0; left: 0; width: 100%; height: 50px;
+        padding: 0 56px 0 20px; margin: 0;
+        background: rgba(255, 255, 255, 1);
+        z-index: 30; line-height: 50px; box-sizing: border-box;
+        & h1 {
+            margin: 0; padding: 0;
+            font-size: 1.286rem; font-weight: 700;
+        }
+        & button.modalClose {
+            position: absolute;
+            top: 13px; right: 16px; width: 24px; height: 24px;
+            padding: 0; margin: 0; border: none; border-radius: 0;
+            background: transparent url('@/assets/images/global/button_close_s24.png') no-repeat center / 24px;
+        }
+    }
+}
+ul.emptyList {
+    display: table;
+    width: 100%; height: 100%;
+    padding: 0 !important;
+    & > li {
+        display: table-cell;
+        text-align: center; vertical-align: middle; color: rgba(140,140,140,1);
+        font-weight: 400;
+        & > img {
+            position: static !important;
+            width: 32px;
+            margin-top: -2px; margin-bottom: 4px;
+        }
+        & > button {
+            margin-top: 22px;
+        }
+        & > strong {
+            font-weight: 500;
+        }
+    }
+}
+
+.vc-container.pickerBottomSheet {
+    border: none !important;
+    padding-top: 8px; border-radius: 0 !important;
+    & .vc-header, & .vc-arrows-container {
+        display: none !important;
+    }
+    & .vc-container {
+        padding-bottom: 0;
+    }
+    & .vc-weekday {
+        height: 21px; margin-bottom: 6px;
+        font-size: 0.857rem !important; color: var(--fontLightgray) !important;
+        &:nth-child(1) { color: var(--red) !important; }
+        &:nth-child(7) { color: var(--pointBlue) !important; }
+    }
+    & .vc-day {
+        height: 40px;
+        font-size: 1rem !important; font-weight: 500 !important;
+        &.weekday-1 { color: var(--red); }
+        &.weekday-7 { color: var(--pointBlue); }
+        &.is-today > span { background: rgba(236,238,249,1); }
+        & .is-disabled, &.is-not-in-month * { opacity: 1 !important; color: rgba(20, 20, 20, 0.4); pointer-events: none; }
+        & .vc-day-content { min-width: 34px; height: 34px; border-radius: 8px; }
+        & .vc-day-content[tabindex="0"] {
+            background: var(--pointBlue) !important;
+            font-weight: 500 !important; color: rgba(255,255,255,1) !important;
+        }
+    }
+}
+/* trasition */
+.slideVertical-enter-active,
+.slideVertical-leave-active {
+    max-height: 100vh;
+    transition: all .6s ease;
+}
+.slideVertical-enter-from,
+.slideVertical-leave-to {
+    opacity: 0;
+    max-height: 0;
+}
+
+/* 테이블 그리드 용 공통 스타일 */
+.remakeTable {
+    position: relative;
+    overflow: auto; display: flex;
+    & > div {
+        position: relative;
+        flex-grow: 1; flex-shrink: 0;
+        z-index: 9;
+        &.fixedArea {
+            flex-grow : 0;
+            position: sticky;
+            left: 0;
+            z-index: 10;
+        }
+    }
+    & table {
+        border-collapse: separate;
+        border-spacing: 0;
+        & thead {
+            position: sticky;
+            top: 0;
+            &.on {
+                box-shadow: -2px 2px 4px rgba(0,0,0,.1);
+            }
+        }
+        & caption {
+            position: absolute; overflow: hidden;
+            top: -1px; width: 1px; height: 1px;
+        }
+    }
+    & div.fixedArea.on {
+        & table {
+            box-shadow: 2px 0 4px rgba(0,0,0,.1)
+        }
+    }
+    & div.verticalShadow {
+        position: fixed;
+        width: 6px;
+        background: transparent;
+        /* background: #ccc; */
+        z-index: 11;
+        &.on {
+            background: transparent linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 100%);
+        }
+    }
+    & div.horizonShadow {
+        position: fixed;
+        left: 0; height: 6px;
+        background: transparent;
+        z-index: 11;
+        &.on {
+            background: transparent linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.1) 100%);
+        }
+    }
+    & > table {
+        /* display: none !important; */
+        position: absolute; overflow: hidden; display: block;
+        width: 1px !important; height: 1px; opacity: 0;
+        & .hddenTable {
+            display: none;
+        }
+    }
+}
+
+/* 스와이프 영역 관련 */
+.swipeArea {
+    overflow: auto;
+    width: 100%; margin: 0;
+    scrollbar-width: 0;
+    & * { user-select: none; }
+    &::-webkit-scrollbar {
+        width: 0;
+        height: 0;
+    }
+}
+
+/* 앱 실행용 히든 버튼 */
+button.hidden {
+    position: absolute; overflow: hidden;
+    width: 1px; height: 1px; top: -1px; left: -1px;
+}

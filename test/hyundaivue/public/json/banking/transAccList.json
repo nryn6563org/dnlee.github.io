@@ -1,0 +1,223 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "oftenListTotalCount" : 24,
+    "accList" : [
+        {
+            "bankCode" : "004",
+            "bankAccNumber" : 1234567801,
+            "ownerName" : "홍길동01",
+            "groupCode" : "often",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "089",
+            "bankAccNumber" : 1234567802,
+            "ownerName" : "홍길동02",
+            "groupCode" : "001",
+            "isoftend" : true,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "035",
+            "bankAccNumber" : 1234567803,
+            "ownerName" : "홍길동03",
+            "groupCode" : "001",
+            "isoftend" : true,
+            "isQuick" : true,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567804,
+            "ownerName" : "홍길동04",
+            "groupCode" : "001",
+            "isoftend" : false,
+            "isQuick" : true,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567805,
+            "ownerName" : "홍길동05",
+            "groupCode" : "often",
+            "isoftend" : true,
+            "isQuick" : true,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567806,
+            "ownerName" : "홍길동06",
+            "groupCode" : "002",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567807,
+            "ownerName" : "홍길동07",
+            "groupCode" : "quick",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 5000000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567808,
+            "ownerName" : "홍길동08",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : true,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567809,
+            "ownerName" : "홍길동09",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567810,
+            "ownerName" : "홍길동10",
+            "groupCode" : "002",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567811,
+            "ownerName" : "홍길동11",
+            "groupCode" : "002",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567812,
+            "ownerName" : "홍길동12",
+            "groupCode" : "001",
+            "isoftend" : true,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567813,
+            "ownerName" : "홍길동13",
+            "groupCode" : "often",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567814,
+            "ownerName" : "홍길동14",
+            "groupCode" : "quick",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 5000000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567815,
+            "ownerName" : "홍길동15",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567816,
+            "ownerName" : "홍길동16",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567817,
+            "ownerName" : "홍길동17",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567818,
+            "ownerName" : "홍길동18",
+            "groupCode" : "002",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567819,
+            "ownerName" : "홍길동19",
+            "groupCode" : "003",
+            "isoftend" : true,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567820,
+            "ownerName" : "홍길동20",
+            "groupCode" : "002",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567821,
+            "ownerName" : "홍길동21",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567822,
+            "ownerName" : "홍길동22",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567823,
+            "ownerName" : "홍길동23",
+            "groupCode" : "003",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        },
+        {
+            "bankCode" : "263",
+            "bankAccNumber" : 1234567824,
+            "ownerName" : "홍길동24",
+            "groupCode" : "001",
+            "isoftend" : false,
+            "isQuick" : false,
+            "sendPrice" : 10000
+        }
+    ]
+}

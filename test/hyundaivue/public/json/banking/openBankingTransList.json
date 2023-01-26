@@ -1,0 +1,43 @@
+{
+    "affective" : 200,
+    "message" : "오픈뱅킹이체리스트",
+    "transList" : [
+        {
+            "transferDate" : "2022.07.15",
+            "transferInfo": [
+                {
+                    "timeStemp": "06:34:10",
+                    "bankCode": "236",
+                    "senderText" : "이체이체1",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transType": "deposit",
+                    "retainedAmount" : 15900000
+                },
+                {
+                    "timeStemp": "08:34:10",
+                    "bankCode": "008",
+                    "senderText" : "이체이체2",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transType": "withdrawal",
+                    "retainedAmount" : 15900000
+                }
+            ]
+        },
+        {
+            "transferDate" : "2022.07.10",
+            "transferInfo": [
+                {
+                    "timeStemp": "06:34:10",
+                    "bankCode": "236",
+                    "senderText" : "이체이체3",
+                    "bankAccNumber": 123412341230,
+                    "transPrice" : 150150150,
+                    "transType": "deposit",
+                    "retainedAmount" : 15900000
+                }
+            ]
+        }
+    ]
+}

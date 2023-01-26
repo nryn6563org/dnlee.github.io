@@ -1,0 +1,19 @@
+{
+    "affective" : 200,
+    "message" : "",
+    "pensionInfo" : {
+        "trnsferPrice" : 1000000000,
+        "texFreeWithdrawal" : 5000000000,
+        "texWithdrawal": 50000000,
+        "closeReason": "해지사유",
+        "otherTax" : 5000000,
+        "otherLocalTax" : 10000,
+        "pensionTax" : 10000,
+        "pensionLocalTax" : 10000,
+        "terminationTax" : 10000,
+        "terminationLocalTax" : 10000,
+        "feePrice" : 1000,
+        "totalAccWithdrawal" : 10000,
+        "totalTax" : 10000
+    }
+}
