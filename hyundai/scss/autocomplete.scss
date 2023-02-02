@@ -5,16 +5,17 @@
     background: #fff;
     /* core styles should not be changed */
     position: absolute;
-    display: none;
+    display: block;
     z-index: 9999;
-    max-height: 300px;
+    //max-height: 300px;
     width: 100% !important;
+    height: calc(100% - 50px) !important;
     overflow: hidden;
     overflow-y: auto;
     box-sizing: border-box;
-    top: 60px !important;
+    top: 50px !important;
     left: 0 !important;
-    padding: 0 30px 0 20px;
+    padding: 10px 30px 0 20px;
 }
 .autocomplete-suggestion {
     position: relative;
@@ -47,6 +48,9 @@
     span {
         display: block;
         float: left;
+        width: calc(100% - 58px);
+        overflow: hidden;
+        text-overflow: ellipsis;
         font-size: 14px;
         color: #141414;
         padding-left: 15px;

@@ -44,7 +44,7 @@
         <!-- //header -->
         <!-- modal -->
         <div class="modal fade" id="search">
-            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
                 <!-- content -->
                 <div class="modal-content">
                     <!-- body -->
@@ -78,7 +78,7 @@
 
                                             term = term.toLowerCase();
                                             const choices = [
-                                                ['000000', '삼성SDI'],
+                                                ['000000', '삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI'],
                                                 ['000000', '삼성SDI우'],
                                                 ['000000', '삼성공조'],
                                                 ['000000', '삼성물산우B'],
@@ -110,7 +110,7 @@
                                         renderItem: function (item, search) {
                                             search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
                                             const re = new RegExp('(' + search.split(' ').join('|') + ')', 'gi');
-                                            return '<div class="autocomplete-suggestion" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, '<em>$1</em>') + '</span>' + '</div>';
+                                            return '<div class="autocomplete-suggestion text-truncate" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, '<em>$1</em>') + '</span>' + '</div>';
                                         },
                                         onSelect: function (e, term, item) {
                                             console.log('Item "' + item.getAttribute('data-number') + ' (' + item.getAttribute('data-lang') + ')" selected by ' + (e.type == 'keydown' ? 'pressing enter' : 'mouse click') + '.');
@@ -149,6 +149,46 @@
                                 <!-- //cont -->
                             </div>
                             <!-- // -->
+
+                            <div class="result">
+                                <div class="title"><span>종목명종목명</span><em>000000</em></div>
+                                <!-- //title -->
+
+                                <div class="cont">
+                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                                </div>
+                                <!-- //cont -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="result">
+                                <div class="title"><span>종목명종목명</span><em>000000</em></div>
+                                <!-- //title -->
+
+                                <div class="cont">
+                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                                </div>
+                                <!-- //cont -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="result">
+                                <div class="title"><span>종목명종목명</span><em>000000</em></div>
+                                <!-- //title -->
+
+                                <div class="cont">
+                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                                </div>
+                                <!-- //cont -->
+                            </div>
+                            <!-- // -->
+                            
 
                             <div class="result">
                                 <div class="title"><span>종목명종목명</span><em>000000</em></div>
