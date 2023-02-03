@@ -2,8 +2,8 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8" />
-        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
-        <meta name="viewport" content="width=360px,user-scalable=no">
+        <!-- <meta name="viewport" content="width=360px,user-scalable=no" /> -->
+        <meta name="viewport" content="width=360px,user-scalable=no" />
         <title>현대차증권</title>
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,8 +46,6 @@
         </header>
         <!-- //header -->
 
-        
-
         <article id="container" class="aitem">
             <section id="content" class="a-item">
                 <ul class="nav cnm-tab p-0 none-bordered dark" role="tablist">
@@ -68,9 +66,7 @@
                                     <div class="swiper-slide">
                                         <div class="local-list-box">
                                             <div class="emptybox">
-                                                <div class="txt">
-                                                    AI종목추천 서비스는 <br>서비스 가입 후 확인 가능합니다.
-                                                </div>
+                                                <div class="txt">AI종목추천 서비스는 <br />서비스 가입 후 확인 가능합니다.</div>
                                                 <!-- // -->
 
                                                 <div class="button" data-bs-toggle="modal" data-bs-target="#signup">
@@ -298,12 +294,7 @@
                                     <span>
                                         <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z" stroke="white" stroke-width="1.5" />
-                                            <path
-                                                fill-rule="evenodd"
-                                                clip-rule="evenodd"
-                                                d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z"
-                                                fill="white"
-                                            />
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z" fill="white" />
                                             <path d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z" fill="white" />
                                         </svg>
                                     </span>
@@ -348,7 +339,7 @@
                                         이용가능합니다.
                                     </div>
                                     <!-- // text -->
-        
+
                                     <div class="modal-button joinable">
                                         <button class="bg-white" data-bs-dismiss="modal">취소</button>
                                         <button class="bg-blue">가입하기</button>
@@ -366,8 +357,7 @@
             </section>
             <!-- // -->
 
-            <div class="tbArea-w aiarea open">
-
+            <div class="tbArea-w aiarea">
                 <div class="prcList-w">
                     <div class="empty-scroll">
                         <!-- slide시 스크롤 막는 기능 -->
@@ -568,10 +558,10 @@
                         <div class="guide">
                             <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
                             <!-- // -->
-        
+
                             <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
                             <!-- // -->
-        
+
                             <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
                             <!-- // -->
                         </div>
@@ -583,14 +573,12 @@
             <!-- // 상하 움직입 -->
 
             <script>
-                // 좌표 스크롤 
+                // 좌표 스크롤
                 const cScrollW = document.querySelector('.prcList-w'); // 스크롤 대상
 
-                const cScroll = document.querySelector('#bbb').offsetTop; // id스크롤값 
+                const cScroll = document.querySelector('#bbb').offsetTop; // id스크롤값
 
-                cScrollW.scrollTo({top: cScroll - 10, behavior: 'smooth'}) // 스크롤 이동
-
-
+                cScrollW.scrollTo({ top: cScroll - 10, behavior: 'smooth' }); // 스크롤 이동
 
                 //쓸어올리기
 
