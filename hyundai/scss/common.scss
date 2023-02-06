@@ -14,13 +14,20 @@
 @import 'sub.scss';
 @import 'frame.scss';
 
+html,
+body {
+    position: fixed;
+    width: 100%;
+    overscroll-behavior: none;
+}
 html {
     overscroll-behavior: none;
+    overflow: hidden !important;
 }
 body {
     overscroll-behavior: contain;
-    max-width: 640px;
     margin: 0 auto;
+    overflow: auto;
     //overscroll-behavior-y:none;
 }
 .up * {
@@ -45,10 +52,10 @@ body {
 #container {
     display: block;
     width: 100%;
-    max-width: 640px;
+    //max-width: 640px;
     height: 100%;
     margin: -1px auto 0;
-    padding-top: 50px;
+    padding-top: 52px;
 
     &.item {
         height: calc(100% - 50px);
