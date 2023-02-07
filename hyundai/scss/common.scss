@@ -8,6 +8,7 @@
 @import 'modal.scss';
 @import 'button.scss';
 @import 'autocomplete.scss';
+
 // 레이아웃
 @import 'header.scss';
 @import 'main.scss';
@@ -16,17 +17,17 @@
 
 html,
 body {
-    position: fixed;
-    width: 100%;
-    overscroll-behavior: none;
+    // position: fixed;
+    // width: 100%;
+    // overscroll-behavior: none;
 }
 html {
-    overflow: hidden !important;
+    //overflow: hidden !important;
 }
 body {
-    overscroll-behavior: contain;
     margin: 0 auto;
     overflow: auto;
+    //overscroll-behavior: contain;
     //overscroll-behavior-y:none;
 }
 .up * {
