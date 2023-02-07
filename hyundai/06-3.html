@@ -88,7 +88,7 @@
             </section>
             <!-- // -->
 
-            <div class="tbArea-w">
+            <div class="tbArea-w aiarea2">
                 <div class="org-p-w">
                     <div class="org-p">
                         <div class="score-box">
@@ -303,8 +303,6 @@
                         <!-- // -->
                     </div>
                     <!-- // -->
-
-                    <div class="org-scroll"></div>
                 </div>
                 <!-- // -->
             </div>
@@ -317,14 +315,13 @@
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
                 let touchStartY = 0;
-                const swipeArea = document.querySelector('.org-scroll');
-                const swipeAreaW = document.querySelector('.tbArea-w');
+                const swipeArea = document.querySelector('.tbArea-w');
 
                 // 이벤트 초기화
                 const endExpension = ev => {
                     // const lastTouchY = ev.changedTouches[0].clientY
                     swipeArea.removeEventListener('touchmove', doExpansion);
-                    swipeAreaW.style.top = 0;
+                    swipeArea.style.top = 0;
                 };
 
                 // touchmove 시 마진값 조절
@@ -333,22 +330,22 @@
                     // console.log(ev, touchStartY)
                     const movedY = ev.changedTouches[0].clientY;
                     swipeArea.addEventListener('touchend', endExpension);
-                    if (swipeAreaW.classList.contains('open')) {
+                    if (swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeAreaW.style.top = 0;
-                            swipeAreaW.classList.remove('open');
+                            swipeArea.style.top = 0;
+                            swipeArea.classList.remove('open');
                         }
-                    } else if (!swipeAreaW.classList.contains('open')) {
+                    } else if (!swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY > 80) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeAreaW.style.top = 0;
-                            swipeAreaW.classList.add('open');
+                            swipeArea.style.top = 0;
+                            swipeArea.classList.add('open');
                         } else if (touchStartY - movedY < -80) {
                             ev.preventDefault();
-                            if (!swipeAreaW.classList.contains('bounce')) swipeAreaW.classList.add('bounce');
+                            if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
                             setTimeout(() => {
-                                swipeAreaW.classList.remove('bounce');
+                                swipeArea.classList.remove('bounce');
                             }, 140);
                         }
                     }
