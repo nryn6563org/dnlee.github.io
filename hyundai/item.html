@@ -851,14 +851,13 @@
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
                 let touchStartY = 0;
-                const swipeArea = document.querySelector('#tbArea header');
-                const swipeAreaW = document.querySelector('.tbArea-w');
+                const swipeArea = document.querySelector('.tbArea-w');
 
                 // 이벤트 초기화
                 const endExpension = ev => {
                     // const lastTouchY = ev.changedTouches[0].clientY
                     swipeArea.removeEventListener('touchmove', doExpansion);
-                    swipeAreaW.style.top = 0;
+                    swipeArea.style.top = 0;
                 };
 
                 // touchmove 시 마진값 조절
@@ -869,24 +868,24 @@
                     const ctsHeight = document.querySelector('.c-item').offsetHeight;
 
                     swipeArea.addEventListener('touchend', endExpension);
-                    if (swipeAreaW.classList.contains('open')) {
+                    if (swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeAreaW.style.top = 0;
-                            swipeAreaW.classList.remove('open');
-                            swipeAreaW.style.marginTop = '-20px';
+                            swipeArea.style.top = 0;
+                            swipeArea.classList.remove('open');
+                            swipeArea.style.marginTop = '-20px';
                         }
-                    } else if (!swipeAreaW.classList.contains('open')) {
+                    } else if (!swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY > 80) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeAreaW.style.top = 0;
-                            swipeAreaW.classList.add('open');
-                            swipeAreaW.style.marginTop = '-' + ctsHeight + 'px';
+                            swipeArea.style.top = 0;
+                            swipeArea.classList.add('open');
+                            swipeArea.style.marginTop = '-' + ctsHeight + 'px';
                         } else if (touchStartY - movedY < -80) {
                             ev.preventDefault();
-                            if (!swipeAreaW.classList.contains('bounce')) swipeAreaW.classList.add('bounce');
+                            if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
                             setTimeout(() => {
-                                swipeAreaW.classList.remove('bounce');
+                                swipeArea.classList.remove('bounce');
                             }, 140);
                         }
                     }

@@ -21,7 +21,7 @@
         }
     }
 
-    &.a-item{
+    &.a-item {
         background: #4d4d4f;
         padding: 0 14px 0 12px;
 
@@ -32,36 +32,35 @@
             width: calc(100% - 68px);
         }
 
-        & > div:not(.modal){
+        & > div:not(.modal) {
             justify-content: space-between;
             align-items: center;
             align-content: center;
-            height:50px;
+            height: 50px;
 
-            &>div{
-                button{
-                    &.back{
-                        margin-top:0;
+            & > div {
+                button {
+                    &.back {
+                        margin-top: 0;
                     }
                 }
             }
-            h1{
-                margin-left:5px;
-                margin-top:0;
-                
-                span{
-                    color:#fff;
+            h1 {
+                margin-left: 5px;
+                margin-top: 0;
+
+                span {
+                    color: #fff;
                 }
             }
         }
-        &.a2-item{
-            background:#DED6D0;
+        &.a2-item {
+            background: #ded6d0;
 
-            & > div:not(.modal){
-                h1{
-                    
-                    span{
-                        color:#141414;
+            & > div:not(.modal) {
+                h1 {
+                    span {
+                        color: #141414;
                     }
                 }
             }
@@ -133,7 +132,7 @@
 
             h1 {
                 display: block;
-                width: calc(100% - 29px);
+                width: 100%;
                 float: left;
                 height: 23px;
                 line-height: 23px;
