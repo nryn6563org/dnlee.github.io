@@ -874,6 +874,7 @@
                             swipeArea.removeEventListener('touchmove', doExpansion);
                             swipeAreaW.style.top = 0;
                             swipeAreaW.classList.remove('open');
+                            swipeAreaW.style.marginTop = '-20px';
                         }
                     } else if (!swipeAreaW.classList.contains('open')) {
                         if (touchStartY - movedY > 80) {
@@ -881,7 +882,6 @@
                             swipeAreaW.style.top = 0;
                             swipeAreaW.classList.add('open');
                             swipeAreaW.style.marginTop = '-' + ctsHeight + 'px';
-                            
                         } else if (touchStartY - movedY < -80) {
                             ev.preventDefault();
                             if (!swipeAreaW.classList.contains('bounce')) swipeAreaW.classList.add('bounce');
