@@ -26,7 +26,7 @@
 
     &.open {
         //margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
-        margin-top: calc(-100% - 150px);
+        //margin-top: calc(-100% - 150px);
         overflow: auto;
     }
 }
