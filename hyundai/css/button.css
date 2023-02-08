@@ -1,1 +1,45 @@
-button.bg-white{background:#fff;color:#141414;border:1px solid #d7d7d7}button.bg-blue{background:#3f54c3;color:#fff}.fixed-button{position:fixed;display:flex;width:100%;bottom:0;left:0;padding:0 20px 20px;z-index:20;background:#fff}.fixed-button::before{position:absolute;top:-10px;display:block;width:100%;height:10px;content:"";background:linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%)}.fixed-button button{width:100%;height:50px;line-height:50px;border-radius:8px;background:#3f54c3;font-size:16px;color:#fff;text-align:center}.fixed-button button:disabled{background:#b6bee8;color:#dbdff4}
+button.bg-white {
+  background: #fff;
+  color: #141414;
+  border: 1px solid #d7d7d7;
+}
+button.bg-blue {
+  background: #3f54c3;
+  color: #fff;
+}
+
+.fixed-button {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  padding: 0 20px 20px;
+  z-index: 20;
+  background: rgb(255, 255, 255);
+}
+.fixed-button::before {
+  position: absolute;
+  top: -10px;
+  display: block;
+  width: 100%;
+  height: 10px;
+  content: "";
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%);
+}
+.fixed-button button {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 8px;
+  background: #3f54c3;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+}
+.fixed-button button:disabled {
+  background: #b6bee8;
+  color: #dbdff4;
+}
+
+/*# sourceMappingURL=button.css.map */

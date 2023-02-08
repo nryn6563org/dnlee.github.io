@@ -1,0 +1,47 @@
+.sw-w {
+  position: relative;
+}
+
+.sw-w input[type=checkbox] {
+  position: absolute;
+  /* hidden */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.switch_label {
+  position: relative;
+  cursor: pointer;
+  display: block;
+  width: 40px;
+  height: 24px;
+  background: #e9e9ea;
+  border-radius: 99px;
+  transition: 0.2s;
+  float: left;
+}
+
+.onf_btn {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 22px;
+  background: #fff;
+  transition: 0.2s;
+}
+
+/* checking style */
+.sw-w input[type=checkbox]:checked + .switch_label {
+  background: #3f54c3;
+}
+
+/* move */
+.sw-w input[type=checkbox]:checked + .switch_label .onf_btn {
+  left: 18px;
+}
+
+/*# sourceMappingURL=switch.css.map */
