@@ -3,7 +3,7 @@
     display: block;
     width: 100%;
     float: left;
-    padding: 20px 0 30px;
+    padding: 20px 0 0;
 
     .swiper {
         display: block;
@@ -116,7 +116,7 @@
 
                         .item {
                             display: block;
-                            width:calc(100% - 80px);
+                            width: calc(100% - 80px);
                             float: left;
                             clear: left;
                             margin-top: 14px;
@@ -140,7 +140,7 @@
                                 font-weight: 500;
                                 float: left;
                                 clear: left;
-                                width:100%;
+                                width: 100%;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
@@ -323,9 +323,11 @@
     top: 0;
     left: 0;
     z-index: 99;
+    display:none;
 }
 .open .empty-scroll {
     height: 70px;
+    display:none;
 }
 .prcList-w {
     display: block;

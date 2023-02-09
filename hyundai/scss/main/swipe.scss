@@ -7,7 +7,7 @@
 
     .swiper-wrapper {
         height: 98px;
-        padding-bottom: 20px;
+        //padding-bottom: 20px;
     }
 
     .icard {
@@ -27,8 +27,8 @@
             padding: 5px 12px;
             float: left;
             border-radius: 23px;
-            background:#999;
-            color:#fff;
+            background: #999;
+            color: #fff;
 
             span {
                 display: block;
@@ -81,7 +81,7 @@
         .swiper-pagination-bullet {
             color: #333d47 !important;
             background: #333d47 !important;
-            margin: 0 8px;
+            //margin: 0 8px;
         }
     }
 }
@@ -178,7 +178,6 @@
                     justify-content: space-between;
                     align-items: center;
 
-
                     .name {
                         display: block;
                         width: calc(100% - 140px);
@@ -194,14 +193,14 @@
 
                     .per {
                         display: flex;
-                        gap:10px;
+                        gap: 10px;
                         align-items: center;
                         align-content: center;
 
-                        em{
-                            display:block;
-                            font-size:13px;
-                            color:#141414;
+                        em {
+                            display: block;
+                            font-size: 13px;
+                            color: #141414;
                         }
                         span {
                             display: block;
@@ -268,7 +267,7 @@
         .swiper-pagination-bullet {
             color: #333d47 !important;
             background: #333d47 !important;
-            margin: 0 8px;
+            //margin: 0 8px;
         }
     }
 }
@@ -292,12 +291,12 @@
         padding: 29px 23px 28px 24px;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
 
-        &>a{
+        & > a {
             position: absolute;
-            top:0;
-            left:0;
-            width:100%;
-            height:100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
 
         .local-wrapper {
@@ -405,8 +404,8 @@
 
                     span {
                         display: block;
-                        width:auto;
-                        max-width:calc(100% - 72px);
+                        width: auto;
+                        max-width: calc(100% - 72px);
                         letter-spacing: -1px;
                         color: #fff;
                         font-weight: 700;
@@ -417,8 +416,8 @@
                     }
 
                     em {
-                        display:block;
-                        width:72px;
+                        display: block;
+                        width: 72px;
                         color: #9ea2bb;
                         font-size: 14px;
                         font-weight: 400;
