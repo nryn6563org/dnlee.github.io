@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <!-- <meta name="viewport" content="width=360px,user-scalable=no"> -->
         <title>현대차증권</title>
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -44,7 +45,7 @@
         <!-- //header -->
         <!-- modal -->
         <div class="modal fade" id="search">
-            <div class="modal-dialog modal-fullscreen">
+            <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
                 <!-- content -->
                 <div class="modal-content">
                     <!-- body -->
@@ -59,7 +60,7 @@
 
                                 <div class="schArea">
                                     <form onsubmit="return false;" class="pure-form">
-                                        <input id="advanced-demo" type="search" name="" placeholder="종목, 메뉴, 키워드 검색" style="" />
+                                        <input id="advanced-demo" type="search" name="" placeholder="종목, 메뉴, 키워드 검색" />
                                         <label for="advanced-demo">
                                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414" />
@@ -78,7 +79,7 @@
 
                                             term = term.toLowerCase();
                                             const choices = [
-                                                ['000000', '삼성SDI'],
+                                                ['000000', '삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI'],
                                                 ['000000', '삼성SDI우'],
                                                 ['000000', '삼성공조'],
                                                 ['000000', '삼성물산우B'],
@@ -110,7 +111,7 @@
                                         renderItem: function (item, search) {
                                             search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&amp;');
                                             const re = new RegExp('(' + search.split(' ').join('|') + ')', 'gi');
-                                            return '<div class="autocomplete-suggestion" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, '<em>$1</em>') + '</span>' + '</div>';
+                                            return '<div class="autocomplete-suggestion text-truncate" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + '<em>' + item[0] + '</em>' + '<span>' + item[1].replace(re, '<em>$1</em>') + '</span>' + '</div>';
                                         },
                                         onSelect: function (e, term, item) {
                                             console.log('Item "' + item.getAttribute('data-number') + ' (' + item.getAttribute('data-lang') + ')" selected by ' + (e.type == 'keydown' ? 'pressing enter' : 'mouse click') + '.');
@@ -149,6 +150,46 @@
                                 <!-- //cont -->
                             </div>
                             <!-- // -->
+
+                            <div class="result">
+                                <div class="title"><span>종목명종목명</span><em>000000</em></div>
+                                <!-- //title -->
+
+                                <div class="cont">
+                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                                </div>
+                                <!-- //cont -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="result">
+                                <div class="title"><span>종목명종목명</span><em>000000</em></div>
+                                <!-- //title -->
+
+                                <div class="cont">
+                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                                </div>
+                                <!-- //cont -->
+                            </div>
+                            <!-- // -->
+
+                            <div class="result">
+                                <div class="title"><span>종목명종목명</span><em>000000</em></div>
+                                <!-- //title -->
+
+                                <div class="cont">
+                                    <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                                    <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                                    <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+                                </div>
+                                <!-- //cont -->
+                            </div>
+                            <!-- // -->
+                            
 
                             <div class="result">
                                 <div class="title"><span>종목명종목명</span><em>000000</em></div>
@@ -855,6 +896,7 @@
                                 <!-- //local-card -->
 
                                 <div class="swiper-slide local-card">
+                                    <a href="#"></a>
                                     <div class="local">
                                         <img src="./img/main/local1.png" alt="국내주식" width="100%" />
                                     </div>
@@ -867,10 +909,10 @@
 
                                     <div class="item">
                                         <div class="item-title">
-                                            <a href="#" class="name">
+                                            <div href="#" class="name">
                                                 <span>LIG 넥스원</span>
                                                 <em>000123</em>
-                                            </a>
+                                            </div>
                                             <div class="txt">
                                                 <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
                                                 <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
@@ -899,6 +941,7 @@
                                 <!-- //card -->
 
                                 <div class="swiper-slide local-card">
+                                    <a href="#"></a>
                                     <div class="local">
                                         <img src="./img/main/local1.png" alt="국내주식" width="32" />
                                     </div>
@@ -911,10 +954,10 @@
 
                                     <div class="item">
                                         <div class="item-title">
-                                            <a href="#" class="name">
+                                            <div href="#" class="name">
                                                 <span>LIG 넥스원</span>
                                                 <em>000123</em>
-                                            </a>
+                                            </div>
                                             <div class="txt">
                                                 <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
                                                 <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
@@ -943,6 +986,7 @@
                                 <!-- //card -->
 
                                 <div class="swiper-slide local-card">
+                                    <a href="#"></a>
                                     <div class="local">
                                         <img src="./img/main/local1.png" alt="국내주식" width="32" />
                                     </div>
@@ -955,10 +999,10 @@
 
                                     <div class="item">
                                         <div class="item-title">
-                                            <a href="#" class="name">
+                                            <div href="#" class="name">
                                                 <span>LIG 넥스원</span>
                                                 <em>000123</em>
-                                            </a>
+                                            </div>
                                             <div class="txt">
                                                 <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
                                                 <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
@@ -1034,6 +1078,7 @@
                                 <!-- //local-card -->
 
                                 <div class="swiper-slide local-card">
+                                    <a href="#"></a>
                                     <div class="local">
                                         <img src="./img/main/local2.png" alt="미국주식" width="100%" />
                                     </div>
@@ -1046,10 +1091,10 @@
 
                                     <div class="item">
                                         <div class="item-title">
-                                            <a href="#" class="name">
+                                            <div href="#" class="name">
                                                 <span>테슬라</span>
                                                 <em>TSLA</em>
-                                            </a>
+                                            </div>
                                             <div class="txt h42 text-truncate-2">
                                                 <span class="">Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
                                             </div>
@@ -1066,6 +1111,7 @@
                                 <!-- //card -->
 
                                 <div class="swiper-slide local-card">
+                                    <a href="#"></a>
                                     <div class="local">
                                         <img src="./img/main/local2.png" alt="미국주식" width="32" />
                                     </div>
@@ -1078,10 +1124,10 @@
 
                                     <div class="item">
                                         <div class="item-title">
-                                            <a href="#" class="name">
+                                            <div href="#" class="name">
                                                 <span>테슬라</span>
                                                 <em>TSLA</em>
-                                            </a>
+                                            </div>
                                             <div class="txt">
                                                 <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
                                             </div>
@@ -1098,6 +1144,7 @@
                                 <!-- //card -->
 
                                 <div class="swiper-slide local-card">
+                                    <a href="#"></a>
                                     <div class="local">
                                         <img src="./img/main/local2.png" alt="미국주식" width="32" />
                                     </div>
@@ -1110,10 +1157,10 @@
 
                                     <div class="item">
                                         <div class="item-title">
-                                            <a href="#" class="name">
+                                            <div href="#" class="name">
                                                 <span>테슬라</span>
                                                 <em>TSLA</em>
-                                            </a>
+                                            </div>
                                             <div class="txt">
                                                 <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
                                             </div>
@@ -1870,31 +1917,6 @@
                 <!-- //dialog -->
             </div>
             <!-- //modal -->
-
-            <script>
-                //적용안함
-
-                // window.addEventListener('scroll', function(){
-                //     scrollMotion()
-                // });
-
-                // function scrollMotion(){
-                //     const title = document.querySelector('h1');
-                //     const changeTitle = document.querySelectorAll('.fixed-title');
-                //     const section = document.querySelectorAll('.cnm')
-
-                //     for (let i=0; i < changeTitle.length; i++){
-                //         const witchTop = section[i].getBoundingClientRect().top + document.querySelector('html').scrollTop - 50;
-                //         //console.log(window.scrollY + "," + witchTop)
-
-                //         if(document.querySelector('html').scrollTop >= witchTop +50){
-                //             document.querySelector('h1').innerHTML = changeTitle[i].innerHTML;
-                //         }else if(document.querySelector("html").scrollTop == 0){
-                //             document.querySelector('h1').innerHTML = "투자정보";
-                //         }
-                //     }
-                // }
-            </script>
         </article>
         <!-- //container -->
 

@@ -8,18 +8,26 @@
     overflow: hidden;
     float: left;
     background: #fff;
-    margin-top: -150px;
+    margin-top: -20px;
     touch-action: pan-y;
     z-index: 12;
     transition: margin 0.3s ease-in-out;
 
     &.aiarea.open {
-        margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
+        //margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
+        margin-top: calc(-100% - 107px);
         border-radius: 0 !important;
+        top: 0 !important;
+    }
+
+    &.aiarea2.open {
+        margin-top: calc(-100vw + 77px);
     }
 
     &.open {
-        margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
+        //margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
+        //margin-top: calc(-100% - 150px);
+        overflow: auto;
     }
 }
 #tbArea {

@@ -109,10 +109,13 @@
                 }
 
                 &.on {
-                    background-image: url(../img/myitem/alarm.svg);
-                    background-size: 17px auto;
-                    background-repeat: no-repeat;
-                    background-position: 100% 50%;
+                    button svg {
+                        fill: #3f54c3;
+
+                        path {
+                            fill: #3f54c3;
+                        }
+                    }
                 }
             }
         }

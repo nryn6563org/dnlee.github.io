@@ -38,13 +38,15 @@
                 float: left;
 
                 .top {
-                    display: block;
+                    display: flex;
+                    justify-content: flex-start;
                     width: 100%;
                     float: left;
                     min-height: 18px;
                     line-height: 18px;
                     vertical-align: top;
                     padding: 18px 20px;
+                    gap: 5px;
 
                     .date {
                         font-size: 12px;
@@ -54,6 +56,11 @@
                         font-size: 14px;
                         color: #141414;
                         font-weight: 700;
+
+                        &.text-truncate {
+                            display: inline-block;
+                            width: calc(100% - 36px);
+                        }
                     }
                     .per {
                         font-size: 14px;
@@ -72,6 +79,31 @@
                     line-height: 25px;
                     padding: 2px 20px 0;
                     margin-bottom: 18px;
+
+                    ul {
+                        padding: 0;
+                        margin: 0;
+                        list-style-type: none;
+
+                        li {
+                            display: block;
+                            width: 100%;
+                            list-style-type: none;
+                            text-overflow: ellipsis;
+                            overflow: hidden;
+                            white-space: nowrap;
+
+                            &::before {
+                                content: '\00b7';
+                                font-size: 18px;
+                                color: #141414;
+                                padding-right: 3px;
+                            }
+                            &::marker {
+                                display: none;
+                            }
+                        }
+                    }
                 }
 
                 .more {

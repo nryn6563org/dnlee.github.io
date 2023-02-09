@@ -96,3 +96,54 @@
         }
     }
 }
+
+.modal-pf{
+    display:block;
+    width:100%;
+    float:left; 
+
+    .tit{
+        display:block;
+        width:100%;
+        float:left;
+        font-size:16px;
+        font-weight:700;
+        height:24px;
+        line-height:24px;
+    }
+    .txt{
+        display:block;
+        width:100%;
+        float:left;
+        margin-top:20px;
+        font-size:16px;
+        line-height:24px;
+    }
+
+    .box{
+        display:flex;
+        flex-wrap:wrap;
+        width:100%;
+        margin-top:20px;
+        float:left;
+        background:#f8f8f8;
+        border-radius: 8px;
+        padding:16px 20px;
+        gap:15px;
+
+        span{
+            display:block;
+            width:100%;
+            float:left;
+            font-size:14px;
+            line-height:21px;
+            color:#141414;
+
+            &::before{
+                content: '\00b7';
+                font-size:20px;
+                color:#141414;
+            }
+        }
+    }
+}

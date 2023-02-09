@@ -1,12 +1,10 @@
 #tbArea .areaContent {
     display: block;
     width: 100%;
-    height: calc(100vh - 152px);
     float: left;
     margin: 0 0 40px 0;
-    padding: 20px 0 0;
+    padding: 122px 0 0;
     //background:#fff;
-    overflow-y: auto;
     z-index: 10;
 
     & > div {

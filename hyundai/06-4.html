@@ -2,7 +2,7 @@
 <html lang="ko">
     <head>
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+        <meta name="viewport" content="width=360px,user-scalable=no" />
         <title>현대차증권</title>
         <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -46,19 +46,31 @@
         <!-- //header -->
 
         <!-- Modal z-index값 적용으로 header밖으로 나와야 합니다. -->
-        <div class="modal custom-modal01 fade" id="org-popup">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade" id="org-popup">
+            <div class="modal-dialog modal-fullscreen">
                 <div class="modal-content">
-                    <div class="modal-body">
-                        <div class="org-info-top">
-                            <div>기업개요</div>
-                            <buttton class="org-close" data-bs-dismiss="modal">&times;</buttton>
-                        </div>
-                        <div class="org-info-txt">
-                            <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함.</span>
-                            <span>이 회사의 제품에는 상품 및 공급 업체의 재판매를 위해 구매하는 상품 및 제 3 자 판매자가 제공하는 콘텐츠가 포함됨</span>
-                            <span>또한 전자 장치를 제조 및 판매함.</span>
-                        </div>
+                    <div class="modal-body p-0">
+                        <section class="cnm">
+                            <div class="subTitle">
+                                <h1 class="m-0">기업개요</h1>
+                                <a href="javascript:;" data-bs-dismiss="modal">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                        <path d="M19 5L5 19" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </section>
+                        <!-- // -->
+                        <section class="cnm overflow-auto p-20 pt-0" style="height: calc(100% - 50px)">
+                            <div class="org-info-txt">
+                                <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함.</span>
+                                <span>이 회사의 제품에는 상품 및 공급 업체의 재판매를 위해 구매하는 상품 및 제 3 자 판매자가 제공하는 콘텐츠가 포함됨</span>
+                                <span>또한 전자 장치를 제조 및 판매함.</span>
+                            </div>
+                        </section>
+                        <!-- // -->
+                        
                     </div>
                     <!-- //body -->
                 </div>
@@ -77,7 +89,7 @@
                         <span>소매(카달로그 및 온라인 판매)</span>
                     </div>
                     <!-- // -->
-                    <div class="box">
+                    <div class="box nomem">
                         <div class="top">
                             <div class="stit">오늘의추천</div>
                             <div class="price">
@@ -102,6 +114,12 @@
                                 <strong>추천사유</strong>
                                 <span class="text-truncate-2"> 최근 발표한 2분기 양호한 실적에 따라 주가 상승 확률이 높을 것으로 분석하고 있다. </span>
                             </div>
+                        </div>
+                        <!-- // -->
+
+                        <div class="empty">
+                            <span class="d-block text-center">AI종목추천 서비스는 <br>서비스 가입 후 확인 가능합니다.</span>
+                            <button class="d-block text-center mt-10">가입하기</button>
                         </div>
                         <!-- // -->
                     </div>
@@ -671,14 +689,13 @@
                 document.documentElement.style.setProperty('--vh', `${vh}px`);
 
                 let touchStartY = 0;
-                const swipeArea = document.querySelector('.org-scroll');
-                const swipeAreaW = document.querySelector('.tbArea-w');
+                const swipeArea = document.querySelector('.tbArea-w');
 
                 // 이벤트 초기화
                 const endExpension = ev => {
                     // const lastTouchY = ev.changedTouches[0].clientY
                     swipeArea.removeEventListener('touchmove', doExpansion);
-                    swipeAreaW.style.top = 0;
+                    swipeArea.style.top = 0;
                 };
 
                 // touchmove 시 마진값 조절
@@ -687,22 +704,22 @@
                     // console.log(ev, touchStartY)
                     const movedY = ev.changedTouches[0].clientY;
                     swipeArea.addEventListener('touchend', endExpension);
-                    if (swipeAreaW.classList.contains('open')) {
+                    if (swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeAreaW.style.top = 0;
-                            swipeAreaW.classList.remove('open');
+                            swipeArea.style.top = 0;
+                            swipeArea.classList.remove('open');
                         }
-                    } else if (!swipeAreaW.classList.contains('open')) {
+                    } else if (!swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY > 80) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeAreaW.style.top = 0;
-                            swipeAreaW.classList.add('open');
+                            swipeArea.style.top = 0;
+                            swipeArea.classList.add('open');
                         } else if (touchStartY - movedY < -80) {
                             ev.preventDefault();
-                            if (!swipeAreaW.classList.contains('bounce')) swipeAreaW.classList.add('bounce');
+                            if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
                             setTimeout(() => {
-                                swipeAreaW.classList.remove('bounce');
+                                swipeArea.classList.remove('bounce');
                             }, 140);
                         }
                     }

@@ -12,7 +12,8 @@
         float: left;
 
         &:first-child::after {
-            background: none;
+            top:46px;
+            height:50%;
         }
         &:last-child::after {
             height: 25px;

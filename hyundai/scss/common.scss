@@ -8,17 +8,26 @@
 @import 'modal.scss';
 @import 'button.scss';
 @import 'autocomplete.scss';
+
 // 레이아웃
 @import 'header.scss';
 @import 'main.scss';
 @import 'sub.scss';
-html{
-    overscroll-behavior: none;
+@import 'frame.scss';
+
+html,
+body {
+    // position: fixed;
+    // width: 100%;
+    // overscroll-behavior: none;
+}
+html {
+    //overflow: hidden !important;
 }
 body {
-    overscroll-behavior: contain;
-    max-width: 640px;
     margin: 0 auto;
+    overflow: auto;
+    //overscroll-behavior: contain;
     //overscroll-behavior-y:none;
 }
 .up * {
@@ -27,10 +36,10 @@ body {
 .dn * {
     color: #2073ef;
 }
-.red{
-    color:#e81a1a !important;
+.red {
+    color: #e81a1a !important;
 }
-.blue{
+.blue {
     color: #2073ef !important;
 }
 
@@ -43,10 +52,10 @@ body {
 #container {
     display: block;
     width: 100%;
-    max-width: 640px;
+    //max-width: 640px;
     height: 100%;
-    margin: 0 auto;
-    padding-top: 50px;
+    margin: -1px auto 0;
+    padding-top: 52px;
 
     &.item {
         height: calc(100% - 50px);
