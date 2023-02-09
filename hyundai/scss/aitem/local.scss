@@ -116,6 +116,7 @@
 
                         .item {
                             display: block;
+                            width:calc(100% - 80px);
                             float: left;
                             clear: left;
                             margin-top: 14px;
@@ -139,6 +140,10 @@
                                 font-weight: 500;
                                 float: left;
                                 clear: left;
+                                width:100%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
                             }
                         }
 

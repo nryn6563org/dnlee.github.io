@@ -1,1 +1,490 @@
-﻿.swiper-card{display:block;width:calc(100% - 20px);padding:15px 10px 0 10px;margin:0 auto}.swiper-card .swiper-wrapper{height:98px;padding-bottom:20px}.swiper-card .icard{position:relative;display:block;width:100%;height:98px;background:#f9f9f9;box-shadow:0px 10px 10px rgba(0,0,0,.1);border-radius:16px;padding:15px 20px}.swiper-card .icard .tag{display:block;min-width:24px;height:23px;padding:5px 12px;float:left;border-radius:23px;background:#999;color:#fff}.swiper-card .icard .tag span{display:block;height:13px;flex-grow:0;font-size:10px;font-weight:500;letter-spacing:-0.5px;color:#fff;float:left}.swiper-card .icard .tag.up{background:#ea5863}.swiper-card .icard .tag.dn{background:#3f82de}.swiper-card .icard .per{position:absolute;top:20px;right:20px;font-size:13px;height:16px;line-height:16px}.swiper-card .icard .txt{position:relative;width:100%;height:38px;line-height:19px;font-size:13px;color:#5c5c5c;margin-top:7px;float:left;overflow:hidden;text-overflow:ellipsis}.swiper-card .swiper-pagination{position:relative;top:auto;left:auto;bottom:auto;width:100%;float:left}.swiper-card .swiper-pagination .swiper-pagination-bullet{color:#333d47 !important;background:#333d47 !important;margin:0 8px}.swipe-box{display:block;width:calc(100% - 20px);padding:0 10px;margin:0 10px;float:left;overflow:hidden}.swipe-box .issue-card-box{display:block;width:100%;background:#fff;box-shadow:0px 3px 8px rgba(0,0,0,.08);border-radius:16px;float:left;overflow:hidden}.swipe-box .issue-card-box.bordered{border:1px solid #f0f0f0}.swipe-box .issue-card-box a{display:block;width:100%;min-height:47px;float:left}.swipe-box .issue-card-box .title{display:block;width:100%;float:left;padding:20px 20px 0 20px}.swipe-box .issue-card-box .title span{display:block;min-height:27px;line-height:27px;font-size:20px;font-weight:500;color:#141414}.swipe-box .issue-card-box .title span .visual{position:relative;z-index:9}.swipe-box .issue-card-box .title span .visual::after{content:"";width:100%;height:14px;position:absolute;bottom:0;left:0;background:#e0e9ff;z-index:-1}.swipe-box .issue-card-box .title>em{display:block;height:13px;line-height:13px;font-size:10px;color:#8c8c8c;margin-top:6px}.swipe-box .issue-card-box .list-w{display:block;width:100%;padding:2px 15px 8px 15px;overflow:hidden}.swipe-box .issue-card-box .list-w .list{display:block;width:100%;float:left;padding:18px 5px;border-bottom:1px solid #d7d7d7}.swipe-box .issue-card-box .list-w .list:last-child{border-bottom:0}.swipe-box .issue-card-box .list-w .list .top{display:flex;width:100%;justify-content:space-between;align-items:center}.swipe-box .issue-card-box .list-w .list .top .name{display:block;width:198px;height:24px;line-height:24px;color:#141414;font-size:16px;font-weight:500}.swipe-box .issue-card-box .list-w .list .top .per span{display:block;width:66px;font-size:13px;line-height:16px;padding:3px 6px;border-radius:4px;font-weight:500;text-align:center}.swipe-box .issue-card-box .list-w .list .top .per span.up{background:#fdecec;color:#e81a1a}.swipe-box .issue-card-box .list-w .list .top .per span.dn{background:#e3f1ff;color:#2073ef}.swipe-box .issue-card-box .list-w .list .txt{display:block;width:100%;height:18px;float:left;font-size:12px;line-height:18px;color:#4d4d4d;margin-top:5px}.swipe-box .issue-card-box .more{display:block;width:100%;height:50px;line-height:50px;background:#f4f2f4;text-align:center;font-size:14px;color:#333d47}.swipe-box .issue-card-box .more button{width:100%;height:50px;color:#333d47;float:left}.swipe-box .swiper-pagination{position:relative;top:auto;left:auto;bottom:auto;width:100%;float:left}.swipe-box .swiper-pagination .swiper-pagination-bullet{color:#333d47 !important;background:#333d47 !important;margin:0 8px}.swipe-local-card{display:block;width:calc(100% - 20px);padding:0 10px;margin:0 10px;float:left}.swipe-local-card .local-card{position:relative;display:block;width:100%;height:304px;background-image:linear-gradient(134deg, #362c61 8%, rgba(24, 141, 191, 0.23) 33%, rgba(255, 255, 255, 0) 77%);background-color:#333d47;border-radius:16px;padding:29px 23px 28px 24px;box-shadow:0px 10px 10px rgba(0,0,0,.15)}.swipe-local-card .local-card>a{position:absolute;top:0;left:0;width:100%;height:100%}.swipe-local-card .local-card .local-wrapper{position:relative;display:block;width:100%;height:304px;float:left}.swipe-local-card .local-card .nomember{position:absolute;top:0;left:0;width:100%;height:304px;background-image:url(../img/main/local-bg.png);background-repeat:no-repeat;background-position:0 0;background-size:cover;border-radius:16px;overflow:hidden;z-index:98}.swipe-local-card .local-card .nomember .txt{display:block;width:100%;min-height:48px;line-height:24px;text-align:Center;float:left;margin-top:94px;font-size:16px;font-weight:500;color:#fff}.swipe-local-card .local-card .nomember .btnbox{display:block;width:100%;text-align:center;float:left;margin-top:67px}.swipe-local-card .local-card .nomember .btnbox button{display:inline-block;width:155px;height:50px;border-radius:8px;background:#fff;border:1px solid #d7d7d7;line-height:50px;font-size:16px;color:#141414}.swipe-local-card .local-card .local{position:absolute;right:30px;top:30px;width:32px;height:32px;border-radius:100%;overflow:hidden}.swipe-local-card .local-card .bullet{display:inline-block;height:24px;border-radius:24px;background:#040404;padding:0 15px}.swipe-local-card .local-card .bullet span{display:block;height:24px;line-height:24px;font-size:12px;color:#fff;float:left;font-weight:700}.swipe-local-card .local-card .item{display:flex;flex-wrap:wrap;width:100%;height:201px;float:left;margin-top:12px;align-content:space-between}.swipe-local-card .local-card .item .item-title{display:block;width:100%}.swipe-local-card .local-card .item .item-title .name{height:32px;line-height:32px}.swipe-local-card .local-card .item .item-title .name span{letter-spacing:-1px;color:#fff;font-weight:700;font-size:24px}.swipe-local-card .local-card .item .item-title .name em{color:#9ea2bb;font-size:14px;font-weight:400;padding-left:10px;letter-spacing:0}.swipe-local-card .local-card .item .item-title .txt{display:block;width:100%;line-height:21px;margin-top:5px;font-size:14px;color:#fff}.swipe-local-card .local-card .item .item-info{display:block;width:100%}.swipe-local-card .local-card .item .item-info .price{display:block}.swipe-local-card .local-card .item .item-info .price em{display:block;height:18px;line-height:18px;font-size:12px;letter-spacing:-1px;color:#fff;opacity:.8}.swipe-local-card .local-card .item .item-info .price span{display:block;margin-top:2px;color:#fff;font-weight:700;font-size:24px;line-height:31px;height:31px}.swipe-local-card .local-card .item .item-info .tag{display:block;width:100%;margin-top:11px}.swipe-local-card .local-card .item .item-info .tag a{display:inline-block;height:24px;line-height:22px;border:1px solid #ebebeb;padding:0 10px;font-size:11px;color:#fff;border-radius:24px;float:left;margin-left:4px}.swipe-local-card .local-card .item .item-info .tag a:first-child{margin-left:0}.swipe-local-card .local-card .item .item-guide{position:absolute;bottom:0;left:0;width:100%;min-height:110px;background:rgba(0,0,0,.1);box-shadow:0px 8px 10px rgba(0,0,0,.05);padding:22px 24.62px 27px 28.72px;border-radius:0 0 16px 16px}.swipe-local-card .local-card .item .item-guide span{position:relative;display:block;width:100%;min-height:18px;line-height:18px;font-size:12px;color:#fff;float:left;padding-left:18px;opacity:.8;margin-bottom:10px}.swipe-local-card .local-card .item .item-guide span:last-child{margin-bottom:0}.swipe-local-card .local-card .item .item-guide span::before{content:"·";position:absolute;top:0;left:0;font-weight:700;font-size:18px;width:18px;text-align:center}.swipe-local-card .swiper-pagination{position:relative;width:100%;top:auto;left:auto;bottom:auto;float:left}.swipe-local-card .swiper-pagination .swiper-pagination-bullet-active{background:#000}.local-more{position:absolute;top:45px;right:31px}.local-more a{display:inline-block;width:39px;height:18px;line-height:18px;font-size:14px;color:gray}
+@charset "UTF-8";
+.swiper-card {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 15px 10px 0 10px;
+  margin: 0 auto;
+}
+.swiper-card .swiper-wrapper {
+  height: 98px;
+  padding-bottom: 20px;
+}
+.swiper-card .icard {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 98px;
+  background: #f9f9f9;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+  padding: 15px 20px;
+}
+.swiper-card .icard .tag {
+  display: block;
+  min-width: 24px;
+  height: 23px;
+  padding: 5px 12px;
+  float: left;
+  border-radius: 23px;
+  background: #999;
+  color: #fff;
+}
+.swiper-card .icard .tag span {
+  display: block;
+  height: 13px;
+  flex-grow: 0;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  color: #fff;
+  float: left;
+}
+.swiper-card .icard .tag.up {
+  background: #ea5863;
+}
+.swiper-card .icard .tag.dn {
+  background: #3f82de;
+}
+.swiper-card .icard .per {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 13px;
+  height: 16px;
+  line-height: 16px;
+}
+.swiper-card .icard .txt {
+  position: relative;
+  width: 100%;
+  height: 38px;
+  line-height: 19px;
+  font-size: 13px;
+  color: #5c5c5c;
+  margin-top: 7px;
+  float: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.swiper-card .swiper-pagination {
+  position: relative;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  width: 100%;
+  float: left;
+}
+.swiper-card .swiper-pagination .swiper-pagination-bullet {
+  color: #333d47 !important;
+  background: #333d47 !important;
+  margin: 0 8px;
+}
+
+.swipe-box {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  margin: 0 10px;
+  float: left;
+  overflow: hidden;
+}
+.swipe-box .issue-card-box {
+  display: block;
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  float: left;
+  overflow: hidden;
+}
+.swipe-box .issue-card-box.bordered {
+  border: 1px solid #f0f0f0;
+}
+.swipe-box .issue-card-box a {
+  display: block;
+  width: 100%;
+  min-height: 47px;
+  float: left;
+}
+.swipe-box .issue-card-box .title {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 20px 20px 0 20px;
+}
+.swipe-box .issue-card-box .title span {
+  display: block;
+  min-height: 27px;
+  line-height: 27px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #141414;
+}
+.swipe-box .issue-card-box .title span .visual {
+  position: relative;
+  z-index: 9;
+}
+.swipe-box .issue-card-box .title span .visual::after {
+  content: "";
+  width: 100%;
+  height: 14px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #e0e9ff;
+  z-index: -1;
+}
+.swipe-box .issue-card-box .title > em {
+  display: block;
+  height: 13px;
+  line-height: 13px;
+  font-size: 10px;
+  color: #8c8c8c;
+  margin-top: 6px;
+}
+.swipe-box .issue-card-box .list-w {
+  display: block;
+  width: 100%;
+  padding: 2px 15px 8px 15px;
+  overflow: hidden;
+}
+.swipe-box .issue-card-box .list-w .list {
+  display: block;
+  width: 100%;
+  float: left;
+  padding: 18px 5px;
+  border-bottom: 1px solid #d7d7d7;
+}
+.swipe-box .issue-card-box .list-w .list:last-child {
+  border-bottom: 0;
+}
+.swipe-box .issue-card-box .list-w .list .top {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.swipe-box .issue-card-box .list-w .list .top .name {
+  display: block;
+  width: 198px;
+  height: 24px;
+  line-height: 24px;
+  color: #141414;
+  font-size: 16px;
+  font-weight: 500;
+}
+.swipe-box .issue-card-box .list-w .list .top .per span {
+  display: block;
+  width: 66px;
+  font-size: 13px;
+  line-height: 16px;
+  padding: 3px 6px;
+  border-radius: 4px;
+  font-weight: 500;
+  text-align: center;
+}
+.swipe-box .issue-card-box .list-w .list .top .per span.up {
+  background: #fdecec;
+  color: #e81a1a;
+}
+.swipe-box .issue-card-box .list-w .list .top .per span.dn {
+  background: #e3f1ff;
+  color: #2073ef;
+}
+.swipe-box .issue-card-box .list-w .list .txt {
+  display: block;
+  width: 100%;
+  height: 18px;
+  float: left;
+  font-size: 12px;
+  line-height: 18px;
+  color: #4d4d4d;
+  margin-top: 5px;
+}
+.swipe-box .issue-card-box .more {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #f4f2f4;
+  text-align: center;
+  font-size: 14px;
+  color: #333d47;
+}
+.swipe-box .issue-card-box .more button {
+  width: 100%;
+  height: 50px;
+  color: #333d47;
+  float: left;
+}
+.swipe-box .swiper-pagination {
+  position: relative;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  width: 100%;
+  float: left;
+}
+.swipe-box .swiper-pagination .swiper-pagination-bullet {
+  color: #333d47 !important;
+  background: #333d47 !important;
+  margin: 0 8px;
+}
+
+.swipe-local-card {
+  display: block;
+  width: calc(100% - 20px);
+  padding: 0 10px;
+  margin: 0 10px;
+  float: left;
+}
+.swipe-local-card .local-card {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 304px;
+  background-image: linear-gradient(134deg, #362c61 8%, rgba(24, 141, 191, 0.23) 33%, rgba(255, 255, 255, 0) 77%);
+  background-color: #333d47;
+  border-radius: 16px;
+  padding: 29px 23px 28px 24px;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.15);
+}
+.swipe-local-card .local-card > a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.swipe-local-card .local-card .local-wrapper {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 304px;
+  float: left;
+}
+.swipe-local-card .local-card .nomember {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 304px;
+  background-image: url(../img/main/local-bg.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-size: cover;
+  border-radius: 16px;
+  overflow: hidden;
+  z-index: 98;
+}
+.swipe-local-card .local-card .nomember .txt {
+  display: block;
+  width: 100%;
+  min-height: 48px;
+  line-height: 24px;
+  text-align: Center;
+  float: left;
+  margin-top: 94px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+.swipe-local-card .local-card .nomember .btnbox {
+  display: block;
+  width: 100%;
+  text-align: center;
+  float: left;
+  margin-top: 67px;
+}
+.swipe-local-card .local-card .nomember .btnbox button {
+  display: inline-block;
+  width: 155px;
+  height: 50px;
+  border-radius: 8px;
+  background: #fff;
+  border: 1px solid #d7d7d7;
+  line-height: 50px;
+  font-size: 16px;
+  color: #141414;
+}
+.swipe-local-card .local-card .local {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.swipe-local-card .local-card .bullet {
+  display: inline-block;
+  height: 24px;
+  border-radius: 24px;
+  background: #040404;
+  padding: 0 15px;
+}
+.swipe-local-card .local-card .bullet span {
+  display: block;
+  height: 24px;
+  line-height: 24px;
+  font-size: 12px;
+  color: #fff;
+  float: left;
+  font-weight: 700;
+}
+.swipe-local-card .local-card .item {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 201px;
+  float: left;
+  margin-top: 12px;
+  align-content: space-between;
+}
+.swipe-local-card .local-card .item .item-title {
+  display: block;
+  width: 100%;
+}
+.swipe-local-card .local-card .item .item-title .name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+  height: 32px;
+  line-height: 32px;
+}
+.swipe-local-card .local-card .item .item-title .name span {
+  display: block;
+  width: auto;
+  max-width: calc(100% - 72px);
+  letter-spacing: -1px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.swipe-local-card .local-card .item .item-title .name em {
+  display: block;
+  width: 72px;
+  color: #9ea2bb;
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 10px;
+  letter-spacing: 0;
+}
+.swipe-local-card .local-card .item .item-title .txt {
+  display: block;
+  width: 100%;
+  line-height: 21px;
+  margin-top: 5px;
+  font-size: 14px;
+  color: #fff;
+}
+.swipe-local-card .local-card .item .item-info {
+  display: block;
+  width: 100%;
+}
+.swipe-local-card .local-card .item .item-info .price {
+  display: block;
+}
+.swipe-local-card .local-card .item .item-info .price em {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  letter-spacing: -1px;
+  color: #fff;
+  opacity: 0.8;
+}
+.swipe-local-card .local-card .item .item-info .price span {
+  display: block;
+  margin-top: 2px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31px;
+  height: 31px;
+}
+.swipe-local-card .local-card .item .item-info .tag {
+  display: block;
+  width: 100%;
+  margin-top: 11px;
+}
+.swipe-local-card .local-card .item .item-info .tag a {
+  display: inline-block;
+  height: 24px;
+  line-height: 22px;
+  border: 1px solid #ebebeb;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #fff;
+  border-radius: 24px;
+  float: left;
+  margin-left: 4px;
+}
+.swipe-local-card .local-card .item .item-info .tag a:first-child {
+  margin-left: 0;
+}
+.swipe-local-card .local-card .item .item-guide {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 110px;
+  background: rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.05);
+  padding: 22px 24.62px 27px 28.72px;
+  border-radius: 0 0 16px 16px;
+}
+.swipe-local-card .local-card .item .item-guide span {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #fff;
+  float: left;
+  padding-left: 18px;
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
+.swipe-local-card .local-card .item .item-guide span:last-child {
+  margin-bottom: 0;
+}
+.swipe-local-card .local-card .item .item-guide span::before {
+  content: "·";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  font-size: 18px;
+  width: 18px;
+  text-align: center;
+}
+.swipe-local-card .swiper-pagination {
+  position: relative;
+  width: 100%;
+  top: auto;
+  left: auto;
+  bottom: auto;
+  float: left;
+}
+.swipe-local-card .swiper-pagination .swiper-pagination-bullet-active {
+  background: #000;
+}
+
+.local-more {
+  position: absolute;
+  top: 45px;
+  right: 31px;
+}
+.local-more a {
+  display: inline-block;
+  width: 39px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 14px;
+  color: #808080;
+}

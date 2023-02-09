@@ -382,17 +382,29 @@
                 width: 100%;
 
                 .name {
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    align-content: center;
                     height: 32px;
                     line-height: 32px;
 
                     span {
+                        display: block;
+                        width:auto;
+                        max-width:calc(100% - 72px);
                         letter-spacing: -1px;
                         color: #fff;
                         font-weight: 700;
                         font-size: 24px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
 
                     em {
+                        display:block;
+                        width:72px;
                         color: #9ea2bb;
                         font-size: 14px;
                         font-weight: 400;
