@@ -178,17 +178,31 @@
                     justify-content: space-between;
                     align-items: center;
 
+
                     .name {
                         display: block;
-                        width: 198px;
+                        width: calc(100% - 140px);
                         height: 24px;
                         line-height: 24px;
                         color: #141414;
                         font-size: 16px;
                         font-weight: 500;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
                     }
 
                     .per {
+                        display: flex;
+                        gap:10px;
+                        align-items: center;
+                        align-content: center;
+
+                        em{
+                            display:block;
+                            font-size:13px;
+                            color:#141414;
+                        }
                         span {
                             display: block;
                             width: 66px;

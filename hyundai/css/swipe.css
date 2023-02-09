@@ -165,12 +165,26 @@
 }
 .swipe-box .issue-card-box .list-w .list .top .name {
   display: block;
-  width: 198px;
+  width: calc(100% - 140px);
   height: 24px;
   line-height: 24px;
   color: #141414;
   font-size: 16px;
   font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.swipe-box .issue-card-box .list-w .list .top .per {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  align-content: center;
+}
+.swipe-box .issue-card-box .list-w .list .top .per em {
+  display: block;
+  font-size: 13px;
+  color: #141414;
 }
 .swipe-box .issue-card-box .list-w .list .top .per span {
   display: block;

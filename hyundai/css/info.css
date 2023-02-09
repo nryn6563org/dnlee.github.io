@@ -1,1 +1,73 @@
-.c-item .info{display:block;width:100%;padding:7px 20px 0;float:left}.c-item .info>div{display:block;width:100%;float:left;flex-wrap:wrap}.c-item .info>div .cd{display:block;height:14px;line-height:14px;color:#8e8e8e;font-weight:500;font-size:11px;float:left}.c-item .info>div .cd::before{content:"";display:block;float:left;width:1px;height:10px;margin:2px 6px 0;background:#d7d7d7}.c-item .info>div .cd:first-child::before{content:"";width:0;height:0;margin:0;padding:0;background:none}.c-item .info>div .prc{display:block;height:31px;font-size:24px;font-weight:700;letter-spacing:-0.011em;float:left}.c-item .info>div .per{display:block;height:20px;font-size:16px;line-height:20px;font-weight:500;margin:8.5px 0 0 15px;float:left}.c-item .info>div .gd{display:block;height:18px;line-height:18px;font-size:12px;color:#4e4e4e;letter-spacing:-0.011em}.c-item .info>div .tag{display:block;height:24px;line-height:22px;border:1px solid #d9d9d9;border-radius:99px;padding:0 10px;font-size:11px;color:#4d4d4d}
+.c-item .info {
+  display: block;
+  width: 100%;
+  padding: 7px 20px 0;
+  float: left;
+}
+.c-item .info > div {
+  display: block;
+  width: 100%;
+  float: left;
+  flex-wrap: wrap;
+}
+.c-item .info > div .cd {
+  display: block;
+  height: 14px;
+  line-height: 14px;
+  color: #8e8e8e;
+  font-weight: 500;
+  font-size: 11px;
+  float: left;
+}
+.c-item .info > div .cd::before {
+  content: "";
+  display: block;
+  float: left;
+  width: 1px;
+  height: 10px;
+  margin: 2px 6px 0;
+  background: #d7d7d7;
+}
+.c-item .info > div .cd:first-child::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+}
+.c-item .info > div .prc {
+  display: block;
+  height: 31px;
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: -0.011em;
+  float: left;
+}
+.c-item .info > div .per {
+  display: block;
+  height: 20px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 500;
+  margin: 8.5px 0 0 15px;
+  float: left;
+}
+.c-item .info > div .gd {
+  display: block;
+  height: 18px;
+  line-height: 18px;
+  font-size: 12px;
+  color: #4e4e4e;
+  letter-spacing: -0.011em;
+}
+.c-item .info > div .tag {
+  display: block;
+  height: 24px;
+  line-height: 22px;
+  border: 1px solid #d9d9d9;
+  border-radius: 99px;
+  padding: 0 10px;
+  font-size: 11px;
+  color: #4d4d4d;
+}
