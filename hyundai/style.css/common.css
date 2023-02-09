@@ -60984,6 +60984,17 @@ div.cnm {
 .pf-p .tab-pane {
   display: none;
 }
+.pf-p .tab-pane button.more {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background-color: #f4f2f4;
+  border-radius: 10px;
+  font-size: 14px;
+  color: #333d47;
+  text-align: center;
+  margin-bottom: 26px;
+}
 .pf-p .tab-pane.active {
   display: block;
 }
