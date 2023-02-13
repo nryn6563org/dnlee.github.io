@@ -88,13 +88,17 @@
         padding: 20px 20px 40px;
         overflow-y: auto;
 
-        .con-ft {
+        & > div {
             display: block;
             width: 100%;
+            float: left;
+        }
+
+        .con-ft {
+            margin-top: 40px;
             border-top: 1px solid #e5e5e5;
             padding-top: 18px;
             padding-bottom: 40px;
-            float: left;
 
             span {
                 display: block;
