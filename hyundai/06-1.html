@@ -957,18 +957,22 @@
                 const doExpansion = ev => {
                     // console.log(ev, touchStartY)
                     const movedY = ev.changedTouches[0].clientY;
+                    const ctsHeight = document.querySelector('#content').offsetHeight - 48;
+
                     swipeArea.addEventListener('touchend', endExpension);
                     if (swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
                             swipeArea.style.top = 0;
                             swipeArea.classList.remove('open');
+                            swipeArea.style.marginTop = '-20px';
                         }
                     } else if (!swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY > 80) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
                             swipeArea.style.top = 0;
                             swipeArea.classList.add('open');
+                            swipeArea.style.marginTop = '-' + ctsHeight + 'px';
                         } else if (touchStartY - movedY < -80) {
                             ev.preventDefault();
                             if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
@@ -984,6 +988,10 @@
                     swipeArea.addEventListener('touchmove', doExpansion);
                 };
                 swipeArea.addEventListener('touchstart', addHeight);
+
+                if (swipeArea.classList.contains('open')) {
+                    swipeArea.style.marginTop = '-' + document.querySelector('#content').offsetHeight - 48 + 'px';
+                }
 
                 /////////////////////////////////////////
             </script>
