@@ -30,7 +30,7 @@
                                 font-size: 20px;
                                 color: #000;
                                 font-weight: 500;
-                                width:100%;
+                                width: 100%;
                                 overflow: hidden;
                                 text-overflow: ellipsis;
                                 white-space: nowrap;
@@ -338,6 +338,9 @@
             .btm {
                 filter: blur(10px);
             }
+            .empty {
+                display: flex;
+            }
         }
 
         .empty {
@@ -348,7 +351,7 @@
             height: 100%;
             border-radius: 16px;
             overflow: hidden;
-            display: flex;
+            display: none;
             flex-wrap: wrap;
             flex-direction: column;
             justify-content: center;
@@ -728,7 +731,7 @@
     top: 0;
     left: 0;
     z-index: 99;
-    display:none;
+    display: none;
 }
 
 .open .org-scroll {
@@ -738,5 +741,5 @@
     top: 0;
     left: 0;
     z-index: 99;
-    display:none;
+    display: none;
 }

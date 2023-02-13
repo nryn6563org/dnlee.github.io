@@ -93,8 +93,20 @@
                         height: calc(100% - 90px);
                         float: left;
                         padding: 20px;
-                        background: url(../img/localboxbg.png) no-repeat 95% 116px;
+                        //background: url(../img/localboxbg.png) no-repeat 95% 116px;
                         background-size: 101px 70px;
+
+                        .candle {
+                            position: absolute;
+                            top: 116px;
+                            right: 16px;
+                            width: 101px;
+                            height: 70px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
 
                         .bullet {
                             display: flex;
@@ -323,11 +335,11 @@
     top: 0;
     left: 0;
     z-index: 99;
-    display:none;
+    display: none;
 }
 .open .empty-scroll {
     height: 70px;
-    display:none;
+    display: none;
 }
 .prcList-w {
     display: block;
@@ -465,8 +477,16 @@
 
         .top {
             padding: 0;
-            background: url(../img/localboxbg.png) no-repeat 95% 19px;
+            //background: url(../img/localboxbg.png) no-repeat 95% 19px;
             background-size: 101px 70px;
+
+            .candle {
+                position: absolute;
+                top: 19px;
+                right: 20px;
+                width: 101px;
+                height: 70px;
+            }
 
             .stit {
                 padding-left: 5px;
