@@ -70,7 +70,6 @@
                             </div>
                         </section>
                         <!-- // -->
-                        
                     </div>
                     <!-- //body -->
                 </div>
@@ -118,7 +117,7 @@
                         <!-- // -->
 
                         <div class="empty">
-                            <span class="d-block text-center">AI종목추천 서비스는 <br>서비스 가입 후 확인 가능합니다.</span>
+                            <span class="d-block text-center">AI종목추천 서비스는 <br />서비스 가입 후 확인 가능합니다.</span>
                             <button class="d-block text-center mt-10">가입하기</button>
                         </div>
                         <!-- // -->
@@ -274,7 +273,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    기업 고유자산의 증가를 나타내는 지표. <br>
+                                                    기업 고유자산의 증가를 나타내는 지표. <br />
                                                     시가총액 상위20%평균 점수보다 높을수록 미래 성장 잠재력이 크다고 평가.
                                                 </span>
                                                 <!-- // -->
@@ -351,7 +350,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    재무 건전성을 분석할때 활용되는 지표. <br>
+                                                    재무 건전성을 분석할때 활용되는 지표. <br />
                                                     시가총액 상위20%평균 점수보다 높으면 보다 안정적인 기업으로 평가.
                                                 </span>
                                                 <!-- // -->
@@ -397,7 +396,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    꾸준한 실적은 내는 기업을 평가하는 지표. <br>
+                                                    꾸준한 실적은 내는 기업을 평가하는 지표. <br />
                                                     시가총액 상위20%평균 점수보다 높을 경우 안정적인 실적을 내는 것으로 평가.
                                                 </span>
                                                 <!-- // -->
@@ -474,7 +473,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    대표적인 수익성 지표인 ROA와 ROE 결합. <br>
+                                                    대표적인 수익성 지표인 ROA와 ROE 결합. <br />
                                                     시가총액 상위20%평균 점수보다 높을수록 투자가치와 수익성이 높다고 평가.
                                                 </span>
                                                 <!-- // -->
@@ -520,7 +519,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    기업의 영업활동의 능률을 측정하는 지표. <br>
+                                                    기업의 영업활동의 능률을 측정하는 지표. <br />
                                                     시가총액 상위20%평균 점수보다 높을 수록 시장대비 수익성이 좋은 것으로 평가.
                                                 </span>
                                                 <!-- // -->
@@ -597,7 +596,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    기업의 주식가치를 나타내는 대표적인 척도. <br>
+                                                    기업의 주식가치를 나타내는 대표적인 척도. <br />
                                                     시가총액 상위20%평균 점수보다 높을수록 기업 가치가 높은 것으로 평가.
                                                 </span>
                                                 <!-- // -->
@@ -643,7 +642,7 @@
                                                 <!-- // -->
 
                                                 <span class="txt">
-                                                    기업의 재무상태면에서 주가를 판단하는 지표. <br>
+                                                    기업의 재무상태면에서 주가를 판단하는 지표. <br />
                                                     시가총액 상위20%평균 점수보다 높을수록 재무구조가 매우 튼튼하다고 평가.
                                                 </span>
                                                 <!-- // -->
@@ -703,18 +702,22 @@
                 const doExpansion = ev => {
                     // console.log(ev, touchStartY)
                     const movedY = ev.changedTouches[0].clientY;
+                    const ctsHeight = document.querySelector('#content').offsetHeight;
+
                     swipeArea.addEventListener('touchend', endExpension);
                     if (swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
                             swipeArea.style.top = 0;
                             swipeArea.classList.remove('open');
+                            swipeArea.style.marginTop = '-20px';
                         }
                     } else if (!swipeArea.classList.contains('open')) {
                         if (touchStartY - movedY > 80) {
                             swipeArea.removeEventListener('touchmove', doExpansion);
                             swipeArea.style.top = 0;
                             swipeArea.classList.add('open');
+                            swipeArea.style.marginTop = '-' + ctsHeight + 'px';
                         } else if (touchStartY - movedY < -80) {
                             ev.preventDefault();
                             if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
@@ -730,6 +733,10 @@
                     swipeArea.addEventListener('touchmove', doExpansion);
                 };
                 swipeArea.addEventListener('touchstart', addHeight);
+
+                if (swipeArea.classList.contains('open')) {
+                    swipeArea.style.marginTop = '-' + document.querySelector('#content').offsetHeight + 'px';
+                }
 
                 /////////////////////////////////////////
             </script>
