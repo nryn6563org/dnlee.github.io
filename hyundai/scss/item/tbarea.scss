@@ -29,6 +29,14 @@
         //margin-top: calc(-100% - 150px);
         overflow: auto;
     }
+
+    #container.item & .guide {
+        padding: 40px 26px 77px;
+    }
+
+    .guide {
+        padding: 40px 26px 123px;
+    }
 }
 #tbArea {
     position: relative;

@@ -111,8 +111,18 @@
                 color: #141414;
                 font-weight: 500;
                 float: left;
-                padding-right: 76px;
+                padding-right: 136px;
                 margin-top: 7px;
+            }
+
+            .price {
+                position: absolute;
+                top: 48px;
+                right: 76px;
+                height: 22px;
+                line-height: 22px;
+                font-size: 13px;
+                color: #141414;
             }
 
             .per {
@@ -179,6 +189,9 @@
                 border-top: 0;
 
                 .per {
+                    top: 23px;
+                }
+                .price {
                     top: 23px;
                 }
             }
