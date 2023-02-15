@@ -34,6 +34,8 @@
         padding: 40px 26px 77px;
     }
 
+    
+
     .guide {
         padding: 40px 26px 123px;
     }
@@ -49,6 +51,10 @@
     border-radius: 20px 20px 0 0;
     float: left;
     overflow-y: scroll;
+
+    #container & .areaContent>div{
+        padding:0 20px 28px;
+    }
 }
 
 @import 'tbheader.scss';

@@ -1,11 +1,11 @@
 .cnm-tab {
     position: relative;
     display: table;
-    width: 100%;
+    width: calc(100% - 40px);
     height: 48px;
     float: left;
-    border-bottom: 1px solid #ebeced;
-    padding: 0 20px;
+    border-bottom: 1px solid #d7d7d7;
+    margin: 0 20px;
     table-layout: fixed;
 
     &.black {
@@ -289,6 +289,9 @@
                     color: #4d4d4d;
                     margin-top: 5px;
                     float: left;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
 
                     &-multi {
                         height: 36px;
@@ -308,13 +311,14 @@
                 }
 
                 .date {
-                    position: absolute;
-                    top: 2px;
-                    right: 5px;
+                    display: block;
+                    width:100%;
                     font-size: 12px;
                     height: 15px;
                     line-height: 15px;
                     color: #969696;
+                    margin-top:5px;
+                    float:left;
                 }
 
                 .info {
