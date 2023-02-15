@@ -118,6 +118,10 @@
                                             document.getElementById('advanced-demo').value = item.getAttribute('data-lang');
                                         },
                                     });
+
+                                    if(document.querySelector('.autocomplete-suggestions').style.display == "block"){
+                                        document.querySelector('#container').style.overflow = "hidden !important";
+                                    }
                                 </script>
                             </div>
                             <!-- //subTitle -->
