@@ -8,36 +8,33 @@
     padding: 0 20px;
     table-layout: fixed;
 
-    &.black{
-        border-bottom:1px solid rgba(20, 20, 20, 0.2) !important;
+    &.black {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.2) !important;
 
-        li.nav-item{
-            a.nav-link{
-                color:rgba(75, 63, 48, 0.7);
+        li.nav-item {
+            a.nav-link {
+                color: rgba(75, 63, 48, 0.7);
 
-                &.active{
-                    color:#4B3F30;
-                    border-bottom:3px solid #4B3F30 !important;
+                &.active {
+                    color: #4b3f30;
+                    border-bottom: 3px solid #4b3f30 !important;
                 }
             }
         }
     }
 
-    &.dark{
-        border-bottom:1px solid rgba(255, 255, 255, 0.2) !important;
+    &.dark {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
 
-        li.nav-item{
-            
-            a.nav-link{
-                color:#B3B3B3;
+        li.nav-item {
+            a.nav-link {
+                color: #b3b3b3;
 
-                &.active{
-                    color:#fff;
-                    border-bottom:3px solid #fff !important;
+                &.active {
+                    color: #fff;
+                    border-bottom: 3px solid #fff !important;
                 }
             }
-
-            
         }
     }
 
@@ -95,7 +92,7 @@
             box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
             border-radius: 16px;
             float: left;
-            margin-top: 14px;
+            margin-top: 12px;
             padding: 14px 26px 14px 20px;
 
             &:first-child {
@@ -186,7 +183,7 @@
             background: #f4f2f4;
             border-radius: 10px;
             float: left;
-            margin-top: 26px;
+            margin-top: 20px;
 
             button {
                 width: 100%;
@@ -258,11 +255,12 @@
         .list {
             display: block;
             width: 100%;
-            padding: 18px 5px;
+            padding: 12px 5px;
             border-top: 1px solid #d7d7d7;
 
             &:first-child {
                 border-top: 0;
+                padding-top: 18px;
             }
 
             .item {
