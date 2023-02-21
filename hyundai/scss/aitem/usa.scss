@@ -31,35 +31,37 @@
                 color: #000;
                 font-weight: 500;
                 width: 100%;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                margin-top: 3px;
+                -webkit-line-clamp: 2 !important;
+                overflow: hidden !important;
+                text-overflow: ellipsis !important;
+                display: -webkit-box !important;
+                -webkit-box-orient: vertical !important;
+                white-space: normal !important;
               }
             }
 
             .usaPrice {
               display: flex;
-              justify-content: flex-start;
-              width: 248px;
+              justify-content: space-between;
+              width: 100%;
               float: left;
               margin-top: 5px;
               //padding: 0 4px;
 
               & > div {
                 position: relative;
-                padding-left: 18px;
-                width: 77px;
+                width: calc((100% / 3) - 9px);
+                padding-left: 9px;
                 text-align: center;
 
                 &:first-child {
                   padding-left: 0;
-                  padding-right: 18px;
+                  padding-right: 9px;
                 }
 
                 &:nth-child(2n) {
                   padding: 0 18px;
-                  width: calc(100% - 154px);
+                  width: calc((100% / 3) + 18px);
 
                   &::before {
                     content: '';
@@ -543,7 +545,7 @@
         position: relative;
         display: block;
         width: 100%;
-        padding: 10px;
+        padding: 10px 20px;
         border: 1px solid #dcdcdc;
         border-radius: 10px;
         float: left;

@@ -306,7 +306,7 @@
     position: relative;
     display: block;
     width: 100%;
-    height: 304px;
+    height: 267px;
     background-image: linear-gradient(134deg, #362c61 8%, rgba(24, 141, 191, 0.23) 33%, rgba(255, 255, 255, 0) 77%);
     background-color: #333d47;
     border-radius: 16px;
@@ -335,7 +335,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      height: 304px;
+      height: 264px;
       background-image: url(../img/main/local-bg.png);
       background-repeat: no-repeat;
       background-position: 0 0;
@@ -351,7 +351,7 @@
         line-height: 24px;
         text-align: Center;
         float: left;
-        margin-top: 94px;
+        margin-top: 75px;
         font-size: 16px;
         font-weight: 500;
         color: #fff;
@@ -361,7 +361,7 @@
         width: 100%;
         text-align: center;
         float: left;
-        margin-top: 67px;
+        margin-top: 38px;
 
         button {
           display: inline-block;
@@ -408,7 +408,7 @@
       display: flex;
       flex-wrap: wrap;
       width: 100%;
-      height: 201px;
+      height: 164px;
       float: left;
       margin-top: 12px;
       align-content: space-between;
@@ -515,10 +515,10 @@
         bottom: 0;
         left: 0;
         width: 100%;
-        min-height: 110px;
+        min-height: 100px;
         background: rgba(0, 0, 0, 0.1);
         box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.05);
-        padding: 22px 24.62px 27px 28.72px;
+        padding: 16px 24.62px 23px 28.72px;
         border-radius: 0 0 16px 16px;
 
         span {
