@@ -1,19 +1,19 @@
 // 공통
 //@import "font.scss";
-@import 'reset.scss'; //reset
-@import 'fsize.scss'; //폰트사이즈
-@import 'gap.scss'; //flex gap
-@import 'hspace.scss';
-@import 'mpsize.scss';
-@import 'modal.scss';
-@import 'button.scss';
-@import 'autocomplete.scss';
+@import "reset.scss"; //reset
+@import "fsize.scss"; //폰트사이즈
+@import "gap.scss"; //flex gap
+@import "hspace.scss";
+@import "mpsize.scss";
+@import "modal.scss";
+@import "button.scss";
+@import "autocomplete.scss";
 
 // 레이아웃
-@import 'header.scss';
-@import 'main.scss';
-@import 'sub.scss';
-@import 'frame.scss';
+@import "header.scss";
+@import "main.scss";
+@import "sub.scss";
+@import "frame.scss";
 
 html,
 body {
@@ -187,7 +187,7 @@ body {
     color: #292929;
 
     &::after {
-      content: '';
+      content: "";
       width: 7px;
       height: 7px;
       border: 1px solid #7f7f7f;
