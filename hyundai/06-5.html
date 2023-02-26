@@ -1,1046 +1,1069 @@
 <!DOCTYPE html>
 <html lang="ko">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=360px,user-scalable=no" />
-        <title>현대차증권</title>
-        <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <link href="./css/font.css" rel="stylesheet" />
-        <!-- // font css -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-        <!-- //bootstrap css -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-        <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
-        <!-- //swiper css -->
-        <link rel="stylesheet" href="./css/common.css" />
-        <!-- // custom css -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-        <!-- <script src="./js/swiper-bundle.min.js"></script> -->
-        <!-- //swiper js -->
-    </head>
-    <body>
-        <!-- header -->
-        <header id="header" class="a-item a2-item">
-            <div>
-                <div>
-                    <button class="back">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                    <h1 class="text-truncate">
-                        <!-- <span>오늘의 이슈 (종목명종목명종목명종목명)</span> -->
-                        <span><em>AI 포트폴리오 추천</em></span>
-                    </h1>
-                </div>
-                <!-- // -->
-                <div>
-                    <button class="usr mt-0">
-                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M17.5529 9.6506C17.5529 8.17781 16.9678 6.76533 15.9264 5.7239C14.885 4.68248 13.4725 4.09741 11.9997 4.09741C10.5269 4.09741 9.11444 4.68248 8.07301 5.7239C7.03158 6.76533 6.44652 8.17781 6.44652 9.6506C6.44652 16.1293 3.66992 17.9804 3.66992 17.9804H20.3295C20.3295 17.9804 17.5529 16.1293 17.5529 9.6506Z" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                            <path d="M13.6008 19.9805C13.4381 20.261 13.2045 20.4938 12.9235 20.6557C12.6425 20.8175 12.3239 20.9027 11.9996 20.9027C11.6753 20.9027 11.3567 20.8175 11.0757 20.6557C10.7947 20.4938 10.5612 20.261 10.3984 19.9805" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
 
-                    <button class="usr mt-0" data-bs-toggle="modal" data-bs-target="#signalList-p">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z" stroke="#141414" stroke-width="1.5" />
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 17.5C11.5858 17.5 11.25 17.1642 11.25 16.75L11.25 11.75C11.25 11.3358 11.5858 11 12 11C12.4142 11 12.75 11.3358 12.75 11.75L12.75 16.75C12.75 17.1642 12.4142 17.5 12 17.5Z" fill="#141414" />
-                            <path d="M12 7.25C11.3787 7.25 10.875 7.75368 10.875 8.375C10.875 8.99632 11.3787 9.5 12 9.5C12.6213 9.5 13.125 8.99632 13.125 8.375C13.125 7.75368 12.6213 7.25 12 7.25Z" fill="#141414" />
-                        </svg>
-                    </button>
-                    <!-- // -->
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=360px,user-scalable=no" />
+    <title>현대차증권</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="./css/font.css" rel="stylesheet" />
+    <!-- // font css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <!-- //bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+    <!-- //swiper css -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- // custom css -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+    <!-- //swiper js -->
+</head>
+
+<body>
+    <!-- header -->
+    <header id="header" class="a-item a2-item">
+        <div>
+            <div>
+                <button class="back">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#141414" stroke-width="1.5"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <h1 class="text-truncate">
+                    <!-- <span>오늘의 이슈 (종목명종목명종목명종목명)</span> -->
+                    <span><em>AI 포트폴리오 추천</em></span>
+                </h1>
+            </div>
+            <!-- // -->
+            <div class="btnGroup">
+                <button class="usr mt-0" data-bs-toggle="modal" data-bs-target="#signalList-p">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M2.75 12C2.75 6.89137 6.89137 2.75 12 2.75C17.1086 2.75 21.25 6.89137 21.25 12C21.25 17.1086 17.1086 21.25 12 21.25C6.89137 21.25 2.75 17.1086 2.75 12Z"
+                            stroke="#141414" stroke-width="1.5" />
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 17.5C11.5858 17.5 11.25 17.1642 11.25 16.75L11.25 11.75C11.25 11.3358 11.5858 11 12 11C12.4142 11 12.75 11.3358 12.75 11.75L12.75 16.75C12.75 17.1642 12.4142 17.5 12 17.5Z"
+                            fill="#141414" />
+                        <path
+                            d="M12 7.25C11.3787 7.25 10.875 7.75368 10.875 8.375C10.875 8.99632 11.3787 9.5 12 9.5C12.6213 9.5 13.125 8.99632 13.125 8.375C13.125 7.75368 12.6213 7.25 12 7.25Z"
+                            fill="#141414" />
+                    </svg>
+                </button>
+                <!-- // -->
+                <button class="btn-alarm">
+                    알람설정
+                </button>
+                <!-- //2023.02.27 추가 -->
+            </div>
+        </div>
+    </header>
+    <!-- //header -->
+
+    <article id="container" class="aitem a2-item">
+        <section id="content" class="a-item a2-item">
+            <ul class="nav cnm-tab p-0 black float-start" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link active" href="./06-5.html" role="tab">단기급등형</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="./06-6.html" role="tab">수급포착형</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" href="./06-7.html" role="tab">실적추구형</a>
+                </li>
+            </ul>
+            <!-- // tab -->
+
+            <div class="tab-content float-start">
+                <div id="" class="tab-pane fade active show">
+                    <div class="pf-w">
+                        <div class="pf-card">
+                            <div class="info">
+                                <span>KOSPI대비</span>
+                                <span>2022.09.28</span>
+                            </div>
+                            <!-- // -->
+
+                            <div class="itemName">
+                                <span>단기급등형 수익률</span>
+                            </div>
+                            <!-- // -->
+
+                            <div class="monthper">
+                                <div>
+                                    <span class="month">3개월</span>
+                                    <!-- // month -->
+
+                                    <span class="per up">+14.8%</span>
+                                    <!-- // per -->
+
+                                    <div>
+                                        <dl>
+                                            <dt><span>AI</span></dt>
+                                            <dd><span class="up">+112.5%</span></dd>
+
+                                            <dt><span>KOSPI</span></dt>
+                                            <dd><span class="dn">-22.3%</span></dd>
+                                        </dl>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div>
+                                    <span class="month">6개월</span>
+                                    <!-- // month -->
+
+                                    <span class="per dn">-14.8%</span>
+                                    <!-- // per -->
+
+                                    <div>
+                                        <dl>
+                                            <dt><span>AI</span></dt>
+                                            <dd><span class="up">+112.5%</span></dd>
+
+                                            <dt><span>KOSPI</span></dt>
+                                            <dd><span class="dn">-22.3%</span></dd>
+                                        </dl>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+
+                                <div>
+                                    <span class="month">12개월</span>
+                                    <!-- // month -->
+
+                                    <span class="per up">+14.8%</span>
+                                    <!-- // per -->
+
+                                    <div>
+                                        <dl>
+                                            <dt><span>AI</span></dt>
+                                            <dd><span class="up">+112.5%</span></dd>
+
+                                            <dt><span>KOSPI</span></dt>
+                                            <dd><span class="dn">-22.3%</span></dd>
+                                        </dl>
+                                    </div>
+                                    <!-- // -->
+                                </div>
+                                <!-- // -->
+                            </div>
+                            <!-- // monthper -->
+                        </div>
+                        <!-- //pf-card -->
+                        <div class="sw-txt">
+                            <p>
+                                <span>
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z"
+                                            stroke="#655747" stroke-width="1.5"></path>
+                                        <path fill-rule="evenodd" clip-rule="evenodd"
+                                            d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z"
+                                            fill="#655747"></path>
+                                        <path
+                                            d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z"
+                                            fill="#655747"></path>
+                                    </svg>
+                                </span>
+                                <span> 중대형 종목들 중, AI가 기업의 실적, 최근 공시, 수급 등을 추가로 분석하여 엄선한 투자 유망 종목군입니다. </span>
+                            </p>
+                        </div>
+                    </div>
+                    <!-- //pf-w -->
                 </div>
             </div>
-        </header>
-        <!-- //header -->
+        </section>
+        <!-- // -->
 
-        <article id="container" class="aitem a2-item">
-            <section id="content" class="a-item a2-item">
-                <ul class="nav cnm-tab p-0 black float-start" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link active" href="./06-5.html" role="tab">단기급등형</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="./06-6.html" role="tab">수급포착형</a>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <a class="nav-link" href="./06-7.html" role="tab">실적추구형</a>
-                    </li>
-                </ul>
-                <!-- // tab -->
+        <div class="tbArea-w aiarea">
+            <div class="prcList-w">
+                <div class="pf-p">
+                    <ul class="nav cnm-stab intab" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <a href="#" class="nav-link active" aria-current="page" data-bs-toggle="tab"
+                                data-bs-target="#item01" aria-selected="true" role="tab">AI보유종목</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a href="#" class="nav-link" aria-current="page" data-bs-toggle="tab"
+                                data-bs-target="#item02" aria-selected="false" tabindex="-1" role="tab">AI매도종목</a>
+                        </li>
+                    </ul>
+                    <!-- // -->
 
-                <div class="tab-content float-start">
-                    <div id="" class="tab-pane fade active show">
-                        <div class="pf-w">
-                            <div class="pf-card">
-                                <div class="info">
-                                    <span>KOSPI대비</span>
-                                    <span>2022.09.28</span>
+                    <div class="tab-content">
+                        <div id="item01" class="tab-pane fade active show">
+                            <div class="pf-p-list">
+                                <div class="top">
+                                    <div class="date">
+                                        <span>기준일 22.02.02</span>
+                                    </div>
+                                    <!-- //date -->
+
+                                    <div class="ltSelect">
+                                        <button data-bs-toggle="offcanvas" data-bs-target="#vtselect">최근매수일</button>
+                                    </div>
+                                    <!-- //ltSelect -->
                                 </div>
-                                <!-- // -->
+                                <!-- //top -->
 
-                                <div class="itemName">
-                                    <span>단기급등형 수익률</span>
-                                </div>
-                                <!-- // -->
+                                <div class="list-w">
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
 
-                                <div class="monthper">
-                                    <div>
-                                        <span class="month">3개월</span>
-                                        <!-- // month -->
-
-                                        <span class="per up">+14.8%</span>
-                                        <!-- // per -->
-
-                                        <div>
+                                        <div class="info">
                                             <dl>
-                                                <dt><span>AI</span></dt>
-                                                <dd><span class="up">+112.5%</span></dd>
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
 
-                                                <dt><span>KOSPI</span></dt>
-                                                <dd><span class="dn">-22.3%</span></dd>
+                                                <dt><span>현재가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매수일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
                                             </dl>
                                         </div>
-                                        <!-- // -->
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
                                     </div>
-                                    <!-- // -->
+                                    <!-- //list -->
 
-                                    <div>
-                                        <span class="month">6개월</span>
-                                        <!-- // month -->
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
 
-                                        <span class="per dn">-14.8%</span>
-                                        <!-- // per -->
-
-                                        <div>
+                                        <div class="info">
                                             <dl>
-                                                <dt><span>AI</span></dt>
-                                                <dd><span class="up">+112.5%</span></dd>
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
 
-                                                <dt><span>KOSPI</span></dt>
-                                                <dd><span class="dn">-22.3%</span></dd>
+                                                <dt><span>현재가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매수일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
                                             </dl>
                                         </div>
-                                        <!-- // -->
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
                                     </div>
-                                    <!-- // -->
+                                    <!-- //list -->
 
-                                    <div>
-                                        <span class="month">12개월</span>
-                                        <!-- // month -->
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
 
-                                        <span class="per up">+14.8%</span>
-                                        <!-- // per -->
-
-                                        <div>
+                                        <div class="info">
                                             <dl>
-                                                <dt><span>AI</span></dt>
-                                                <dd><span class="up">+112.5%</span></dd>
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
 
-                                                <dt><span>KOSPI</span></dt>
-                                                <dd><span class="dn">-22.3%</span></dd>
+                                                <dt><span>현재가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매수일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
                                             </dl>
                                         </div>
-                                        <!-- // -->
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
                                     </div>
-                                    <!-- // -->
+                                    <!-- //list -->
+
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
+
+                                        <div class="info">
+                                            <dl>
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>현재가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매수일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
+                                    </div>
+                                    <!-- //list -->
                                 </div>
-                                <!-- // monthper -->
+                                <!-- //list-w -->
                             </div>
-                            <!-- //pf-card -->
-                            <div class="sw-txt">
-                                <p>
-                                    <span>
-                                        <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z" stroke="#655747" stroke-width="1.5"></path>
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z" fill="#655747"></path>
-                                            <path d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z" fill="#655747"></path>
-                                        </svg>
-                                    </span>
-                                    <span> 중대형 종목들 중, AI가 기업의 실적, 최근 공시, 수급 등을 추가로 분석하여 엄선한 투자 유망 종목군입니다. </span>
-                                </p>
-                            </div>
+                            <!-- //pf-p-list -->
+                            <button class="more">더 보기</button>
                         </div>
-                        <!-- //pf-w -->
+                        <!-- //보유종목 -->
+
+                        <div id="item02" class="tab-pane fade">
+                            <div class="pf-p-list">
+                                <div class="top">
+                                    <div class="date">
+                                        <span>기준일 22.02.02</span>
+                                    </div>
+                                    <!-- //date -->
+
+                                    <div class="ltSelect">
+                                        <button data-bs-toggle="offcanvas" data-bs-target="#vtselect">최근매수일</button>
+                                    </div>
+                                    <!-- //ltSelect -->
+                                </div>
+                                <!-- //top -->
+
+                                <div class="list-w">
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
+
+                                        <div class="info">
+                                            <dl>
+                                                <dt><span>매도단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>실현수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매도일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
+
+                                        <div class="info">
+                                            <dl>
+                                                <dt><span>매도단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>실현수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매도일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
+
+                                        <div class="info">
+                                            <dl>
+                                                <dt><span>매도단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>실현수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매도일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
+                                    </div>
+                                    <!-- //list -->
+
+                                    <div class="list">
+                                        <div class="itemName">
+                                            <span>현대차증권</span>
+                                        </div>
+                                        <!-- //itemName -->
+
+                                        <div class="info">
+                                            <dl>
+                                                <dt><span>매도단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>매입단가</span></dt>
+                                                <dd>
+                                                    <span>215,000</span>
+                                                </dd>
+
+                                                <dt><span>실현수익률</span></dt>
+                                                <dd>
+                                                    <span class="up">+12.0%</span>
+                                                </dd>
+
+                                                <dt><span>매도일</span></dt>
+                                                <dd>
+                                                    <span>22.02.02</span>
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        <!-- //info -->
+
+                                        <div class="bsignal">
+                                            <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
+                                        </div>
+                                        <!-- //bsignal -->
+                                    </div>
+                                    <!-- //list -->
+                                </div>
+                                <!-- //list-w -->
+                            </div>
+                            <!-- //pf-p-list -->
+                            <button class="more">더 보기</button>
+                        </div>
+                        <!-- //매도종목 -->
                     </div>
-                </div>
-            </section>
-            <!-- // -->
+                    <!-- // -->
 
-            <div class="tbArea-w aiarea">
-                <div class="prcList-w">
-                    <div class="pf-p">
-                        <ul class="nav cnm-stab intab" role="tablist">
-                            <li class="nav-item" role="presentation">
-                                <a href="#" class="nav-link active" aria-current="page" data-bs-toggle="tab" data-bs-target="#item01" aria-selected="true" role="tab">AI보유종목</a>
-                            </li>
-                            <li class="nav-item" role="presentation">
-                                <a href="#" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#item02" aria-selected="false" tabindex="-1" role="tab">AI매도종목</a>
-                            </li>
-                        </ul>
-                        <!-- // -->
-
-                        <div class="tab-content">
-                            <div id="item01" class="tab-pane fade active show">
-                                <div class="pf-p-list">
-                                    <div class="top">
-                                        <div class="date">
-                                            <span>기준일 22.02.02</span>
-                                        </div>
-                                        <!-- //date -->
-
-                                        <div class="ltSelect">
-                                            <button data-bs-toggle="offcanvas" data-bs-target="#vtselect">최근매수일</button>
-                                        </div>
-                                        <!-- //ltSelect -->
-                                    </div>
-                                    <!-- //top -->
-
-                                    <div class="list-w">
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>현재가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매수일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>현재가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매수일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>현재가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매수일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>현재가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매수일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-                                    </div>
-                                    <!-- //list-w -->
-                                </div>
-                                <!-- //pf-p-list -->
-                                <button class="more">더 보기</button>
-                            </div>
-                            <!-- //보유종목 -->
-
-                            <div id="item02" class="tab-pane fade">
-                                <div class="pf-p-list">
-                                    <div class="top">
-                                        <div class="date">
-                                            <span>기준일 22.02.02</span>
-                                        </div>
-                                        <!-- //date -->
-
-                                        <div class="ltSelect">
-                                            <button data-bs-toggle="offcanvas" data-bs-target="#vtselect">최근매수일</button>
-                                        </div>
-                                        <!-- //ltSelect -->
-                                    </div>
-                                    <!-- //top -->
-
-                                    <div class="list-w">
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매도단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>실현수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매도일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매도단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>실현수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매도일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매도단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>실현수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매도일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-
-                                        <div class="list">
-                                            <div class="itemName">
-                                                <span>현대차증권</span>
-                                            </div>
-                                            <!-- //itemName -->
-
-                                            <div class="info">
-                                                <dl>
-                                                    <dt><span>매도단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>매입단가</span></dt>
-                                                    <dd>
-                                                        <span>215,000</span>
-                                                    </dd>
-
-                                                    <dt><span>실현수익률</span></dt>
-                                                    <dd>
-                                                        <span class="up">+12.0%</span>
-                                                    </dd>
-
-                                                    <dt><span>매도일</span></dt>
-                                                    <dd>
-                                                        <span>22.02.02</span>
-                                                    </dd>
-                                                </dl>
-                                            </div>
-                                            <!-- //info -->
-
-                                            <div class="bsignal">
-                                                <button data-bs-toggle="offcanvas" data-bs-target="#signal">매매신호내역</button>
-                                            </div>
-                                            <!-- //bsignal -->
-                                        </div>
-                                        <!-- //list -->
-                                    </div>
-                                    <!-- //list-w -->
-                                </div>
-                                <!-- //pf-p-list -->
-                                <button class="more">더 보기</button>
-                            </div>
-                            <!-- //매도종목 -->
-                        </div>
-                        <!-- // -->
-
-                        <!-- 
+                    <!-- 
                             비회원시 tab-content 가 나오지 않고 아래 empty가 나오게 됩니다. 
                          -->
 
-                        <div class="pf-p-empty">
-                            <div>
-                                <span>
-                                    <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <circle cx="18" cy="18" r="16" stroke="#D7D7D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                        <path d="M18 10.125V18.0001V21.6249M18 27V25.875" stroke="#D7D7D7" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                    </svg>
-                                </span>
-                                <!-- caution -->
+                    <div class="pf-p-empty">
+                        <div>
+                            <span>
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="18" r="16" stroke="#D7D7D7" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path d="M18 10.125V18.0001V21.6249M18 27V25.875" stroke="#D7D7D7"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </span>
+                            <!-- caution -->
 
-                                <span class="mt-10">AI포트폴리오 추천 서비스는 <br />서비스 가입 후 확인 가능합니다.</span>
+                            <span class="mt-10">AI포트폴리오 추천 서비스는 <br />서비스 가입 후 확인 가능합니다.</span>
 
-                                <button data-bs-toggle="modal" data-bs-target="#signup">가입하기</button>
-                            </div>
+                            <button data-bs-toggle="modal" data-bs-target="#signup">가입하기</button>
                         </div>
-                        <!-- //empty -->
                     </div>
-                    <!-- // -->
-
-                    <section class="cnm float-start">
-                        <div class="guide">
-                            <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
-                            <!-- // -->
-
-                            <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
-                            <!-- // -->
-
-                            <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
-                            <!-- // -->
-                        </div>
-                        <!-- //guide -->
-                    </section>
+                    <!-- //empty -->
                 </div>
                 <!-- // -->
-            </div>
-            <!-- // 상하 움직입 -->
 
-            <div class="modal custom-modal01 fade" id="signup">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="modal-txt">
-                                AI투자정보 가입 후 서비스<br />
-                                이용가능합니다.
-                            </div>
-                            <!-- // text -->
+                <section class="cnm float-start">
+                    <div class="guide">
+                        <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+                        <!-- // -->
 
-                            <div class="modal-button joinable">
-                                <button class="bg-white" data-bs-dismiss="modal">취소</button>
-                                <button class="bg-blue">가입하기</button>
-                            </div>
-                            <!-- // button -->
-                        </div>
-                        <!-- //body -->
+                        <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+                        <!-- // -->
+
+                        <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+                        <!-- // -->
                     </div>
-                    <!-- //content -->
-                </div>
-                <!-- //dialog -->
+                    <!-- //guide -->
+                </section>
             </div>
-            <!-- //modal 
+            <!-- // -->
+        </div>
+        <!-- // 상하 움직입 -->
+
+        <div class="modal custom-modal01 fade" id="signup">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-txt">
+                            AI투자정보 가입 후 서비스<br />
+                            이용가능합니다.
+                        </div>
+                        <!-- // text -->
+
+                        <div class="modal-button joinable">
+                            <button class="bg-white" data-bs-dismiss="modal">취소</button>
+                            <button class="bg-blue">가입하기</button>
+                        </div>
+                        <!-- // button -->
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal 
 
                 컨텐츠간의 상하 관계로 모달창은 외부에 있어야 합니다. 
             -->
 
-            <script>
-                //쓸어올리기
+        <script>
+            //쓸어올리기
 
-                let vh = window.innerHeight * 0.01;
-                document.documentElement.style.setProperty('--vh', `${vh}px`);
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
 
-                let touchStartY = 0;
-                const swipeArea = document.querySelector('.tbArea-w');
+            let touchStartY = 0;
+            const swipeArea = document.querySelector('.tbArea-w');
 
-                // 이벤트 초기화
-                const endExpension = ev => {
-                    // const lastTouchY = ev.changedTouches[0].clientY
-                    swipeArea.removeEventListener('touchmove', doExpansion);
-                    swipeArea.style.top = 0;
-                };
+            // 이벤트 초기화
+            const endExpension = ev => {
+                // const lastTouchY = ev.changedTouches[0].clientY
+                swipeArea.removeEventListener('touchmove', doExpansion);
+                swipeArea.style.top = 0;
+            };
 
-                // touchmove 시 마진값 조절
+            // touchmove 시 마진값 조절
 
-                const doExpansion = ev => {
-                    // console.log(ev, touchStartY)
-                    const movedY = ev.changedTouches[0].clientY;
-                    const ctsHeight = document.querySelector('#content').offsetHeight - 50;
+            const doExpansion = ev => {
+                // console.log(ev, touchStartY)
+                const movedY = ev.changedTouches[0].clientY;
+                const ctsHeight = document.querySelector('#content').offsetHeight - 50;
 
-                    swipeArea.addEventListener('touchend', endExpension);
-                    if (swipeArea.classList.contains('open')) {
-                        if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
-                            swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeArea.style.top = 0;
-                            swipeArea.classList.remove('open');
-                            swipeArea.style.marginTop = '-20px';
-                        }
-                    } else if (!swipeArea.classList.contains('open')) {
-                        if (touchStartY - movedY > 80) {
-                            swipeArea.removeEventListener('touchmove', doExpansion);
-                            swipeArea.style.top = 0;
-                            swipeArea.classList.add('open');
-                            swipeArea.style.marginTop = '-' + ctsHeight + 'px';
-                        } else if (touchStartY - movedY < -80) {
-                            ev.preventDefault();
-                            if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
-                            setTimeout(() => {
-                                swipeArea.classList.remove('bounce');
-                            }, 140);
-                        }
-                    }
-                };
-                // touchstart 최초 좌표반환
-                const addHeight = ev => {
-                    touchStartY = ev.changedTouches[0].clientY;
-                    swipeArea.addEventListener('touchmove', doExpansion);
-                };
-                swipeArea.addEventListener('touchstart', addHeight);
-
+                swipeArea.addEventListener('touchend', endExpension);
                 if (swipeArea.classList.contains('open')) {
-                    swipeArea.style.marginTop = '-' + document.querySelector('#content').offsetHeight - 50 + 'px';
+                    if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
+                        swipeArea.removeEventListener('touchmove', doExpansion);
+                        swipeArea.style.top = 0;
+                        swipeArea.classList.remove('open');
+                        swipeArea.style.marginTop = '-20px';
+                    }
+                } else if (!swipeArea.classList.contains('open')) {
+                    if (touchStartY - movedY > 80) {
+                        swipeArea.removeEventListener('touchmove', doExpansion);
+                        swipeArea.style.top = 0;
+                        swipeArea.classList.add('open');
+                        swipeArea.style.marginTop = '-' + ctsHeight + 'px';
+                    } else if (touchStartY - movedY < -80) {
+                        ev.preventDefault();
+                        if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
+                        setTimeout(() => {
+                            swipeArea.classList.remove('bounce');
+                        }, 140);
+                    }
                 }
+            };
+            // touchstart 최초 좌표반환
+            const addHeight = ev => {
+                touchStartY = ev.changedTouches[0].clientY;
+                swipeArea.addEventListener('touchmove', doExpansion);
+            };
+            swipeArea.addEventListener('touchstart', addHeight);
+
+            if (swipeArea.classList.contains('open')) {
+                swipeArea.style.marginTop = '-' + document.querySelector('#content').offsetHeight - 50 + 'px';
+            }
 
                 /////////////////////////////////////////
-            </script>
+        </script>
 
-            <!-- 
+        <!-- 
                 element z-index 값 표현으로 인해 아래 소스는 section 밖에 있어야 합니다. 
              -->
-            <div class="offcanvas offcanvas-bottom" tabindex="-1" id="vtselect" aria-labelledby="공시선택">
-                <div class="vtSelectContent">
+        <div class="offcanvas offcanvas-bottom" tabindex="-1" id="vtselect" aria-labelledby="공시선택">
+            <div class="vtSelectContent">
+                <div class="top">
+                    <strong>AI보유종목</strong>
+                    <button data-bs-dismiss="offcanvas" aria-label="close">&times;</button>
+                </div>
+                <!-- // -->
+
+                <div class="box-w">
+                    <div class="nav box">
+                        <div>
+                            <input type="radio" name="vtselectrd" id="check01" checked />
+                            <label for="check01" class="nav-link active">
+                                <span data-bs-dismiss="offcanvas">1년 수익률순</span>
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" name="vtselectrd" id="check02" />
+                            <label for="check02" class="nav-link">
+                                <span data-bs-dismiss="offcanvas">최근 매수일</span>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- //box -->
+                </div>
+            </div>
+            <!-- //box-w -->
+        </div>
+        <!-- // -->
+
+        <script>
+            const clSelect = document.querySelectorAll('label.nav-link');
+
+            for (i = 0; i < clSelect.length; i++) {
+                const _this = clSelect[i];
+
+                _this.addEventListener('click', function () {
+                    document.querySelector('.ltSelect button').innerText = this.innerText;
+
+                    console.log(this.innerText);
+                });
+
+                // https://getbootstrap.com/docs/5.2/components/offcanvas/#via-javascript 오프캔버스 닫힌후 이벤트
+
+                const myOffcanvas = document.getElementById('vtselect');
+                myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+                    console.log('캔버스 close');
+                });
+            }
+        </script>
+
+        <!-- Modal -->
+        <div class="modal custom-modal01 fade" id="signalList-p">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="modal-pf">
+                            <div class="tit">
+                                <span>AI 포트폴리오 추천</span>
+                            </div>
+                            <!-- // -->
+
+                            <div class="txt">
+                                <span>
+                                    초보 투자자도 쉽고 안정적으로 따라할 수 있는 서비스입니다. <br />
+                                    일 3000여개의 종목에 대한 실적, 재무, 주가, 거래량, 수급, 이슈 등을 분석하여 종목을 발굴합니다.
+                                </span>
+                            </div>
+                            <!-- // -->
+
+                            <div class="box">
+                                <span> 단기급등형은 인공지능 기술로 주가의 상승 패턴과 강도를 예측해서, 단기 급등 확률이 높은 종목을 추천합니다. </span>
+                                <!-- // -->
+                                <span> 수급포착형은 인공지능이 현재 가장 수급이 좋은 종목을 추출하여, 시장대비 초과수익이 예상되는 종목을 추천합니다. </span>
+                                <!-- // -->
+                                <span> 실적추구형은 예상실적을 분석하여 시장 밸류와 실적보고서를 토대로 미래가치를 측정하여 종목을 추천합니다. </span>
+                                <!-- // -->
+                            </div>
+                            <!-- // -->
+                        </div>
+
+                        <div class="modal-button">
+                            <button class="bg-blue" data-bs-dismiss="modal" style="width: 100%">확인</button>
+                        </div>
+                        <!-- // button -->
+                    </div>
+                    <!-- //body -->
+                </div>
+                <!-- //content -->
+            </div>
+            <!-- //dialog -->
+        </div>
+        <!-- //modal -->
+
+        <div id="signal" class="offcanvas offcanvas-bottom" tabindex="-1" aria-labelledby="offcanvasBottomLabel">
+            <div class="offcanvas-body small">
+                <div class="signal-list">
                     <div class="top">
-                        <strong>AI보유종목</strong>
-                        <button data-bs-dismiss="offcanvas" aria-label="close">&times;</button>
+                        <div><strong>현대차증권 매매신호내역</strong></div>
+                        <button data-bs-dismiss="offcanvas">닫기</button>
                     </div>
                     <!-- // -->
 
-                    <div class="box-w">
-                        <div class="nav box">
-                            <div>
-                                <input type="radio" name="vtselectrd" id="check01" checked />
-                                <label for="check01" class="nav-link active">
-                                    <span data-bs-dismiss="offcanvas">1년 수익률순</span>
-                                </label>
-                            </div>
-                            <div>
-                                <input type="radio" name="vtselectrd" id="check02" />
-                                <label for="check02" class="nav-link">
-                                    <span data-bs-dismiss="offcanvas">최근 매수일</span>
-                                </label>
-                            </div>
+                    <div class="signal-table">
+                        <div class="table-top">
+                            <table width="100%">
+                                <colgroup>
+                                    <col width="*" />
+                                    <col width="21%" />
+                                    <col width="27%" />
+                                    <col width="25%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <span>거래일자</span>
+                                        </td>
+                                        <td>
+                                            <span>매매신호</span>
+                                        </td>
+                                        <td>
+                                            <span>매매단가</span>
+                                        </td>
+                                        <td>
+                                            <span>신헌손익률</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <!-- //box -->
+                        <div class="table-body">
+                            <table width="100%">
+                                <colgroup>
+                                    <col width="*" />
+                                    <col width="21%" />
+                                    <col width="27%" />
+                                    <col width="25%" />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="red">+132.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                            <div>
+                                                <span class="red">매수</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                            <div>
+                                                <span>215,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="red">+132.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                            <div>
+                                                <span class="red">매수</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                            <div>
+                                                <span>215,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="blue">-12.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                            <div>
+                                                <span class="red">매수</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                            <div>
+                                                <span>215,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="red">+132.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                            <div>
+                                                <span class="red">매수</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                            <div>
+                                                <span>215,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="blue">-12.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                            <div>
+                                                <span class="red">매수</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                            <div>
+                                                <span>215,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="red">+132.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td class="text-center">
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                            <div>
+                                                <span>2022.12.01</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-center">
+                                            <div>
+                                                <span class="blue">매도</span>
+                                            </div>
+                                            <div>
+                                                <span class="red">매수</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span>1,235,000</span>
+                                            </div>
+                                            <div>
+                                                <span>215,000</span>
+                                            </div>
+                                        </td>
+                                        <td class="text-end">
+                                            <div>
+                                                <span class="blue">-12.02%</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
+                    <!-- // -->
+
+                    <div class="absolute-button">
+                        <button>확인</button>
+                    </div>
+                    <!-- // -->
                 </div>
-                <!-- //box-w -->
+                <!-- //signal-list -->
             </div>
             <!-- // -->
+        </div>
+        <!-- // -->
+    </article>
+    <!-- //container -->
 
-            <script>
-                const clSelect = document.querySelectorAll('label.nav-link');
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+    <!-- //bootstrap js html최하단에 두어주세요!!! -->
+</body>
 
-                for (i = 0; i < clSelect.length; i++) {
-                    const _this = clSelect[i];
-
-                    _this.addEventListener('click', function () {
-                        document.querySelector('.ltSelect button').innerText = this.innerText;
-
-                        console.log(this.innerText);
-                    });
-
-                    // https://getbootstrap.com/docs/5.2/components/offcanvas/#via-javascript 오프캔버스 닫힌후 이벤트
-
-                    const myOffcanvas = document.getElementById('vtselect');
-                    myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
-                        console.log('캔버스 close');
-                    });
-                }
-            </script>
-
-            <!-- Modal -->
-            <div class="modal custom-modal01 fade" id="signalList-p">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body">
-                            <div class="modal-pf">
-                                <div class="tit">
-                                    <span>AI 포트폴리오 추천</span>
-                                </div>
-                                <!-- // -->
-
-                                <div class="txt">
-                                    <span>
-                                        초보 투자자도 쉽고 안정적으로 따라할 수 있는 서비스입니다. <br />
-                                        일 3000여개의 종목에 대한 실적, 재무, 주가, 거래량, 수급, 이슈 등을 분석하여 종목을 발굴합니다.
-                                    </span>
-                                </div>
-                                <!-- // -->
-
-                                <div class="box">
-                                    <span> 단기급등형은 인공지능 기술로 주가의 상승 패턴과 강도를 예측해서, 단기 급등 확률이 높은 종목을 추천합니다. </span>
-                                    <!-- // -->
-                                    <span> 수급포착형은 인공지능이 현재 가장 수급이 좋은 종목을 추출하여, 시장대비 초과수익이 예상되는 종목을 추천합니다. </span>
-                                    <!-- // -->
-                                    <span> 실적추구형은 예상실적을 분석하여 시장 밸류와 실적보고서를 토대로 미래가치를 측정하여 종목을 추천합니다. </span>
-                                    <!-- // -->
-                                </div>
-                                <!-- // -->
-                            </div>
-
-                            <div class="modal-button">
-                                <button class="bg-blue" data-bs-dismiss="modal" style="width: 100%">확인</button>
-                            </div>
-                            <!-- // button -->
-                        </div>
-                        <!-- //body -->
-                    </div>
-                    <!-- //content -->
-                </div>
-                <!-- //dialog -->
-            </div>
-            <!-- //modal -->
-
-            <div id="signal" class="offcanvas offcanvas-bottom" tabindex="-1" aria-labelledby="offcanvasBottomLabel">
-                <div class="offcanvas-body small">
-                    <div class="signal-list">
-                        <div class="top">
-                            <div><strong>현대차증권 매매신호내역</strong></div>
-                            <button data-bs-dismiss="offcanvas">닫기</button>
-                        </div>
-                        <!-- // -->
-
-                        <div class="signal-table">
-                            <div class="table-top">
-                                <table width="100%">
-                                    <colgroup>
-                                        <col width="*" />
-                                        <col width="21%" />
-                                        <col width="27%" />
-                                        <col width="25%" />
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                <span>거래일자</span>
-                                            </td>
-                                            <td>
-                                                <span>매매신호</span>
-                                            </td>
-                                            <td>
-                                                <span>매매단가</span>
-                                            </td>
-                                            <td>
-                                                <span>신헌손익률</span>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                            <div class="table-body">
-                                <table width="100%">
-                                    <colgroup>
-                                        <col width="*" />
-                                        <col width="21%" />
-                                        <col width="27%" />
-                                        <col width="25%" />
-                                    </colgroup>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="red">+132.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                                <div>
-                                                    <span class="red">매수</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                                <div>
-                                                    <span>215,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="red">+132.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                                <div>
-                                                    <span class="red">매수</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                                <div>
-                                                    <span>215,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="blue">-12.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                                <div>
-                                                    <span class="red">매수</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                                <div>
-                                                    <span>215,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="red">+132.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                                <div>
-                                                    <span class="red">매수</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                                <div>
-                                                    <span>215,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="blue">-12.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                                <div>
-                                                    <span class="red">매수</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                                <div>
-                                                    <span>215,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="red">+132.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        <tr>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                                <div>
-                                                    <span>2022.12.01</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-center">
-                                                <div>
-                                                    <span class="blue">매도</span>
-                                                </div>
-                                                <div>
-                                                    <span class="red">매수</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span>1,235,000</span>
-                                                </div>
-                                                <div>
-                                                    <span>215,000</span>
-                                                </div>
-                                            </td>
-                                            <td class="text-end">
-                                                <div>
-                                                    <span class="blue">-12.02%</span>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                        <!-- // -->
-
-                        <div class="absolute-button">
-                            <button>확인</button>
-                        </div>
-                        <!-- // -->
-                    </div>
-                    <!-- //signal-list -->
-                </div>
-                <!-- // -->
-            </div>
-            <!-- // -->
-        </article>
-        <!-- //container -->
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-        <!-- //bootstrap js html최하단에 두어주세요!!! -->
-    </body>
 </html>

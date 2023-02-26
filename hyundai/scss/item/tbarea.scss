@@ -1,65 +1,63 @@
 .tbArea-w {
-    position: relative;
-    top: 0;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 20px 20px 0 0;
-    overflow: hidden;
-    float: left;
-    background: #fff;
-    margin-top: -20px;
-    touch-action: pan-y;
-    z-index: 12;
-    transition: margin 0.3s ease-in-out;
+  position: relative;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  float: left;
+  background: #fff;
+  margin-top: -20px;
+  touch-action: pan-y;
+  z-index: 12;
+  transition: margin 0.3s ease-in-out;
 
-    &.aiarea.open {
-        //margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
-        //margin-top: calc(-100% - 134px);
-        border-radius: 0 !important;
-        top: 0 !important;
-    }
+  &.aiarea.open {
+    //margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
+    //margin-top: calc(-100% - 134px);
+    border-radius: 0 !important;
+    top: 0 !important;
+  }
 
-    &.aiarea2.open {
-        //margin-top: calc(-100vw + 66px);
-    }
+  &.aiarea2.open {
+    border-radius: 0;
+  }
 
-    &.open {
-        //margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
-        //margin-top: calc(-100% - 150px);
-        overflow: auto;
-    }
+  &.open {
+    //margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
+    //margin-top: calc(-100% - 150px);
+    overflow: auto;
+  }
 
-    #container.item & .guide {
-        padding: 40px 26px 77px;
-    }
+  #container.item & .guide {
+    padding: 40px 26px 77px;
+  }
 
-    
-
-    .guide {
-        padding: 40px 26px 103px;
-    }
+  .guide {
+    padding: 40px 26px 103px;
+  }
 }
 #tbArea {
-    position: relative;
-    //overflow: hidden;
-    bottom: 0;
-    width: 100%;
-    height: auto;
-    padding: 0;
-    //background:#fff;
-    border-radius: 20px 20px 0 0;
-    float: left;
-    overflow-y: scroll;
+  position: relative;
+  //overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  //background:#fff;
+  border-radius: 20px 20px 0 0;
+  float: left;
+  overflow-y: scroll;
 
-    #container & .areaContent>div{
-        padding:0 20px 28px;
+  #container & .areaContent > div {
+    padding: 0 20px 28px;
 
-        .emptybox{
-            margin-top:20px;
-        }
+    .emptybox {
+      margin-top: 20px;
     }
+  }
 }
 
-@import 'tbheader.scss';
-@import 'tbcontent.scss';
+@import "tbheader.scss";
+@import "tbcontent.scss";

@@ -5,13 +5,18 @@
         .local-list-box {
           .cnt {
             background: none;
+            padding: 20px 16px 12px;
+
+            .bullet {
+              margin-left: 6px;
+            }
 
             .usaItem {
               display: block;
               width: 100%;
               float: left;
               margin-top: 6px;
-              padding: 0 2px;
+              padding: 0 6px;
 
               em {
                 display: block;
@@ -50,18 +55,18 @@
 
               & > div {
                 position: relative;
-                width: calc((100% / 3) - 9px);
-                padding-left: 9px;
+                width: calc((100% / 3));
+                padding-left: 5px;
                 text-align: center;
 
                 &:first-child {
                   padding-left: 0;
-                  padding-right: 9px;
+                  padding-right: 5px;
                 }
 
                 &:nth-child(2n) {
-                  padding: 0 18px;
-                  width: calc((100% / 3) + 18px);
+                  //padding: 0 18px;
+                  width: calc(100% - ((100% / 3) * 2));
 
                   &::before {
                     content: "";
@@ -96,7 +101,7 @@
                   width: 100%;
                   float: left;
                   clear: left;
-                  margin-top: 12px;
+                  margin-top: 10px;
                   font-size: 18px;
                   line-height: 23px;
                   font-weight: 700;
@@ -191,6 +196,7 @@
             width: 100%;
             float: left;
             justify-content: space-between;
+            gap: 40px;
 
             & > div {
               flex-wrap: nowrap;
@@ -199,32 +205,38 @@
               align-content: center;
 
               &:first-child {
+                width: calc(100% - 20px);
                 em {
                   display: block;
+                  width: 31px;
                   float: left;
                   line-height: 20px;
                 }
                 span {
                   display: block;
+                  width: calc(100% - 31px);
                   float: left;
                   clear: normal;
                   margin-top: 0;
-                  margin-left: 12px;
+                  text-align: right;
                 }
               }
 
               &:last-child {
+                width: calc(100% - 20px);
                 em {
                   display: block;
+                  width: 31px;
                   float: left;
                   line-height: 20px;
                 }
                 span {
                   display: block;
+                  width: calc(100% - 31px);
                   float: left;
                   clear: normal;
                   margin-top: 0;
-                  margin-left: 12px;
+                  text-align: right;
                 }
               }
             }
@@ -237,7 +249,7 @@
   .more {
     display: block;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 12px;
     float: left;
 
     button {
@@ -635,16 +647,16 @@
     border-radius: 3px;
 
     &.ac01 {
-      background: #58b181;
+      background: #3f54c3;
     }
     &.ac02 {
-      background: #698ade;
+      background: #289599;
     }
     &.ac03 {
-      background: #edc383;
+      background: #9163cb;
     }
     &.ac04 {
-      background: #f06754;
+      background: #f27059;
     }
   }
 

@@ -356,7 +356,7 @@
 
   .list {
     display: block;
-    margin-top: 40px;
+    margin-top: 24px;
     width: 100%;
     float: left;
 
@@ -380,7 +380,7 @@
     .box {
       display: block;
       width: 100%;
-      margin-top: 15px;
+      margin-top: 10px;
       border-radius: 16px;
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.08);
       border: 1px solid #fafafa;
@@ -447,7 +447,7 @@
   .more {
     display: block;
     width: 100%;
-    margin-top: 40px;
+    margin-top: 12px;
     float: left;
 
     button {
@@ -630,7 +630,8 @@
               height: 42px;
               border-left: 1px solid #dcdcdc;
               border-bottom: 1px solid #f0f0f0;
-              text-align: center;
+              text-align: right;
+              padding: 0 10px;
 
               span {
                 font-size: 14px;
@@ -720,7 +721,7 @@
                     color: #8c8c8c;
 
                     &::after {
-                      content: '';
+                      content: "";
                       width: 1px;
                       height: 8px;
                       top: 2px;
