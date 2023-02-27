@@ -34,15 +34,19 @@
     & > div > div:last-child {
       display: flex;
       gap: 10px;
+      div {
+        display: flex;
+        gap: 10px;
 
-      button.usr {
-        margin: 0 !important;
-        svg path {
-          stroke: white !important;
-        }
-        &.active {
+        button.usr {
+          margin: 0 !important;
           svg path {
-            stroke: #fac60f !important;
+            stroke: white !important;
+          }
+          &.active {
+            svg path {
+              stroke: #fac60f !important;
+            }
           }
         }
       }
