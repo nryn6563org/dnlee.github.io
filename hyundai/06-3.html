@@ -1,60 +1,83 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=360px,user-scalable=no" />
-    <title>현대차증권</title>
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="./css/font.css" rel="stylesheet" />
-    <!-- // font css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <!-- //bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
-    <!-- //swiper css -->
-    <link rel="stylesheet" href="./css/common.css" />
-    <!-- // custom css -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- <script src="./js/swiper-bundle.min.js"></script> -->
-    <!-- //swiper js -->
-  </head>
-  <body>
-    <!-- header -->
-    <header id="header" class="a-item">
-      <div>
-        <div>
-          <button class="back">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-            </svg>
-          </button>
-          <h1 class="text-truncate">
-            <!-- <span>오늘의 이슈 (종목명종목명종목명종목명)</span> -->
-            <span><em>한국항공우주</em></span>
-          </h1>
-        </div>
-        <!-- // -->
-        <div>
-          <!-- <button class="btn-org-info" data-bs-toggle="modal" data-bs-target="#org-popup"><span>기업정보</span></button> -->
-          <!-- // -->
-        </div>
-      </div>
-    </header>
-    <!-- //header -->
 
-    <article id="container" class="aitem">
-      <section id="content" class="a-item">
-        <div class="org-detail">
-          <div class="info"><span>001430</span> <span>코스피</span> <span>철강및금속</span></div>
-        </div>
-        <!-- // -->
-        <div class="ai-card-w pt-14">
-          <div class="swiper local-list">
-            <div class="swiper-wrapper">
-              <!-- <div class="swiper-slide" style="width: calc(100% - 40px)">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=360px,user-scalable=no" />
+  <title>현대차증권</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link href="./css/font.css" rel="stylesheet" />
+  <!-- // font css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- //bootstrap css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+  <!-- //swiper css -->
+  <link rel="stylesheet" href="./css/common.css" />
+  <!-- // custom css -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+  <!-- //swiper js -->
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header" class="a-item">
+    <div>
+      <div>
+        <button class="back">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#ffffff" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+        <h1 class="text-truncate">
+          <!-- <span>오늘의 이슈 (종목명종목명종목명종목명)</span> -->
+          <span><em>한국항공우주</em></span>
+        </h1>
+      </div>
+      <!-- // -->
+      <div class="btnGroup">
+        <button class="" data-bs-toggle="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M11.5342 3.6942C11.6997 3.2698 12.3003 3.2698 12.4658 3.6942L14.5047 8.92122C14.5744 9.09981 14.74 9.22285 14.9311 9.23796L20.3327 9.66506C20.7715 9.69976 20.9546 10.2437 20.626 10.5367L16.4583 14.2532C16.3218 14.3748 16.2627 14.5612 16.304 14.7393L17.5915 20.2929C17.6931 20.7311 17.2094 21.0701 16.8321 20.8251L12.2723 17.8641C12.1067 17.7565 11.8933 17.7565 11.7277 17.8641L7.16793 20.8251C6.79061 21.0701 6.30693 20.7311 6.40853 20.2929L7.69605 14.7393C7.73733 14.5612 7.67816 14.3748 7.54174 14.2532L3.37396 10.5367C3.04539 10.2437 3.22846 9.69976 3.66732 9.66506L9.0689 9.23796C9.26 9.22285 9.42564 9.09981 9.4953 8.92122L11.5342 3.6942Z"
+              stroke="white" stroke-width="1.5"></path>
+          </svg>
+        </button>
+        <!-- // 즐겨찾기 -->
+
+        <button class="" data-bs-toggle="button">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M17.5529 9.6506C17.5529 8.17781 16.9678 6.76533 15.9264 5.7239C14.885 4.68248 13.4725 4.09741 11.9997 4.09741C10.5269 4.09741 9.11444 4.68248 8.07301 5.7239C7.03158 6.76533 6.44652 8.17781 6.44652 9.6506C6.44652 16.1293 3.66992 17.9804 3.66992 17.9804H20.3295C20.3295 17.9804 17.5529 16.1293 17.5529 9.6506Z"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path
+              d="M13.6008 19.9805C13.4381 20.261 13.2045 20.4938 12.9235 20.6557C12.6425 20.8175 12.3239 20.9027 11.9996 20.9027C11.6753 20.9027 11.3567 20.8175 11.0757 20.6557C10.7947 20.4938 10.5612 20.261 10.3984 19.9805"
+              stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+        <!-- // 알림 -->
+      </div><!-- //2023.02.27 수정사항 -->
+    </div>
+  </header>
+  <!-- //header -->
+
+  <article id="container" class="aitem">
+    <section id="content" class="a-item">
+      <div class="org-detail">
+        <div class="info"><span>001430</span> <span>코스피</span> <span>철강및금속</span></div>
+      </div>
+      <!-- // -->
+      <div class="ai-card-w pt-14">
+        <div class="swiper local-list">
+          <div class="swiper-wrapper">
+            <!-- <div class="swiper-slide" style="width: calc(100% - 40px)">
                 <div class="local-list-box">
                   <div class="emptybox">
                     <div class="txt">AI종목추천 서비스는 <br />서비스 가입 후 확인 가능합니다.</div>
@@ -65,58 +88,56 @@
                   </div>
                 </div>
               </div> -->
-              <!-- // -->
+            <!-- // -->
 
-              <div class="swiper-slide" style="width: calc(100% - 40px)">
-                <a href="#"></a>
-                <div class="local-list-box">
-                  <div class="cnt">
-                    <div class="bullet">
-                      <span>오늘의 추천주</span>
-                    </div>
-                    <!-- // -->
-                    <div class="item">
-                      <em>001500</em>
-                      <span>삼성바이오로직스</span>
-                    </div>
-                    <!-- // -->
-
-                    <div class="price">
-                      <span>1,335,000원</span>
-                    </div>
-                    <!-- // -->
-
-                    <div class="per">
-                      <span class="up">+21.62%</span>
-                    </div>
-                    <!-- // -->
-
-                    <div class="price2">
-                      <em>증권사 목표가</em>
-                      <span>45,000원</span>
-                    </div>
-                    <!-- // -->
-
-                    <div class="candle">
-                      <img src="./img/localboxbg.png" alt="차트" />
-                    </div>
-                    <!-- //candle -->
+            <div class="swiper-slide" style="width: calc(100% - 40px)">
+              <a href="#"></a>
+              <div class="local-list-box">
+                <div class="cnt">
+                  <div class="bullet">
+                    <span>오늘의 추천주</span>
+                  </div>
+                  <!-- // -->
+                  <div class="item">
+                    <em>001500</em>
+                    <span>삼성바이오로직스</span>
                   </div>
                   <!-- // -->
 
-                  <div class="ftr">
-                    <div class="tag">
-                      <span>#안전</span>
-                      <span>#해외주식</span>
-                      <span>#2차전지</span>
-                    </div>
-                    <!-- // -->
+                  <div class="price">
+                    <span>1,335,000원</span>
+                  </div>
+                  <!-- // -->
 
-                    <div class="txt">
-                      <span class="d-block text-truncate">동결건조기, 초저온냉장고 등 바이오장비 제조업체</span>
-                      <span class="d-block text-truncate">동결건조기, 초저온냉장고 등 바이오장비 제조업체 동결건조기, 초저온냉장고 등 바이오장비 제조업체</span>
-                    </div>
-                    <!-- // -->
+                  <div class="per">
+                    <span class="up">+21.62%</span>
+                  </div>
+                  <!-- // -->
+
+                  <div class="price2">
+                    <em>증권사 목표가</em>
+                    <span>45,000원</span>
+                  </div>
+                  <!-- // -->
+
+                  <div class="candle">
+                    <img src="./img/localboxbg.png" alt="차트" />
+                  </div>
+                  <!-- //candle -->
+                </div>
+                <!-- // -->
+
+                <div class="ftr">
+                  <div class="tag">
+                    <span>#안전</span>
+                    <span>#해외주식</span>
+                    <span>#2차전지</span>
+                  </div>
+                  <!-- // -->
+
+                  <div class="txt">
+                    <span class="d-block text-truncate">동결건조기, 초저온냉장고 등 바이오장비 제조업체</span>
+                    <span class="d-block text-truncate">동결건조기, 초저온냉장고 등 바이오장비 제조업체 동결건조기, 초저온냉장고 등 바이오장비 제조업체</span>
                   </div>
                   <!-- // -->
                 </div>
@@ -124,355 +145,376 @@
               </div>
               <!-- // -->
             </div>
-            <!-- // -->
-          </div>
-
-          <script>
-            const swiper2 = new Swiper(".local-list", {
-              pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-              },
-              paginationClickable: true,
-              effect: "coverflow",
-              loop: false,
-              centeredSlides: true,
-              slidesPerView: "auto",
-              spaceBetween: 10,
-              coverflow: {
-                rotate: 0,
-                stretch: 0,
-                depth: 20,
-                modifier: 20,
-                slideShadows: true,
-              },
-            });
-          </script>
-        </div>
-      </section>
-      <!-- // -->
-
-      <div class="tbArea-w aiarea2">
-        <div class="org-p-w">
-          <div class="org-p">
-            <div class="score-box">
-              <div class="score">
-                <dl>
-                  <dt>
-                    AI 평가점수
-                    <em data-bs-toggle="modal" data-bs-target="#guideforscore">
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z" stroke="#828282" stroke-width="1.3" />
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z" fill="#828282" />
-                        <path d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z" fill="#828282" />
-                      </svg>
-                    </em>
-                  </dt>
-                  <dd>89점</dd>
-                </dl>
-              </div>
-
-              <div class="graph mt-17 w-100 float-start">
-                <img src="./img/aitem/aiscore.png" alt="" width="100%" />
-              </div>
-
-              <div class="graph-table">
-                <table>
-                  <colgroup>
-                    <col width="*" />
-                    <col width="33%" />
-                    <col width="33%" />
-                  </colgroup>
-                  <thead>
-                    <tr>
-                      <th scope="row">구분</th>
-                      <th scope="row">현재종목</th>
-                      <th scope="row">종목평균</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="col">AI상승확률</th>
-                      <td>
-                        <span><em>00</em>점</span>
-                      </td>
-                      <td>
-                        <span>00점</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">주가매력도</th>
-                      <td>
-                        <span><em>00</em>점</span>
-                      </td>
-                      <td>
-                        <span>00점</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">성장성</th>
-                      <td>
-                        <span><em>00</em>점</span>
-                      </td>
-                      <td>
-                        <span>00점</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">안정성</th>
-                      <td>
-                        <span><em>00</em>점</span>
-                      </td>
-                      <td>
-                        <span>00점</span>
-                      </td>
-                    </tr>
-                    <tr>
-                      <th scope="col">수익성</th>
-                      <td>
-                        <span><em>00</em>점</span>
-                      </td>
-                      <td>
-                        <span>00점</span>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            <!-- // -->
-
-            <section class="cnm">
-              <div class="point">
-                <div class="tit">투자포인트</div>
-
-                <div id="pointSwiper" class="swiepr txt-w">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="txt">
-                        <div class="top">
-                          <div class="tit"><span>웹보드 규제 완화와 기존작 반등</span></div>
-                          <div class="info">
-                            <span>07.27</span>
-                            <span>신한투자증권</span>
-                          </div>
-                        </div>
-                        <!-- //top -->
-
-                        <div class="con">
-                          <span class="d-block"> 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급 게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER 리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급 게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER 리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. </span>
-                        </div>
-                        <!-- //con -->
-
-                        <div class="price">
-                          <span>목표가 <em>45,000</em>원</span>
-                        </div>
-                        <!-- //price -->
-                      </div>
-                    </div>
-                    <!-- //slide -->
-
-                    <div class="swiper-slide">
-                      <div class="txt">
-                        <div class="top">
-                          <div class="tit"><span>웹보드 규제 완화와 기존작 반등</span></div>
-                          <div class="info">
-                            <span>07.27</span>
-                            <span>신한투자증권</span>
-                          </div>
-                        </div>
-                        <!-- //top -->
-
-                        <div class="con">
-                          <span class="d-block"> 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급 게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER 리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. </span>
-                        </div>
-                        <!-- //con -->
-
-                        <div class="price">
-                          <span>목표가 <em>45,000</em>원</span>
-                        </div>
-                        <!-- //price -->
-                      </div>
-                    </div>
-                    <!-- //slide -->
-
-                    <div class="swiper-slide">
-                      <div class="txt">
-                        <div class="top">
-                          <div class="tit"><span>웹보드 규제 완화와 기존작 반등</span></div>
-                          <div class="info">
-                            <span>07.27</span>
-                            <span>신한투자증권</span>
-                          </div>
-                        </div>
-                        <!-- //top -->
-
-                        <div class="con">
-                          <span class="d-block"> 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급 게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER 리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. </span>
-                        </div>
-                        <!-- //con -->
-
-                        <div class="price">
-                          <span>목표가 <em>45,000</em>원</span>
-                        </div>
-                        <!-- //price -->
-                      </div>
-                    </div>
-                    <!-- //slide -->
-                  </div>
-                  <!-- //wrapper -->
-
-                  <div class="swiper-pagination"></div>
-                </div>
-                <!-- //swiepr -->
-
-                <script>
-                  var swiper = new Swiper("#pointSwiper", {
-                    spaceBetween: 20,
-                    pagination: {
-                      el: ".swiper-pagination",
-                    },
-                  });
-                </script>
-
-                <div class="graph d-block float-start mt-30">
-                  <img src="./img/demo-ainews2.png" alt="" width="100%" />
-                </div>
-                <!-- //graph -->
-
-                <div class="more">
-                  <button>종목정보 더 보기</button>
-                </div>
-                <!-- //more -->
-              </div>
-            </section>
-            <!-- // -->
-
-            <section class="cnm">
-              <div class="guide">
-                <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
-                <!-- // -->
-
-                <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
-                <!-- // -->
-
-                <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
-                <!-- // -->
-              </div>
-              <!-- //guide -->
-            </section>
             <!-- // -->
           </div>
           <!-- // -->
         </div>
+
+        <script>
+          const swiper2 = new Swiper(".local-list", {
+            pagination: {
+              el: ".swiper-pagination",
+              clickable: true,
+            },
+            paginationClickable: true,
+            effect: "coverflow",
+            loop: false,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            spaceBetween: 10,
+            coverflow: {
+              rotate: 0,
+              stretch: 0,
+              depth: 20,
+              modifier: 20,
+              slideShadows: true,
+            },
+          });
+        </script>
+      </div>
+    </section>
+    <!-- // -->
+
+    <div class="tbArea-w aiarea2">
+      <div class="org-p-w">
+        <div class="org-p">
+          <div class="score-box">
+            <div class="score">
+              <dl>
+                <dt>
+                  AI 평가점수
+                  <em data-bs-toggle="modal" data-bs-target="#guideforscore">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z"
+                        stroke="#828282" stroke-width="1.3" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z"
+                        fill="#828282" />
+                      <path
+                        d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z"
+                        fill="#828282" />
+                    </svg>
+                  </em>
+                </dt>
+                <dd>89점</dd>
+              </dl>
+            </div>
+
+            <div class="graph mt-17 w-100 float-start">
+              <img src="./img/aitem/aiscore.png" alt="" width="100%" />
+            </div>
+
+            <div class="graph-table">
+              <table>
+                <colgroup>
+                  <col width="*" />
+                  <col width="33%" />
+                  <col width="33%" />
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th scope="row">구분</th>
+                    <th scope="row">현재종목</th>
+                    <th scope="row">종목평균</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="col">AI상승확률</th>
+                    <td>
+                      <span><em>00</em>점</span>
+                    </td>
+                    <td>
+                      <span>00점</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">주가매력도</th>
+                    <td>
+                      <span><em>00</em>점</span>
+                    </td>
+                    <td>
+                      <span>00점</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">성장성</th>
+                    <td>
+                      <span><em>00</em>점</span>
+                    </td>
+                    <td>
+                      <span>00점</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">안정성</th>
+                    <td>
+                      <span><em>00</em>점</span>
+                    </td>
+                    <td>
+                      <span>00점</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="col">수익성</th>
+                    <td>
+                      <span><em>00</em>점</span>
+                    </td>
+                    <td>
+                      <span>00점</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <!-- // -->
+
+          <section class="cnm">
+            <div class="point">
+              <div class="tit">투자포인트</div>
+
+              <div id="pointSwiper" class="swiepr txt-w">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="txt">
+                      <div class="top">
+                        <div class="tit"><span>웹보드 규제 완화와 기존작 반등</span></div>
+                        <div class="info">
+                          <span>07.27</span>
+                          <span>신한투자증권</span>
+                        </div>
+                      </div>
+                      <!-- //top -->
+
+                      <div class="con">
+                        <span class="d-block"> 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급
+                          게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER
+                          리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔
+                          게임 시장의 성장세와 AAA급 게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장
+                          환경을 고려했을 때 PER 리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. </span>
+                      </div>
+                      <!-- //con -->
+
+                      <div class="price">
+                        <span>목표가 <em>45,000</em>원</span>
+                      </div>
+                      <!-- //price -->
+                    </div>
+                  </div>
+                  <!-- //slide -->
+
+                  <div class="swiper-slide">
+                    <div class="txt">
+                      <div class="top">
+                        <div class="tit"><span>웹보드 규제 완화와 기존작 반등</span></div>
+                        <div class="info">
+                          <span>07.27</span>
+                          <span>신한투자증권</span>
+                        </div>
+                      </div>
+                      <!-- //top -->
+
+                      <div class="con">
+                        <span class="d-block"> 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급
+                          게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER
+                          리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. </span>
+                      </div>
+                      <!-- //con -->
+
+                      <div class="price">
+                        <span>목표가 <em>45,000</em>원</span>
+                      </div>
+                      <!-- //price -->
+                    </div>
+                  </div>
+                  <!-- //slide -->
+
+                  <div class="swiper-slide">
+                    <div class="txt">
+                      <div class="top">
+                        <div class="tit"><span>웹보드 규제 완화와 기존작 반등</span></div>
+                        <div class="info">
+                          <span>07.27</span>
+                          <span>신한투자증권</span>
+                        </div>
+                      </div>
+                      <!-- //top -->
+
+                      <div class="con">
+                        <span class="d-block"> 웹보드 규제 완화 영향 및 기존작 반등. 안정적인 실적 및 대형 신작 기대감 지속 전망. 글로벌 콘솔 게임 시장의 성장세와 AAA급
+                          게임 개발사에 대한 M&A 수요, 마이크로소프트/소니/넷플릭스/아마존 등 글로벌 플래폼들의 게임 구독 서비스 IP 확보 경쟁 같은 시장 환경을 고려했을 때 PER
+                          리레이팅의 가능성. 내년 상반기 출시 예정 p의 거짓 흥행도 기대. </span>
+                      </div>
+                      <!-- //con -->
+
+                      <div class="price">
+                        <span>목표가 <em>45,000</em>원</span>
+                      </div>
+                      <!-- //price -->
+                    </div>
+                  </div>
+                  <!-- //slide -->
+                </div>
+                <!-- //wrapper -->
+
+                <div class="swiper-pagination"></div>
+              </div>
+              <!-- //swiepr -->
+
+              <script>
+                var swiper = new Swiper("#pointSwiper", {
+                  spaceBetween: 20,
+                  pagination: {
+                    el: ".swiper-pagination",
+                  },
+                });
+              </script>
+
+              <div class="graph d-block float-start mt-30">
+                <img src="./img/demo-ainews2.png" alt="" width="100%" />
+              </div>
+              <!-- //graph -->
+
+              <div class="more">
+                <button>종목정보 더 보기</button>
+              </div>
+              <!-- //more -->
+            </div>
+          </section>
+          <!-- // -->
+
+          <section class="cnm">
+            <div class="guide">
+              <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+              <!-- // -->
+
+              <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+              <!-- // -->
+
+              <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+              <!-- // -->
+            </div>
+            <!-- //guide -->
+          </section>
+          <!-- // -->
+        </div>
         <!-- // -->
       </div>
-      <!-- // 상하 움직입 -->
+      <!-- // -->
+    </div>
+    <!-- // 상하 움직입 -->
 
-      <!-- Modal -->
-      <div class="modal custom-modal01 fade" id="guideforscore">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="modal-pf">
-                <div class="tit">
-                  <span>AI 평가점수</span>
-                </div>
-                <!-- // -->
-
-                <div class="txt">
-                  <span> 5가지 항목 점수를 종합적으로 반영하여 AI평가점수에 반영합니다. </span>
-
-                  <div class="txt-list">
-                    <span> <em>&middot; AI상승확률</em> : 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다. </span>
-
-                    <span> <em>&middot; 주가매력도</em> : 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다. </span>
-
-                    <span> <em>&middot; 성장성</em> : 매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. </span>
-
-                    <span> <em>&middot; 안정성</em> : 부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. </span>
-
-                    <span> <em>&middot; 수익성</em> : 영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다. </span>
-                  </div>
-                </div>
-                <!-- // -->
+    <!-- Modal -->
+    <div class="modal custom-modal01 fade" id="guideforscore">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="modal-pf">
+              <div class="tit">
+                <span>AI 평가점수</span>
               </div>
+              <!-- // -->
 
-              <div class="modal-button">
-                <button class="bg-blue" data-bs-dismiss="modal" style="width: 100%">확인</button>
+              <div class="txt">
+                <span> 5가지 항목 점수를 종합적으로 반영하여 AI평가점수에 반영합니다. </span>
+
+                <div class="txt-list">
+                  <span> <em>&middot; AI상승확률</em> : 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다.
+                  </span>
+
+                  <span> <em>&middot; 주가매력도</em> : 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다. </span>
+
+                  <span> <em>&middot; 성장성</em> : 매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. </span>
+
+                  <span> <em>&middot; 안정성</em> : 부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. </span>
+
+                  <span> <em>&middot; 수익성</em> : 영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다.
+                  </span>
+                </div>
               </div>
-              <!-- // button -->
+              <!-- // -->
             </div>
-            <!-- //body -->
+
+            <div class="modal-button">
+              <button class="bg-blue" data-bs-dismiss="modal" style="width: 100%">확인</button>
+            </div>
+            <!-- // button -->
           </div>
-          <!-- //content -->
+          <!-- //body -->
         </div>
-        <!-- //dialog -->
+        <!-- //content -->
       </div>
+      <!-- //dialog -->
+    </div>
 
-      <script>
-        //쓸어올리기
+    <script>
+      //쓸어올리기
 
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty("--vh", `${vh}px`);
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty("--vh", `${vh}px`);
 
-        let touchStartY = 0;
-        const swipeArea = document.querySelector(".tbArea-w");
+      let touchStartY = 0;
+      const swipeArea = document.querySelector(".tbArea-w");
 
-        // 이벤트 초기화
-        const endExpension = (ev) => {
-          // const lastTouchY = ev.changedTouches[0].clientY
-          swipeArea.removeEventListener("touchmove", doExpansion);
-          swipeArea.style.top = 0;
-        };
+      // 이벤트 초기화
+      const endExpension = (ev) => {
+        // const lastTouchY = ev.changedTouches[0].clientY
+        swipeArea.removeEventListener("touchmove", doExpansion);
+        swipeArea.style.top = 0;
+      };
 
-        // touchmove 시 마진값 조절
+      // touchmove 시 마진값 조절
 
-        const doExpansion = (ev) => {
-          // console.log(ev, touchStartY)
-          const movedY = ev.changedTouches[0].clientY;
-          const ctsHeight = document.querySelector("#content").offsetHeight;
+      const doExpansion = (ev) => {
+        // console.log(ev, touchStartY)
+        const movedY = ev.changedTouches[0].clientY;
+        const ctsHeight = document.querySelector("#content").offsetHeight;
 
-          swipeArea.addEventListener("touchend", endExpension);
-          if (swipeArea.classList.contains("open")) {
-            if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
-              swipeArea.removeEventListener("touchmove", doExpansion);
-              swipeArea.style.top = 0;
-              swipeArea.classList.remove("open");
-              swipeArea.style.marginTop = "-20px";
-            }
-          } else if (!swipeArea.classList.contains("open")) {
-            if (touchStartY - movedY > 80) {
-              swipeArea.removeEventListener("touchmove", doExpansion);
-              swipeArea.style.top = 0;
-              swipeArea.classList.add("open");
-              swipeArea.style.marginTop = "-" + ctsHeight + "px";
-            } else if (touchStartY - movedY < -80) {
-              ev.preventDefault();
-              if (!swipeArea.classList.contains("bounce")) swipeArea.classList.add("bounce");
-              setTimeout(() => {
-                swipeArea.classList.remove("bounce");
-              }, 140);
-            }
-          }
-        };
-        // touchstart 최초 좌표반환
-        const addHeight = (ev) => {
-          touchStartY = ev.changedTouches[0].clientY;
-          swipeArea.addEventListener("touchmove", doExpansion);
-        };
-        swipeArea.addEventListener("touchstart", addHeight);
-
+        swipeArea.addEventListener("touchend", endExpension);
         if (swipeArea.classList.contains("open")) {
-          swipeArea.style.marginTop = "-" + document.querySelector("#content").offsetHeight + "px";
+          if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
+            swipeArea.removeEventListener("touchmove", doExpansion);
+            swipeArea.style.top = 0;
+            swipeArea.classList.remove("open");
+            swipeArea.style.marginTop = "-20px";
+          }
+        } else if (!swipeArea.classList.contains("open")) {
+          if (touchStartY - movedY > 80) {
+            swipeArea.removeEventListener("touchmove", doExpansion);
+            swipeArea.style.top = 0;
+            swipeArea.classList.add("open");
+            swipeArea.style.marginTop = "-" + ctsHeight + "px";
+          } else if (touchStartY - movedY < -80) {
+            ev.preventDefault();
+            if (!swipeArea.classList.contains("bounce")) swipeArea.classList.add("bounce");
+            setTimeout(() => {
+              swipeArea.classList.remove("bounce");
+            }, 140);
+          }
         }
+      };
+      // touchstart 최초 좌표반환
+      const addHeight = (ev) => {
+        touchStartY = ev.changedTouches[0].clientY;
+        swipeArea.addEventListener("touchmove", doExpansion);
+      };
+      swipeArea.addEventListener("touchstart", addHeight);
+
+      if (swipeArea.classList.contains("open")) {
+        swipeArea.style.marginTop = "-" + document.querySelector("#content").offsetHeight + "px";
+      }
 
         /////////////////////////////////////////
-      </script>
-    </article>
-    <!-- //container -->
+    </script>
+  </article>
+  <!-- //container -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- //bootstrap js html최하단에 두어주세요!!! -->
-  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+  <!-- //bootstrap js html최하단에 두어주세요!!! -->
+</body>
+
 </html>
