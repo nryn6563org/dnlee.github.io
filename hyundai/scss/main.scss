@@ -80,50 +80,54 @@
 
     .chart-label {
       display: flex;
-      justify-content: center;
+      justify-content: flex-start;
       flex-wrap: wrap;
-      gap: 0 16px;
+      gap: 8px 16px;
       width: 100%;
       min-height: 19px;
       float: left;
-      padding: 0 5px;
 
       span {
         position: relative;
-        display: inline-block;
+        display: block;
+        width: 95px;
         height: 19px;
         line-height: 19px;
         padding-left: 18px;
         font-size: 12px;
         color: #4d4d4d;
         font-weight: 400;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
 
         &::before {
           content: "";
           position: absolute;
-          top: 8px;
+          top: 5px;
           left: 0;
-          width: 10px;
-          height: 3px;
+          width: 9px;
+          height: 9px;
+          border-radius: 99%;
         }
 
         &.lb01::before {
-          background: #fb5562;
+          background: #f27059;
         }
         &.lb02::before {
-          background: #1e56d1;
+          background: #2d3562;
         }
         &.lb03::before {
-          background: #578cff;
+          background: #3f54c3;
         }
         &.lb04::before {
-          background: #5db1ff;
+          background: #9163cb;
         }
         &.lb05::before {
-          background: #9bcfff;
+          background: #289599;
         }
         &.lb06::before {
-          background: #c2ddf5;
+          background: #60c985;
         }
       }
     }

@@ -230,7 +230,34 @@
                 font-weight: 500;
               }
             }
+
+            .price3 {
+              position: absolute;
+              top: 54px;
+              right: 22px;
+
+              em {
+                display: block;
+                float: left;
+                font-size: 11px;
+                height: 14px;
+                line-height: 14px;
+                color: #969696;
+              }
+              span {
+                display: block;
+                float: left;
+                clear: left;
+                margin-top: 2px;
+                font-size: 16px;
+                height: 20px;
+                line-height: 20px;
+                color: #000;
+                font-weight: 500;
+              }
+            }
           }
+
           .ftr {
             display: block;
             width: 100%;
