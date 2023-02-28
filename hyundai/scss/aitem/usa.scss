@@ -109,7 +109,46 @@
                 }
               }
             }
+
+            .btn-org-info {
+              position: absolute;
+              top: 20px;
+              right: 22px;
+
+              button {
+                display: flex;
+                width: auto;
+                height: auto;
+                justify-content: flex-start;
+                align-items: center;
+                align-content: center;
+                gap: 8px;
+                border: 0;
+                border-radius: 0;
+
+                span {
+                  display: block;
+                  width: 37px;
+                  height: 20px;
+                  line-height: 20px;
+                  font-size: 10px;
+                  color: #292929;
+                }
+                &::after {
+                  content: "";
+                  display: block;
+                  width: 5px;
+                  height: 5px;
+                  border-right: 1px solid #7f7f7f;
+                  border-top: 1px solid #7f7f7f;
+                  transform: rotate(45deg);
+                  margin-top: -2px;
+                  margin-right: 6px;
+                }
+              }
+            }
           }
+
           .ftr {
             .org-cl {
               display: block;

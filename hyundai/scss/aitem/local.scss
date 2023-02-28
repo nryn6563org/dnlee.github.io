@@ -128,7 +128,7 @@
 
             .item {
               display: block;
-              width: calc(100% - 80px);
+              width: calc(100% - 95px);
               float: left;
               clear: left;
               margin-top: 10px;
@@ -243,6 +243,8 @@
                 height: 14px;
                 line-height: 14px;
                 color: #969696;
+                width: 100%;
+                text-align: right;
               }
               span {
                 display: block;
