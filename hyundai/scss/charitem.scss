@@ -1,272 +1,283 @@
 .charItem {
+  display: block;
+  width: 100%;
+  float: left;
+
+  .control {
+    position: relative;
     display: block;
     width: 100%;
+    height: 55px;
+    line-height: 55px;
+    float: left;
+    text-align: center;
+    background: #efefef;
+
+    span {
+      font-size: 16px;
+      color: #646464;
+      font-weight: 400;
+    }
+    button {
+      position: absolute;
+      top: 15px;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+
+      &.active::after {
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 1.5px solid #141414;
+        border-radius: 1px;
+        border-top: 0;
+        border-right: 0;
+      }
+
+      &::after {
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 1.5px solid #bbbbbb;
+        border-radius: 1px;
+        border-top: 0;
+        border-right: 0;
+      }
+
+      &.left {
+        left: 15px;
+        &::after {
+          transform: rotate(45deg);
+        }
+      }
+      &.right {
+        right: 15px;
+        &::after {
+          transform: rotate(-135deg);
+        }
+      }
+    }
+  }
+
+  .tab-content > .tab-pane > .guide {
+    display: block;
+    width: 100%;
+    height: 15px;
+    line-height: 15px;
+    padding: 0 20px;
+    background: none;
+    border: none;
+    float: left;
+    margin-top: 10px;
+
+    span {
+      font-size: 12px;
+      color: #8c8c8c;
+
+      &:first-child {
+        text-indent: 5px;
+      }
+    }
+  }
+
+  .list {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-top: 20px;
     float: left;
 
-    .control {
-        position: relative;
+    & > div:not(.more) {
+      position: relative;
+      display: block;
+      width: 100%;
+      min-height: 77px;
+      float: left;
+      border-top: 1px solid #e5e5e5;
+      padding-top: 25px;
+      padding-bottom: 11px;
+      padding-left: 5px;
+      padding-right: 5px;
+
+      .date {
         display: block;
-        width: 100%;
-        height: 55px;
-        line-height: 55px;
-        float: left;
-        text-align: center;
-        background: #efefef;
-
-        span {
-            font-size: 16px;
-            color: #646464;
-            font-weight: 400;
-        }
-        button {
-            position: absolute;
-            top: 15px;
-            width: 24px;
-            height: 24px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            align-content: center;
-
-            &::after {
-                display: block;
-                content: '';
-                width: 12px;
-                height: 12px;
-                border: 1.5px solid #141414;
-                border-radius: 1px;
-                border-top: 0;
-                border-right: 0;
-            }
-
-            &.left {
-                left: 15px;
-                &::after {
-                    transform: rotate(45deg);
-                }
-            }
-            &.right {
-                right: 15px;
-                &::after {
-                    transform: rotate(-135deg);
-                }
-            }
-        }
-    }
-
-    .tab-content > .tab-pane > .guide {
-        display: block;
-        width: 100%;
         height: 15px;
-        line-height: 15px;
-        padding: 0 20px;
-        background: none;
-        border: none;
         float: left;
-        margin-top: 10px;
+        font-size: 12px;
+        line-height: 15px;
+        color: #8c8c8c;
+      }
 
-        span {
-            font-size: 12px;
-            color: #8c8c8c;
-
-            &:first-child {
-                text-indent: 5px;
-            }
-        }
-    }
-
-    .list {
+      .name {
         display: block;
         width: 100%;
-        padding: 0 20px;
-        margin-top: 20px;
+        height: 24px;
+        line-height: 24px;
+        color: #141414;
+        font-weight: 500;
         float: left;
+        padding-right: 136px;
+        margin-top: 7px;
+      }
 
-        & > div:not(.more) {
-            position: relative;
-            display: block;
-            width: 100%;
-            min-height: 77px;
-            float: left;
-            border-top: 1px solid #e5e5e5;
-            padding-top: 25px;
-            padding-bottom: 11px;
-            padding-left: 5px;
-            padding-right: 5px;
+      .price {
+        position: absolute;
+        top: 48px;
+        right: 76px;
+        height: 22px;
+        line-height: 22px;
+        font-size: 13px;
+        color: #141414;
+      }
 
-            .date {
-                display: block;
-                height: 15px;
-                float: left;
-                font-size: 12px;
-                line-height: 15px;
-                color: #8c8c8c;
-            }
+      .per {
+        position: absolute;
+        top: 48px;
+        right: 5px;
+        width: 66px;
+        height: 22px;
 
-            .name {
-                display: block;
-                width: 100%;
-                height: 24px;
-                line-height: 24px;
-                color: #141414;
-                font-weight: 500;
-                float: left;
-                padding-right: 136px;
-                margin-top: 7px;
-            }
+        span {
+          display: block;
+          width: 100%;
+          height: 22px;
+          line-height: 22px;
+          float: left;
+          border-radius: 4px;
+          font-size: 13px;
+          text-align: center;
+          font-weight: 500;
+          background: #f5f5f5;
+          color: #888;
 
-            .price {
-                position: absolute;
-                top: 48px;
-                right: 76px;
-                height: 22px;
-                line-height: 22px;
-                font-size: 13px;
-                color: #141414;
-            }
-
-            .per {
-                position: absolute;
-                top: 48px;
-                right: 5px;
-                width: 66px;
-                height: 22px;
-
-                span {
-                    display: block;
-                    width: 100%;
-                    height: 22px;
-                    line-height: 22px;
-                    float: left;
-                    border-radius: 4px;
-                    font-size: 13px;
-                    text-align: center;
-                    font-weight: 500;
-                    background: #f5f5f5;
-                    color: #888;
-
-                    &.up {
-                        background: #fdecec;
-                        color: #e81a1a;
-                    }
-                    &.dn {
-                        background: #ecf5fc;
-                        color: #0e83db;
-                    }
-                }
-            }
-
-            .cont {
-                display: block;
-                width: 100%;
-                float: left;
-                margin-top: 5px;
-
-                div {
-                    display: block;
-                    width: 100%;
-
-                    height: 18px;
-                    line-height: 18px;
-                    font-size: 12px;
-                    color: #4d4d4d;
-                    float: left;
-                }
-            }
-
-            & > a {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                z-index: 11;
-                text-indent: -9999em;
-            }
-
-            &:first-child {
-                padding-top: 0;
-                border-top: 0;
-
-                .per {
-                    top: 23px;
-                }
-                .price {
-                    top: 23px;
-                }
-            }
+          &.up {
+            background: #fdecec;
+            color: #e81a1a;
+          }
+          &.dn {
+            background: #ecf5fc;
+            color: #0e83db;
+          }
         }
+      }
 
-        &-bullet {
-            & > div:not(.more) {
-                padding: 18px 0 18px 41px;
-                min-height: 68px;
+      .cont {
+        display: block;
+        width: 100%;
+        float: left;
+        margin-top: 5px;
 
-                &:first-child {
-                    .buNumber {
-                        top: 0;
-                    }
-                    .per {
-                        top: 2px;
-                    }
-                    .price{
-                        top:2px;
-                    }
-                }
+        div {
+          display: block;
+          width: 100%;
 
-                .buNumber {
-                    position: absolute;
-                    top: 18px;
-                    left: 4px;
-                    width: 27px;
-                    height: 27px;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    align-content: center;
-                    border-radius: 100%;
-                    background: #000;
-
-                    span {
-                        display: block;
-                        font-size: 14px;
-                        height: 18px;
-                        line-height: 18px;
-                        color: #fff;
-                        font-weight: 500;
-                    }
-                }
-                .name {
-                    margin-top: 1px;
-                }
-                .price{
-                    top:20px;
-                }
-                .per {
-                    top: 20px;
-                }
-                .cont {
-                    margin-top: 5px;
-                }
-            }
+          height: 18px;
+          line-height: 18px;
+          font-size: 12px;
+          color: #4d4d4d;
+          float: left;
         }
+      }
 
-        .more {
-            display: block;
-            width: 100%;
-            float: left;
-            margin-top: 25px;
+      & > a {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11;
+        text-indent: -9999em;
+      }
 
-            button {
-                display: block;
-                width: 100%;
-                height: 50px;
-                text-align: center;
-                background: #f4f2f4;
-                border-radius: 10px;
-                font-size: 14px;
-                color: #333d47;
-            }
+      &:first-child {
+        padding-top: 0;
+        border-top: 0;
+
+        .per {
+          top: 23px;
         }
+        .price {
+          top: 23px;
+        }
+      }
     }
+
+    &-bullet {
+      & > div:not(.more) {
+        padding: 18px 0 18px 41px;
+        min-height: 68px;
+
+        &:first-child {
+          .buNumber {
+            top: 0;
+          }
+          .per {
+            top: 2px;
+          }
+          .price {
+            top: 2px;
+          }
+        }
+
+        .buNumber {
+          position: absolute;
+          top: 18px;
+          left: 4px;
+          width: 27px;
+          height: 27px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          border-radius: 100%;
+          background: #000;
+
+          span {
+            display: block;
+            font-size: 14px;
+            height: 18px;
+            line-height: 18px;
+            color: #fff;
+            font-weight: 500;
+          }
+        }
+        .name {
+          margin-top: 1px;
+        }
+        .price {
+          top: 20px;
+        }
+        .per {
+          top: 20px;
+        }
+        .cont {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .more {
+      display: block;
+      width: 100%;
+      float: left;
+      margin-top: 25px;
+
+      button {
+        display: block;
+        width: 100%;
+        height: 50px;
+        text-align: center;
+        background: #f4f2f4;
+        border-radius: 10px;
+        font-size: 14px;
+        color: #333d47;
+      }
+    }
+  }
 }
