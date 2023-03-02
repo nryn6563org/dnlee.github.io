@@ -28,23 +28,23 @@
       align-items: center;
       align-content: center;
 
-      &.active::after {
-        display: block;
-        content: "";
-        width: 12px;
-        height: 12px;
-        border: 1.5px solid #141414;
-        border-radius: 1px;
-        border-top: 0;
-        border-right: 0;
-      }
-
       &::after {
         display: block;
         content: "";
         width: 12px;
         height: 12px;
         border: 1.5px solid #bbbbbb;
+        border-radius: 1px;
+        border-top: 0;
+        border-right: 0;
+      }
+
+      &.active::after {
+        display: block;
+        content: "";
+        width: 12px;
+        height: 12px;
+        border: 1.5px solid #141414;
         border-radius: 1px;
         border-top: 0;
         border-right: 0;
@@ -100,8 +100,8 @@
       min-height: 77px;
       float: left;
       border-top: 1px solid #e5e5e5;
-      padding-top: 25px;
-      padding-bottom: 11px;
+      padding-top: 18px;
+      padding-bottom: 18px;
       padding-left: 5px;
       padding-right: 5px;
 
@@ -128,7 +128,7 @@
 
       .price {
         position: absolute;
-        top: 48px;
+        top: 41px;
         right: 76px;
         height: 22px;
         line-height: 22px;
@@ -138,7 +138,7 @@
 
       .per {
         position: absolute;
-        top: 48px;
+        top: 41px;
         right: 5px;
         width: 66px;
         height: 22px;
@@ -171,7 +171,7 @@
         display: block;
         width: 100%;
         float: left;
-        margin-top: 5px;
+        margin-top: 6px;
 
         div {
           display: block;
