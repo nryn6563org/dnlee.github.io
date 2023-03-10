@@ -20,7 +20,7 @@
     }
     button {
       position: absolute;
-      top: 15px;
+      top: 10px;
       width: 24px;
       height: 24px;
       display: flex;
@@ -129,7 +129,7 @@
 
       .price {
         position: absolute;
-        top: 41px;
+        top: 33px;
         right: 76px;
         height: 22px;
         line-height: 22px;
@@ -140,7 +140,7 @@
 
       .per {
         position: absolute;
-        top: 41px;
+        top: 33px;
         right: 5px;
         width: 66px;
         height: 22px;
@@ -202,10 +202,10 @@
         border-top: 0;
 
         .per {
-          top: 23px;
+          top: 21px;
         }
         .price {
-          top: 23px;
+          top: 21px;
         }
       }
     }
@@ -213,9 +213,12 @@
     &-bullet {
       & > div:not(.more) {
         padding: 12px 0 12px 41px;
-        min-height: 68px;
+        min-height: 73px;
 
         &:first-child {
+          padding-bottom: 0;
+          min-height:60px;
+
           .buNumber {
             top: 0;
           }
@@ -228,11 +231,12 @@
         }
         &:last-child {
           padding-bottom: 0;
+          min-height:60px;
         }
 
         .buNumber {
           position: absolute;
-          top: 18px;
+          top: 12px;
           left: 4px;
           width: 24px;
           height: 24px;
@@ -256,10 +260,10 @@
           margin-top: 1px;
         }
         .price {
-          top: 20px;
+          top: 14px;
         }
         .per {
-          top: 20px;
+          top: 14px;
         }
         .cont {
           margin-top: 5px;
