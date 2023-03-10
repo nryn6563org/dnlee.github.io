@@ -1,1546 +1,1560 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
-    <meta name="viewport" content="width=360px,user-scalable=no" />
-    <title>현대차증권</title>
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <link href="./css/font.css" rel="stylesheet" />
-    <!-- // font css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
-    <!-- //bootstrap css -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
-    <!-- //swiper css -->
-    <link rel="stylesheet" href="./css/common.css" />
-    <!-- // custom css -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    <!-- <script src="./js/swiper-bundle.min.js"></script> -->
-    <!-- //swiper js -->
-  </head>
-  <body>
-    <!-- header -->
-    <header id="header">
+
+<head>
+  <meta charset="utf-8" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> -->
+  <meta name="viewport" content="width=360px" />
+  <title>현대차증권</title>
+  <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="./css/font.css" rel="stylesheet" />
+  <!-- // font css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+  <!-- //bootstrap css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+  <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+  <!-- //swiper css -->
+  <link rel="stylesheet" href="./css/common.css" />
+  <!-- // custom css -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+  <!-- //swiper js -->
+  <script>
+    const viewportWidth = window.innerWidth;
+    const viewportHeight = window.innerHeight;
+    const contentWidth = 360;
+    const contentHeight = document.documentElement.scrollHeight;
+    const scaleX = viewportWidth / contentWidth;
+    const scaleY = viewportHeight / contentHeight;
+    const scale = Math.min(scaleX, scaleY);
+    document.body.style.transform = `scale(${scale})`;
+
+  </script>
+</head>
+
+<body>
+  <!-- header -->
+  <header id="header">
+    <div>
       <div>
-        <div>
-          <button class="back">
-            <img src="./img/header/icon-back.svg" alt="뒤로가기" />
-          </button>
-          <h1 class="text-truncate">투자정보</h1>
+        <button class="back">
+          <img src="./img/header/icon-back.svg" alt="뒤로가기" />
+        </button>
+        <h1 class="text-truncate">투자정보</h1>
+      </div>
+      <!-- // -->
+      <div>
+        <button class="search">
+          <img src="./img/header/icon-search.svg" alt="검색" data-bs-toggle="modal" data-bs-target="#search" />
+        </button>
+        <a href="./my_info.html"><img src="./img/main/ico_my.svg" alt="my종목정보" /></a>
+      </div>
+      <!-- // -->
+    </div>
+  </header>
+  <!-- //header -->
+  <!-- modal -->
+  <div class="modal fade" id="search">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <!-- content -->
+      <div class="modal-content">
+        <!-- body -->
+        <div class="modal-body p-0">
+          <section class="cnm">
+            <div class="subTitle search pl-12 pr-14">
+              <a href="javascript:;" data-bs-dismiss="modal">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+
+              <div class="schArea">
+                <form onsubmit="return false;" class="pure-form">
+                  <input id="advanced-demo" type="search" name="" placeholder="종목, 메뉴, 키워드 검색" />
+                  <label for="advanced-demo">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414" />
+                    </svg>
+                  </label>
+                </form>
+              </div>
+              <!-- // -->
+              <script src="./js/auto-complete.js"></script>
+              <script>
+                new autoComplete({
+                  selector: "#advanced-demo",
+                  minChars: 0,
+                  source: function (term, suggest) {
+                    //$.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
+
+                    term = term.toLowerCase();
+                    const choices = [
+                      ["000000", "삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI"],
+                      ["000000", "삼성SDI우"],
+                      ["000000", "삼성공조"],
+                      ["000000", "삼성물산우B"],
+                      ["000000", "삼성바이오로직스"],
+                      ["000000", "삼성중공업"],
+                      ["000000", "삼성전자"],
+                      ["000000", "삼성생명보험"],
+                      ["000000", "삼성디스플레이"],
+                      ["000000", "삼성화재해상"],
+                      ["000000", "삼성카드"],
+                      ["000000", "제일기획"],
+                      ["000000", "세메스"],
+                      ["000000", "에스디플렉스"],
+                      ["000000", "휴먼TCS"],
+                      ["000000", "삼성전기"],
+                      ["000000", "삼성엔지니어링"],
+                      ["000000", "조선중공업"],
+                      ["000000", "LG화학"],
+                      ["000000", "한미약품"],
+                      ["000000", "KB금융"],
+                      ["000000", "포스코케미칼"],
+                      ["000000", "CJ ENM"],
+                      ["000000", "위메이드"],
+                    ];
+                    const suggestions = [];
+                    for (i = 0; i < choices.length; i++) if (~(choices[i][0] + " " + choices[i][1]).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
+                    suggest(suggestions);
+                  },
+                  renderItem: function (item, search) {
+                    search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&amp;");
+                    const re = new RegExp("(" + search.split(" ").join("|") + ")", "gi");
+                    return '<div class="autocomplete-suggestion text-truncate" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + "<em>" + item[0] + "</em>" + "<span>" + item[1].replace(re, "<em>$1</em>") + "</span>" + "</div>";
+                  },
+                  onSelect: function (e, term, item) {
+                    console.log('Item "' + item.getAttribute("data-number") + " (" + item.getAttribute("data-lang") + ')" selected by ' + (e.type == "keydown" ? "pressing enter" : "mouse click") + ".");
+                    document.getElementById("advanced-demo").value = item.getAttribute("data-lang");
+                  },
+                });
+              </script>
+            </div>
+            <!-- //subTitle -->
+          </section>
+          <!-- // -->
+
+          <section class="cnm resultArea">
+            <!-- <div class="empty-sch">
+                            <span>#<em>방산</em> 과(와) 관련된 종목이 검색되지 않았습니다.</span>
+                        </div> -->
+            <!-- //  -->
+
+            <div class="result">
+              <div class="title"><span>검색결과</span></div>
+              <div class="tagtxt">
+                <span>#<em>방산</em> 과(와) 관련된 종목을 검색했습니다.</span>
+              </div>
+            </div>
+            <!-- // -->
+
+            <div class="result">
+              <div class="title"><span>종목명종목명</span><em>000000</em></div>
+              <!-- //title -->
+
+              <div class="cont">
+                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+              </div>
+              <!-- //cont -->
+            </div>
+            <!-- // -->
+
+            <div class="result">
+              <div class="title"><span>종목명종목명</span><em>000000</em></div>
+              <!-- //title -->
+
+              <div class="cont">
+                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+              </div>
+              <!-- //cont -->
+            </div>
+            <!-- // -->
+
+            <div class="result">
+              <div class="title"><span>종목명종목명</span><em>000000</em></div>
+              <!-- //title -->
+
+              <div class="cont">
+                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+              </div>
+              <!-- //cont -->
+            </div>
+            <!-- // -->
+
+            <div class="result">
+              <div class="title"><span>종목명종목명</span><em>000000</em></div>
+              <!-- //title -->
+
+              <div class="cont">
+                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+              </div>
+              <!-- //cont -->
+            </div>
+            <!-- // -->
+
+            <div class="result">
+              <div class="title"><span>종목명종목명</span><em>000000</em></div>
+              <!-- //title -->
+
+              <div class="cont">
+                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+              </div>
+              <!-- //cont -->
+            </div>
+            <!-- // -->
+
+            <div class="result">
+              <div class="title"><span>종목명종목명</span><em>000000</em></div>
+              <!-- //title -->
+
+              <div class="cont">
+                <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
+                <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
+                <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
+              </div>
+              <!-- //cont -->
+            </div>
+            <!-- // -->
+          </section>
+          <!-- //검색결과 -->
+        </div>
+        <!-- //body -->
+      </div>
+      <!-- //content -->
+    </div>
+  </div>
+  <!-- //modal -->
+
+  <article id="container">
+    <section class="nomemsg">
+      <div>
+        <span> <em>서비스 신청</em>하여 추가 정보를 받아보세요. </span>
+        <button class="close nomemsgbtn">&times;</button>
+      </div>
+
+      <script>
+        const nomemsg = document.querySelector(".nomemsg");
+        const msgClose = document.querySelector(".nomemsgbtn");
+
+        msgClose.addEventListener("click", function () {
+          nomemsg.style.display = "none";
+        });
+      </script>
+    </section>
+    <!-- // -->
+
+    <section class="cnm pb-18 no-snap">
+      <!-- <h2 class="fixed-title">시장의 이슈</h2> -->
+      <div class="title mt-10">
+        <span><em>시장의 이슈</em>를<br />확인해 보세요.</span>
+        <em>2022.03.03 기준</em>
+      </div>
+      <!-- // -->
+
+      <div class="chart-w mt-10">
+        <img src="./img/main/bubble.png" alt="" width="100%" />
+      </div>
+      <!-- // -->
+
+      <div class="swiper swiper-card">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide icard">
+            <a href="./issue_1.html">
+              <div class="tag">
+                <span>#네옴시티</span>
+              </div>
+              <!-- //issue tag -->
+
+              <div class="per up">
+                <span>+1.62%</span>
+              </div>
+              <!-- // per -->
+
+              <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년</div>
+              <!-- // issue txt -->
+            </a>
+          </div>
+          <!-- // issue card -->
+
+          <div class="swiper-slide icard">
+            <a href="./issue_1.html">
+              <div class="tag dn">
+                <span>#네옴시티</span>
+              </div>
+              <!-- //issue tag -->
+
+              <div class="per dn">
+                <span>-1.62%</span>
+              </div>
+
+              <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다 불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다</div>
+              <!-- // issue txt -->
+            </a>
+          </div>
+          <!-- // issue card -->
+
+          <div class="swiper-slide icard">
+            <a href="./issue_1.html">
+              <div class="tag up">
+                <span>#네옴시티</span>
+              </div>
+              <!-- //issue tag -->
+
+              <div class="per up">
+                <span>+1.62%</span>
+              </div>
+              <!-- // per -->
+
+              <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다 불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다</div>
+              <!-- // issue txt -->
+            </a>
+          </div>
+          <!-- // issue card -->
+
+          <div class="swiper-slide icard">
+            <a href="./issue_1.html">
+              <div class="tag up">
+                <span>#네옴시티</span>
+              </div>
+              <!-- //issue tag -->
+
+              <div class="per up">
+                <span>+1.62%</span>
+              </div>
+              <!-- // per -->
+
+              <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다 불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다</div>
+              <!-- // issue txt -->
+            </a>
+          </div>
+          <!-- // issue card -->
+        </div>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+      <!-- // swipe card -->
+      <script>
+        var swiper = new Swiper(".swiper-card", {
+          spaceBetween: 20,
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+    </section>
+    <!-- // -->
+
+    <section class="cnm cnm-bg pb-18">
+      <!-- <h2 class="fixed-title">시장 특징주</h2> -->
+      <div class="title mt-24">
+        <span><em>시장 특징주</em>를 <br />확인해 보세요.</span>
+      </div>
+      <!-- // -->
+
+      <div class="swiper swipe-box">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide issue-card-box mt-10 border-f0">
+            <div class="title">
+              <span>핫이슈 종목</span>
+              <em>2022.03.03 기준</em>
+            </div>
+            <!-- // -->
+
+            <div class="list-w">
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+            </div>
+            <!-- //list-w -->
+
+            <div class="more">
+              <button>더보기</button>
+            </div>
+            <!-- // -->
+          </div>
+          <!-- //issue-card-box -->
+
+          <div class="swiper-slide issue-card-box mt-10 border-f0">
+            <div class="title">
+              <span>외국인 비중 확대</span>
+              <em>2022.03.03 기준</em>
+            </div>
+            <!-- // -->
+
+            <div class="list-w">
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <em>9,999,999</em>
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+            </div>
+            <!-- //list-w -->
+
+            <div class="more">
+              <button>더보기</button>
+            </div>
+            <!-- // -->
+          </div>
+          <!-- //issue-card-box -->
+
+          <div class="swiper-slide issue-card-box mt-10 border-f0">
+            <div class="title">
+              <span>기관 순매수 상위</span>
+              <em>2022.03.03 기준</em>
+            </div>
+            <!-- // -->
+
+            <div class="list-w">
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+            </div>
+            <!-- //list -->
+
+            <div class="more">
+              <button>더보기</button>
+            </div>
+            <!-- // -->
+          </div>
+          <!-- //issue-card-box -->
+
+          <div class="swiper-slide issue-card-box mt-10 border-f0">
+            <div class="title">
+              <span>외국인 순매수 상위</span>
+              <em>2022.03.03 기준</em>
+            </div>
+            <!-- // -->
+
+            <div class="list-w">
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+              <div class="list">
+                <a href="./item.html">
+                  <div class="top">
+                    <div class="name">현대차증권</div>
+                    <!-- //name -->
+
+                    <div class="per">
+                      <span class="up">+21.62%</span>
+                    </div>
+                    <!-- //per -->
+                  </div>
+                  <!-- //top -->
+
+                  <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
+                  <!-- //txt -->
+                </a>
+              </div>
+              <!-- // list-->
+            </div>
+            <!-- //list-w -->
+
+            <div class="more">
+              <button>더보기</button>
+            </div>
+            <!-- // -->
+          </div>
+          <!-- //issue-card-box -->
         </div>
         <!-- // -->
-        <div>
-          <button class="search">
-            <img src="./img/header/icon-search.svg" alt="검색" data-bs-toggle="modal" data-bs-target="#search" />
-          </button>
-          <a href="./my_info.html"><img src="./img/main/ico_my.svg" alt="my종목정보" /></a>
+        <div class="swiper-pagination mt-6"></div>
+      </div>
+      <!-- // -->
+      <script>
+        var swiper = new Swiper(".swipe-box", {
+          spaceBetween: 20,
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+      </script>
+    </section>
+    <!-- // -->
+
+    <section class="cnm">
+      <!-- <h2 class="fixed-title">기술주를 확인</h2> -->
+      <div class="title mt-24">
+        <span>금주의 저평가된 <br /><em>기술주를 확인</em>해 보세요.</span>
+      </div>
+
+      <ul class="nav cnm-tab mt-10">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#sector" data-bs-toggle="tab" data-bs-target="#sector">이슈섹터</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#theme" data-bs-toggle="tab" data-bs-target="#theme">이슈테마</a>
+        </li>
+      </ul>
+      <!-- //tab -->
+
+      <div class="tab-content">
+        <div id="sector" class="tab-pane fade show active tabox mt-20 pb-24">
+          <div class="title"><span>신재생에너지</span></div>
+          <!-- //title -->
+
+          <div class="list-w mt-10">
+            <div class="list">
+              <div class="bullet lev1"><span>저평가</span></div>
+              <!-- //bullet -->
+
+              <div class="cont">
+                <a href="#" class="name text-truncate">종목명종목명종목</a>
+                <span class="info">기술력 <em>12</em>위/65</span>
+              </div>
+              <!-- //cont -->
+
+              <a href="#" class="link">기술진단</a>
+              <!-- //link -->
+            </div>
+            <!-- //list -->
+            <div class="list">
+              <div class="bullet lev2"><span>다소저평가</span></div>
+              <!-- //bullet -->
+
+              <div class="cont">
+                <a href="#" class="name text-truncate">종목명종목명종목</a>
+                <span class="info">기술력 <em>12</em>위/65</span>
+              </div>
+              <!-- //cont -->
+
+              <a href="#" class="link">기술진단</a>
+              <!-- //link -->
+            </div>
+            <!-- //list -->
+            <div class="list">
+              <div class="bullet lev3"><span>적정</span></div>
+              <!-- //bullet -->
+
+              <div class="cont">
+                <a href="#" class="name text-truncate">종목명종목명종목</a>
+                <span class="info">기술력 <em>12</em>위/65</span>
+              </div>
+              <!-- //cont -->
+
+              <a href="#" class="link">기술진단</a>
+              <!-- //link -->
+            </div>
+            <!-- //list -->
+
+            <div class="more">
+              <button>더보기</button>
+            </div>
+          </div>
+          <!-- //list-w -->
+        </div>
+        <!-- //섹터 -->
+
+        <div id="theme" class="tab-pane fade tabox mt-25 mt-25 pb-24">
+          <div class="title"><span>신재생에너지</span></div>
+          <!-- //title -->
+
+          <div class="list-w mt-20">
+            <div class="list">
+              <div class="bullet lev4"><span>고평가</span></div>
+              <!-- //bullet -->
+
+              <div class="cont">
+                <a href="#" class="name text-truncate">종목명종목명종목</a>
+                <span class="info">기술력 <em>12</em>위/65</span>
+              </div>
+              <!-- //cont -->
+
+              <a href="#" class="link">기술진단</a>
+              <!-- //link -->
+            </div>
+            <!-- //list -->
+            <div class="list">
+              <div class="bullet lev1"><span>저평가</span></div>
+              <!-- //bullet -->
+
+              <div class="cont">
+                <a href="#" class="name text-truncate">종목명종목명종목</a>
+                <span class="info">기술력 <em>12</em>위/65</span>
+              </div>
+              <!-- //cont -->
+
+              <a href="#" class="link">기술진단</a>
+              <!-- //link -->
+            </div>
+            <!-- //list -->
+            <div class="list">
+              <div class="bullet lev1"><span>저평가</span></div>
+              <!-- //bullet -->
+
+              <div class="cont">
+                <a href="#" class="name text-truncate">종목명종목명종목</a>
+                <span class="info">기술력 <em>12</em>위/65</span>
+              </div>
+              <!-- //cont -->
+
+              <a href="#" class="link">기술진단</a>
+              <!-- //link -->
+            </div>
+            <!-- //list -->
+
+            <div class="more">
+              <button>더보기</button>
+            </div>
+          </div>
+          <!-- //list-w -->
+        </div>
+        <!-- //테마 -->
+      </div>
+    </section>
+    <!-- // -->
+
+    <section class="cnm cnm-bg pb-24">
+      <!-- <h2 class="fixed-title">AI가 추천</h2> -->
+      <div class="title mt-24">
+        <span><em>AI가 추천</em>하는 <br />관심종목입니다.</span>
+      </div>
+      <!-- //title -->
+
+      <ul class="nav cnm-tab mt-10">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#kor" data-bs-toggle="tab" data-bs-target="#kor">국내주식</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="#usa" data-bs-toggle="tab" data-bs-target="#usa">미국주식</a>
+        </li>
+      </ul>
+      <!-- //tab -->
+
+      <div class="tab-content">
+        <div id="kor" class="tab-pane fade show active tabox2">
+          <div class="swiper swipe-local-card mt-20">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide local-card">
+                <div class="nomember">
+                  <div class="txt">AI종목추천 서비스는<br />서비스 가입 후 확인 가능합니다.</div>
+                  <!-- //txt -->
+
+                  <div class="btnbox">
+                    <button data-bs-toggle="modal" data-bs-target="#signup">가입하기</button>
+                  </div>
+                  <!-- //btnbox -->
+                </div>
+                <!-- // 미가입자 -->
+              </div>
+              <!-- //local-card -->
+
+              <div class="swiper-slide local-card">
+                <a href="#"></a>
+                <div class="local">
+                  <img src="./img/main/local1.png" alt="국내주식" width="100%" />
+                </div>
+                <!-- //local -->
+
+                <div class="bullet">
+                  <span>AI 관심종목</span>
+                </div>
+                <!-- //bullet -->
+
+                <div class="item">
+                  <div class="item-title">
+                    <div href="#" class="name">
+                      <span>LIG 넥스원</span>
+                      <em>000123</em>
+                    </div>
+                    <div class="txt">
+                      <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
+                    </div>
+                  </div>
+                  <!-- //title -->
+
+                  <div class="item-info">
+                    <div class="price">
+                      <em>증권사 목표가</em>
+                      <span>45,000원</span>
+                    </div>
+                    <!-- //price -->
+
+                    <div class="tag">
+                      <a href="#">#온라인</a>
+                      <a href="#">#해외주식</a>
+                      <a href="#">#2차전지</a>
+                    </div>
+                  </div>
+                  <!-- //info -->
+                </div>
+                <!-- //item -->
+              </div>
+              <!-- //card -->
+
+              <div class="swiper-slide local-card">
+                <a href="#"></a>
+                <div class="local">
+                  <img src="./img/main/local1.png" alt="국내주식" width="32" />
+                </div>
+                <!-- //local -->
+
+                <div class="bullet">
+                  <span>AI 관심종목</span>
+                </div>
+                <!-- //bullet -->
+
+                <div class="item">
+                  <div class="item-title">
+                    <div href="#" class="name">
+                      <span>LIG 넥스원</span>
+                      <em>000123</em>
+                    </div>
+                    <div class="txt">
+                      <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
+                    </div>
+                  </div>
+                  <!-- //title -->
+
+                  <div class="item-info">
+                    <div class="price">
+                      <em>증권사 목표가</em>
+                      <span>45,000원</span>
+                    </div>
+                    <!-- //price -->
+
+                    <div class="tag">
+                      <a href="#">#온라인</a>
+                      <a href="#">#해외주식</a>
+                      <a href="#">#2차전지</a>
+                    </div>
+                  </div>
+                  <!-- //info -->
+                </div>
+                <!-- //item -->
+              </div>
+              <!-- //card -->
+
+              <div class="swiper-slide local-card">
+                <a href="#"></a>
+                <div class="local">
+                  <img src="./img/main/local1.png" alt="국내주식" width="32" />
+                </div>
+                <!-- //local -->
+
+                <div class="bullet">
+                  <span>AI 관심종목</span>
+                </div>
+                <!-- //bullet -->
+
+                <div class="item">
+                  <div class="item-title">
+                    <div href="#" class="name">
+                      <span>LIG 넥스원</span>
+                      <em>000123</em>
+                    </div>
+                    <div class="txt">
+                      <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
+                    </div>
+                  </div>
+                  <!-- //title -->
+
+                  <div class="item-info">
+                    <div class="price">
+                      <em>증권사 목표가</em>
+                      <span>45,000원</span>
+                    </div>
+                    <!-- //price -->
+
+                    <div class="tag">
+                      <a href="#">#온라인</a>
+                      <a href="#">#해외주식</a>
+                      <a href="#">#2차전지</a>
+                    </div>
+                  </div>
+                  <!-- //info -->
+                </div>
+                <!-- //item -->
+              </div>
+              <!-- //card -->
+            </div>
+            <!-- // -->
+            <div class="swiper-pagination mt-6"></div>
+          </div>
+          <!-- //swipe-card -->
+          <script>
+            var swiper = new Swiper("#kor .swiper", {
+              spaceBetween: 20,
+              pagination: {
+                el: ".swiper-pagination",
+              },
+            });
+          </script>
+
+          <div class="more local-more">
+            <a href="#">더보기</a>
+          </div>
+          <!-- //more 
+
+                        탭 별로 두개로 제작됨, 하나만 필요시 tabox 외부로 빼도 괜찮음
+                    -->
+
+          <div class="ad-banner mt-12">
+            <button>
+              <span>내 투자 스타일에 맞는</span>
+              <em>AI포트폴리오 확인하기</em>
+            </button>
+          </div>
+        </div>
+        <!-- //kor -->
+
+        <div id="usa" class="tab-pane fade tabox2">
+          <div class="swiper swipe-local-card mt-20">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide local-card">
+                <div class="nomember">
+                  <div class="txt">AI종목추천 서비스는<br />서비스 가입 후 확인 가능합니다.</div>
+                  <!-- //txt -->
+
+                  <div class="btnbox">
+                    <button data-bs-toggle="modal" data-bs-target="#signup">가입하기</button>
+                  </div>
+                  <!-- //btnbox -->
+                </div>
+                <!-- // 미가입자 -->
+              </div>
+              <!-- //local-card -->
+
+              <div class="swiper-slide local-card">
+                <a href="#"></a>
+                <div class="local">
+                  <img src="./img/main/local2.png" alt="미국주식" width="100%" />
+                </div>
+                <!-- //local -->
+
+                <div class="bullet">
+                  <span>AI 관심종목</span>
+                </div>
+                <!-- //bullet -->
+
+                <div class="item">
+                  <div class="item-title">
+                    <div href="#" class="name">
+                      <span>테슬라</span>
+                      <em>TSLA</em>
+                    </div>
+                    <div class="txt h42 text-truncate-2">
+                      <span class="">Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
+                    </div>
+                  </div>
+                  <!-- //title -->
+
+                  <div class="item-guide">
+                    <span class="d-block w-100 text-truncate">통신장비/서비스</span>
+                    <span class="d-block w-100 h36 text-truncate-2">자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가 자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가</span>
+                  </div>
+                </div>
+                <!-- //item -->
+              </div>
+              <!-- //card -->
+
+              <div class="swiper-slide local-card">
+                <a href="#"></a>
+                <div class="local">
+                  <img src="./img/main/local2.png" alt="미국주식" width="32" />
+                </div>
+                <!-- //local -->
+
+                <div class="bullet">
+                  <span>AI 관심종목</span>
+                </div>
+                <!-- //bullet -->
+
+                <div class="item">
+                  <div class="item-title">
+                    <div href="#" class="name">
+                      <span>테슬라</span>
+                      <em>TSLA</em>
+                    </div>
+                    <div class="txt">
+                      <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
+                    </div>
+                  </div>
+                  <!-- //title -->
+
+                  <div class="item-guide">
+                    <span>통신장비/서비스</span>
+                    <span>자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가</span>
+                  </div>
+                </div>
+                <!-- //item -->
+              </div>
+              <!-- //card -->
+
+              <div class="swiper-slide local-card">
+                <a href="#"></a>
+                <div class="local">
+                  <img src="./img/main/local2.png" alt="미국주식" width="32" />
+                </div>
+                <!-- //local -->
+
+                <div class="bullet">
+                  <span>AI 관심종목</span>
+                </div>
+                <!-- //bullet -->
+
+                <div class="item">
+                  <div class="item-title">
+                    <div href="#" class="name">
+                      <span>테슬라</span>
+                      <em>TSLA</em>
+                    </div>
+                    <div class="txt">
+                      <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
+                    </div>
+                  </div>
+                  <!-- //title -->
+
+                  <div class="item-guide">
+                    <span>통신장비/서비스</span>
+                    <span>자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가</span>
+                  </div>
+                </div>
+                <!-- //item -->
+              </div>
+              <!-- //card -->
+            </div>
+            <!-- // -->
+            <div class="swiper-pagination mt-6"></div>
+          </div>
+          <!-- //swipe-card -->
+
+          <script>
+            var swiper = new Swiper("#usa .swiper", {
+              spaceBetween: 20,
+              pagination: {
+                el: ".swiper-pagination",
+              },
+            });
+          </script>
+
+          <div class="more local-more">
+            <a href="#">더보기</a>
+          </div>
+          <!-- //more -->
+
+          <div class="ad-banner mt-12">
+            <button>
+              <span>내 투자 스타일에 맞는</span>
+              <em>AI포트폴리오 확인하기</em>
+            </button>
+          </div>
+        </div>
+        <!-- //usa -->
+      </div>
+    </section>
+    <!-- // -->
+
+    <section class="cnm pb-12">
+      <div class="title mt-24">
+        <span><em>주요 공시와 최신 리포트</em>를 <br />확인해보세요.</span>
+      </div>
+      <ul class="nav cnm-tab mt-10" role="tablist">
+        <li class="nav-item" role="presentation"><a aria-current="page" href="#major" data-bs-toggle="tab" data-bs-target="#major" class="nav-link active" aria-selected="true" role="tab">주요공시</a></li>
+        <li class="nav-item" role="presentation"><a aria-current="page" href="#report" data-bs-toggle="tab" data-bs-target="#report" class="nav-link" aria-selected="false" role="tab" tabindex="-1">최신 리포트</a></li>
+      </ul>
+      <div class="tab-content">
+        <div id="major" class="tab-pane fade tabox3 mt-20 hdc-major active show" role="tabpanel">
+          <ul class="nav cnm-stab" role="tablist">
+            <li class="nav-item" role="presentation"><a href="#ma01" aria-current="page" data-bs-toggle="tab" data-bs-target="#ma01" class="nav-link" aria-selected="false" role="tab" tabindex="-1">수주공시</a></li>
+            <li class="nav-item" role="presentation"><a href="#ma02" aria-current="page" data-bs-toggle="tab" data-bs-target="#ma02" class="nav-link active" aria-selected="true" role="tab">주요경영사항</a></li>
+            <li class="nav-item" role="presentation"><a href="#ma03" aria-current="page" data-bs-toggle="tab" data-bs-target="#ma03" class="nav-link" aria-selected="false" tabindex="-1" role="tab">시설투자</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="ma01" class="tab-pane fade list-w" role="tabpanel">
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">지에스이</div>
+                    <div class="txt"><span>290.6억 계약체결, 도시가스 공급계약 </span></div>
+                    <div class="date"><span>02.22 14:42</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">광명전기</div>
+                    <div class="txt"><span>85.0억 계약체결, 화성HPC센터 신축공사 저압반 </span></div>
+                    <div class="date"><span>02.22 14:26</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">인지컨트롤스</div>
+                    <div class="txt"><span>1629.9억 계약체결, ITM(통합유량제어밸브) </span></div>
+                    <div class="date"><span>02.22 14:11</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">HSD엔진</div>
+                    <div class="txt"><span>636.0억 계약체결, 선박용 엔진 </span></div>
+                    <div class="date"><span>02.22 10:31</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="more"><button>더보기</button></div>
+              <!---->
+              <!---->
+            </div>
+            <div id="ma02" class="tab-pane fade list-w active show" role="tabpanel">
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">크리스탈지노믹스</div>
+                    <div class="txt"><span>진행성 혹은 전이성 비편평 비소세포폐암 환자의 1차 치료제로서 항 PD-1항체인 camrelizumab (SHR-1210)과 Pemetrexed, Carboplatin과의 병용요법에 대한 공개, 다기관 임상시험 계획(IND)승인</span></div>
+                    <div class="date"><span>02.20 19:03</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">메지온</div>
+                    <div class="txt"><span>폰탄환자치료제 유데나필의 임상3상(추가 임상) 임상시험계획 신청</span></div>
+                    <div class="date"><span>02.20 08:01</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">브릿지바이오테라퓨틱스</div>
+                    <div class="txt"><span>궤양성대장염 신약 후보물질 BBT-401의 제2a상 임상시험 결과(CSR)</span></div>
+                    <div class="date"><span>02.17 19:19</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name">대웅제약</div>
+                    <div class="txt"><span>&lt;보툴리눔 균주 및 독소제제 제조기술정보의 사용금지 및 손해배상청구&gt;에 대한 강제집행정지신청 인용</span></div>
+                    <div class="date"><span>02.17 17:46</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="more"><button>더보기</button></div>
+              <!---->
+              <!---->
+            </div>
+            <div id="ma03" class="tab-pane fade list-w" role="tabpanel">
+              <div class="more"><button>더보기</button></div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+        <div id="report" class="tab-pane fade tabox3 mt-20" role="tabpanel">
+          <ul class="nav cnm-stab" role="tablist">
+            <li class="nav-item" role="presentation"><a href="#re01" aria-current="page" data-bs-toggle="tab" data-bs-target="#re01" class="nav-link" aria-selected="false" role="tab" tabindex="-1">신규리포트</a></li>
+            <li class="nav-item" role="presentation"><a href="#re02" aria-current="page" data-bs-toggle="tab" data-bs-target="#re02" class="nav-link" aria-selected="false" role="tab" tabindex="-1">목표가상향</a></li>
+            <li class="nav-item" role="presentation"><a href="#re03" aria-current="page" data-bs-toggle="tab" data-bs-target="#re03" class="nav-link active" aria-selected="true" role="tab">신규매수추천</a></li>
+          </ul>
+          <div class="tab-content">
+            <div id="re01" class="tab-pane fade list-w" role="tabpanel">
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>코난테크놀로지</span></div>
+                    <div class="txt text-truncate"><span>AI 일상화에 따른 수혜 기대</span></div>
+                    <div class="info">
+                      <div class="">
+                        <span>목표가 : -</span> <span> 투자의견 : <em>Not Rated</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>키움증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>스튜디오미르</span></div>
+                    <div class="txt text-truncate"><span>기획 능력에 대한 강점이 발휘될 시기</span></div>
+                    <div class="info">
+                      <div class="">
+                        <span>목표가 : -</span> <span> 투자의견 : <em>Not Rated</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>키움증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>SAMG엔터</span></div>
+                    <div class="txt text-truncate"><span>유아기 애니의 최고봉에 서다</span></div>
+                    <div class="info">
+                      <div class="">
+                        <span>목표가 : -</span> <span> 투자의견 : <em>Not Rated</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>키움증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="more"><button>더보기</button></div>
+              <!---->
+              <!---->
+            </div>
+            <div id="re02" class="tab-pane fade list-w" role="tabpanel">
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>하이브</span></div>
+                    <div class="txt text-truncate"><span>노이즈로 조정될 때 성장으로 증명하기</span></div>
+                    <div class="info">
+                      <div>
+                        <span>목표가 : 230,000원</span> <span><img src="https://img.thinkpool.com/hdc_thinkpool/img/main/leftarrow.svg" alt="" /></span> <span><em class="up">240,000원</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>다올투자증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>하이브</span></div>
+                    <div class="txt text-truncate"><span>벌크업…ing</span></div>
+                    <div class="info">
+                      <div>
+                        <span>목표가 : 205,000원</span> <span><img src="https://img.thinkpool.com/hdc_thinkpool/img/main/leftarrow.svg" alt="" /></span> <span><em class="up">220,000원</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>한화투자</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>하이브</span></div>
+                    <div class="txt text-truncate"><span>글로벌 콘텐츠 산업의 게임 체인저</span></div>
+                    <div class="info">
+                      <div>
+                        <span>목표가 : 200,000원</span> <span><img src="https://img.thinkpool.com/hdc_thinkpool/img/main/leftarrow.svg" alt="" /></span> <span><em class="up">220,000원</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>IBK증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="more"><button>더보기</button></div>
+              <!---->
+              <!---->
+            </div>
+            <div id="re03" class="tab-pane fade list-w active show" role="tabpanel">
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>레이크머티리얼즈</span></div>
+                    <div class="txt text-truncate"><span>적정 기업가치 5,600억원</span></div>
+                    <div class="info">
+                      <div class="up">
+                        <span>목표가 : 8,500원</span> <span> 투자의견 : <em>BUY(신규)</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>한화투자</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>효성중공업</span></div>
+                    <div class="txt text-truncate"><span>다 좋은데 아쉬운 건설사업부</span></div>
+                    <div class="info">
+                      <div class="up">
+                        <span>목표가 : 92,000원</span> <span> 투자의견 : <em>BUY(신규)</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>SK증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="list">
+                <a>
+                  <div class="item">
+                    <div class="name"><span>LS ELECTRIC</span></div>
+                    <div class="txt text-truncate"><span>본업은 턴어라운드, 주가는 그대로</span></div>
+                    <div class="info">
+                      <div class="up">
+                        <span>목표가 : 70,000원</span> <span> 투자의견 : <em>BUY(신규)</em></span>
+                      </div>
+                    </div>
+                    <div class="b-date"><span>SK증권</span> <span>02.22</span></div>
+                  </div>
+                </a>
+              </div>
+              <div class="more"><button>더보기</button></div>
+              <!---->
+              <!---->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- // -->
+
+    <section class="cnm cnm-bg pb-24">
+      <!-- <h2 class="fixed-title">장 개시전 !</h2> -->
+      <div class="title mt-24">
+        <span><em>장 개시전 !</em> <br />이런 주제는 어떠세요?</span>
+      </div>
+      <!-- //title -->
+
+      <div class="tag-link mt-10">
+        <div class="link">
+          <a href="./issue_2.html"># 수급포착테마</a>
+        </div>
+        <!-- // -->
+
+        <div class="link">
+          <a href="./issue_2.html"># 전일시간 외 급등주</a>
+        </div>
+        <!-- // -->
+
+        <div class="link">
+          <a href="./issue_2.html"># 검색 상위 신규 등장</a>
+        </div>
+        <!-- // -->
+
+        <div class="link">
+          <a href="./issue_2.html"># 장중수급포착</a>
         </div>
         <!-- // -->
       </div>
-    </header>
-    <!-- //header -->
-    <!-- modal -->
-    <div class="modal fade" id="search">
-      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
-        <!-- content -->
+      <!-- //tag-link -->
+    </section>
+    <!-- // -->
+
+    <section class="cnm">
+      <div class="guide">
+        <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+        <!-- // -->
+
+        <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+        <!-- // -->
+
+        <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+        <!-- // -->
+      </div>
+      <!-- //guide -->
+    </section>
+    <!-- // -->
+
+    <!-- Modal -->
+    <div class="modal custom-modal01 fade" id="signup">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-          <!-- body -->
-          <div class="modal-body p-0">
-            <section class="cnm">
-              <div class="subTitle search pl-12 pr-14">
-                <a href="javascript:;" data-bs-dismiss="modal">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                    <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#141414" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  </svg>
-                </a>
+          <div class="modal-body">
+            <div class="modal-txt">
+              AI투자정보 가입 후 서비스<br />
+              이용가능합니다.
+            </div>
+            <!-- // text -->
 
-                <div class="schArea">
-                  <form onsubmit="return false;" class="pure-form">
-                    <input id="advanced-demo" type="search" name="" placeholder="종목, 메뉴, 키워드 검색" />
-                    <label for="advanced-demo">
-                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414" />
-                      </svg>
-                    </label>
-                  </form>
-                </div>
-                <!-- // -->
-                <script src="./js/auto-complete.js"></script>
-                <script>
-                  new autoComplete({
-                    selector: "#advanced-demo",
-                    minChars: 0,
-                    source: function (term, suggest) {
-                      //$.getJSON('/some/ajax/url/', { q: term }, function(data){ response(data); });
-
-                      term = term.toLowerCase();
-                      const choices = [
-                        ["000000", "삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI삼성SDI"],
-                        ["000000", "삼성SDI우"],
-                        ["000000", "삼성공조"],
-                        ["000000", "삼성물산우B"],
-                        ["000000", "삼성바이오로직스"],
-                        ["000000", "삼성중공업"],
-                        ["000000", "삼성전자"],
-                        ["000000", "삼성생명보험"],
-                        ["000000", "삼성디스플레이"],
-                        ["000000", "삼성화재해상"],
-                        ["000000", "삼성카드"],
-                        ["000000", "제일기획"],
-                        ["000000", "세메스"],
-                        ["000000", "에스디플렉스"],
-                        ["000000", "휴먼TCS"],
-                        ["000000", "삼성전기"],
-                        ["000000", "삼성엔지니어링"],
-                        ["000000", "조선중공업"],
-                        ["000000", "LG화학"],
-                        ["000000", "한미약품"],
-                        ["000000", "KB금융"],
-                        ["000000", "포스코케미칼"],
-                        ["000000", "CJ ENM"],
-                        ["000000", "위메이드"],
-                      ];
-                      const suggestions = [];
-                      for (i = 0; i < choices.length; i++) if (~(choices[i][0] + " " + choices[i][1]).toLowerCase().indexOf(term)) suggestions.push(choices[i]);
-                      suggest(suggestions);
-                    },
-                    renderItem: function (item, search) {
-                      search = search.replace(/[-\/\\^$*+?.()|[\]{}]/g, "\\$&amp;");
-                      const re = new RegExp("(" + search.split(" ").join("|") + ")", "gi");
-                      return '<div class="autocomplete-suggestion text-truncate" data-number="' + item[0] + '" data-lang="' + item[1] + '" data-val="' + search + '">' + "<em>" + item[0] + "</em>" + "<span>" + item[1].replace(re, "<em>$1</em>") + "</span>" + "</div>";
-                    },
-                    onSelect: function (e, term, item) {
-                      console.log('Item "' + item.getAttribute("data-number") + " (" + item.getAttribute("data-lang") + ')" selected by ' + (e.type == "keydown" ? "pressing enter" : "mouse click") + ".");
-                      document.getElementById("advanced-demo").value = item.getAttribute("data-lang");
-                    },
-                  });
-                </script>
-              </div>
-              <!-- //subTitle -->
-            </section>
-            <!-- // -->
-
-            <section class="cnm resultArea">
-              <!-- <div class="empty-sch">
-                            <span>#<em>방산</em> 과(와) 관련된 종목이 검색되지 않았습니다.</span>
-                        </div> -->
-              <!-- //  -->
-
-              <div class="result">
-                <div class="title"><span>검색결과</span></div>
-                <div class="tagtxt">
-                  <span>#<em>방산</em> 과(와) 관련된 종목을 검색했습니다.</span>
-                </div>
-              </div>
-              <!-- // -->
-
-              <div class="result">
-                <div class="title"><span>종목명종목명</span><em>000000</em></div>
-                <!-- //title -->
-
-                <div class="cont">
-                  <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                  <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                  <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                </div>
-                <!-- //cont -->
-              </div>
-              <!-- // -->
-
-              <div class="result">
-                <div class="title"><span>종목명종목명</span><em>000000</em></div>
-                <!-- //title -->
-
-                <div class="cont">
-                  <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                  <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                  <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                </div>
-                <!-- //cont -->
-              </div>
-              <!-- // -->
-
-              <div class="result">
-                <div class="title"><span>종목명종목명</span><em>000000</em></div>
-                <!-- //title -->
-
-                <div class="cont">
-                  <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                  <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                  <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                </div>
-                <!-- //cont -->
-              </div>
-              <!-- // -->
-
-              <div class="result">
-                <div class="title"><span>종목명종목명</span><em>000000</em></div>
-                <!-- //title -->
-
-                <div class="cont">
-                  <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                  <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                  <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                </div>
-                <!-- //cont -->
-              </div>
-              <!-- // -->
-
-              <div class="result">
-                <div class="title"><span>종목명종목명</span><em>000000</em></div>
-                <!-- //title -->
-
-                <div class="cont">
-                  <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                  <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                  <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                </div>
-                <!-- //cont -->
-              </div>
-              <!-- // -->
-
-              <div class="result">
-                <div class="title"><span>종목명종목명</span><em>000000</em></div>
-                <!-- //title -->
-
-                <div class="cont">
-                  <div>뉴스 : (2022/10/13) 지배구조 재편에 <em>방산</em>사업 프리미엄..</div>
-                  <div>이슈 : CCTV, RFID, UAM, <em>방산</em>, 우주항공, 전투기, 항공부품어쩌고저쩌고</div>
-                  <div>기업개요 : <em>방산</em>장비, 에너지장비 제조 및 보안솔루션 제공</div>
-                </div>
-                <!-- //cont -->
-              </div>
-              <!-- // -->
-            </section>
-            <!-- //검색결과 -->
+            <div class="modal-button joinable">
+              <button class="bg-white" data-bs-dismiss="modal">취소</button>
+              <button class="bg-blue">가입하기</button>
+            </div>
+            <!-- // button -->
           </div>
           <!-- //body -->
         </div>
         <!-- //content -->
       </div>
+      <!-- //dialog -->
     </div>
     <!-- //modal -->
+  </article>
+  <!-- //container -->
 
-    <article id="container">
-      <section class="nomemsg">
-        <div>
-          <span> <em>서비스 신청</em>하여 추가 정보를 받아보세요. </span>
-          <button class="close nomemsgbtn">&times;</button>
-        </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <!-- //bootstrap js html최하단에 두어주세요!!! -->
+</body>
 
-        <script>
-          const nomemsg = document.querySelector(".nomemsg");
-          const msgClose = document.querySelector(".nomemsgbtn");
-
-          msgClose.addEventListener("click", function () {
-            nomemsg.style.display = "none";
-          });
-        </script>
-      </section>
-      <!-- // -->
-
-      <section class="cnm pb-18 no-snap">
-        <!-- <h2 class="fixed-title">시장의 이슈</h2> -->
-        <div class="title mt-10">
-          <span><em>시장의 이슈</em>를<br />확인해 보세요.</span>
-          <em>2022.03.03 기준</em>
-        </div>
-        <!-- // -->
-
-        <div class="chart-w mt-10">
-          <img src="./img/main/bubble.png" alt="" width="100%" />
-        </div>
-        <!-- // -->
-
-        <div class="swiper swiper-card">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide icard">
-              <a href="./issue_1.html">
-                <div class="tag">
-                  <span>#네옴시티</span>
-                </div>
-                <!-- //issue tag -->
-
-                <div class="per up">
-                  <span>+1.62%</span>
-                </div>
-                <!-- // per -->
-
-                <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년</div>
-                <!-- // issue txt -->
-              </a>
-            </div>
-            <!-- // issue card -->
-
-            <div class="swiper-slide icard">
-              <a href="./issue_1.html">
-                <div class="tag dn">
-                  <span>#네옴시티</span>
-                </div>
-                <!-- //issue tag -->
-
-                <div class="per dn">
-                  <span>-1.62%</span>
-                </div>
-
-                <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다 불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다</div>
-                <!-- // issue txt -->
-              </a>
-            </div>
-            <!-- // issue card -->
-
-            <div class="swiper-slide icard">
-              <a href="./issue_1.html">
-                <div class="tag up">
-                  <span>#네옴시티</span>
-                </div>
-                <!-- //issue tag -->
-
-                <div class="per up">
-                  <span>+1.62%</span>
-                </div>
-                <!-- // per -->
-
-                <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다 불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다</div>
-                <!-- // issue txt -->
-              </a>
-            </div>
-            <!-- // issue card -->
-
-            <div class="swiper-slide icard">
-              <a href="./issue_1.html">
-                <div class="tag up">
-                  <span>#네옴시티</span>
-                </div>
-                <!-- //issue tag -->
-
-                <div class="per up">
-                  <span>+1.62%</span>
-                </div>
-                <!-- // per -->
-
-                <div class="txt txt-multi icard-txt">불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다 불붙는 '태양광 전기차' 시장 누가 선점하나? 하나2025년 4천만원대 나온다</div>
-                <!-- // issue txt -->
-              </a>
-            </div>
-            <!-- // issue card -->
-          </div>
-          <div class="swiper-pagination mt-6"></div>
-        </div>
-        <!-- // swipe card -->
-        <script>
-          var swiper = new Swiper(".swiper-card", {
-            spaceBetween: 20,
-            pagination: {
-              el: ".swiper-pagination",
-            },
-          });
-        </script>
-      </section>
-      <!-- // -->
-
-      <section class="cnm cnm-bg pb-18">
-        <!-- <h2 class="fixed-title">시장 특징주</h2> -->
-        <div class="title mt-24">
-          <span><em>시장 특징주</em>를 <br />확인해 보세요.</span>
-        </div>
-        <!-- // -->
-
-        <div class="swiper swipe-box">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide issue-card-box mt-10 border-f0">
-              <div class="title">
-                <span>핫이슈 종목</span>
-                <em>2022.03.03 기준</em>
-              </div>
-              <!-- // -->
-
-              <div class="list-w">
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-              </div>
-              <!-- //list-w -->
-
-              <div class="more">
-                <button>더보기</button>
-              </div>
-              <!-- // -->
-            </div>
-            <!-- //issue-card-box -->
-
-            <div class="swiper-slide issue-card-box mt-10 border-f0">
-              <div class="title">
-                <span>외국인 비중 확대</span>
-                <em>2022.03.03 기준</em>
-              </div>
-              <!-- // -->
-
-              <div class="list-w">
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <em>9,999,999</em>
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-              </div>
-              <!-- //list-w -->
-
-              <div class="more">
-                <button>더보기</button>
-              </div>
-              <!-- // -->
-            </div>
-            <!-- //issue-card-box -->
-
-            <div class="swiper-slide issue-card-box mt-10 border-f0">
-              <div class="title">
-                <span>기관 순매수 상위</span>
-                <em>2022.03.03 기준</em>
-              </div>
-              <!-- // -->
-
-              <div class="list-w">
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-              </div>
-              <!-- //list -->
-
-              <div class="more">
-                <button>더보기</button>
-              </div>
-              <!-- // -->
-            </div>
-            <!-- //issue-card-box -->
-
-            <div class="swiper-slide issue-card-box mt-10 border-f0">
-              <div class="title">
-                <span>외국인 순매수 상위</span>
-                <em>2022.03.03 기준</em>
-              </div>
-              <!-- // -->
-
-              <div class="list-w">
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-                <div class="list">
-                  <a href="./item.html">
-                    <div class="top">
-                      <div class="name">현대차증권</div>
-                      <!-- //name -->
-
-                      <div class="per">
-                        <span class="up">+21.62%</span>
-                      </div>
-                      <!-- //per -->
-                    </div>
-                    <!-- //top -->
-
-                    <div class="txt text-truncate">코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고 코스피, 개인의 매수세로 AFDSS상승 2,418.어쩌고</div>
-                    <!-- //txt -->
-                  </a>
-                </div>
-                <!-- // list-->
-              </div>
-              <!-- //list-w -->
-
-              <div class="more">
-                <button>더보기</button>
-              </div>
-              <!-- // -->
-            </div>
-            <!-- //issue-card-box -->
-          </div>
-          <!-- // -->
-          <div class="swiper-pagination mt-6"></div>
-        </div>
-        <!-- // -->
-        <script>
-          var swiper = new Swiper(".swipe-box", {
-            spaceBetween: 20,
-            pagination: {
-              el: ".swiper-pagination",
-            },
-          });
-        </script>
-      </section>
-      <!-- // -->
-
-      <section class="cnm">
-        <!-- <h2 class="fixed-title">기술주를 확인</h2> -->
-        <div class="title mt-24">
-          <span>금주의 저평가된 <br /><em>기술주를 확인</em>해 보세요.</span>
-        </div>
-
-        <ul class="nav cnm-tab mt-10">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#sector" data-bs-toggle="tab" data-bs-target="#sector">이슈섹터</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#theme" data-bs-toggle="tab" data-bs-target="#theme">이슈테마</a>
-          </li>
-        </ul>
-        <!-- //tab -->
-
-        <div class="tab-content">
-          <div id="sector" class="tab-pane fade show active tabox mt-20 pb-24">
-            <div class="title"><span>신재생에너지</span></div>
-            <!-- //title -->
-
-            <div class="list-w mt-10">
-              <div class="list">
-                <div class="bullet lev1"><span>저평가</span></div>
-                <!-- //bullet -->
-
-                <div class="cont">
-                  <a href="#" class="name text-truncate">종목명종목명종목</a>
-                  <span class="info">기술력 <em>12</em>위/65</span>
-                </div>
-                <!-- //cont -->
-
-                <a href="#" class="link">기술진단</a>
-                <!-- //link -->
-              </div>
-              <!-- //list -->
-              <div class="list">
-                <div class="bullet lev2"><span>다소저평가</span></div>
-                <!-- //bullet -->
-
-                <div class="cont">
-                  <a href="#" class="name text-truncate">종목명종목명종목</a>
-                  <span class="info">기술력 <em>12</em>위/65</span>
-                </div>
-                <!-- //cont -->
-
-                <a href="#" class="link">기술진단</a>
-                <!-- //link -->
-              </div>
-              <!-- //list -->
-              <div class="list">
-                <div class="bullet lev3"><span>적정</span></div>
-                <!-- //bullet -->
-
-                <div class="cont">
-                  <a href="#" class="name text-truncate">종목명종목명종목</a>
-                  <span class="info">기술력 <em>12</em>위/65</span>
-                </div>
-                <!-- //cont -->
-
-                <a href="#" class="link">기술진단</a>
-                <!-- //link -->
-              </div>
-              <!-- //list -->
-
-              <div class="more">
-                <button>더보기</button>
-              </div>
-            </div>
-            <!-- //list-w -->
-          </div>
-          <!-- //섹터 -->
-
-          <div id="theme" class="tab-pane fade tabox mt-25 mt-25 pb-24">
-            <div class="title"><span>신재생에너지</span></div>
-            <!-- //title -->
-
-            <div class="list-w mt-20">
-              <div class="list">
-                <div class="bullet lev4"><span>고평가</span></div>
-                <!-- //bullet -->
-
-                <div class="cont">
-                  <a href="#" class="name text-truncate">종목명종목명종목</a>
-                  <span class="info">기술력 <em>12</em>위/65</span>
-                </div>
-                <!-- //cont -->
-
-                <a href="#" class="link">기술진단</a>
-                <!-- //link -->
-              </div>
-              <!-- //list -->
-              <div class="list">
-                <div class="bullet lev1"><span>저평가</span></div>
-                <!-- //bullet -->
-
-                <div class="cont">
-                  <a href="#" class="name text-truncate">종목명종목명종목</a>
-                  <span class="info">기술력 <em>12</em>위/65</span>
-                </div>
-                <!-- //cont -->
-
-                <a href="#" class="link">기술진단</a>
-                <!-- //link -->
-              </div>
-              <!-- //list -->
-              <div class="list">
-                <div class="bullet lev1"><span>저평가</span></div>
-                <!-- //bullet -->
-
-                <div class="cont">
-                  <a href="#" class="name text-truncate">종목명종목명종목</a>
-                  <span class="info">기술력 <em>12</em>위/65</span>
-                </div>
-                <!-- //cont -->
-
-                <a href="#" class="link">기술진단</a>
-                <!-- //link -->
-              </div>
-              <!-- //list -->
-
-              <div class="more">
-                <button>더보기</button>
-              </div>
-            </div>
-            <!-- //list-w -->
-          </div>
-          <!-- //테마 -->
-        </div>
-      </section>
-      <!-- // -->
-
-      <section class="cnm cnm-bg pb-24">
-        <!-- <h2 class="fixed-title">AI가 추천</h2> -->
-        <div class="title mt-24">
-          <span><em>AI가 추천</em>하는 <br />관심종목입니다.</span>
-        </div>
-        <!-- //title -->
-
-        <ul class="nav cnm-tab mt-10">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#kor" data-bs-toggle="tab" data-bs-target="#kor">국내주식</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#usa" data-bs-toggle="tab" data-bs-target="#usa">미국주식</a>
-          </li>
-        </ul>
-        <!-- //tab -->
-
-        <div class="tab-content">
-          <div id="kor" class="tab-pane fade show active tabox2">
-            <div class="swiper swipe-local-card mt-20">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide local-card">
-                  <div class="nomember">
-                    <div class="txt">AI종목추천 서비스는<br />서비스 가입 후 확인 가능합니다.</div>
-                    <!-- //txt -->
-
-                    <div class="btnbox">
-                      <button data-bs-toggle="modal" data-bs-target="#signup">가입하기</button>
-                    </div>
-                    <!-- //btnbox -->
-                  </div>
-                  <!-- // 미가입자 -->
-                </div>
-                <!-- //local-card -->
-
-                <div class="swiper-slide local-card">
-                  <a href="#"></a>
-                  <div class="local">
-                    <img src="./img/main/local1.png" alt="국내주식" width="100%" />
-                  </div>
-                  <!-- //local -->
-
-                  <div class="bullet">
-                    <span>AI 관심종목</span>
-                  </div>
-                  <!-- //bullet -->
-
-                  <div class="item">
-                    <div class="item-title">
-                      <div href="#" class="name">
-                        <span>LIG 넥스원</span>
-                        <em>000123</em>
-                      </div>
-                      <div class="txt">
-                        <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
-                      </div>
-                    </div>
-                    <!-- //title -->
-
-                    <div class="item-info">
-                      <div class="price">
-                        <em>증권사 목표가</em>
-                        <span>45,000원</span>
-                      </div>
-                      <!-- //price -->
-
-                      <div class="tag">
-                        <a href="#">#온라인</a>
-                        <a href="#">#해외주식</a>
-                        <a href="#">#2차전지</a>
-                      </div>
-                    </div>
-                    <!-- //info -->
-                  </div>
-                  <!-- //item -->
-                </div>
-                <!-- //card -->
-
-                <div class="swiper-slide local-card">
-                  <a href="#"></a>
-                  <div class="local">
-                    <img src="./img/main/local1.png" alt="국내주식" width="32" />
-                  </div>
-                  <!-- //local -->
-
-                  <div class="bullet">
-                    <span>AI 관심종목</span>
-                  </div>
-                  <!-- //bullet -->
-
-                  <div class="item">
-                    <div class="item-title">
-                      <div href="#" class="name">
-                        <span>LIG 넥스원</span>
-                        <em>000123</em>
-                      </div>
-                      <div class="txt">
-                        <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
-                      </div>
-                    </div>
-                    <!-- //title -->
-
-                    <div class="item-info">
-                      <div class="price">
-                        <em>증권사 목표가</em>
-                        <span>45,000원</span>
-                      </div>
-                      <!-- //price -->
-
-                      <div class="tag">
-                        <a href="#">#온라인</a>
-                        <a href="#">#해외주식</a>
-                        <a href="#">#2차전지</a>
-                      </div>
-                    </div>
-                    <!-- //info -->
-                  </div>
-                  <!-- //item -->
-                </div>
-                <!-- //card -->
-
-                <div class="swiper-slide local-card">
-                  <a href="#"></a>
-                  <div class="local">
-                    <img src="./img/main/local1.png" alt="국내주식" width="32" />
-                  </div>
-                  <!-- //local -->
-
-                  <div class="bullet">
-                    <span>AI 관심종목</span>
-                  </div>
-                  <!-- //bullet -->
-
-                  <div class="item">
-                    <div class="item-title">
-                      <div href="#" class="name">
-                        <span>LIG 넥스원</span>
-                        <em>000123</em>
-                      </div>
-                      <div class="txt">
-                        <span class="d-block w-100 text-truncate">방산물자의 개발, 제조, 정비 및 판매업체방산물자의 개발, 제조, 정비 및 판매업체</span>
-                      </div>
-                    </div>
-                    <!-- //title -->
-
-                    <div class="item-info">
-                      <div class="price">
-                        <em>증권사 목표가</em>
-                        <span>45,000원</span>
-                      </div>
-                      <!-- //price -->
-
-                      <div class="tag">
-                        <a href="#">#온라인</a>
-                        <a href="#">#해외주식</a>
-                        <a href="#">#2차전지</a>
-                      </div>
-                    </div>
-                    <!-- //info -->
-                  </div>
-                  <!-- //item -->
-                </div>
-                <!-- //card -->
-              </div>
-              <!-- // -->
-              <div class="swiper-pagination mt-6"></div>
-            </div>
-            <!-- //swipe-card -->
-            <script>
-              var swiper = new Swiper("#kor .swiper", {
-                spaceBetween: 20,
-                pagination: {
-                  el: ".swiper-pagination",
-                },
-              });
-            </script>
-
-            <div class="more local-more">
-              <a href="#">더보기</a>
-            </div>
-            <!-- //more 
-
-                        탭 별로 두개로 제작됨, 하나만 필요시 tabox 외부로 빼도 괜찮음
-                    -->
-
-            <div class="ad-banner mt-12">
-              <button>
-                <span>내 투자 스타일에 맞는</span>
-                <em>AI포트폴리오 확인하기</em>
-              </button>
-            </div>
-          </div>
-          <!-- //kor -->
-
-          <div id="usa" class="tab-pane fade tabox2">
-            <div class="swiper swipe-local-card mt-20">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide local-card">
-                  <div class="nomember">
-                    <div class="txt">AI종목추천 서비스는<br />서비스 가입 후 확인 가능합니다.</div>
-                    <!-- //txt -->
-
-                    <div class="btnbox">
-                      <button data-bs-toggle="modal" data-bs-target="#signup">가입하기</button>
-                    </div>
-                    <!-- //btnbox -->
-                  </div>
-                  <!-- // 미가입자 -->
-                </div>
-                <!-- //local-card -->
-
-                <div class="swiper-slide local-card">
-                  <a href="#"></a>
-                  <div class="local">
-                    <img src="./img/main/local2.png" alt="미국주식" width="100%" />
-                  </div>
-                  <!-- //local -->
-
-                  <div class="bullet">
-                    <span>AI 관심종목</span>
-                  </div>
-                  <!-- //bullet -->
-
-                  <div class="item">
-                    <div class="item-title">
-                      <div href="#" class="name">
-                        <span>테슬라</span>
-                        <em>TSLA</em>
-                      </div>
-                      <div class="txt h42 text-truncate-2">
-                        <span class="">Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
-                      </div>
-                    </div>
-                    <!-- //title -->
-
-                    <div class="item-guide">
-                      <span class="d-block w-100 text-truncate">통신장비/서비스</span>
-                      <span class="d-block w-100 h36 text-truncate-2">자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가 자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가</span>
-                    </div>
-                  </div>
-                  <!-- //item -->
-                </div>
-                <!-- //card -->
-
-                <div class="swiper-slide local-card">
-                  <a href="#"></a>
-                  <div class="local">
-                    <img src="./img/main/local2.png" alt="미국주식" width="32" />
-                  </div>
-                  <!-- //local -->
-
-                  <div class="bullet">
-                    <span>AI 관심종목</span>
-                  </div>
-                  <!-- //bullet -->
-
-                  <div class="item">
-                    <div class="item-title">
-                      <div href="#" class="name">
-                        <span>테슬라</span>
-                        <em>TSLA</em>
-                      </div>
-                      <div class="txt">
-                        <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
-                      </div>
-                    </div>
-                    <!-- //title -->
-
-                    <div class="item-guide">
-                      <span>통신장비/서비스</span>
-                      <span>자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가</span>
-                    </div>
-                  </div>
-                  <!-- //item -->
-                </div>
-                <!-- //card -->
-
-                <div class="swiper-slide local-card">
-                  <a href="#"></a>
-                  <div class="local">
-                    <img src="./img/main/local2.png" alt="미국주식" width="32" />
-                  </div>
-                  <!-- //local -->
-
-                  <div class="bullet">
-                    <span>AI 관심종목</span>
-                  </div>
-                  <!-- //bullet -->
-
-                  <div class="item">
-                    <div class="item-title">
-                      <div href="#" class="name">
-                        <span>테슬라</span>
-                        <em>TSLA</em>
-                      </div>
-                      <div class="txt">
-                        <span>Amazon. com, Inc. 는 웹 사이트를 통해 다양한 제품 및 서비스를 제공함</span>
-                      </div>
-                    </div>
-                    <!-- //title -->
-
-                    <div class="item-guide">
-                      <span>통신장비/서비스</span>
-                      <span>자기자본이익률과 주당순이익은 지속적인 상승세, 매출도 꾸준히 증가</span>
-                    </div>
-                  </div>
-                  <!-- //item -->
-                </div>
-                <!-- //card -->
-              </div>
-              <!-- // -->
-              <div class="swiper-pagination mt-6"></div>
-            </div>
-            <!-- //swipe-card -->
-
-            <script>
-              var swiper = new Swiper("#usa .swiper", {
-                spaceBetween: 20,
-                pagination: {
-                  el: ".swiper-pagination",
-                },
-              });
-            </script>
-
-            <div class="more local-more">
-              <a href="#">더보기</a>
-            </div>
-            <!-- //more -->
-
-            <div class="ad-banner mt-12">
-              <button>
-                <span>내 투자 스타일에 맞는</span>
-                <em>AI포트폴리오 확인하기</em>
-              </button>
-            </div>
-          </div>
-          <!-- //usa -->
-        </div>
-      </section>
-      <!-- // -->
-
-      <section class="cnm pb-12">
-        <div class="title mt-24">
-          <span><em>주요 공시와 최신 리포트</em>를 <br />확인해보세요.</span>
-        </div>
-        <ul class="nav cnm-tab mt-10" role="tablist">
-          <li class="nav-item" role="presentation"><a aria-current="page" href="#major" data-bs-toggle="tab" data-bs-target="#major" class="nav-link active" aria-selected="true" role="tab">주요공시</a></li>
-          <li class="nav-item" role="presentation"><a aria-current="page" href="#report" data-bs-toggle="tab" data-bs-target="#report" class="nav-link" aria-selected="false" role="tab" tabindex="-1">최신 리포트</a></li>
-        </ul>
-        <div class="tab-content">
-          <div id="major" class="tab-pane fade tabox3 mt-20 hdc-major active show" role="tabpanel">
-            <ul class="nav cnm-stab" role="tablist">
-              <li class="nav-item" role="presentation"><a href="#ma01" aria-current="page" data-bs-toggle="tab" data-bs-target="#ma01" class="nav-link" aria-selected="false" role="tab" tabindex="-1">수주공시</a></li>
-              <li class="nav-item" role="presentation"><a href="#ma02" aria-current="page" data-bs-toggle="tab" data-bs-target="#ma02" class="nav-link active" aria-selected="true" role="tab">주요경영사항</a></li>
-              <li class="nav-item" role="presentation"><a href="#ma03" aria-current="page" data-bs-toggle="tab" data-bs-target="#ma03" class="nav-link" aria-selected="false" tabindex="-1" role="tab">시설투자</a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="ma01" class="tab-pane fade list-w" role="tabpanel">
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">지에스이</div>
-                      <div class="txt"><span>290.6억 계약체결, 도시가스 공급계약 </span></div>
-                      <div class="date"><span>02.22 14:42</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">광명전기</div>
-                      <div class="txt"><span>85.0억 계약체결, 화성HPC센터 신축공사 저압반 </span></div>
-                      <div class="date"><span>02.22 14:26</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">인지컨트롤스</div>
-                      <div class="txt"><span>1629.9억 계약체결, ITM(통합유량제어밸브) </span></div>
-                      <div class="date"><span>02.22 14:11</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">HSD엔진</div>
-                      <div class="txt"><span>636.0억 계약체결, 선박용 엔진 </span></div>
-                      <div class="date"><span>02.22 10:31</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="more"><button>더보기</button></div>
-                <!---->
-                <!---->
-              </div>
-              <div id="ma02" class="tab-pane fade list-w active show" role="tabpanel">
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">크리스탈지노믹스</div>
-                      <div class="txt"><span>진행성 혹은 전이성 비편평 비소세포폐암 환자의 1차 치료제로서 항 PD-1항체인 camrelizumab (SHR-1210)과 Pemetrexed, Carboplatin과의 병용요법에 대한 공개, 다기관 임상시험 계획(IND)승인</span></div>
-                      <div class="date"><span>02.20 19:03</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">메지온</div>
-                      <div class="txt"><span>폰탄환자치료제 유데나필의 임상3상(추가 임상) 임상시험계획 신청</span></div>
-                      <div class="date"><span>02.20 08:01</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">브릿지바이오테라퓨틱스</div>
-                      <div class="txt"><span>궤양성대장염 신약 후보물질 BBT-401의 제2a상 임상시험 결과(CSR)</span></div>
-                      <div class="date"><span>02.17 19:19</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name">대웅제약</div>
-                      <div class="txt"><span>&lt;보툴리눔 균주 및 독소제제 제조기술정보의 사용금지 및 손해배상청구&gt;에 대한 강제집행정지신청 인용</span></div>
-                      <div class="date"><span>02.17 17:46</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="more"><button>더보기</button></div>
-                <!---->
-                <!---->
-              </div>
-              <div id="ma03" class="tab-pane fade list-w" role="tabpanel">
-                <div class="more"><button>더보기</button></div>
-                <!---->
-                <!---->
-              </div>
-            </div>
-          </div>
-          <div id="report" class="tab-pane fade tabox3 mt-20" role="tabpanel">
-            <ul class="nav cnm-stab" role="tablist">
-              <li class="nav-item" role="presentation"><a href="#re01" aria-current="page" data-bs-toggle="tab" data-bs-target="#re01" class="nav-link" aria-selected="false" role="tab" tabindex="-1">신규리포트</a></li>
-              <li class="nav-item" role="presentation"><a href="#re02" aria-current="page" data-bs-toggle="tab" data-bs-target="#re02" class="nav-link" aria-selected="false" role="tab" tabindex="-1">목표가상향</a></li>
-              <li class="nav-item" role="presentation"><a href="#re03" aria-current="page" data-bs-toggle="tab" data-bs-target="#re03" class="nav-link active" aria-selected="true" role="tab">신규매수추천</a></li>
-            </ul>
-            <div class="tab-content">
-              <div id="re01" class="tab-pane fade list-w" role="tabpanel">
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>코난테크놀로지</span></div>
-                      <div class="txt text-truncate"><span>AI 일상화에 따른 수혜 기대</span></div>
-                      <div class="info">
-                        <div class="">
-                          <span>목표가 : -</span> <span> 투자의견 : <em>Not Rated</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>키움증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>스튜디오미르</span></div>
-                      <div class="txt text-truncate"><span>기획 능력에 대한 강점이 발휘될 시기</span></div>
-                      <div class="info">
-                        <div class="">
-                          <span>목표가 : -</span> <span> 투자의견 : <em>Not Rated</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>키움증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>SAMG엔터</span></div>
-                      <div class="txt text-truncate"><span>유아기 애니의 최고봉에 서다</span></div>
-                      <div class="info">
-                        <div class="">
-                          <span>목표가 : -</span> <span> 투자의견 : <em>Not Rated</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>키움증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="more"><button>더보기</button></div>
-                <!---->
-                <!---->
-              </div>
-              <div id="re02" class="tab-pane fade list-w" role="tabpanel">
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>하이브</span></div>
-                      <div class="txt text-truncate"><span>노이즈로 조정될 때 성장으로 증명하기</span></div>
-                      <div class="info">
-                        <div>
-                          <span>목표가 : 230,000원</span> <span><img src="https://img.thinkpool.com/hdc_thinkpool/img/main/leftarrow.svg" alt="" /></span> <span><em class="up">240,000원</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>다올투자증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>하이브</span></div>
-                      <div class="txt text-truncate"><span>벌크업…ing</span></div>
-                      <div class="info">
-                        <div>
-                          <span>목표가 : 205,000원</span> <span><img src="https://img.thinkpool.com/hdc_thinkpool/img/main/leftarrow.svg" alt="" /></span> <span><em class="up">220,000원</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>한화투자</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>하이브</span></div>
-                      <div class="txt text-truncate"><span>글로벌 콘텐츠 산업의 게임 체인저</span></div>
-                      <div class="info">
-                        <div>
-                          <span>목표가 : 200,000원</span> <span><img src="https://img.thinkpool.com/hdc_thinkpool/img/main/leftarrow.svg" alt="" /></span> <span><em class="up">220,000원</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>IBK증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="more"><button>더보기</button></div>
-                <!---->
-                <!---->
-              </div>
-              <div id="re03" class="tab-pane fade list-w active show" role="tabpanel">
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>레이크머티리얼즈</span></div>
-                      <div class="txt text-truncate"><span>적정 기업가치 5,600억원</span></div>
-                      <div class="info">
-                        <div class="up">
-                          <span>목표가 : 8,500원</span> <span> 투자의견 : <em>BUY(신규)</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>한화투자</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>효성중공업</span></div>
-                      <div class="txt text-truncate"><span>다 좋은데 아쉬운 건설사업부</span></div>
-                      <div class="info">
-                        <div class="up">
-                          <span>목표가 : 92,000원</span> <span> 투자의견 : <em>BUY(신규)</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>SK증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="list">
-                  <a
-                    ><div class="item">
-                      <div class="name"><span>LS ELECTRIC</span></div>
-                      <div class="txt text-truncate"><span>본업은 턴어라운드, 주가는 그대로</span></div>
-                      <div class="info">
-                        <div class="up">
-                          <span>목표가 : 70,000원</span> <span> 투자의견 : <em>BUY(신규)</em></span>
-                        </div>
-                      </div>
-                      <div class="b-date"><span>SK증권</span> <span>02.22</span></div>
-                    </div></a
-                  >
-                </div>
-                <div class="more"><button>더보기</button></div>
-                <!---->
-                <!---->
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- // -->
-
-      <section class="cnm cnm-bg pb-24">
-        <!-- <h2 class="fixed-title">장 개시전 !</h2> -->
-        <div class="title mt-24">
-          <span><em>장 개시전 !</em> <br />이런 주제는 어떠세요?</span>
-        </div>
-        <!-- //title -->
-
-        <div class="tag-link mt-10">
-          <div class="link">
-            <a href="./issue_2.html"># 수급포착테마</a>
-          </div>
-          <!-- // -->
-
-          <div class="link">
-            <a href="./issue_2.html"># 전일시간 외 급등주</a>
-          </div>
-          <!-- // -->
-
-          <div class="link">
-            <a href="./issue_2.html"># 검색 상위 신규 등장</a>
-          </div>
-          <!-- // -->
-
-          <div class="link">
-            <a href="./issue_2.html"># 장중수급포착</a>
-          </div>
-          <!-- // -->
-        </div>
-        <!-- //tag-link -->
-      </section>
-      <!-- // -->
-
-      <section class="cnm">
-        <div class="guide">
-          <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
-          <!-- // -->
-
-          <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
-          <!-- // -->
-
-          <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
-          <!-- // -->
-        </div>
-        <!-- //guide -->
-      </section>
-      <!-- // -->
-
-      <!-- Modal -->
-      <div class="modal custom-modal01 fade" id="signup">
-        <div class="modal-dialog modal-dialog-centered">
-          <div class="modal-content">
-            <div class="modal-body">
-              <div class="modal-txt">
-                AI투자정보 가입 후 서비스<br />
-                이용가능합니다.
-              </div>
-              <!-- // text -->
-
-              <div class="modal-button joinable">
-                <button class="bg-white" data-bs-dismiss="modal">취소</button>
-                <button class="bg-blue">가입하기</button>
-              </div>
-              <!-- // button -->
-            </div>
-            <!-- //body -->
-          </div>
-          <!-- //content -->
-        </div>
-        <!-- //dialog -->
-      </div>
-      <!-- //modal -->
-    </article>
-    <!-- //container -->
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <!-- //bootstrap js html최하단에 두어주세요!!! -->
-  </body>
 </html>

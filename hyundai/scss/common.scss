@@ -37,6 +37,9 @@ body {
   overflow: auto;
   //overscroll-behavior: contain;
   //overscroll-behavior-y:none;
+
+  transform-origin: top left;
+  transform: scale(1);
 }
 .up * {
   color: #e81a1a;
