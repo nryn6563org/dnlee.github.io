@@ -3,7 +3,6 @@
 @import "./main/tab.scss";
 @import "./scharea.scss";
 
-
 .cnm {
   position: relative;
   display: block;
@@ -22,6 +21,7 @@
   }
 
   & > .title {
+    position: relative;
     display: block;
     width: calc(100% - 60px);
     margin: 0 30px;
@@ -55,8 +55,11 @@
     }
 
     & > em {
+      position: absolute;
+      top: 0;
+      right: 0;
       display: block;
-      width: 100%;
+      width: auto;
       font-size: 10px;
       line-height: 15px;
       color: #8c8c8c;
