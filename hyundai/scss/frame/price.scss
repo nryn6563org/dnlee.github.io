@@ -130,6 +130,12 @@
         gap: 4px;
         float: left;
 
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-right: 4px;
+          }
+        }
+
         span {
           display: block;
           height: 20px;

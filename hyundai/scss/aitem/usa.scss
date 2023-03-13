@@ -126,6 +126,12 @@
                 border: 0;
                 border-radius: 0;
 
+                @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                  &:not(:last-child) {
+                    margin-right: 8px;
+                  }
+                }
+
                 span {
                   display: block;
                   width: 37px;
@@ -197,6 +203,12 @@
         border-top: 1px solid #d7d7d7;
         gap: 13px;
 
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-right: 13px;
+          }
+        }
+
         &:first-child {
           padding-top: 0;
           border-top: 0;
@@ -213,6 +225,12 @@
               display: flex;
               flex-wrap: wrap;
               gap: 4px;
+
+              @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                &:not(:last-child) {
+                  margin-right: 4px;
+                }
+              }
 
               em {
                 display: block;
@@ -236,6 +254,12 @@
             float: left;
             justify-content: space-between;
             gap: 40px;
+
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              &:not(:last-child) {
+                margin-right: 40px;
+              }
+            }
 
             & > div {
               flex-wrap: nowrap;
@@ -622,6 +646,13 @@
             align-content: center;
             align-items: center;
             gap: 5px;
+
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              &:not(:last-child) {
+                margin-right: 5px;
+              }
+            }
+
             em {
               margin-top: -2px;
             }
@@ -646,6 +677,12 @@
         flex-wrap: nowrap;
         gap: 4px;
         padding: 0 20px;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-right: 4px;
+          }
+        }
 
         span svg {
           float: left;

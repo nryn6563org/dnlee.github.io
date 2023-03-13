@@ -30,6 +30,12 @@
   float: left;
   margin-top: 24px;
 
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
   button {
     display: inline-block;
     width: 135px;
@@ -127,6 +133,12 @@
       gap: 10px;
       flex-wrap: wrap;
 
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                &:not(:last-child) {
+                  margin-bottom: 10px;
+                }
+              }
+
       span {
         display: block;
         font-size: 14px;
@@ -150,6 +162,12 @@
     border-radius: 8px;
     padding: 16px 20px;
     gap: 15px;
+
+    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                &:not(:last-child) {
+                  margin-right: 15px;
+                }
+              }
 
     span {
       display: block;

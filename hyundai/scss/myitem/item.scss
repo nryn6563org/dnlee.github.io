@@ -16,6 +16,12 @@
         gap: 24px;
         align-items: center;
         align-content: center;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-right: 24px;
+          }
+        }
       }
 
       &.allcheck {
@@ -25,19 +31,19 @@
         align-content: inherit;
         gap: 0;
 
-        input[type='checkbox'] {
+        input[type="checkbox"] {
           position: absolute;
           top: 0;
           left: -9999em;
         }
-        input[type='checkbox'] + label {
+        input[type="checkbox"] + label {
           font-size: 14px;
           color: #141414;
           padding-left: 25px;
           background: url(../img/myitem/lineCheck.svg) no-repeat 0 50%;
           background-size: 14px auto;
         }
-        input[type='checkbox']:checked + label {
+        input[type="checkbox"]:checked + label {
           color: #3f54c3;
           background: url(../img/myitem/lineCheckOn.svg) no-repeat 0 50%;
           background-size: 14px auto;

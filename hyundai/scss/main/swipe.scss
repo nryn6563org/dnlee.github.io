@@ -208,6 +208,12 @@
             align-items: center;
             align-content: center;
 
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              &:not(:last-child) {
+                margin-right: 10px;
+              }
+            }
+
             em {
               display: block;
               font-size: 13px;

@@ -83,6 +83,12 @@
           flex-wrap: wrap;
           gap: 10px;
 
+          @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+            &:not(:last-child) {
+              margin-right: 10px;
+            }
+          }
+
           .txt {
             display: block;
             width: 100%;
@@ -168,6 +174,12 @@
         border-top: 1px solid #e5e5e5;
         justify-content: flex-start;
         gap: 15px;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          &:not(:last-child) {
+            margin-right: 15px;
+          }
+        }
         a {
           position: absolute;
           top: 0;

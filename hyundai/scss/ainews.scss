@@ -73,6 +73,12 @@
             .fs-btn {
                 display: flex;
                 gap: 12px;
+
+                @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                &:not(:last-child) {
+                  margin-right: 12px;
+                }
+              }
             }
         }
     }

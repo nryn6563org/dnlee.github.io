@@ -111,6 +111,12 @@
             margin:0;
             padding:0;
 
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+                &:not(:last-child) {
+                  margin-right: 4px;
+                }
+              }
+
             .swiper-pagination-bullet{
                 width:8px;
                 height:4px;
