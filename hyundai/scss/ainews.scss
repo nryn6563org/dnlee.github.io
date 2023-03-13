@@ -75,7 +75,7 @@
                 gap: 12px;
 
                 @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-                &:not(:last-child) {
+                & *:not(:last-child) {
                   margin-right: 12px;
                 }
               }

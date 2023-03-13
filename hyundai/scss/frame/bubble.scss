@@ -112,7 +112,7 @@
             padding:0;
 
             @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-                &:not(:last-child) {
+                & *:not(:last-child) {
                   margin-right: 4px;
                 }
               }

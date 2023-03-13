@@ -18,7 +18,7 @@
         align-content: center;
 
         @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-          &:not(:last-child) {
+          & *:not(:last-child) {
             margin-right: 24px;
           }
         }

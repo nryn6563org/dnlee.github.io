@@ -222,7 +222,7 @@
         justify-content: flex-start;
 
         @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-          &:not(:last-child) {
+          & *:not(:last-child) {
             margin-right: 12px;
           }
         }
