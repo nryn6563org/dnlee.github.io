@@ -20,14 +20,6 @@ body {
   // position: fixed;
   // width: 100%;
   // overscroll-behavior: none;
-
-  -webkit-text-size-adjust: auto;
-
-  -moz-text-size-adjust: auto;
-
-  -ms-text-size-adjust: auto;
-
-  text-size-adjust: auto;
 }
 html {
   //overflow: hidden !important;
@@ -35,11 +27,6 @@ html {
 body {
   margin: 0 auto;
   overflow: auto;
-  //overscroll-behavior: contain;
-  //overscroll-behavior-y:none;
-
-  transform-origin: top left;
-  transform: scale(1);
 }
 .up * {
   color: #e81a1a;
