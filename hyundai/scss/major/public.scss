@@ -34,7 +34,7 @@
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       width: 24px;
       height: 24px;
@@ -88,6 +88,12 @@
             float: left;
             justify-content: flex-start;
             gap: 0 13px;
+
+            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+              & .bullet:not(:last-child) {
+                margin-right: 13px;
+              }
+            }
 
             .bullet {
               display: block;
@@ -247,19 +253,19 @@
             }
           }
 
-          input[type='radio'] {
+          input[type="radio"] {
             position: absolute;
             top: 0;
             left: -9999em;
           }
 
-          input[type='radio']:checked + label {
+          input[type="radio"]:checked + label {
             background: #f4f6fd;
             color: #2151d1;
             font-weight: 500;
 
             &::after {
-              content: '';
+              content: "";
               width: 24px;
               height: 24px;
               background: url(../img/checking.svg) no-repeat center 50%;

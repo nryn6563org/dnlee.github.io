@@ -29,11 +29,11 @@
     gap: 10px;
     justify-items: center;
 
-    @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-      & *:not(:last-child) {
-        margin-right: 10px;
-      }
-    }
+    // @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    //   & *:not(:last-child) {
+    //     margin-right: 10px;
+    //   }
+    // }
 
     button {
       display: inline-block;
@@ -93,6 +93,12 @@
   padding: 22px 20px 40px;
   flex-wrap: wrap;
   gap: 10px 0;
+
+  @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+    & *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
 
   div {
     display: block;
