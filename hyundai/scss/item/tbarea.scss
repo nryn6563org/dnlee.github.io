@@ -13,6 +13,12 @@
   z-index: 12;
   transition: margin 0.3s ease-in-out;
 
+  &.aiarea2 {
+    .guide {
+      padding: 40px 26px 77px 27px;
+    }
+  }
+
   &.aiarea.open {
     //margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
     //margin-top: calc(-100% - 134px);
@@ -35,7 +41,7 @@
   }
 
   .guide {
-    padding: 40px 26px 103px;
+    padding: 40px 26px 123px 27px;
   }
 }
 #tbArea {
