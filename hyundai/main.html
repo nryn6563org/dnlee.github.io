@@ -21,18 +21,6 @@
   <!-- // custom css -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
   <!-- <script src="./js/swiper-bundle.min.js"></script> -->
-  <!-- //swiper js -->
-  <script>
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-    const contentWidth = 360;
-    const contentHeight = document.documentElement.scrollHeight;
-    const scaleX = viewportWidth / contentWidth;
-    const scaleY = viewportHeight / contentHeight;
-    const scale = Math.min(scaleX, scaleY);
-    document.body.style.transform = `scale(${scale})`;
-
-  </script>
 </head>
 
 <body>
@@ -79,6 +67,7 @@
                       <path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 10.708a5.208 5.208 0 1 1 10.417 0 5.208 5.208 0 0 1-10.417 0zM10.709 4a6.708 6.708 0 1 0 4.183 11.953L17.84 18.9a.75.75 0 0 0 1.06-1.061l-2.946-2.947A6.708 6.708 0 0 0 10.709 4z" fill="#141414" />
                     </svg>
                   </label>
+                  <button class="schClear" onclick="document.getElementById('advanced-demo').value = '';"><img src="./img/schClose.png" alt="" width="9px"></button>
                 </form>
               </div>
               <!-- // -->
