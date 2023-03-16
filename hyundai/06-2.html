@@ -8,12 +8,10 @@
     <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link href="./css/font.css" rel="stylesheet" />
     <!-- // font css -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
     <!-- //bootstrap css -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
@@ -32,8 +30,7 @@
             <div>
                 <button class="back">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#ffffff" stroke-width="1.5"
-                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="m15.5 19-6.293-6.293a1 1 0 0 1 0-1.414L15.5 5" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                     </svg>
                 </button>
                 <h1 class="text-truncate">
@@ -193,17 +190,10 @@
                         <div class="sw-txt">
                             <p>
                                 <span>
-                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z"
-                                            stroke="white" stroke-width="1.5" />
-                                        <path fill-rule="evenodd" clip-rule="evenodd"
-                                            d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z"
-                                            fill="white" />
-                                        <path
-                                            d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z"
-                                            fill="white" />
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z" stroke="white" stroke-width="1.5" />
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z" fill="white" />
+                                        <path d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z" fill="white" />
                                     </svg>
                                 </span>
                                 <span>중대형 종목들 중, AI가 기업의 실적, 최근 공시, 수급 등을 추가로 분석하여 엄선한 투자 유망 종목군입니다. </span>
@@ -507,6 +497,9 @@
         <!-- // 상하 움직입 -->
 
         <script>
+            // 좌표 스크롤
+            const cScrollW = document.querySelector('.tbArea-w'); // 스크롤 대상
+
             //쓸어올리기
 
             let vh = window.innerHeight * 0.01;
@@ -516,7 +509,7 @@
             const swipeArea = document.querySelector('.tbArea-w');
 
             // 이벤트 초기화
-            const endExpension = ev => {
+            const endExpension = (ev) => {
                 // const lastTouchY = ev.changedTouches[0].clientY
                 swipeArea.removeEventListener('touchmove', doExpansion);
                 swipeArea.style.top = 0;
@@ -524,21 +517,25 @@
 
             // touchmove 시 마진값 조절
 
-            const doExpansion = ev => {
+            const doExpansion = (ev) => {
                 // console.log(ev, touchStartY)
                 const movedY = ev.changedTouches[0].clientY;
+                const ctsHeight = document.querySelector('#content').offsetHeight - 48;
+
                 swipeArea.addEventListener('touchend', endExpension);
                 if (swipeArea.classList.contains('open')) {
                     if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
                         swipeArea.removeEventListener('touchmove', doExpansion);
                         swipeArea.style.top = 0;
                         swipeArea.classList.remove('open');
+                        swipeArea.style.marginTop = '-20px';
                     }
                 } else if (!swipeArea.classList.contains('open')) {
                     if (touchStartY - movedY > 80) {
                         swipeArea.removeEventListener('touchmove', doExpansion);
                         swipeArea.style.top = 0;
                         swipeArea.classList.add('open');
+                        swipeArea.style.marginTop = '-' + ctsHeight + 'px';
                     } else if (touchStartY - movedY < -80) {
                         ev.preventDefault();
                         if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
@@ -549,20 +546,22 @@
                 }
             };
             // touchstart 최초 좌표반환
-            const addHeight = ev => {
+            const addHeight = (ev) => {
                 touchStartY = ev.changedTouches[0].clientY;
                 swipeArea.addEventListener('touchmove', doExpansion);
             };
             swipeArea.addEventListener('touchstart', addHeight);
+
+            if (swipeArea.classList.contains('open')) {
+                swipeArea.style.marginTop = '-' + (document.querySelector('#content').offsetHeight - 48) + 'px';
+            }
 
                 /////////////////////////////////////////
         </script>
     </article>
     <!-- //container -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
     <!-- //bootstrap js html최하단에 두어주세요!!! -->
 </body>
 

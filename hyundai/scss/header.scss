@@ -42,17 +42,10 @@
       }
 
       div {
-        display: flex;
-        gap: 10px;
-
-        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-          & *:not(:last-child) {
-            margin-right: 10px;
-          }
-        }
+        display: block;
 
         button.usr {
-          margin: 0 !important;
+          margin: 0 0 0 10px !important;
           svg path {
             stroke: white !important;
           }

@@ -232,6 +232,9 @@
                 }
               }
 
+              &:last-child{
+              }
+
               em {
                 display: block;
                 width: 100%;
@@ -271,17 +274,20 @@
                 width: calc(100% - 20px);
                 em {
                   display: block;
-                  width: 31px;
+                  width: 35px;
                   float: left;
                   line-height: 20px;
+                  font-size:12px;
                 }
                 span {
                   display: block;
-                  width: calc(100% - 31px);
+                  width: calc(100% - 35px);
                   float: left;
                   clear: normal;
                   margin-top: 0;
                   text-align: right;
+                  font-weight:700;
+                  font-size:18px;
                 }
               }
 
@@ -289,17 +295,20 @@
                 width: calc(100% - 20px);
                 em {
                   display: block;
-                  width: 31px;
+                  width: 35px;
                   float: left;
                   line-height: 20px;
+                  font-size:12px;
                 }
                 span {
                   display: block;
-                  width: calc(100% - 31px);
+                  width: calc(100% - 35px);
                   float: left;
                   clear: normal;
                   margin-top: 0;
                   text-align: right;
+                  font-weight:700;
+                  font-size:18px;
                 }
               }
             }
