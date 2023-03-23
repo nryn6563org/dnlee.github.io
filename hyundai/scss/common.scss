@@ -20,6 +20,8 @@ body {
   // position: fixed;
   // width: 100%;
   // overscroll-behavior: none;
+  scroll-behavior: auto !important;
+  overscroll-behavior: none !important;
 }
 html {
   //overflow: hidden !important;

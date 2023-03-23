@@ -28,6 +28,8 @@
     height: 26px;
 
     strong {
+      display: block;
+      width: 100%;
       font-size: 16px;
       color: #292929;
       font-weight: 500;
@@ -36,9 +38,10 @@
         font-size: 12px;
         color: #8c8c8c;
         line-height: 15px;
-        display: inline-block;
+        display: block;
         padding-left: 10px;
         font-weight: 400;
+        float: right;
       }
     }
 
@@ -178,7 +181,6 @@
         @supports (-webkit-touch-callout: none) and (not (translate: none)) {
           & *:not(:last-child) {
             margin-right: 15px;
-            
           }
         }
         a {

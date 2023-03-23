@@ -106,27 +106,27 @@
             top:auto;
             bottom:34px;
             display:flex;
-            justify-content: center;
-            gap:4px;
+            justify-content: center;            
             margin:0;
             padding:0;
 
-            @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-                & *:not(:last-child) {
-                  margin-right: 4px;
-                }
-              }
+            
 
             .swiper-pagination-bullet{
                 width:8px;
                 height:4px;
                 background:#d3d4d6;
                 border-radius: 1px;
-                margin:0;
+                margin:0 4px 0 0;
                 padding:0;
                 transition: ease-in-out;
                 animation-duration: 500ms;
                 opacity: 1;
+
+                &:last-child{
+                    margin-right:0;
+                }
+
 
                 &-active{
                     width:16px;
