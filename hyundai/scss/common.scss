@@ -23,6 +23,16 @@ body {
   scroll-behavior: auto !important;
   overscroll-behavior: none !important;
 }
+
+*.fade {
+  transition: none !important;
+
+  .modal-dialog {
+    transition: none !important;
+    transform: none !important;
+  }
+}
+
 html {
   //overflow: hidden !important;
 }

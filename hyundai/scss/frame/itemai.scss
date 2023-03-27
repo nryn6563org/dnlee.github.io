@@ -102,10 +102,10 @@
                 font-size: 20px;
                 color: #292929;
                 letter-spacing: -0.025em;
-                max-width:calc(100% - 60px);
-                overflow:hidden;
+                max-width: calc(100% - 60px);
+                overflow: hidden;
                 text-overflow: ellipsis;
-                white-space:nowrap;
+                white-space: nowrap;
               }
               em {
                 display: block;
@@ -354,15 +354,8 @@
       position: static;
       display: flex;
       justify-content: center;
-      gap: 4px;
       margin: 12px 0 0 0;
       padding: 0;
-
-      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
-        & *:not(:last-child) {
-          margin-right: 4px;
-        }
-      }
 
       .swiper-pagination-bullet {
         width: 8px;
@@ -374,6 +367,11 @@
         transition: ease-in-out;
         animation-duration: 1s;
         opacity: 1;
+        margin-right: 4px;
+
+        &:last-child {
+          margin-right: 0;
+        }
 
         &-active {
           width: 16px;
