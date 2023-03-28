@@ -223,3 +223,14 @@ input::-webkit-search-results-decoration {
 input[type="search"]::-webkit-search-cancel-button {
   -webkit-appearance: none;
 }
+.absolute-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  background:#ccc;
+}
+#area05 {
+  position: relative;
+}
