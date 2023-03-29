@@ -88,7 +88,8 @@
       display: block;
       width: 100%;
       float: left;
-      padding-bottom: 80px;
+      //padding-bottom: 80px;
+      //border-bottom:1px solid #d7d7d7;
 
       .list {
         display: flex;
@@ -130,6 +131,33 @@
           }
         }
       }
+    }
+  }
+}
+.add-bank {
+  display: block;
+  width: calc(100% - 40px);
+  border-top: 1px solid #d7d7d7;
+  float: left;
+  margin: 0 20px;
+  padding:20px 0;
+  text-align: right;
+
+  button {
+    font-size: 14px;
+    color: #141414;
+    font-weight: 500;
+
+    &::before {
+      content: "+";
+      width: 16px;
+      height: 16px;
+      border: 1px solid #141414;
+      border-radius: 100%;
+      margin-right: 8px;
+      display: block;
+      padding: 0;
+      float: left;
     }
   }
 }
