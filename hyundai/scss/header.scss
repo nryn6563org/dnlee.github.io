@@ -17,7 +17,13 @@
     position: -webkit-relative;
 
     & > div > div:first-child {
-      width: calc(100% - 68px);
+      width: calc(100% - 92px) !important;
+    }
+    & > div > div:last-child .search {
+      margin-right: 0;
+    }
+    & > div > div:last-child button.usr {
+      margin-left: 10px;
     }
   }
 
