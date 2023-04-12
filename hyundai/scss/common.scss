@@ -30,7 +30,7 @@ body {
 }
 
 *.fade {
-  transition: none !important;
+  //transition: initial !important;
 
   .modal-dialog {
     transition: none !important;
