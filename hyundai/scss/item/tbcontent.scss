@@ -1,29 +1,31 @@
 #tbArea .areaContent {
-    display: block;
+  display: block;
+  width: 100%;
+  float: left;
+  //margin: 0 0 40px 0;
+  padding: 122px 0 0;
+  //background:#fff;
+  z-index: 10;
+
+  & > div {
+    //display:block;
     width: 100%;
+    padding: 0 20px 40px;
     float: left;
-    //margin: 0 0 40px 0;
-    padding: 122px 0 0;
-    //background:#fff;
-    z-index: 10;
 
-    & > div {
-        //display:block;
-        width: 100%;
-        padding: 0 20px 40px;
-        float: left;
+    .tab-pane {
+      display: none;
+      z-index: -999;
 
-        .tab-pane {
-            display: none;
-
-            &.active {
-                display: block;
-            }
-        }
+      &.active {
+        display: block;
+        z-index: inherit;
+      }
     }
+  }
 }
 
-@import 'empty.scss';
-@import 'chart.scss';
-@import 'alarm.scss';
-@import 'highrow.scss';
+@import "empty.scss";
+@import "chart.scss";
+@import "alarm.scss";
+@import "highrow.scss";

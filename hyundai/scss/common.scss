@@ -29,8 +29,11 @@ body {
   height: 100%;
 }
 
+.fade:not(.show) {
+  opacity: inherit;
+}
 *.fade {
-  //transition: initial !important;
+  transition: initial !important;
 
   .modal-dialog {
     transition: none !important;
