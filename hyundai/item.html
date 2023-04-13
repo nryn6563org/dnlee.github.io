@@ -23,15 +23,13 @@
   <!-- //swiper js -->
 
   <script>
-    document.ready(() => {
-      const setHeight = () => {
+    const setHeight = () => {
         const vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
       };
 
       window.addEventListener('resize', setHeight);
       setHeight();
-    })
   </script>
 </head>
 
