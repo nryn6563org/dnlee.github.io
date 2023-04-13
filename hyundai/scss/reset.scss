@@ -8,9 +8,11 @@ html {
 body {
   margin: 0;
 }
-html,
-body {
+html{
   height: 100vh;
+}
+body{
+    height:100%;
 }
 main {
   display: block;
