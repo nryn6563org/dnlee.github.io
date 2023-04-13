@@ -24,12 +24,12 @@
 
   <script>
     const setHeight = () => {
-        const vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      };
+      const vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    };
 
-      window.addEventListener('resize', setHeight);
-      setHeight();
+    window.addEventListener('resize', setHeight);
+    setHeight();
   </script>
 </head>
 
@@ -214,10 +214,38 @@
 
     <div class="tbArea-w">
       <section id="tbArea">
-        
+        <header>
+          <div class="tit">
+            <strong>AI종목분석</strong>
+          </div>
+          <!-- // -->
+          <div class="navi-s">
+            <div class="nav" role="tablist">
+              <button type="button" class="smenu active nav-tabs">
+                <span class="nav-link active" data-bs-toggle="tab" data-bs-target="#area01">수급</span>
+              </button>
+
+              <button type="button" class="smenu nav-tabs">
+                <span class="nav-link" data-bs-toggle="tab" data-bs-target="#area02">시세</span>
+              </button>
+
+              <button type="button" class="smenu nav-tabs">
+                <span class="nav-link" data-bs-toggle="tab" data-bs-target="#area03">실적</span>
+              </button>
+
+              <button type="button" class="smenu nav-tabs">
+                <span class="nav-link" data-bs-toggle="tab" data-bs-target="#area04">리포트/공시</span>
+              </button>
+              <button type="button" class="smenu nav-tabs">
+                <span class="nav-link" data-bs-toggle="tab" data-bs-target="#area05">기술진단</span>
+              </button>
+            </div>
+          </div>
+          <!-- // -->
+        </header>
 
         <div class="areaContent tab-content">
-          <div id="area01" class="tab-pane active show" role="tabpanel" tabindex="0">
+          <div id="area01" class="tab-pane fade active show" role="tabpanel" tabindex="0">
             <div class="chart-w mt-10">
               <div class="chart">
                 <img src="./img/item/chart.png" alt="" width="100%" />
@@ -314,480 +342,6 @@
 
             <div class="emptybox">※ 최근 수급 관련 콘텐츠가 없습니다.</div>
           </div>
-          <!-- //수급 -->
-
-          <div id="area02" class="tab-pane" role="tabpanel" tabindex="0">
-            <div class="chart-w mt-10">
-              <div class="chart">
-                <img src="./img/item/candle.png" alt="" width="100%" />
-              </div>
-              <!-- // 임의 영역 -->
-            </div>
-            <!-- // -->
-
-            <div class="alarm">
-              <div class="list">
-                <div>
-                  <div class="date">
-                    <span>09.02</span>
-                  </div>
-                  <!-- // -->
-
-                  <div class="con">
-                    <span class="bullet">N</span>
-                    <span class="txt">외국인 보유비중 확대</span>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- // -->
-
-                <div>
-                  <div class="date">
-                    <span>09.02</span>
-                  </div>
-                  <!-- // -->
-
-                  <div class="con">
-                    <span class="bullet">N</span>
-                    <span class="txt">외국인 보유비중 확대 외국인 보유비중 확대</span>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- // -->
-
-                <div>
-                  <div class="date">
-                    <span>09.02</span>
-                  </div>
-                  <!-- // -->
-
-                  <div class="con">
-                    <!-- <span class="bullet">N</span> -->
-                    <span class="txt">외국인 보유비중 확대 외국인 보유비중 확대 되는중</span>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- // -->
-
-                <div>
-                  <div class="date">
-                    <span>09.02</span>
-                  </div>
-                  <!-- // -->
-
-                  <div class="con">
-                    <!-- <span class="bullet">N</span> -->
-                    <span class="txt">외국인 보유비중 확대 외국인 보유</span>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- // -->
-
-                <div>
-                  <div class="date">
-                    <span>09.02</span>
-                  </div>
-                  <!-- // -->
-
-                  <div class="con">
-                    <!-- <span class="bullet">N</span> -->
-                    <span class="txt">외국인 보유비중 확대 외국인 보유비중 확대 되는중</span>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- // -->
-              </div>
-              <!-- list -->
-
-              <div class="more">
-                <button>더 보기</button>
-              </div>
-              <!-- // -->
-            </div>
-            <!-- // -->
-
-            <div class="emptybox">※ 최근 리포트 관련 콘텐츠가 없습니다.</div>
-          </div>
-          <!-- //시세 -->
-
-          <div id="area03" class="tab-pane " role="tabpanel" tabindex="0">
-            <div class="chart-w mt-10">
-              <div class="chart">
-                <img src="./img/item/line.png" alt="" width="100%" />
-              </div>
-              <!-- // 임의 영역 -->
-            </div>
-            <!-- // -->
-
-            <div class="alarm">
-              <div class="list list-link">
-                <div>
-                  <a href="#">
-                    <span class="date">
-                      <em>09.02</em>
-                    </span>
-                    <!-- // -->
-
-                    <span class="con">
-                      <em class="bullet">N</em>
-                      <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑</em>
-                    </span>
-                    <!-- // -->
-                  </a>
-                </div>
-                <!-- // -->
-
-                <div>
-                  <a href="#">
-                    <span class="date">
-                      <em>09.02</em>
-                    </span>
-                    <!-- // -->
-
-                    <span class="con">
-                      <!-- <em class="bullet">N</em> -->
-                      <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑</em>
-                    </span>
-                    <!-- // -->
-                  </a>
-                </div>
-                <!-- // -->
-
-                <div>
-                  <a href="#">
-                    <span class="date">
-                      <em>09.02</em>
-                    </span>
-                    <!-- // -->
-
-                    <span class="con">
-                      <!-- <em class="bullet">N</em> -->
-                      <em class="txt">[실적속보]켐온, 올해 2Q 영업이익</em>
-                    </span>
-                    <!-- // -->
-                  </a>
-                </div>
-                <!-- // -->
-              </div>
-              <!-- list -->
-
-              <div class="more">
-                <button>더 보기</button>
-              </div>
-              <!-- // -->
-            </div>
-            <!-- // -->
-
-            <div class="emptybox">※ 최근 실적 관련 콘텐츠가 없습니다.</div>
-          </div>
-          <!-- //실적 -->
-
-          <div id="area04" class="tab-pane " role="tabpanel" tabindex="0">
-            <ul class="nav cnm-stab intab" style="margin-top: -4px">
-              <li class="nav-item">
-                <a href="#ct0401" class="nav-link active" aria-current="page" data-bs-toggle="tab" data-bs-target="#ct0401">리포트</a>
-              </li>
-              <li class="nav-item">
-                <a href="#ct0402" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#ct0402">주요공시</a>
-              </li>
-            </ul>
-            <!-- // -->
-
-            <div id="ct0401" class="mt-30 float-start tab-pane fade active show">
-              <div class="chart-w">
-                <div class="chart">
-                  <img src="./img/item/report.png" alt="" width="100%" />
-                </div>
-                <!-- // 임의 영역 -->
-              </div>
-              <!-- // -->
-
-              <div class="hrbox">
-                <div>
-                  <div class="tit">
-                    <span>최고목표가</span>
-                    <em>(이베스권투자증권 11.03)</em>
-                  </div>
-                  <!-- //tit -->
-                  <div class="prc">
-                    <span>1,200,222원</span>
-                  </div>
-                  <!-- //prc -->
-                </div>
-                <!-- // -->
-                <div>
-                  <div class="tit">
-                    <span>최저목표가</span>
-                    <em>(이베스권투자증권 11.23)</em>
-                  </div>
-                  <!-- //tit -->
-                  <div class="prc">
-                    <span>1,200,222원</span>
-                  </div>
-                  <!-- //prc -->
-                </div>
-                <!-- // -->
-              </div>
-              <!-- //hrbox -->
-
-              <div class="alarm">
-                <strong>최신 리포트</strong>
-
-                <div class="list list-link report">
-                  <div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <em class="bullet">N</em>
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-
-                    <div class="cdn">
-                      <span>신규매수</span>
-                      <span>목표가상향</span>
-                      <span>괴리율상위</span>
-                    </div>
-
-                    <div class="cpn">
-                      <span>현대차증권</span>
-                    </div>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <!-- <em class="bullet">N</em> -->
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-
-                    <div class="cdn">
-                      <span>신규매수</span>
-                    </div>
-
-                    <div class="cpn">
-                      <span>현대차증권</span>
-                    </div>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <!-- <em class="bullet">N</em> -->
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-
-                    <div class="cdn">
-                      <!-- <span>신규매수</span> -->
-                    </div>
-
-                    <div class="cpn">
-                      <span>현대차증권</span>
-                    </div>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <!-- <em class="bullet">N</em> -->
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-
-                    <div class="cdn">
-                      <!-- <span>신규매수</span> -->
-                    </div>
-
-                    <div class="cpn">
-                      <span>현대차증권</span>
-                    </div>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <!-- <em class="bullet">N</em> -->
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-
-                    <div class="cdn">
-                      <!-- <span>신규매수</span> -->
-                    </div>
-
-                    <div class="cpn">
-                      <span>현대차증권</span>
-                    </div>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- list -->
-
-                <div class="more">
-                  <button>더 보기</button>
-                </div>
-                <!-- // -->
-              </div>
-              <!-- //alarm -->
-            </div>
-            <!-- //0401 -->
-
-            <div id="ct0402" class="mt-30 float-start tab-pane fade">
-              <div class="alarm mt-0">
-                <div class="list list-link report">
-                  <div>
-                    <div class="bulletbox">
-                      <span>지분공시</span>
-                    </div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <em class="bullet">N</em>
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <div class="bulletbox">
-                      <span>주요경영사항</span>
-                    </div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <em class="bullet">N</em>
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑ 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <div class="bulletbox">
-                      <span>수주공시</span>
-                    </div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <em class="bullet">N</em>
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원, 전년동기比 266%↑</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <div class="bulletbox">
-                      <span>지분공시</span>
-                    </div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <!-- <em class="bullet">N</em> -->
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-                  </div>
-                  <!-- // -->
-
-                  <div>
-                    <div class="bulletbox">
-                      <span>지분공시</span>
-                    </div>
-                    <a href="#">
-                      <span class="date">
-                        <em>09.02</em>
-                      </span>
-                      <!-- // -->
-
-                      <span class="con">
-                        <!-- <em class="bullet">N</em> -->
-                        <em class="txt">[실적속보]켐온, 올해 2Q 영업이익 48.6억원</em>
-                      </span>
-                      <!-- // -->
-                    </a>
-                  </div>
-                  <!-- // -->
-                </div>
-                <!-- list -->
-
-                <div class="more">
-                  <button>더 보기</button>
-                </div>
-                <!-- // -->
-              </div>
-              <!-- //alarm -->
-            </div>
-
-            <div class="emptybox">※ 최근 리포트 관련 콘텐츠가 없습니다.</div>
-            <div class="emptybox">※ 최근 공시 관련 콘텐츠가 없습니다.</div>
-          </div>
-          <!-- //리포트 -->
-
-          <div id="area05" class="tab-pane " role="tabpanel" tabindex="0">
-            <iframe src="" frameborder="0" style="width:100%;height:700px;"></iframe>
-            <div class="absolute-area" style="height:700px"></div>
-            <!--
-              iframe높이보다 60px작게 높이값 잡아주세요
-             -->
-          </div>
-          <!-- //기술진단 -->
 
           <div class="itemHomeButton">
             <button>매수하기</button>
