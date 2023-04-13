@@ -34,12 +34,84 @@
     position: relative !important;
     position: -webkit-relative;
 
+    & > div:last-child {
+      & > div > div:first-child {
+        width: calc(100% - 92px);
+      }
+      & > div > div:last-child .search {
+        margin-right: 0;
+        margin-top: 0;
+
+        svg path {
+          fill: #ffffff !important;
+        }
+      }
+      & > div > div:last-child {
+        display: flex;
+        //gap: 10px;
+
+        @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+          & *:not(:last-child) {
+            margin-right: 10px;
+          }
+        }
+
+        div {
+          display: block;
+
+          button.usr {
+            margin: 0 0 0 10px !important;
+            svg path {
+              stroke: white !important;
+            }
+            &.active {
+              svg path {
+                stroke: #fac60f !important;
+              }
+            }
+          }
+        }
+      }
+
+      & > div:not(.modal) {
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        height: 50px;
+
+        & > div {
+          button {
+            &.back {
+              margin-top: 0;
+            }
+          }
+        }
+        h1 {
+          margin-left: 5px;
+          margin-top: 0;
+          color: #fff;
+
+          span {
+            color: #fff;
+          }
+        }
+      }
+    }
+
     & > div > div:first-child {
-      width: calc(100% - 68px);
+      width: calc(100% - 92px);
+    }
+    & > div > div:last-child .search {
+      margin-right: 0;
+      margin-top: 0;
+
+      svg path {
+        fill: #ffffff !important;
+      }
     }
     & > div > div:last-child {
       display: flex;
-      gap: 10px;
+      //gap: 10px;
 
       @supports (-webkit-touch-callout: none) and (not (translate: none)) {
         & *:not(:last-child) {
@@ -94,6 +166,10 @@
         h1 {
           span {
             color: #141414;
+            
+            em{
+              color:#141414;
+            }
           }
         }
       }
