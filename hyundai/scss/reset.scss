@@ -8,11 +8,8 @@ html {
 body {
   margin: 0;
 }
-html{
+html,body{
     height: calc(var(--vh, 1vh) * 100);
-}
-body{
-    height:100%;
 }
 main {
   display: block;
