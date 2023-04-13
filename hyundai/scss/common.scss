@@ -80,13 +80,13 @@ body {
     padding: 0;
     position: relative;
 
-    .tbArea-w{
-      &.open{
-        overflow:hidden !important;
+    .tbArea-w {
+      &.open {
+        overflow: hidden !important;
 
-        #tbArea{
-          height:100%;
-          overflow:scroll;
+        #tbArea {
+          height: 100%;
+          overflow: scroll;
         }
       }
     }
