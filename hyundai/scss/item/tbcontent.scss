@@ -16,10 +16,31 @@
     .tab-pane {
       display: none;
       z-index: -999;
+      position:absolute;
+      top:0;
+      left:-9999em;
 
       &.active {
         display: block;
         z-index: inherit;
+        position:relative;
+        top:0;
+        left:0;
+      }
+    }
+    &.tab-pane {
+      display: none;
+      z-index: -999;
+      position:absolute;
+      top:0;
+      left:-9999em;
+
+      &.active {
+        display: block;
+        z-index: inherit;
+        position:relative;
+        top:0;
+        left:0;
       }
     }
   }
