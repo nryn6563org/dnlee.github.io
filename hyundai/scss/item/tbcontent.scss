@@ -16,31 +16,33 @@
     .tab-pane {
       display: none;
       z-index: -999;
-      position:absolute;
-      top:0;
-      left:-9999em;
+      position: absolute;
+      top: 0;
+      left: -9999em;
 
       &.active {
         display: block;
         z-index: inherit;
-        position:relative;
-        top:0;
-        left:0;
+        position: relative;
+        top: 0;
+        left: 0;
       }
     }
     &.tab-pane {
-      display: none;
-      z-index: -999;
-      position:absolute;
-      top:0;
-      left:-9999em;
+      z-index: -1;
+      position: absolute;
+      top: 0;
+      left: -9999em;
+      opacity: 0;
+      visibility: hidden;
 
       &.active {
-        display: block;
-        z-index: inherit;
-        position:relative;
-        top:0;
-        left:0;
+        z-index: 99;
+        position: relative;
+        top: 0;
+        left: 0;
+        opacity: 1;
+        visibility: visible;
       }
     }
   }

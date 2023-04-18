@@ -6,7 +6,7 @@
   border-radius: 20px 20px 0 0;
   overflow: hidden;
   //background:#fff;
-  z-index: 12;
+  z-index: 100;
   float: left;
   position: fixed;
   background: #fff;
@@ -48,7 +48,7 @@
       background: #ccc;
       z-index: 3;
     }
-    
+
     div {
       position: relative;
       display: flex;
@@ -61,7 +61,6 @@
       padding: 0;
       flex-wrap: nowrap;
       z-index: 9;
-      
 
       &::-webkit-scrollbar {
         display: none;
