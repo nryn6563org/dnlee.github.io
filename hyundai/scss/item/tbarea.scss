@@ -9,8 +9,8 @@
   float: left;
   background: #fff;
   margin-top: -20px;
-  touch-action: pan-y;
-  z-index: 12;
+  //touch-action: pan-y;
+  z-index: 999;
   transition: margin 0.3s ease-in-out;
 
   &.aiarea2 {
