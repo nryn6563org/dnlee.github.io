@@ -2,6 +2,38 @@
 //버블차트
 @import './frame/itemai.scss';
 // AI추천종목
-
 @import './frame/price.scss';
 
+* {
+  font-family: "Spoqa Han Sans Neo", "sans-serif";
+}
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  height: -webkit-fill-available
+}
+body {
+  margin: 0;
+  height: calc(var(--vh, 1vh) * 100);
+  min-height: calc(var(--vh, 1vh) * 100);
+  min-height: -webkit-fill-available;
+}
+@supports(-webkit-touch-callout: none) {
+    html {
+        height: -webkit-fill-available
+    }
+}
+/* iOS only */
+
+em{
+  font-style:normal !important;
+}
+.mt-10{
+  margin-top:10px;
+}
+.mt-12{
+  margin-top:12px;
+}
+.mt-5{
+  margin-top:5px;
+}
