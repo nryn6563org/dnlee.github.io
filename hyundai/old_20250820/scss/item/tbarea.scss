@@ -1,0 +1,69 @@
+.tbArea-w {
+  position: relative;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+  overflow: hidden;
+  float: left;
+  background: #fff;
+  margin-top: -20px;
+  //touch-action: pan-y;
+  z-index: 999;
+  transition: margin 0.3s ease-in-out;
+
+  &.aiarea2 {
+    .guide {
+      padding: 40px 26px 77px 27px;
+    }
+  }
+
+  &.aiarea.open {
+    //margin-top: calc(((var(--vh, 1vh) * -100) + 100px));
+    //margin-top: calc(-100% - 134px);
+    border-radius: 0 !important;
+    top: 0 !important;
+  }
+
+  &.aiarea2.open {
+    border-radius: 0;
+  }
+
+  &.open {
+    //margin-top: calc(((var(--vh, 1vh) * -100) + 50px));
+    //margin-top: calc(-100% - 150px);
+    overflow: auto;
+  }
+
+  #container.item & .guide {
+    padding: 40px 26px 77px;
+  }
+
+  .guide {
+    padding: 40px 26px 123px 27px;
+  }
+}
+#tbArea {
+  position: relative;
+  //overflow: hidden;
+  bottom: 0;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  //background:#fff;
+  border-radius: 20px 20px 0 0;
+  float: left;
+  overflow-y: scroll;
+
+  #container & .areaContent > div {
+    padding: 0 20px 28px;
+
+    .emptybox {
+      margin-top: 20px;
+    }
+  }
+}
+
+@import "tbheader.scss";
+@import "tbcontent.scss";
