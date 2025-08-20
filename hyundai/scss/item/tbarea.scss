@@ -13,6 +13,10 @@
   z-index: 999;
   transition: margin 0.3s ease-in-out;
 
+  &.usa{
+    height:auto;
+  }
+
   &.aiarea2 {
     .guide {
       padding: 40px 26px 77px 27px;
@@ -42,6 +46,9 @@
 
   .guide {
     padding: 40px 26px 123px 27px;
+    &.usa{
+      padding:40px 26px;
+    }
   }
 }
 #tbArea {

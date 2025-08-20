@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=360px,user-scalable=no" />
+    <title>현대차증권</title>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <link href="./css/font.css" rel="stylesheet" />
+    <!-- // font css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+    <!-- //bootstrap css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+    <!-- <link rel="stylesheet" href="./css/swiper-bundle.min.css"/> -->
+    <!-- //swiper css -->
+    <link rel="stylesheet" href="./css/common.css" />
+    <!-- // custom css -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script src="./js/swiper-bundle.min.js"></script> -->
+    <!-- //swiper js -->
+  </head>
+
+  <body>
+    <header id="header" class="item">
+      <div>
+        <div>
+          <button class="back">
+            <img src="./img/header/icon-back.svg" alt="뒤로가기" />
+          </button>
+          <h1 class="text-truncate">종목명종목종목명종목종목명종목종목명종목종목명종목</h1>
+        </div>
+        <!-- // -->
+      </div>
+    </header>
+    <!-- //header -->
+
+    <article id="container" class="usa">
+      <section id="content" class="c-item">
+        <div class="info usa">
+          <div class="usa">
+            <span class="cd">PLTR</span>
+            <span class="cd">Nasdaq</span>
+          </div>
+          <!-- // 코드&정보 -->
+
+          <div class="mt-8 up">
+            <span class="prc usa">10.48%</span>
+          </div>
+          <!-- // 가격&퍼센트 -->
+
+          <div class="mt-20 pl-3">
+            <span class="gd text-truncate">아연, 금, 은 등의 비철금속 제련 및 판매 기업</span>
+          </div>
+          <!-- // 기업요건 -->
+
+          <div class="mt-7 d-flex justify-content-start gap4">
+            <span class="tag">#온라인</span>
+            <span class="tag">#해외주식</span>
+            <span class="tag">#2차전지</span>
+          </div>
+          <!-- // 태그 -->
+
+          <button class="orgInfo usa" data-bs-toggle="modal" data-bs-target="#OrgInfoModal">
+            <span>기업정보</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M5.61279 12L9.61279 8L5.61279 4" stroke="#7F7F7F" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+
+          <button class="nowPricing usa">
+            <span>현재가</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M5.61279 12L9.61279 8L5.61279 4" stroke="#7F7F7F" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <!-- //종목정보 -->
+
+        <div class="cardNews">
+          <div class="box">
+            <div class="tit">
+              <strong>이 종목, 무슨일이야></strong>
+            </div>
+            <div class="txt">팔란티어테크놀로지 주가는 2025년 1분기 실적 발표에서 상업 매출이 전년 동기 대비 71%, 정부 부문 매출이 45% 급등하는 등 강력한 성장을 보였습니다. S&P 500지수에 편입되며 ETF 자금 유입 효과도 발생했고, 기업과 정부기관의 AI 및 데이터 플랫폼 실전 배치와 대규모 계약 체결이 이어지고 있어 투자 심리가 크게 개선됐습니다.</div>
+
+            <div class="link">
+              <button>
+                관련기사
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M5.61279 12L9.61279 8L5.61279 4" stroke="#7F7F7F" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="tbArea-w usa">
+        <!-- 2023.02.27 수정사항 aiarea2추가 -->
+        <div class="org-p-w">
+          <div class="org-p">
+            <div class="score-box">
+              <div class="score">
+                <dl>
+                  <dt>
+                    AI 평가점수
+                    <em data-bs-toggle="modal" data-bs-target="#guideforscore">
+                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.16602 8.49996C2.16602 5.00216 5.00155 2.16663 8.49935 2.16663C11.9972 2.16663 14.8327 5.00216 14.8327 8.49996C14.8327 11.9978 11.9972 14.8333 8.49935 14.8333C5.00155 14.8333 2.16602 11.9978 2.16602 8.49996Z" stroke="#828282" stroke-width="1.3" />
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M8.5 12.3959C8.2066 12.3959 7.96875 12.158 7.96875 11.8646L7.96875 8.32296C7.96875 8.02956 8.2066 7.79171 8.5 7.79171C8.7934 7.79171 9.03125 8.02956 9.03125 8.32296L9.03125 11.8646C9.03125 12.158 8.7934 12.3959 8.5 12.3959Z" fill="#828282" />
+                        <path d="M8.5 5.13546C8.0599 5.13546 7.70312 5.49223 7.70312 5.93233C7.70312 6.37243 8.0599 6.72921 8.5 6.72921C8.9401 6.72921 9.29687 6.37243 9.29687 5.93233C9.29687 5.49223 8.9401 5.13546 8.5 5.13546Z" fill="#828282" />
+                      </svg>
+                    </em>
+                  </dt>
+                  <dd>89점</dd>
+                </dl>
+              </div>
+
+              <div class="graph mt-17 w-100 float-start">
+                <img src="./img/aitem/aiscore.png" alt="" width="100%" />
+              </div>
+            </div>
+            <!-- // -->
+
+            <ul class="nav cnm-stab mt-20">
+              <li class="nav-item">
+                <a href="#usa01" class="nav-link active" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa01">성장성</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#usa02" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa02">안정성</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#usa03" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa03">수익성</a>
+              </li>
+
+              <li class="nav-item">
+                <a href="#usa04" class="nav-link" aria-current="page" data-bs-toggle="tab" data-bs-target="#usa04">멀티플</a>
+              </li>
+            </ul>
+            <!-- //nav -->
+
+            <div class="tab-content w-100 float-start mt-14 pb-40">
+              <div id="usa01" class="tab-pane fade active show">
+                <div class="org-p-txt">
+                  <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2236_25548)">
+                        <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2236_25548">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>기업의 미래 성장 가능성을 분석할 수 있는 지표입니다.</span>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score">
+                    <dl>
+                      <dt>성장성 지표 평균점수</dt>
+                      <dd>89점</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>매출액 증가율</dt>
+                      <dd>89점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac01" style="width: 89%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt"> 최근 3년 분기별 매출액, 전종목 매출액, 종목별 AI분석 가중치 </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          기업의 성장률을 판단하는 대표적인 지표. <br />
+                          시가총액 상위20%평균 점수보다 높을수록 고성장이 기대되는 종목으로 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>자기자본 증가율</dt>
+                      <dd>60점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac01" style="width: 60%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">최근 3년 분기별 자기자본 금액, 전종목 자기자본 금액, 종목별 AI분석 가중치</span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          기업 고유자산의 증가를 나타내는 지표. <br />
+                          시가총액 상위20%평균 점수보다 높을수록 미래 성장 잠재력이 크다고 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+              </div>
+              <!-- // -->
+
+              <div id="usa02" class="tab-pane fade">
+                <div class="org-p-txt">
+                  <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2236_25548)">
+                        <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2236_25548">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>기업의 재무/실적 안정성을 분석할 수 있는 지표입니다.</span>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score">
+                    <dl>
+                      <dt>안정성 지표 평균점수</dt>
+                      <dd>89점</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>부채/유동 비율</dt>
+                      <dd>70점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac02" style="width: 70%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">부채총계, 자본총계, 유동자산, 유동부채,AI분석 적정비율값 </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          재무 건전성을 분석할때 활용되는 지표. <br />
+                          시가총액 상위20%평균 점수보다 높으면 보다 안정적인 기업으로 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>실적안정성</dt>
+                      <dd>30점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac02" style="width: 30%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">최근 3년 분기별 매출액, 영업이익, 당기순이익 등 실적분석 지표</span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          꾸준한 실적은 내는 기업을 평가하는 지표. <br />
+                          시가총액 상위20%평균 점수보다 높을 경우 안정적인 실적을 내는 것으로 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+              </div>
+              <!-- // -->
+
+              <div id="usa03" class="tab-pane fade">
+                <div class="org-p-txt">
+                  <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2236_25548)">
+                        <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2236_25548">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>기업의 영업효율 및 성과를 분석할 수 있는 지표입니다.</span>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score">
+                    <dl>
+                      <dt>수익성 지표 평균점수</dt>
+                      <dd>89점</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>ROA/ROE</dt>
+                      <dd>45점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac03" style="width: 45%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">최근 2년 분기별 당기순이익, 자산총계, 자본총계, 종목별 AI분석 가중치</span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          대표적인 수익성 지표인 ROA와 ROE 결합. <br />
+                          시가총액 상위20%평균 점수보다 높을수록 투자가치와 수익성이 높다고 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>영업이익률</dt>
+                      <dd>15점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac03" style="width: 15%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">최근 2년 분기별 영업이익, 매출액, 종목별 AI분석 가중치</span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          기업의 영업활동의 능률을 측정하는 지표. <br />
+                          시가총액 상위20%평균 점수보다 높을 수록 시장대비 수익성이 좋은 것으로 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+              </div>
+              <!-- // -->
+
+              <div id="usa04" class="tab-pane fade">
+                <div class="org-p-txt">
+                  <span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_2236_25548)">
+                        <ellipse cx="8.00174" cy="8.00003" rx="7.11111" ry="7.11111" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M8 4.5V8.00003V9.61108M8 12V11.5" stroke="#828282" stroke-width="1.25" stroke-linecap="round" stroke-linejoin="round" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_2236_25548">
+                          <rect width="16" height="16" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </span>
+                  <span>기업의 미래 가치를 분석할 수 있는 지표입니다.</span>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score">
+                    <dl>
+                      <dt>멀티플 지표 평균점수</dt>
+                      <dd>89점</dd>
+                    </dl>
+                  </div>
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-25">
+                    <dl>
+                      <dt>PER</dt>
+                      <dd>59점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac04" style="width: 59%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">최근 4분기 당기순이익, 주가, 시가총액, 전종목 PER, 종목별 AI분석 가중치</span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          기업의 주식가치를 나타내는 대표적인 척도. <br />
+                          시가총액 상위20%평균 점수보다 높을수록 기업 가치가 높은 것으로 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+
+                <div class="score-box mt-12">
+                  <div class="score pt-20">
+                    <dl>
+                      <dt>PBR</dt>
+                      <dd>39점</dd>
+                    </dl>
+
+                    <div class="score-progress">
+                      <span class="pr-basic"></span>
+                      <span class="pr-active ac04" style="width: 39%"></span>
+
+                      <div>
+                        <span>0</span>
+                        <span>평균(42)</span>
+                        <span>100</span>
+                      </div>
+                      <!-- // -->
+                    </div>
+                    <!-- // -->
+
+                    <div class="elm-w">
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">최근 4분기 자본총계, 주가, 시가총액, 전종목 PBR, 종목별 AI분석 가중치</span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                      <div class="elm">
+                        <span class="bullet">분석요소</span>
+                        <!-- // -->
+
+                        <span class="txt">
+                          기업의 재무상태면에서 주가를 판단하는 지표. <br />
+                          시가총액 상위20%평균 점수보다 높을수록 재무구조가 매우 튼튼하다고 평가.
+                        </span>
+                        <!-- // -->
+                      </div>
+                      <!-- // -->
+                    </div>
+                  </div>
+                  <!-- //score -->
+                </div>
+                <!-- // -->
+              </div>
+              <!-- // -->
+            </div>
+            <!-- // -->
+
+            <section class="cnm">
+              <div class="guide usa">
+                <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
+                <!-- // -->
+
+                <div>※ 현대차증권과 콘텐츠 제공업체는 제공된 정보에 의한 투자 성과를 보장하지 않으며, 결과에 대해 법적인 책임을 지지 않습니다.</div>
+                <!-- // -->
+
+                <div>※ 주식거래는 자산가격 변동, 환율 등에 따라 투자원금의 손실(0~100%)이 발생할 수 있으며, 그 손실은 투자자에게 귀속됩니다.</div>
+                <!-- // -->
+              </div>
+              <!-- //guide -->
+            </section>
+            <!-- // -->
+          </div>
+          <!-- // -->
+
+          <div class="org-scroll"></div>
+        </div>
+        <!-- // -->
+      </div>
+      <!-- // 상하 움직입 -->
+
+      <!-- Modal -->
+      <div class="modal custom-modal01 fade" id="guideforscore">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="modal-pf">
+                <div class="tit">
+                  <span>AI 평가점수</span>
+                </div>
+                <!-- // -->
+
+                <div class="txt">
+                  <span> 5가지 항목 점수를 종합적으로 반영하여 AI평가점수에 반영합니다. </span>
+
+                  <div class="txt-list">
+                    <span> <em>&middot; AI상승확률</em> : 재무 정보, 수급 정보, 주가 정보 등을 토대로 AI가 학습해서 15일 이내 상승할 확률을 점수로 환산한 값입니다. </span>
+
+                    <span> <em>&middot; 주가매력도</em> : 실적 대비 현재 주가 수준을 평가하여 점수로 환산한 값입니다. 저평가 된 종목일수록 높은 점수입니다. </span>
+
+                    <span> <em>&middot; 성장성</em> : 매출액, 영업이익, 자기자본등의 증가율을 기준으로 산출한 점수입니다. </span>
+
+                    <span> <em>&middot; 안정성</em> : 부채비율, 순부채비율, 당좌비율, 이자보상비율, 자본유보율 등을 기준으로 기업의 재무 건전성을 평가한 점수입니다. </span>
+
+                    <span> <em>&middot; 수익성</em> : 영업이익률, 순이익률, 자기자본이익률(ROE), 총자산이익률(ROA) 등을 도대로 기업의 수익성을 평가한 점수입니다. </span>
+                  </div>
+                </div>
+                <!-- // -->
+              </div>
+
+              <div class="modal-button">
+                <button class="bg-blue" data-bs-dismiss="modal" style="width: 100%">확인</button>
+              </div>
+              <!-- // button -->
+            </div>
+            <!-- //body -->
+          </div>
+          <!-- //content -->
+        </div>
+        <!-- //dialog -->
+      </div>
+      <!-- // -->
+
+      <!-- Modal -->
+      <div class="modal fade custom-modal01" id="OrgInfoModal" tabindex="-1" aria-labelledby="기업정보" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-body">
+              <div class="org-info">
+                <div class="tit">기업정보</div>
+
+                <div class="txt">
+                  팔란티어 테크놀로지스는 기관용 소프트웨어 플랫폼을 구축합니다. 회사는 비정부 산업에 종사하는 고객에게 서비스를 제공하는 상업 부문과 미국 연방 정부 및 비미국 정부 기관 고객에게 서비스를 제공하는 정부 부문의 두 가지 부문을 운영합니다. 팔란티어 고담(Palantir Gotham)과 팔란티어 파운드리(Palantir Foundry)라는 두 가지 소프트웨어 플랫폼을 구축했습니다. 고담은 국방 및 정보 기관의 분석가를 위해 구축된 소프트웨어 플랫폼입니다.고담은 사용자가 신호 정보 소스에서 정보원의 보고서에
+                  이르기까지 데이터 세트에 숨겨진 패턴을 식별할 수 있도록 지원하여 미국과 동맹국 군인을 돕습니다.파운드리는 조직의 데이터를 위한 중앙 운영 체제를 생성합니다.개별 사용자는 데이터를 통합하고 분석할 수 있습니다.
+                </div>
+
+                <button class="close" data-bs-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // -->
+    </article>
+    <!-- //container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <!-- //bootstrap js html최하단에 두어주세요!!! -->
+  </body>
+</html>
