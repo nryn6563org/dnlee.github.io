@@ -896,5 +896,17 @@
         }
       }
     }
+
+    .empty_txt{
+      display:flex;
+      min-height: 150px;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top:15px;
+      text-align:center;
+      color:#8c8c8c;
+      font-size:14px;
+      line-height: 24px;
+    }
   }
 }
