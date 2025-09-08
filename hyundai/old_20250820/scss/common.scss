@@ -1,4 +1,4 @@
-// 공통
+// 공통 
 //@import "font.scss";
 @import "reset.scss"; //reset
 @import "fsize.scss"; //폰트사이즈
@@ -77,6 +77,14 @@ body {
   height: 100%;
   margin: -1px auto 0;
   padding-top: 52px;
+
+  &.usa {
+    background: #ffffff;
+    //float:left;
+    padding: 0;
+    position: relative;
+    height: calc(100% - 50px);
+  }
 
   &.item {
     height: calc(100% - 50px);

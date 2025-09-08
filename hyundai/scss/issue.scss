@@ -21,6 +21,10 @@
             min-height: 24px;
             line-height: 24px;
 
+            &.text-truncate-2{
+                -webkit-line-clamp: none !important;
+            }
+
             span {
                 font-size: 16px;
                 color: #141414;
@@ -38,17 +42,10 @@
                 display: block;
                 width: 100%;
                 min-height: 21px;
-                max-height: 168px;
                 line-height: 21px;
                 font-size: 14px;
                 color: #4d4d4d;
                 font-weight: 400;
-                -webkit-line-clamp: 8 !important;
-                overflow: hidden !important;
-                text-overflow: ellipsis !important;
-                display: -webkit-box !important;
-                -webkit-box-orient: vertical !important;
-                white-space: normal !important;
             }
         }
     }
