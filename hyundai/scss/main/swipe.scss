@@ -119,6 +119,7 @@
     }
 
     .title {
+      position:relative;
       display: block;
       width: 100%;
       float: left;
@@ -131,6 +132,19 @@
         font-size: 20px;
         font-weight: 500;
         color: #141414;
+
+        &.txt{
+          position:absolute;
+          bottom:0;
+          right:5px;
+          width:66px;
+          height:13px;
+          min-height:13px;
+          font-weight:normal;
+          font-size:10px;
+          color:#969696;
+          line-height:13px;
+        }
 
         .visual {
           position: relative;
@@ -150,7 +164,7 @@
       }
       & > em {
         display: block;
-        height: 13px;
+        min-height: 13px;
         line-height: 13px;
         font-size: 10px;
         color: #8c8c8c;
@@ -186,7 +200,17 @@
         &:first-child {
           border-bottom: 1px solid #d7d7d7;
         }
-
+        .tag{
+          height:13px;
+          span{
+            display:block;
+            height:13px;
+            line-height:13px;
+            font-size:11px;
+            color:#969696;
+            font-weight:normal;
+          }
+        }
         .top {
           display: flex;
           width: 100%;
