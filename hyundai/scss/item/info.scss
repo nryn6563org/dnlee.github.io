@@ -38,15 +38,21 @@
 
           span {
             font-size: 10px;
+            margin-right:5px;
 
             &.dollar {
               font-size: 12px;
               color: #3b3b3b;
               font-weight:normal;
+              margin-right:0;
 
               em{
                 font-size:14px;
                 font-weight:bold;
+
+                &:first-child{
+                  font-weight:normal;
+                }
 
                 &.colorTxt{
                   &01{

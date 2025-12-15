@@ -9,6 +9,10 @@
     overflow: hidden;
 }
 
+.c-item div.d-flex{
+    flex-wrap:wrap !important;
+}
+
 @import './item/info.scss';
 @import './item/additional.scss';
 @import './item/cardnews.scss';
