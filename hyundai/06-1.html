@@ -325,24 +325,24 @@
               <!-- //swiper -->
 
               <script>
-                const swiper = new Swiper('.local-list', {
+                const swiper = new Swiper(".local-list", {
                   pagination: {
-                    el: '.swiper-pagination',
-                    clickable: true,
+                    el: ".swiper-pagination",
+                    clickable: true
                   },
                   paginationClickable: true,
-                  effect: 'coverflow',
+                  effect: "coverflow",
                   loop: false,
                   centeredSlides: true,
-                  slidesPerView: 'auto',
+                  slidesPerView: "auto",
                   spaceBetween: 10,
                   coverflow: {
                     rotate: 0,
                     stretch: 0,
                     depth: 20,
                     modifier: 20,
-                    slideShadows: true,
-                  },
+                    slideShadows: true
+                  }
                 });
               </script>
             </div>
@@ -938,6 +938,12 @@
               <div class="red">※ AI투자정보서비스는 KRX시세 기반으로 제공됩니다.</div>
               <!-- // -->
 
+              <!-- 2026.01.13 추가내용 -->
+              <div class="red">※ AI가 선별한 투자정보 입니다.</div>
+
+              <div>※ AI가 생성한 정보는 단순 참고용이며, 추천이나 권유 목적이 아닙니다. 제3자 정보제공업체와 제휴하여 데이터를 제공하므로 수신이 지연될 수 있고, 정보의 정확성이나 완전성을 보장할 수 없습니다.</div>
+              <!-- // 2026.01.13 추가내용 -->
+
               <div>※ AI투자정보에서 제공하는 정보는 각 콘텐츠 제공업체로부터 받는 투자 참고사항으로, 무단 배포가 불가합니다.</div>
               <!-- // -->
 
@@ -956,22 +962,22 @@
 
       <script>
         // 좌표 스크롤
-        const cScrollW = document.querySelector('.tbArea-w'); // 스크롤 대상
-        const cScroll = document.querySelector('#ccc').offsetTop; // id스크롤값
-        cScrollW.scrollTo({ top: cScroll - 60, behavior: 'smooth' }); // 스크롤 이동
+        const cScrollW = document.querySelector(".tbArea-w"); // 스크롤 대상
+        const cScroll = document.querySelector("#ccc").offsetTop; // id스크롤값
+        cScrollW.scrollTo({ top: cScroll - 60, behavior: "smooth" }); // 스크롤 이동
 
         //쓸어올리기
 
         let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        document.documentElement.style.setProperty("--vh", `${vh}px`);
 
         let touchStartY = 0;
-        const swipeArea = document.querySelector('.tbArea-w');
+        const swipeArea = document.querySelector(".tbArea-w");
 
         // 이벤트 초기화
         const endExpension = (ev) => {
           // const lastTouchY = ev.changedTouches[0].clientY
-          swipeArea.removeEventListener('touchmove', doExpansion);
+          swipeArea.removeEventListener("touchmove", doExpansion);
           swipeArea.style.top = 0;
         };
 
@@ -980,27 +986,27 @@
         const doExpansion = (ev) => {
           // console.log(ev, touchStartY)
           const movedY = ev.changedTouches[0].clientY;
-          const ctsHeight = document.querySelector('#content').offsetHeight - 48;
+          const ctsHeight = document.querySelector("#content").offsetHeight - 48;
 
-          swipeArea.addEventListener('touchend', endExpension);
-          if (swipeArea.classList.contains('open')) {
+          swipeArea.addEventListener("touchend", endExpension);
+          if (swipeArea.classList.contains("open")) {
             if (touchStartY - movedY < -80 && swipeArea.scrollTop <= 0) {
-              swipeArea.removeEventListener('touchmove', doExpansion);
+              swipeArea.removeEventListener("touchmove", doExpansion);
               swipeArea.style.top = 0;
-              swipeArea.classList.remove('open');
-              swipeArea.style.marginTop = '-20px';
+              swipeArea.classList.remove("open");
+              swipeArea.style.marginTop = "-20px";
             }
-          } else if (!swipeArea.classList.contains('open')) {
+          } else if (!swipeArea.classList.contains("open")) {
             if (touchStartY - movedY > 80) {
-              swipeArea.removeEventListener('touchmove', doExpansion);
+              swipeArea.removeEventListener("touchmove", doExpansion);
               swipeArea.style.top = 0;
-              swipeArea.classList.add('open');
-              swipeArea.style.marginTop = '-' + ctsHeight + 'px';
+              swipeArea.classList.add("open");
+              swipeArea.style.marginTop = "-" + ctsHeight + "px";
             } else if (touchStartY - movedY < -80) {
               ev.preventDefault();
-              if (!swipeArea.classList.contains('bounce')) swipeArea.classList.add('bounce');
+              if (!swipeArea.classList.contains("bounce")) swipeArea.classList.add("bounce");
               setTimeout(() => {
-                swipeArea.classList.remove('bounce');
+                swipeArea.classList.remove("bounce");
               }, 140);
             }
           }
@@ -1008,12 +1014,12 @@
         // touchstart 최초 좌표반환
         const addHeight = (ev) => {
           touchStartY = ev.changedTouches[0].clientY;
-          swipeArea.addEventListener('touchmove', doExpansion);
+          swipeArea.addEventListener("touchmove", doExpansion);
         };
-        swipeArea.addEventListener('touchstart', addHeight);
+        swipeArea.addEventListener("touchstart", addHeight);
 
-        if (swipeArea.classList.contains('open')) {
-          swipeArea.style.marginTop = '-' + (document.querySelector('#content').offsetHeight - 48) + 'px';
+        if (swipeArea.classList.contains("open")) {
+          swipeArea.style.marginTop = "-" + (document.querySelector("#content").offsetHeight - 48) + "px";
         }
 
         /////////////////////////////////////////
