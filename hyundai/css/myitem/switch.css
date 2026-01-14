@@ -4,6 +4,8 @@
 
 .sw-w input[type=checkbox] {
   position: absolute;
+  left: -9999em;
+  top: 0;
   /* hidden */
   appearance: none;
   -webkit-appearance: none;
@@ -43,3 +45,5 @@
 .sw-w input[type=checkbox]:checked + .switch_label .onf_btn {
   left: 18px;
 }
+
+/*# sourceMappingURL=switch.css.map */

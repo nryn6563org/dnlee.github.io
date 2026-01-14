@@ -3,12 +3,13 @@
   width: 100%;
   padding: 24px 0 0 0;
   float: left;
+  background: #FAFAFC;
 }
 .bubble-w.nomem:after {
   content: "";
   position: absolute;
   z-index: -1;
-  background: #FAFAFC;
+  background: #fafafc;
   width: 100%;
   height: 100%;
   top: 0;
@@ -80,12 +81,29 @@
 .bubble-w .swiper .swiper-slide > div .name .dn {
   color: #2073ef;
 }
+.bubble-w .swiper .swiper-slide > div .per {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 16px;
+  line-height: 16px;
+}
+.bubble-w .swiper .swiper-slide > div .per span {
+  font-size: 13px;
+  color: #999;
+}
+.bubble-w .swiper .swiper-slide > div .per span.up {
+  color: #e81a1a;
+}
+.bubble-w .swiper .swiper-slide > div .per span.dn {
+  color: #2073ef;
+}
 .bubble-w .swiper .swiper-slide > div .contxt {
   display: block;
   width: 100%;
   float: left;
   margin-top: 4px;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 20px;
   letter-spacing: -0.025em;
   color: #7f7f7f;
@@ -95,7 +113,6 @@
   bottom: 34px;
   display: flex;
   justify-content: center;
-  gap: 4px;
   margin: 0;
   padding: 0;
 }
@@ -104,10 +121,14 @@
   height: 4px;
   background: #d3d4d6;
   border-radius: 1px;
-  margin: 0;
+  margin: 0 4px 0 0;
   padding: 0;
   transition: ease-in-out;
   animation-duration: 500ms;
+  opacity: 1;
+}
+.bubble-w .swiper .swiper-pagination .swiper-pagination-bullet:last-child {
+  margin-right: 0;
 }
 .bubble-w .swiper .swiper-pagination .swiper-pagination-bullet-active {
   width: 16px;
@@ -115,3 +136,20 @@
   background: #7c7f85;
   border-radius: 1px;
 }
+
+.cnm {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  float: left;
+}
+.cnm .chart-w {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 20px;
+  float: left;
+  overflow: hidden;
+}
+
+/*# sourceMappingURL=bubble.css.map */

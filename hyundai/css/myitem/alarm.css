@@ -4,6 +4,8 @@
 
 .sw-w input[type=checkbox] {
   position: absolute;
+  left: -9999em;
+  top: 0;
   /* hidden */
   appearance: none;
   -webkit-appearance: none;
@@ -122,6 +124,11 @@
   flex-wrap: wrap;
   gap: 10px 0;
 }
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .alarm-more-list *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
 .alarm-more-list div {
   display: block;
   width: 100%;
@@ -141,3 +148,5 @@
   font-weight: 500;
   background: url(../img/main/linkarrow_s.svg) no-repeat 100% 50%;
 }
+
+/*# sourceMappingURL=alarm.css.map */

@@ -57874,13 +57874,43 @@ button.bg-blue {
   min-height: 19px;
   float: left;
 }
+.cnm .chart-w .chart-label.label-sub {
+  flex-direction: column;
+  gap: 8px 0 !important;
+  padding: 12px 8px;
+  border: 1px solid #f0f0f0;
+  border-radius: 8px;
+}
+.cnm .chart-w .chart-label.label-sub strong {
+  display: flex;
+  width: 100%;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f0;
+  align-items: center;
+  font-size: 12px;
+  color: #4D4D4D;
+  font-weight: 700;
+}
+.cnm .chart-w .chart-label.label-sub strong::before {
+  content: "";
+  width: 9px;
+  height: 9px;
+  background: #f27059;
+  margin-right: 8px;
+}
+.cnm .chart-w .chart-label.label-sub .label-group {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 8px;
+}
 .cnm .chart-w .chart-label span {
   position: relative;
   display: block;
-  width: 95px;
+  width: calc((100% - 16px) / 3);
   height: 19px;
   line-height: 19px;
-  padding-left: 16px;
+  padding-left: 15px;
   font-size: 12px;
   color: #4d4d4d;
   font-weight: 400;
@@ -57898,22 +57928,22 @@ button.bg-blue {
   border-radius: 99%;
 }
 .cnm .chart-w .chart-label span.lb01::before {
-  background: #f27059;
+  background: #F27059;
 }
 .cnm .chart-w .chart-label span.lb02::before {
-  background: #2d3562;
+  background: #2D3563;
 }
 .cnm .chart-w .chart-label span.lb03::before {
-  background: #3f54c3;
+  background: #3F53C3;
 }
 .cnm .chart-w .chart-label span.lb04::before {
-  background: #9163cb;
+  background: #9263CB;
 }
 .cnm .chart-w .chart-label span.lb05::before {
-  background: #289599;
+  background: #289598;
 }
 .cnm .chart-w .chart-label span.lb06::before {
-  background: #60c985;
+  background: #60C986;
 }
 
 .ad-banner {
@@ -58356,9 +58386,20 @@ div.cnm {
   line-height: 25px;
   float: left;
 }
+.c-item .cardNews .swiper-slide > div .list ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 5px;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .c-item .cardNews .swiper-slide > div .list ul li a *:not(:last-child) {
+    margin-right: 5px;
+  }
+}
 .c-item .cardNews .swiper-slide > div .list ul li span {
   display: block;
-  width: calc(100% - 15px);
+  max-width: calc(100% - 20px);
   font-size: 14px;
   color: #141414;
   letter-spacing: -0.5px;
@@ -58922,10 +58963,16 @@ div.cnm {
   font-weight: 700;
 }
 .txtbox .bg-box .txt {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   width: 100%;
-  float: left;
   padding-top: 15px;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .txtbox .bg-box .txt *:not(:last-child) {
+    margin-bottom: 10px;
+  }
 }
 .txtbox .bg-box .txt span {
   position: relative;
@@ -62519,11 +62566,13 @@ div.cnm {
 .nprc .cont .list.list-multi > div .txt span {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: 48px;
   line-height: 24px;
   font-size: 16px;
   color: #141414;
   font-weight: 500;
+  padding: 0;
 }
 .nprc .cont .list.list-multi > div .txt span.new {
   display: flex;
@@ -62578,11 +62627,12 @@ div.cnm {
   padding: 12px 5px;
   border-top: 1px solid #e5e5e5;
   justify-content: flex-start;
-  gap: 15px;
+  align-items: center;
+  gap: 5px;
 }
 @supports (-webkit-touch-callout: none) and (not (translate: none)) {
   .nprc .cont .list > div *:not(:last-child) {
-    margin-right: 15px;
+    margin-right: 5px;
   }
 }
 .nprc .cont .list > div a {
@@ -62592,6 +62642,7 @@ div.cnm {
   width: 100%;
   height: 100%;
   z-index: 11;
+  display: none;
 }
 .nprc .cont .list > div em {
   display: block;
@@ -62604,12 +62655,17 @@ div.cnm {
 }
 .nprc .cont .list > div span {
   display: block;
-  width: calc(100% - 47px);
+  max-width: calc(100% - 57px);
   height: 21px;
   line-height: 21px;
   color: #4d4d4d;
   font-weight: 400;
   font-size: 14px;
+  padding-left: 10px;
+}
+.nprc .cont .list > div svg {
+  display: block;
+  width: 16px;
 }
 .nprc .cont .list > div:first-child {
   border-top: 0;

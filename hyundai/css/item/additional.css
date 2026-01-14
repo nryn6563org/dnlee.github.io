@@ -6,6 +6,11 @@
   gap: 5px;
   justify-content: flex-start;
 }
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .c-item .add *:not(:last-child) {
+    margin-right: 5px;
+  }
+}
 .c-item .add button {
   width: calc((100% - 10px) / 3);
   background: #3b3b3b;
@@ -21,3 +26,10 @@
   align-items: center;
   gap: 6px;
 }
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .c-item .add button *:not(:last-child) {
+    margin-right: 6px;
+  }
+}
+
+/*# sourceMappingURL=additional.css.map */

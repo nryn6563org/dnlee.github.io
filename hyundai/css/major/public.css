@@ -1,8 +1,5 @@
-#vtselect {
-  padding-bottom: 60px;
-}
-
 .selectbox {
+  position: -webkit-sticky;
   position: sticky;
   display: block;
   width: 100%;
@@ -83,6 +80,11 @@
   float: left;
   justify-content: flex-start;
   gap: 0 13px;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  #public .tab-pane .p-box .list-w .list .top .bullet:not(:last-child) {
+    margin-right: 13px;
+  }
 }
 #public .tab-pane .p-box .list-w .list .top .bullet {
   display: block;
@@ -243,3 +245,5 @@
   background: url(../img/checking.svg) no-repeat center 50%;
   background-size: 15px 10px;
 }
+
+/*# sourceMappingURL=public.css.map */

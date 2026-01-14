@@ -1,7 +1,6 @@
 .avg-price {
   position: relative;
   width: 100%;
-  padding: 0 0 8px;
   float: left;
 }
 .avg-price .title {
@@ -33,6 +32,7 @@
   width: 100%;
   float: left;
   padding: 0 20px;
+  margin-top: 10px;
 }
 .avg-price .tprice dl {
   display: flex;
@@ -41,6 +41,8 @@
   justify-content: space-between;
   float: left;
   margin: 0;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d7d7d7;
 }
 .avg-price .tprice dl dt {
   display: block;
@@ -84,8 +86,14 @@
   display: block;
   width: 100%;
   padding: 12px 0;
-  border-top: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
   float: left;
+}
+.avg-price .list-w .list:first-child {
+  padding-top: 0;
+}
+.avg-price .list-w .list:last-child {
+  border-bottom: 0;
 }
 .avg-price .list-w .list a {
   position: absolute;
@@ -112,6 +120,11 @@
   justify-content: flex-start;
   gap: 4px;
   float: left;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .avg-price .list-w .list .tag *:not(:last-child) {
+    margin-right: 4px;
+  }
 }
 .avg-price .list-w .list .tag span {
   display: block;
@@ -149,3 +162,5 @@
   float: left;
   background: #d7d7d7;
 }
+
+/*# sourceMappingURL=price.css.map */

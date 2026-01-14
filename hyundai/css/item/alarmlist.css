@@ -146,6 +146,11 @@
   justify-content: flex-start;
   gap: 6px;
 }
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .areaContent .alarm .list-link > div .cdn *:not(:last-child) {
+    margin-right: 6px;
+  }
+}
 .areaContent .alarm .list-link > div .cdn span {
   display: block;
   height: 20px;
@@ -170,3 +175,5 @@
   font-size: 12px;
   color: #969696;
 }
+
+/*# sourceMappingURL=alarmlist.css.map */

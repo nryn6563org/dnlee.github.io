@@ -1,14 +1,63 @@
 .c-item .info {
+  position: relative;
   display: block;
   width: 100%;
-  padding: 7px 20px 0;
+  padding: 11px 20px 0;
   float: left;
+}
+.c-item .info.usa {
+  padding-top: 6px;
 }
 .c-item .info > div {
   display: block;
   width: 100%;
   float: left;
-  flex-wrap: wrap;
+}
+.c-item .info > div.udn {
+  padding-bottom: 12px;
+  border-bottom: 1px solid #e5e5e5;
+}
+.c-item .info > div.mktCap {
+  position: absolute;
+  top: 42px;
+  right: 20px;
+  display: block;
+  width: 100%;
+}
+.c-item .info > div.mktCap div {
+  display: block;
+  width: 100%;
+  height: 14px;
+  line-height: 14px;
+  text-align: right;
+  font-size: 11px;
+  color: #8e8e8e;
+}
+.c-item .info > div.mktCap div span {
+  font-size: 10px;
+  margin-right: 5px;
+}
+.c-item .info > div.mktCap div span.dollar {
+  font-size: 12px;
+  color: #3b3b3b;
+  font-weight: normal;
+  margin-right: 0;
+}
+.c-item .info > div.mktCap div span.dollar em {
+  font-size: 14px;
+  font-weight: bold;
+}
+.c-item .info > div.mktCap div span.dollar em:first-child {
+  font-weight: normal;
+}
+.c-item .info > div.mktCap div span.dollar em.colorTxt01 {
+  color: #005886;
+}
+.c-item .info > div.mktCap div span.dollar em.colorTxt02 {
+  color: #0C8040;
+}
+.c-item .info > div.mktCap div span.dollar em.colorTxt03 {
+  color: #8C6A00;
 }
 .c-item .info > div .cd {
   display: block;
@@ -44,6 +93,12 @@
   letter-spacing: -0.011em;
   float: left;
 }
+.c-item .info > div .prc.usa {
+  font-size: 22px;
+  height: 28px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
 .c-item .info > div .per {
   display: block;
   height: 20px;
@@ -71,3 +126,53 @@
   font-size: 11px;
   color: #4d4d4d;
 }
+.c-item .info > .nowPricing {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  height: 26px;
+  padding: 0 2px 0 6px;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background: #fff;
+}
+.c-item .info > .nowPricing.usa {
+  top: 6px;
+  background: #3b3b3b;
+}
+.c-item .info > .nowPricing.usa span {
+  color: #fff;
+}
+.c-item .info > .nowPricing span {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #141414;
+  letter-spacing: -0.3px;
+}
+.c-item .info > .orgInfo {
+  position: absolute;
+  top: 5px;
+  right: 87px;
+  height: 26px;
+  padding: 0 2px 0 6px;
+  border: 1px solid #d9d9d9;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  background: #fff;
+}
+.c-item .info > .orgInfo.usa {
+  top: 6px;
+}
+.c-item .info > .orgInfo span {
+  height: 16px;
+  line-height: 16px;
+  font-size: 12px;
+  color: #141414;
+  letter-spacing: -0.3px;
+}
+
+/*# sourceMappingURL=info.css.map */

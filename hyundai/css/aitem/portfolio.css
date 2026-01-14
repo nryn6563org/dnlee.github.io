@@ -124,7 +124,7 @@
   display: block;
   width: 100%;
   float: left;
-  padding: 28px 20px 0;
+  padding: 20px 20px 0;
   background: #fff;
 }
 .pf-p .tab-pane {
@@ -148,7 +148,7 @@
   display: block;
   width: 100%;
   float: left;
-  margin-top: 14px;
+  margin-top: 6px;
 }
 .pf-p .tab-pane .pf-p-list .top {
   display: flex;
@@ -194,10 +194,15 @@
   display: flex;
   width: 100%;
   float: left;
-  margin: 20px 0 26px;
+  margin: 4px 0 12px;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 12px;
   justify-content: flex-start;
+}
+@supports (-webkit-touch-callout: none) and (not (translate: none)) {
+  .pf-p .tab-pane .pf-p-list .list-w *:not(:last-child) {
+    margin-right: 12px;
+  }
 }
 .pf-p .tab-pane .pf-p-list .list-w .list {
   position: relative;
@@ -422,7 +427,7 @@
   height: calc(100% - 35px);
   float: left;
   overflow-y: auto;
-  padding-bottom: 94px;
+  padding-bottom: 56px;
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none;
 }
@@ -518,3 +523,5 @@
   font-weight: 500;
   background: #f4f6fd;
 }
+
+/*# sourceMappingURL=portfolio.css.map */

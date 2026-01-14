@@ -33,10 +33,17 @@
     }
 
     .txt {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
       width: 100%;
-      float: left;
       padding-top: 15px;
+
+      @supports (-webkit-touch-callout: none) and (not (translate: none)) {
+        & *:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
 
       span {
         position: relative;
