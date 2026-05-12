@@ -1090,8 +1090,7 @@
   display: block;
   width: 100%;
   float: left;
-  border-top: 10px solid #efefef;
-  padding: 24px 20px 17px;
+  padding: 17px 20px;
 }
 .resultArea .result:first-child {
   border-top: 0;
@@ -1421,5 +1420,3 @@ div.cnm {
   position: absolute;
   bottom: 0;
 }
-
-/*# sourceMappingURL=main.css.map */

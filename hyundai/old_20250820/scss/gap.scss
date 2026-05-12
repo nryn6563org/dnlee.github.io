@@ -1,5 +1,0 @@
-@for $i from 1 to 99 {
-    .gap#{$i} {
-        gap: ($i + px) !important;
-    }
-}

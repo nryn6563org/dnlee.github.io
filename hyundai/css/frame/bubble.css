@@ -3,7 +3,7 @@
   width: 100%;
   padding: 24px 0 0 0;
   float: left;
-  background: #FAFAFC;
+  background: #F5F6F7;
 }
 .bubble-w.nomem:after {
   content: "";
@@ -44,7 +44,7 @@
   width: 100%;
   float: left;
   padding: 0 20px;
-  padding-bottom: 14px;
+  padding-bottom: 10px;
   padding-top: 20px;
 }
 .bubble-w .swiper .swiper-slide > div {

@@ -41,6 +41,10 @@
   visibility: visible;
 }
 
+#tbArea.cnm .areaContent {
+  padding: 30px 0 0 !important;
+}
+
 .emptybox {
   display: block;
   width: 100%;
@@ -351,5 +355,3 @@
   color: #141414;
   font-weight: 700;
 }
-
-/*# sourceMappingURL=tbcontent.css.map */

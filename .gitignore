@@ -436,3 +436,11 @@ $RECYCLE.BIN/
 # .pnp.*
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,windows,git,webstorm+all,jetbrains+all,visualstudiocode,node,yarn,archive
+hyundai/old_20250820
+hyundai/old_2026.01.14
+hyundai/css/*.*.map
+hyundai/css/*.map
+hyundai/css/*/*.map
+hyundai/old_20250820
+hyundai/old_260507
+hyundai/css/common.css.map

@@ -83,4 +83,13 @@
   padding: 0;
 }
 
-/*# sourceMappingURL=tbheader.css.map */
+#tbArea.cnm header {
+  position: relative !important;
+}
+#tbArea.cnm header .tit strong {
+  font-size: 16px;
+  color: #292929;
+  font-weight: 500;
+  height: 24px;
+  line-height: 24px;
+}

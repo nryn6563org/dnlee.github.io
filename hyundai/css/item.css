@@ -541,6 +541,17 @@
   padding: 0;
 }
 
+#tbArea.cnm header {
+  position: relative !important;
+}
+#tbArea.cnm header .tit strong {
+  font-size: 16px;
+  color: #292929;
+  font-weight: 500;
+  height: 24px;
+  line-height: 24px;
+}
+
 #tbArea .areaContent {
   display: block;
   width: 100%;
@@ -582,6 +593,10 @@
   left: 0;
   opacity: 1;
   visibility: visible;
+}
+
+#tbArea.cnm .areaContent {
+  padding: 30px 0 0 !important;
 }
 
 .emptybox {
@@ -894,5 +909,3 @@
   color: #141414;
   font-weight: 700;
 }
-
-/*# sourceMappingURL=item.css.map */
