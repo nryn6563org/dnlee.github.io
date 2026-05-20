@@ -97,6 +97,11 @@
     width: 100%;
     float: left;
     padding: 17px 20px;
+    border-top: 10px solid #f0f0f0;
+
+    &.result-fav {
+      border-top: 0;
+    }
 
     &:first-child {
       border-top: 0;
@@ -161,7 +166,7 @@
 
         &::before {
           display: block;
-          content: "\00b7";
+          content: '\00b7';
           float: left;
           font-weight: 700;
           font-size: 17px;
