@@ -1,6 +1,7 @@
 // 타임랩스 (09:00 / 12:00 / 15:30 / 18:00 / 20:00)
 $tl-blue: #4560c0;
-$tl-purple: #b69be8;
+$tl-purple: #946ee0; // 15:30 이후 활성
+$tl-purple-off: #ded2ed; // 15:30 이후 비활성
 $tl-off: #d3d4d6;
 
 .timelapse {
@@ -19,9 +20,10 @@ $tl-off: #d3d4d6;
     top: 38px;
     height: 3px;
     border-radius: 2px;
-    background: $tl-off;
+    // 15:30(50%) 이후 구간은 보라색 계열
+    background: linear-gradient(90deg, $tl-off 0, $tl-off 50%, $tl-purple-off 50%, $tl-purple-off 100%);
 
-    // 15:30(50%) 이후 구간은 보라색
+    // 채워진 구간
     &:after {
       content: "";
       position: absolute;
@@ -66,12 +68,12 @@ $tl-off: #d3d4d6;
       background: $tl-purple;
     }
     &.late:not(.on) {
-      background: #dccff5;
+      background: $tl-purple-off;
     }
     &.now {
-      box-shadow: 0 0 0 4px rgba($tl-blue, 0.25);
+      box-shadow: 0 0 0 4px rgba($tl-blue, 0.3);
       &.late {
-        box-shadow: 0 0 0 4px rgba($tl-purple, 0.35);
+        box-shadow: 0 0 0 4px rgba($tl-purple, 0.3);
       }
     }
   }
