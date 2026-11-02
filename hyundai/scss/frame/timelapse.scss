@@ -1,0 +1,139 @@
+// 타임랩스 (09:00 / 12:00 / 15:30 / 18:00 / 20:00)
+$tl-blue: #4560c0;
+$tl-purple: #b69be8;
+$tl-off: #d3d4d6;
+
+.timelapse {
+  position: relative;
+  display: block;
+  width: calc(100% - 52px);
+  height: 50px;
+  margin: 10px 26px 0;
+  float: left;
+  --p: 0%;
+
+  .tl-track {
+    position: absolute;
+    left: 9px;
+    right: 11px;
+    top: 38px;
+    height: 3px;
+    border-radius: 2px;
+    background: $tl-off;
+
+    // 15:30(50%) 이후 구간은 보라색
+    &:after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: 2px;
+      background: linear-gradient(90deg, $tl-blue 0, $tl-blue 50%, $tl-purple 50%, $tl-purple 100%);
+      clip-path: inset(0 calc(100% - var(--p)) 0 0);
+    }
+  }
+
+  .tl-dots {
+    position: absolute;
+    left: 14.5px;
+    right: 14.5px;
+    top: 34px;
+    height: 11px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tl-dot {
+    position: absolute;
+    top: 0;
+    width: 11px;
+    height: 11px;
+    margin-left: -5.5px;
+    border-radius: 50%;
+    background: $tl-off;
+    box-sizing: border-box;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        left: calc(#{($i - 1) * 25%});
+      }
+    }
+
+    &.on {
+      background: $tl-blue;
+    }
+    &.on.late {
+      background: $tl-purple;
+    }
+    &.late:not(.on) {
+      background: #dccff5;
+    }
+    &.now {
+      box-shadow: 0 0 0 4px rgba($tl-blue, 0.25);
+      &.late {
+        box-shadow: 0 0 0 4px rgba($tl-purple, 0.35);
+      }
+    }
+  }
+
+  .tl-label {
+    position: absolute;
+    top: 18px;
+    font-size: 12px;
+    line-height: 15px;
+    color: #a9a9a9;
+    letter-spacing: -0.025em;
+    white-space: nowrap;
+    transform: translateX(-50%);
+
+    @for $i from 1 through 5 {
+      &:nth-of-type(#{$i}) {
+        left: calc(14.5px + #{$i - 1} * (100% - 29px) / 4);
+      }
+    }
+
+    &.now {
+      visibility: hidden;
+    }
+  }
+
+  .tl-ball {
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+    min-width: 50px;
+    height: 24px;
+    padding: 0 8px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 24px;
+    text-align: center;
+    color: #292929;
+    display: none;
+
+    &:after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      bottom: -3px;
+      width: 6px;
+      height: 6px;
+      margin-left: -3px;
+      background: #fff;
+      transform: rotate(45deg);
+    }
+  }
+
+  @for $i from 0 through 4 {
+    &.step#{$i} .tl-ball {
+      left: calc(14.5px + #{$i} * (100% - 29px) / 4);
+    }
+  }
+
+  &.active .tl-ball {
+    display: block;
+  }
+}
