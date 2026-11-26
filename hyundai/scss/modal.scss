@@ -294,3 +294,10 @@
     border: 1px solid #e8efef;
   }
 }
+#itemDeleteComplete, #itemAdd{
+  .modal-button{
+    button{
+      width:100% !important;
+    }
+  }
+}
