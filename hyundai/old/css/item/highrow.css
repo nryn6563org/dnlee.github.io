@@ -1,0 +1,65 @@
+#tbArea .hrbox {
+  position: relative;
+  display: block;
+  width: 100%;
+  border: 1px solid #8e9ef5;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.08);
+  border-radius: 16px;
+  padding: 17px 10px 18px 24px;
+  margin: 20px 0 0 0;
+  float: left;
+}
+#tbArea .hrbox::after {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 54px;
+  top: 24px;
+  left: 160px;
+  background: #ebebeb;
+}
+#tbArea .hrbox > div {
+  display: block;
+  width: 50%;
+  max-width: 141px;
+  float: left;
+}
+#tbArea .hrbox > div:last-child {
+  padding-left: 10px;
+}
+#tbArea .hrbox > div .tit {
+  display: block;
+  width: 100%;
+  float: left;
+}
+#tbArea .hrbox > div .tit span {
+  display: block;
+  width: 100%;
+  float: left;
+  height: 16px;
+  line-height: 16px;
+  font-size: 13px;
+  color: #828282;
+}
+#tbArea .hrbox > div .tit em {
+  display: block;
+  width: 100%;
+  float: left;
+  height: 15px;
+  line-height: 15px;
+  font-size: 12px;
+  color: #828282;
+  margin-top: 3px;
+}
+#tbArea .hrbox > div .prc {
+  display: block;
+  width: 100%;
+  float: left;
+  margin-top: 8px;
+  line-height: 25px;
+}
+#tbArea .hrbox > div .prc span {
+  font-size: 20px;
+  color: #141414;
+  font-weight: 700;
+}
