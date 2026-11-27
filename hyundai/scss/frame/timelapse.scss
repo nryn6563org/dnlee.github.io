@@ -3,6 +3,7 @@ $tl-blue: #4560c0;
 $tl-purple: #946ee0; // 15:30 이후 활성
 $tl-purple-off: #ded2ed; // 15:30 이후 비활성
 $tl-off: #d7d7d7;
+$tl-now: #ff4471; // 현재시간 화살표
 
 .timelapse {
   position: relative;
@@ -108,7 +109,9 @@ $tl-off: #d7d7d7;
     padding: 0 8px;
     border-radius: 6px;
     background: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16);
+    border: 1px solid #dcdcdc;
+    box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
     font-size: 13px;
     font-weight: 700;
     line-height: 24px;
@@ -125,6 +128,8 @@ $tl-off: #d7d7d7;
       height: 6px;
       margin-left: -3px;
       background: #fff;
+      border: solid #dcdcdc;
+      border-width: 0 1px 1px 0;
       transform: rotate(45deg);
     }
   }
@@ -137,5 +142,78 @@ $tl-off: #d7d7d7;
 
   &.active .tl-ball {
     display: block;
+  }
+
+  // 현재시간 화살표 + 시간 선택 (main) : .tl-now 가 있는 경우
+  --a: 0;
+
+  .tl-now {
+    display: none;
+    position: absolute;
+    top: 8px;
+    left: calc(13.5px + var(--a) * (100% - 28px) / 4);
+    width: 0;
+    height: 0;
+    margin-left: -5.5px;
+    border-style: solid;
+    border-width: 9px 5.5px 0;
+    border-color: $tl-now transparent transparent;
+    pointer-events: none;
+
+    // 점선 + 트랙 위 점 (포인트와 겹치면 .now-exact 로 제거)
+    &:before {
+      content: "";
+      position: absolute;
+      left: -0.5px;
+      top: 10px;
+      height: 18px;
+      border-left: 1px dashed $tl-now;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: -2.5px;
+      top: 28px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: $tl-now;
+    }
+  }
+
+  &.live {
+    .tl-ball {
+      left: calc(13.5px + var(--a) * (100% - 28px) / 4);
+      top: 0;
+      height: 23px;
+      line-height: 21px;
+      display: none;
+    }
+    .tl-dot {
+      cursor: pointer;
+      &:before {
+        content: "";
+        position: absolute;
+        inset: -12px -14px;
+      }
+    }
+    &.sel .tl-ball {
+      display: block;
+    }
+    &.now-mid .tl-now,
+    &.now-exact .tl-now {
+      display: block;
+    }
+    &.now-exact .tl-now:before,
+    &.now-exact .tl-now:after {
+      display: none;
+    }
+    // 현재 시간 점선이 지나가는 트랙 위 점과 겹치는 라벨 방지는 디자인상 불필요
+    &:not(.active) .tl-dot {
+      cursor: default;
+      &:before {
+        display: none;
+      }
+    }
   }
 }
